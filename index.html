@@ -28,11 +28,13 @@
       <div class="dropdown">
         <div data-target="main">Main Quests</div>
         <div data-target="side">Side Quests</div>
+        <div data-target="requests">Requests</div>
         <div data-target="faq">FAQ</div>
       </div>
     </div>
     <div class="content active" id="main"><h3>Main Quests</h3><div class="progress" id="progress-main"></div><ul id="main-list"></ul></div>
     <div class="content" id="side"><h3>Side Quests</h3><div class="progress" id="progress-side"></div><ul id="side-list"></ul></div>
+    <div class="content" id="requests"><h3>Requests</h3><div class="progress" id="progress-requests"></div><ul id="requests-list"></ul></div>
     <div class="content" id="faq">
     <h3>FAQ</h3>
     <p>The foundation of this guide was based on Stephen McNabb's Dark Soul 2 Cheat Sheet source code.</p>
@@ -121,6 +123,30 @@
       "Urgent Information"
       ];
 
+        const requests = [
+      "An Unforgettable Fish Dish",
+      "Find the Cat",
+      "Generous Drop Pod",
+      "Legion's Secret Stash",
+      "Looking for My Brother",
+      "Lost Device",
+      "Lurker Hunt",
+      "Missing Husband",
+      "Missing Wife",
+      "Precious Treasure",
+      "Recruit Passcode Specialists",
+      "Simple Puzzle",
+      "Sleeping Beauty",
+      "Source of the Nightmare",
+      "The Last Wine",
+      "Time for Revenge",
+      "Valuable Cargo",
+      "Where's the Item",
+      "Wife's Medicine",
+      "Wife's Water Tank",
+      "Wisdom Puzzle"
+      ];
+
     function createList(quests, containerId, type) {
       const container = document.getElementById(containerId);
       quests.forEach((quest, index) => {
@@ -151,6 +177,7 @@
 
     createList(mainQuests, 'main-list', 'main');
     createList(sideQuests, 'side-list', 'side');
+    createList(sideQuests, 'requests-list', 'requests');
 
     document.addEventListener('change', e => {
       if (e.target.matches('input[type="checkbox"]')) {
