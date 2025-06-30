@@ -123,7 +123,7 @@
       "Urgent Information"
       ];
 
-        const requests = [
+      const requests = [
       "An Unforgettable Fish Dish",
       "Find the Cat",
       "Generous Drop Pod",
@@ -177,7 +177,7 @@
 
     createList(mainQuests, 'main-list', 'main');
     createList(sideQuests, 'side-list', 'side');
-    createList(sideQuests, 'requests-list', 'requests');
+    createList(requests, 'requests-list', 'requests');
 
     document.addEventListener('change', e => {
       if (e.target.matches('input[type="checkbox"]')) {
