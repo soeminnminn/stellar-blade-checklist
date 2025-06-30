@@ -1,0 +1,170 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stellar Blade Checklist</title>
+<style>
+    body { font-family: sans-serif; margin: 20px; background: #121212; color: #ddd; }
+    h1 { text-align: center; margin: 0 auto 20px; max-width: 1280px; border-radius: 8px; }
+    .content-container { position: relative; max-width: 1280px; margin: 60px auto 0; }
+    .menu { position: absolute; top: -60px; left: 0; }
+    .menu-button { background: #212121; border: 1px solid #444; padding: 10px 20px; cursor: pointer; border-radius: 8px; }
+    .dropdown { display: none; position: absolute; left: 0; background: #212121; border: 1px solid #444; border-radius: 8px; min-width: 160px; z-index: 1; }
+    .dropdown div { padding: 10px; cursor: pointer; }
+    .dropdown div:hover { background: #383838; }
+    .content { display: none; border: 1px solid #444; padding: 20px; background: #212121; margin-top: 40px; border-radius: 8px; max-width: 1280px; margin-left: auto; margin-right: auto; }
+    .content.active { display: block; }
+    .progress { margin: 10px 0; font-weight: bold; }
+    input[type=checkbox]:checked + label { text-decoration: line-through; color: #888; }
+    ul { list-style: none; padding: 0; }
+    li { margin: 5px 0; }
+  </style>
+</head>
+<body>
+  <h1>Stellar Blade Checklist</h1>
+  <div class="content-container">
+    <div class="menu">
+      <div class="menu-button">☰ Menu</div>
+      <div class="dropdown">
+        <div data-target="main">Main Quests</div>
+        <div data-target="side">Side Quests</div>
+        <div data-target="faq">FAQ</div>
+      </div>
+    </div>
+    <div class="content active" id="main"><h3>Main Quests</h3><div class="progress" id="progress-main"></div><ul id="main-list"></ul></div>
+    <div class="content active" id="side"><h3>Side Quests</h3><div class="progress" id="progress-side"></div><ul id="side-list"></ul></div>
+    <div class="content" id="faq">
+    <h3>FAQ</h3>
+    <p>The foundation of this guide was based on Stephen McNabb's Dark Soul 2 Cheat Sheet source code.</p>
+    <p>This checklist has been compiled using IGN and wiki pages.</p>
+    <p><strong>I have feedback, how can I contribute?</strong><br>You can visit the <a href="https://github.com/Lepehn/stellar-blade-checklist" target="_blank" style="color: #88c0d0; text-decoration: none;">GitHub repository</a> and report Issues or create a fork and submit a Pull Request.</p>
+    <p><strong>Is this a guide?</strong><br>Nope, not really. This is a set of checklists and information that you can use while playing Atomic Heart.</p>
+    <p><strong>How does the checklist status get saved?</strong><br>The checklist is saved to your browser's local storage. Be careful when clearing your browser's cache as it will also destroy your saved progress.</p>
+    </div>
+  </div>
+  <script>
+    const menuButton = document.querySelector('.menu-button');
+    const dropdown = document.querySelector('.dropdown');
+
+    // Toggle dropdown visibility on menu button click
+    menuButton.addEventListener('click', () => {
+      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Add click event to each dropdown item
+    dropdown.querySelectorAll('div[data-target]').forEach(item => {
+      item.addEventListener('click', () => {
+        // Show the selected content tab
+        document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+        document.getElementById(item.dataset.target).classList.add('active');
+
+        // Hide dropdown menu after selecting
+        dropdown.style.display = 'none';
+
+        // Update progress if applicable
+        updateProgress(item.dataset.target);
+      });
+    });
+    
+    const mainQuests = [
+      "7th Airborne Squad",
+      "Scavenger Adam",
+      "Xion, the Last Remaining City",
+      "Altess Levoire",		
+      "Light of Hope",	
+      "Alpha Signal",
+      "Hidden Truth",
+      "Abyss Levoire",
+      "Orcal's Testimony",
+      "Secret Garden",
+      "Eye of the Hurricane",
+      "Burning Xion",
+      "Last Fragment",
+      "Selection of Species",
+      "EVE Protocol"
+    ];
+    
+    const sideQuests = [
+      "A Treasure with a Name",
+      "A United People Cannot Be Defeated", 
+      "An Eye for an Eye, a Tooth for a Tooth",
+      "An Offer You Can't Refuse",
+      "An Unknown Present
+      "Angel of Death",
+      "Barry and Wine",
+      "CnL - Communicate and Link",
+      "Encounter",
+      "End of the Nightmare",
+      "Fallen Angel",
+      "First Customer",
+      "I Won't Forget You",
+      "Incarceration",
+      "Keeping Secrets",
+      "Let There Be Light Again",
+      "Life of the Scavengers",
+      "Looking at You",
+      "Looking Glass",
+      "Lost Ark",
+      "Madama Machine",
+      "Memories in the Doll",
+      "Oblivion",
+      "Plan to Clean the Earth",
+      "Reboot!",
+      "Reboot!!!",
+      "Siren's Song",
+      "Stolen Treasure",
+      "Stubbornness",
+      "Taboo",
+      "The King of the Tunnel",
+      "The Scavenger's Story",
+      "The Words of Mother Sphere",
+      "Urgent Information"
+      ]
+
+    function createList(quests, containerId, type) {
+      const container = document.getElementById(containerId);
+      quests.forEach((quest, index) => {
+        const id = `${type}-${index}`;
+        const li = document.createElement('li');
+        li.innerHTML = `<input type="checkbox" id="${id}" data-id="${id}" class="${type}"><label for="${id}"> ${quest}</label>`;
+        container.appendChild(li);
+      });
+    }
+
+    function loadProgress() {
+      document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+        const saved = localStorage.getItem(cb.dataset.id);
+        if (saved === 'true') cb.checked = true;
+      });
+    }
+
+    function saveProgress(cb) {
+      localStorage.setItem(cb.dataset.id, cb.checked);
+    }
+
+    function updateProgress(tabId) {
+      const container = document.getElementById(tabId);
+      const checkboxes = container.querySelectorAll('input[type="checkbox"]');
+      const checked = container.querySelectorAll('input[type="checkbox"]:checked').length;
+      document.getElementById(`progress-${tabId}`).textContent = `Completed: ${checked} / ${checkboxes.length}`;
+    }
+
+    createList(mainQuests, 'main-list', 'main');
+    createList(sideQuests, 'side-list', 'side');
+
+    document.addEventListener('change', e => {
+      if (e.target.matches('input[type="checkbox"]')) {
+        saveProgress(e.target);
+        const activeContent = document.querySelector('.content.active').id;
+        updateProgress(activeContent);
+      }
+    });
+
+    loadProgress();
+    updateProgress('main');
+  </script>
+  <footer style="text-align: center; margin-top: 40px; font-size: 0.9em; color: #aaa;">
+  Check out the project or <a href="https://github.com/Lepehn/stellar-blade-checklist" target="_blank" style="color: #88c0d0; text-decoration: none;">report an issue on GitHub</a>.
+</footer>
+</body>
+</html>
