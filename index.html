@@ -1,5 +1,6 @@
 <html lang="en">
 <head>
+<meta name="google-site-verification" content="TM2JLp2z2ivvAbxCRiY7ekyg7shRkm4LJ23ywpbje1U" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Stellar Blade Checklist</title>
@@ -128,6 +129,13 @@
     .tagShotgun    { background: #ffd180; }
     .tagEnergy	   { background: #ffd180; }
     
+    .tagXion          { background: #C9DAF8; }
+    .tagEidos7        { background: #D9EAD3; }      
+    .tagWasteland     { background: #FFF2CC; }
+    .tagMatrix11      { background: #F4CCCC; }
+    .tagGreatDesert   { background: #D9D2E9; }
+    .tagSpire4        { background: #FCE5CD; }
+    
     .tagDLC      { background: #f7bf00; }
   </style>
 </head>
@@ -152,6 +160,7 @@
         <div data-target="main">Main Quests</div>
         <div data-target="side">Side Quests</div>
         <div data-target="request">Requests</div>
+        <div data-target="can">Cans</div>
         <div data-target="faq">FAQ</div>
       </div>
     </div>
@@ -175,6 +184,13 @@
       <h2>Requests</h2>
       <div class="progress" id="request-Progress">Completed 0 / 0</div>
       <ul id="requests"></ul>
+    </div>
+    
+    <!-- Cans -->
+    <div class="content" id="can">
+      <h2>Cans</h2>
+      <div class="progress" id="can-Progress">Completed 0 / 0</div>
+      <ul id="cans"></ul>
     </div>
 
     <!-- FAQ -->
@@ -266,7 +282,7 @@
       {title: "Urgent Information"}
     ];
 
-    const request = [
+    const requests = [
       {title: "An Unforgettable Fish Dish"},
       {title: "Find the Cat"},
       {title: "Generous Drop Pod"},
@@ -289,6 +305,58 @@
       {title: "Wife's Water Tank"},
       {title: "Wisdom Puzzle"}
     ];
+    
+    const cans = [
+      { title: "Cryo Original", tag: "Eidos7" },
+      { title: "Cryo Zero", tag: "Wasteland" },
+      { title: "Pixie", tag: "Xion" },
+      { title: "Pixie Zero", tag: "Wasteland" },
+      { title: "Newfoundland Dry", tag: "Matrix11" },
+      { title: "Newfoundland Dry Zero", tag: "GreatDesert" },
+      { title: "Milky Pop", tag: "Spire4" },
+      { title: "Milky Pop Zero", tag: "GreatDesert" },
+      { title: "The Machinetta Americano", tag: "Xion" },
+      { title: "The Machinetta Cafe Latte", tag: "Wasteland" },
+      { title: "The Machinetta Caramel Machiatto", tag: "Xion" },
+      { title: "Cryo Cafe Original", tag: "Wasteland" },
+      { title: "Cryo Cafe Vanilla", tag: "Matrix11" },
+      { title: "Cryo Cafe Mocha", tag: "GreatDesert" },
+      { title: "The Haven Earl Grey", tag: "GreatDesert" },
+      { title: "The Haven Milk Tea", tag: "GreatDesert" },
+      { title: "The Haven Green Tea", tag: "Wasteland" },
+      { title: "GrainT Barley", tag: "Wasteland" },
+      { title: "GrainT Oolong", tag: "Xion" },
+      { title: "GrainT Corn", tag: "Wasteland" },
+      { title: "Nectar Orange", tag: "Wasteland" },
+      { title: "Nectar Grape", tag: "GreatDesert" },
+      { title: "Nectar Apple", tag: "Spire4" },
+      { title: "Nectar Cranberry", tag: "GreatDesert" },
+      { title: "Elixir Carrot", tag: "Eidos7" },
+      { title: "Elixir Green", tag: "Wasteland" },
+      { title: "Behemoth Red", tag: "Xion" },
+      { title: "Behemoth Green", tag: "Wasteland" },
+      { title: "Behemoth Black", tag: "GreatDesert" },
+      { title: "Liquid Fire", tag: "GreatDesert" },
+      { title: "Liquid Lightning", tag: "Spire4" },
+      { title: "Liquid Nuclear", tag: "GreatDesert" },
+      { title: "Potential Blast", tag: "Eidos7" },
+      { title: "Potential Tempest", tag: "Wasteland" },
+      { title: "Potential Frost", tag: "GreatDesert" },
+      { title: "Dionysus C", tag: "Xion" },
+      { title: "Moonwell", tag: "Spire4" },
+      { title: "Starwell", tag: "GreatDesert" },
+      { title: "Mountain Sparkle Mont Blanc", tag: "Xion" },
+      { title: "Mountain Sparkle Everest", tag: "GreatDesert" },
+      { title: "Mountain Sparkle Halla", tag: "Wasteland" },
+      { title: "Cryo The Clear", tag: "Wasteland" },
+      { title: "Cryo The Malt", tag: "GreatDesert" },
+      { title: "Bayern Hefe Weissbier", tag: "Wasteland" },
+      { title: "Bayern Weissbier Dunkel", tag: "Xion" },
+      { title: "Corsair Lager", tag: "Wasteland" },
+      { title: "Corsair Ale", tag: "Matrix11" },
+      { title: "Johnson's Highball Lemon", tag: "GreatDesert" },
+      { title: "Johnson's Highball Ginger", tag: "GreatDesert" }
+    ];
 
     function createTag(text, className) {
       const span = document.createElement("span");
@@ -309,6 +377,7 @@
         'main-Quests': 'main-Progress',
         'side-Quests': 'side-Progress',
         'requests': 'request-Progress',
+        'cans': 'can-Progress'
       };
       checkbox.addEventListener('change', () => {
         localStorage.setItem(id, checkbox.checked);
@@ -332,10 +401,11 @@
         li.appendChild(createTag(item.tag, className));
       }
 
-      if (type === 'weapon') {
+      if (type === 'can') {
         const tags = Array.isArray(item.tag) ? item.tag : [item.tag];
         tags.forEach(t => {
-          const className = `tag${t.replace(/\s+/g, '')}`; // e.g. Melee → tagMelee
+          if (!t) return;
+          const className = `tag${t.replace(/\s+/g, '')}`;
           li.appendChild(createTag(t, className));
         });
       }
@@ -355,6 +425,7 @@
       if (progressId === 'main-Progress') listId = 'main-Quests';
       else if (progressId === 'side-Progress') listId = 'side-Quests';
       else if (progressId === 'request-Progress') listId = 'requests';
+      else if (progressId === 'can-Progress') listId = 'cans';
       else return;
 
       const list = document.getElementById(listId);
@@ -377,8 +448,13 @@
     updateProgress('side-Progress', 'side');
     
     const requestList = document.getElementById("requests");
-    request.forEach(r => createChecklistItem(r, 'request', requestList));
+    requests.forEach(r => createChecklistItem(r, 'request', requestList));
     updateProgress('request-Progress', 'request');
+    
+    const canList = document.getElementById("cans");
+    cans.forEach(r => createChecklistItem(r, 'can', canList));
+    updateProgress('can-Progress', 'can');
+    
     
     window.addEventListener('DOMContentLoaded', () => {
       const faqTemplate = document.getElementById("github-link-template-faq");
