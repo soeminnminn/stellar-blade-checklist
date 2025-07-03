@@ -159,18 +159,21 @@
     <!-- Main Quests -->
     <div class="content active" id="main">
       <h2>Main Quests</h2>
-      <ul id="main-quests"></ul>
+      <div class="progress" id="main-Progress">Completed 0 / 0</div>
+      <ul id="main-Quests"></ul>
     </div>
     
     <!-- Side Quests -->
     <div class="content" id="side">
       <h2>Side Quests</h2>
-      <ul id="side-quests"></ul>
+      <div class="progress" id="side-Progress">Completed 0 / 0</div>
+      <ul id="side-Quests"></ul>
     </div>
     
     <!-- Requests -->
     <div class="content" id="request">
       <h2>Requests</h2>
+      <div class="progress" id="request-Progress">Completed 0 / 0</div>
       <ul id="requests"></ul>
     </div>
 
@@ -302,9 +305,17 @@
       checkbox.type = "checkbox";
       checkbox.id = id;
       checkbox.checked = localStorage.getItem(id) === 'true';
+       const progressIdMap = {
+        'main-Quests': 'main-Progress',
+        'side-Quests': 'side-Progress',
+        'requests': 'request-Progress',
+      };
       checkbox.addEventListener('change', () => {
         localStorage.setItem(id, checkbox.checked);
+        const progressId = progressIdMap[container.id];
+        if(progressId) updateProgress(progressId, type);
       });
+
 
       const label = document.createElement("label");
       label.setAttribute("for", id);
@@ -330,16 +341,44 @@
       }
 
       container.appendChild(li);
+      return checkbox;
     }
     
-    const mainQuestList = document.getElementById("main-quests");
-    mainQuests.forEach(q => createChecklistItem(q, 'main', mainQuestList));
+    // Update the progress text for a checklist
+    function updateProgress(progressId, type) {
+      const progressEl = document.getElementById(progressId);
+      if (!progressEl) return;
+
+      // Get the related list by converting progressId to listId
+      // e.g. main-progress → main-quests, boss-progress → baseGame-Bosses, weapon-progress → weapons
+      let listId;
+      if (progressId === 'main-Progress') listId = 'main-Quests';
+      else if (progressId === 'side-Progress') listId = 'side-Quests';
+      else if (progressId === 'request-Progress') listId = 'requests';
+      else return;
+
+      const list = document.getElementById(listId);
+      const checkboxes = list.querySelectorAll('input[type=checkbox]');
+
+      let completed = 0;
+      checkboxes.forEach(cb => {
+        if (cb.checked) completed++;
+      });
+
+      progressEl.textContent = `Completed ${completed} / ${checkboxes.length}`;
+    }
     
-    const sideQuestList = document.getElementById("side-quests");
+    const mainQuestList = document.getElementById("main-Quests");
+    mainQuests.forEach(q => createChecklistItem(q, 'main', mainQuestList));
+    updateProgress('main-Progress', 'main');
+    
+    const sideQuestList = document.getElementById("side-Quests");
     sideQuests.forEach(s => createChecklistItem(s, 'side', sideQuestList));
+    updateProgress('side-Progress', 'side');
     
     const requestList = document.getElementById("requests");
     request.forEach(r => createChecklistItem(r, 'request', requestList));
+    updateProgress('request-Progress', 'request');
     
     window.addEventListener('DOMContentLoaded', () => {
       const faqTemplate = document.getElementById("github-link-template-faq");
