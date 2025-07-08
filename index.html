@@ -170,7 +170,7 @@
         background: #212121;
         border-radius: 8px;
         padding: 20px;
-        width: 250;
+        width: 300;
         height: 400;
         flex-shrink: 0;
         color: #ccc;
@@ -195,7 +195,7 @@
         width: 100%;
         height: 100%;
         background-image: url("https://cdn2.steamgriddb.com/thumb/44c949fd6c031820079421c414622806.jpg");
-        background-size: auto;
+        background-size: 100% 100%;
         background-repeat: no-repeat;
         background-position: center;
         border-radius: 8px;
@@ -512,8 +512,8 @@
         const progressIdMap = {
           "main-Quests": "main-Progress",
           "side-Quests": "side-Progress",
-          requests: "request-Progress",
-          cans: "can-Progress",
+          "requests": "request-Progress",
+          "cans": "can-Progress",
         };
         checkbox.addEventListener("change", () => {
           localStorage.setItem(id, checkbox.checked);
