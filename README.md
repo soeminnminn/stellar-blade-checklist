@@ -42,3 +42,12 @@ Your checklist data is saved automatically in your browser using `localStorage`.
 - No account or login required
 - Your progress will persist between visits
 - If you clear browser data, progress will reset
+
+### 📤 Export / Import Progress
+
+To back up or move your progress between devices:
+
+- Click **"Export Progress"** to download a `.json` file of your checklist state
+- Click **"Import Progress"** and select your file to restore it
+
+All data is stored locally in your browser. No login is required.
