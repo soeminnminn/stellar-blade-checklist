@@ -512,7 +512,8 @@
       }
 
       function createChecklistItem(item, type, container) {
-        const id = `${type}-${item.title.replace(/\s+/g, "-").toLowerCase()}`;
+        const STORAGE_PREFIX = "stellar-blade";
+        const id = `${STORAGE_PREFIX}-${type}-${item.title.replace(/\s+/g, "-").toLowerCase()}`;
         const li = document.createElement("li");
 
         const checkbox = document.createElement("input");
@@ -633,26 +634,31 @@
         document.getElementById("faq-link-container").appendChild(faqClone);
         document.getElementById("footer-link-container").appendChild(footerClone);
       });
-      
+
       function exportChecklist() {
+     	const STORAGE_PREFIX = "stellar-blade";
         const categories = ["main", "side", "request", "can"];
-        const sortedData = {};
+
+        const sortedData = {
+        prefix: STORAGE_PREFIX,
+        main: [],
+        side: [],
+        request: [],
+        can: []
+      	};
 
         categories.forEach((category) => {
           const entries = [];
 
           for (let i = 0; i < localStorage.length; i++) {
             const key = localStorage.key(i);
-            if (key.startsWith(`${category}-`)) {
-              entries.push({ key, value: localStorage.getItem(key) });
+            if (key.startsWith(`${STORAGE_PREFIX}-${category}-`) && localStorage.getItem(key) === "true") {
+            	const cleanTitle = key.slice(`${STORAGE_PREFIX}-${category}-`.length);
+      			sortedData[category].push(cleanTitle);
             }
           }
-
-          entries.sort((a, b) => a.key.localeCompare(b.key));
-
-          entries.forEach((entry) => {
-            sortedData[entry.key] = entry.value;
-          });
+          
+          sortedData[category].sort();
         });
 
         const blob = new Blob([JSON.stringify(sortedData, null, 2)], { type: "application/json" });
@@ -676,16 +682,31 @@
           reader.onload = (e) => {
             try {
               const imported = JSON.parse(e.target.result);
-              for (const key in imported) {
-                if (imported.hasOwnProperty(key)) {
-                  localStorage.setItem(key, imported[key]);
-                }
+
+              const STORAGE_PREFIX = "stellar-blade";
+
+              if (imported.prefix !== STORAGE_PREFIX) {
+                alert(`This checklist file is for a different game or project ("${imported.prefix}"). Import aborted.`);
+                return;
               }
+
+              for (const category in imported) {
+                if (category === "prefix") continue;
+                const items = imported[category];
+                if (!Array.isArray(items)) continue;
+
+                items.forEach((slug) => {
+                  const key = `${STORAGE_PREFIX}-${category}-${slug}`;
+                  localStorage.setItem(key, "true");
+                });
+              }
+
               alert("Checklist progress imported! Refresh the page to see updates.");
             } catch (err) {
               alert("Failed to import: Invalid file format.");
             }
           };
+
           reader.readAsText(file);
         };
       }
