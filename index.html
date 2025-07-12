@@ -250,6 +250,26 @@
         padding-right: 8px; /* Avoid cutting off scrollbar */
         scrollbar-color: #383838 #1a1a1a;
       }
+      
+      @media (max-width: 768px) {
+      .content-container {
+        flex-direction: column;
+        margin-top: 20px;
+      }
+
+      .sidebar {
+        width: 100%;
+        height: auto;
+      }
+
+      .content-section {
+        width: 100%;
+      }
+
+      .scrollable-list {
+        max-height: none;
+      }
+    }
 
       /* Ensure content fills remaining space */
       .content-section {
