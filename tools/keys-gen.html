@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keys Gen</title>
+</head>
+<body>
+  <div style="padding: 1em;">
+    <h1>Keys Gen</h1>
+    <textarea id="textInput" rows="20" style="display: block;width: 100%;white-space:nowrap;"></textarea>
+    <textarea id="textOutput" rows="20" style="display: block;width: 100%;white-space:nowrap;margin-top: 1em;"></textarea>
+    <button id="btnProcess" type="button" style="margin-top: 1em;">Process</button>
+  </div>
+  <script type="module">
+    import { escapeKey } from '../js/utils.js';
+
+    function formatJsonRow(json) {
+      let text = '  ';
+      text += json.replaceAll('{"', '{ "')
+                  .replaceAll('":"', '": "')
+                  .replaceAll('","', '", "')
+                  .replaceAll('"}', '" }')
+                  .replaceAll('":[', '": [')
+                  .replaceAll('["', '[ "')
+                  .replaceAll('"]', '" ]')
+                  .replaceAll(']}', '] }')
+                  .replace(/:([\d]+),/g, ': $1, ')
+                  .replace(/[\s]+/g, ' ');
+      text += ',';
+      return text;
+    }
+
+    const btnProcess = document.getElementById('btnProcess');
+    btnProcess.addEventListener('click', () => {
+      const textInput = document.getElementById('textInput');
+      const textOutput = document.getElementById('textOutput');
+      const input = JSON.parse(textInput.value);
+
+      const genKeys = [];
+
+      const output = [ '[' ];
+      for (const i in input) {
+        if (typeof input[i] === 'string') {
+          let key = escapeKey(input[i]);
+          if (!!~genKeys.indexOf(key)) {
+            key += `-${i + 1}`;
+          }
+          genKeys.push(key);
+
+          const d = {
+            title: input[i],
+            key
+          };
+
+          output.push(formatJsonRow(JSON.stringify(d)));
+
+        } else if (typeof input[i] === 'object') {
+          
+          if (input[i].key) {
+            const d = {
+              ...input[i]
+            };
+
+            let key = escapeKey(input[i].key);
+            if (!!~genKeys.indexOf(key)) {
+              key += `-${escapeKey(input[i].location)}`;
+            }
+            genKeys.push(key);
+            d.key = key;
+            
+            output.push(formatJsonRow(JSON.stringify(d)));
+
+          } else {
+            const text = input[i].name || input[i].title;
+            const d = {};
+
+            if (input[i].name) {
+              d.name = input[i].name;
+            } else if (input[i].title) {
+              d.title = input[i].title;
+            }
+
+            let key = escapeKey(text);
+            if (!!~genKeys.indexOf(key)) {
+              key += `-${escapeKey(input[i].location)}`;
+            }
+            genKeys.push(key);
+            d.key = key;
+
+            for (const k of Object.keys(input[i])) {
+              if (!['name', 'title'].includes(k)) {
+                d[k] = input[i][k];
+              }
+            }
+            output.push(formatJsonRow(JSON.stringify(d)));
+          }
+
+        }
+      }
+
+      const lastIdx = output.length - 1;
+      output[lastIdx] = output[lastIdx].slice(0, -1);
+
+      output.push(']');
+
+      textOutput.value = output.join('\n');
+    });
+
+  </script>
+</body>
+</html>

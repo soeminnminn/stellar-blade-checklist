@@ -1,0 +1,738 @@
+<html lang="en">
+
+<head>
+  <meta name="google-site-verification" content="TM2JLp2z2ivvAbxCRiY7ekyg7shRkm4LJ23ywpbje1U" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stellar Blade Checklist</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      font-size: clamp(14px, 2vw, 16px);
+      margin: 20px;
+      background: #121212;
+      color: #ddd;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 0 auto 20px;
+      max-width: 1280px;
+      border-radius: 8px;
+    }
+
+    /* Container & Layout */
+    .content-container {
+      display: flex;
+      flex-direction: row;
+      /* horizontal layout by default */
+      align-items: flex-start;
+      gap: 20px;
+      max-width: 1280px;
+      width: 100%;
+      margin: 60px auto 0;
+      padding: 0 10px;
+    }
+
+    /* Content */
+    .content {
+      display: none;
+      border: none;
+      padding: 20px;
+      background: #212121;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 1280px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .content.active {
+      display: block;
+    }
+
+    .content ul {
+      color: #a0a0a0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 5px 0;
+    }
+
+    input[type="checkbox"]:checked+label {
+      text-decoration: line-through;
+      color: #555;
+    }
+
+    /* Tags */
+    .tag {
+      font-size: clamp(0.8em, 1.5vw, 0.95em);
+      padding: 4px 8px;
+      border-radius: 8px;
+      display: inline-block;
+      margin-left: 10px;
+      color: #121212;
+    }
+
+    .tagRequired {
+      background: #ff8a80;
+    }
+
+    .tagOptional {
+      background: #d8d8d4;
+    }
+
+    .tagGiver {
+      background: #80d8ff;
+    }
+
+    .tagNote {
+      color: #aaa;
+      background: #1a1a1a;
+      padding: 4px 8px;
+      border-radius: 8px;
+      display: block;
+      margin-left: 20px;
+      margin-top: 4px;
+      width: fit-content;
+      max-width: 100%;
+      word-wrap: break-word;
+    }
+
+    .tagXion {
+      background: #c9daf8;
+    }
+
+    .tagEidos7 {
+      background: #d9ead3;
+    }
+
+    .tagWasteland {
+      background: #fff2cc;
+    }
+
+    .tagMatrix11 {
+      background: #f4cccc;
+    }
+
+    .tagGreatDesert {
+      background: #d9d2e9;
+    }
+
+    .tagSpire4 {
+      background: #fce5cd;
+    }
+
+    .tagDLC {
+      background: #f7bf00;
+    }
+
+    /* Sidebar Styling */
+    .sidebar-wrapper {
+      width: 100%;
+      max-width: 324px;
+      height: 100%;
+      max-height: 496px;
+      flex-shrink: 0;
+    }
+
+    .sidebar {
+      background: #212121;
+      border-radius: 8px;
+      padding: 20px;
+      width: 100%;
+      color: #ccc;
+      font-size: clamp(0.9em, 1.5vw, 0.95em);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .profile-bg {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      background-image: url("../images/co9s0t.webp");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+
+    .sidebar h3 {
+      margin-top: 20px;
+      color: #a0a0a0;
+    }
+
+    .sidebar a {
+      color: #88c0d0;
+      text-decoration: none;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    /* Tabs & Buttons */
+    .tab-box {
+      background: #212121;
+      border-radius: 8px;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    .tab-box2 {
+      background: #212121;
+      border-radius: 8px;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    .tab-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: 100%;
+    }
+
+    .tab-buttons2 {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 8px;
+      overflow-x: auto;
+    }
+
+    .tab-button {
+      padding: 10px;
+      background: #2a2a2a;
+      color: #ccc;
+      border-radius: 6px;
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.2s;
+      flex-shrink: 0;
+    }
+
+    .tab-button:hover,
+    .tab-button.active {
+      background: #383838;
+      color: #f7bf00;
+    }
+
+    .scrollable-list {
+      margin-top: 12px;
+      max-height: 400px;
+      overflow-y: auto;
+      padding-right: 8px;
+      scrollbar-color: #383838 #1a1a1a;
+    }
+
+    .content-section {
+      flex-grow: 1;
+      width: 100%;
+    }
+
+    /* Responsive Layout */
+    @media (max-width: 768px) {
+      .content-container {
+        flex-direction: column;
+      }
+
+      .sidebar-wrapper {
+        margin-bottom: 75px;
+      }
+
+      .sidebar-wrapper,
+      .content-section {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<template id="github-link-template-faq">
+  <a href="https://github.com/Lepehn/stellar-blade-checklist" target="_blank"
+    style="color: #88c0d0; text-decoration: none;">
+    GitHub repository
+  </a>
+</template>
+<template id="github-link-template-footer">
+  <a href="https://github.com/Lepehn/stellar-blade-checklist" target="_blank"
+    style="color: #88c0d0; text-decoration: none;">
+    report an issue on GitHub
+  </a>
+</template>
+
+<body>
+  <h1>Stellar Blade Checklist</h1>
+  <div class="content-container">
+    <div class="sidebar-wrapper">
+      <div class="sidebar">
+        <div class="profile-bg"></div>
+      </div>
+      <div class="tab-sidebar">
+        <div class="tab-box">
+          <div class="tab-buttons">
+            <div class="tab-button" data-target="faq">FAQ</div>
+            <div class="tab-button" onclick="exportChecklist()">Export Progress</div>
+            <div class="tab-button" onclick="importChecklist()">Import Progress <input type="file" id="import-file"
+                style="display: none;" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Main Quests -->
+    <div class="content-section">
+      <div class="tab-box2">
+        <div class="tab-buttons2">
+          <div class="tab-button" data-target="main">Main Quests</div>
+          <div class="tab-button" data-target="side">Side Quests</div>
+          <div class="tab-button" data-target="request">Requests</div>
+          <div class="tab-button" data-target="can">Cans</div>
+        </div>
+      </div>
+      <div class="content active" id="main">
+        <h2>Main Quests</h2>
+        <div class="progress" id="main-Progress">Completed 0 / 0</div>
+        <div class="scrollable-list">
+          <ul id="main-Quests"></ul>
+        </div>
+      </div>
+
+      <!-- Side Quests -->
+      <div class="content" id="side">
+        <h2>Side Quests</h2>
+        <div class="progress" id="side-Progress">Completed 0 / 0</div>
+        <div class="scrollable-list">
+          <ul id="side-Quests"></ul>
+        </div>
+      </div>
+
+      <!-- Requests -->
+      <div class="content" id="request">
+        <h2>Requests</h2>
+        <div class="progress" id="request-Progress">Completed 0 / 0</div>
+        <div class="scrollable-list">
+          <ul id="requests"></ul>
+        </div>
+      </div>
+
+      <!-- Cans -->
+      <div class="content" id="can">
+        <h2>Cans</h2>
+        <div class="progress" id="can-Progress">Completed 0 / 0</div>
+        <div class="scrollable-list">
+          <div id="can-filters" class="tab-buttons2" style="margin-bottom: 10px;"></div>
+          <ul id="cans"></ul>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="content" id="faq">
+        <h3>FAQ</h3>
+        <p>This project was built by a fan and is inspired by similar checklists for other games like Dark Souls.</p>
+        <p>
+          <strong>I have feedback, how can I contribute?</strong><br />
+          You can visit the <span id="faq-link-container"></span> and report Issues or create a fork and submit a Pull
+          Request.
+        </p>
+        <p>
+          <strong>Is this a guide?</strong><br />
+          No, this is not a full walkthrough or guide. It simply helps you stay organized while playing by letting you
+          check off content as you complete it.
+        </p>
+        <p>
+          <strong>How does the checklist status get saved?</strong><br />
+          Your progress is saved locally in your browser using localStorage. This means your checklist will stay saved
+          as long as you don’t clear your browser data.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script>
+    document.querySelectorAll(".tab-button").forEach((button) => {
+      button.addEventListener("click", () => {
+        // Only run tab-switching code if data-target exists
+        const target = button.dataset.target;
+        if (!target) return;
+
+        document.querySelectorAll(".tab-button").forEach((btn) => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        document.querySelectorAll(".content").forEach((c) => c.classList.remove("active"));
+        document.getElementById(target).classList.add("active");
+      });
+    });
+
+    const mainQuests = [
+      { title: "7th Airborne Squad" },
+      { title: "Scavenger Adam" },
+      { title: "Xion, the Last Remaining City" },
+      { title: "Altess Levoire" },
+      { title: "Light of Hope" },
+      { title: "Alpha Signal" },
+      { title: "Hidden Truth" },
+      { title: "Abyss Levoire" },
+      { title: "Orcal's Testimony" },
+      { title: "Secret Garden" },
+      { title: "Eye of the Hurricane" },
+      { title: "Burning Xion" },
+      { title: "Last Fragment" },
+      { title: "Selection of Species" },
+      { title: "EVE Protocol" },
+    ];
+
+    const sideQuests = [
+      { title: "A Treasure with a Name" },
+      { title: "A United People Cannot Be Defeated" },
+      { title: "An Eye for an Eye, a Tooth for a Tooth" },
+      { title: "An Offer You Can't Refuse" },
+      { title: "An Unknown Present" },
+      { title: "Angel of Death" },
+      { title: "Barry and Wine" },
+      { title: "CnL - Communicate and Link" },
+      { title: "Encounter" },
+      { title: "End of the Nightmare" },
+      { title: "Fallen Angel" },
+      { title: "First Customer" },
+      { title: "I Won't Forget You" },
+      { title: "Incarceration" },
+      { title: "Keeping Secrets" },
+      { title: "Let There Be Light Again" },
+      { title: "Life of the Scavengers" },
+      { title: "Looking at You" },
+      { title: "Looking Glass" },
+      { title: "Lost Ark" },
+      { title: "Madama Machine" },
+      { title: "Memories in the Doll" },
+      { title: "Oblivion" },
+      { title: "Plan to Clean the Earth" },
+      { title: "Reboot!" },
+      { title: "Reboot!!!" },
+      { title: "Siren's Song" },
+      { title: "Stolen Treasure" },
+      { title: "Stubbornness" },
+      { title: "Taboo" },
+      { title: "The King of the Tunnel" },
+      { title: "The Scavenger's Story" },
+      { title: "The Words of Mother Sphere" },
+      { title: "Urgent Information" },
+    ];
+
+    const requests = [
+      { title: "An Unforgettable Fish Dish" },
+      { title: "Find the Cat" },
+      { title: "Generous Drop Pod" },
+      { title: "Legion's Secret Stash" },
+      { title: "Looking for My Brother" },
+      { title: "Lost Device" },
+      { title: "Lurker Hunt" },
+      { title: "Missing Husband" },
+      { title: "Missing Wife" },
+      { title: "Precious Treasure" },
+      { title: "Recruit Passcode Specialists" },
+      { title: "Simple Puzzle" },
+      { title: "Sleeping Beauty" },
+      { title: "Source of the Nightmare" },
+      { title: "The Last Wine" },
+      { title: "Time for Revenge" },
+      { title: "Valuable Cargo" },
+      { title: "Where's the Item" },
+      { title: "Wife's Medicine" },
+      { title: "Wife's Water Tank" },
+      { title: "Wisdom Puzzle" },
+    ];
+
+    const cans = [
+      { title: "Cryo Original", tag: "Eidos7" },
+      { title: "Cryo Zero", tag: "Wasteland" },
+      { title: "Pixie", tag: "Xion" },
+      { title: "Pixie Zero", tag: "Wasteland" },
+      { title: "Newfoundland Dry", tag: "Matrix11" },
+      { title: "Newfoundland Dry Zero", tag: "GreatDesert" },
+      { title: "Milky Pop", tag: "Spire4" },
+      { title: "Milky Pop Zero", tag: "GreatDesert" },
+      { title: "The Machinetta Americano", tag: "Xion" },
+      { title: "The Machinetta Cafe Latte", tag: "Wasteland" },
+      { title: "The Machinetta Caramel Machiatto", tag: "Xion" },
+      { title: "Cryo Cafe Original", tag: "Wasteland" },
+      { title: "Cryo Cafe Vanilla", tag: "Matrix11" },
+      { title: "Cryo Cafe Mocha", tag: "GreatDesert" },
+      { title: "The Haven Earl Grey", tag: "GreatDesert" },
+      { title: "The Haven Milk Tea", tag: "GreatDesert" },
+      { title: "The Haven Green Tea", tag: "Wasteland" },
+      { title: "GrainT Barley", tag: "Wasteland" },
+      { title: "GrainT Oolong", tag: "Xion" },
+      { title: "GrainT Corn", tag: "Wasteland" },
+      { title: "Nectar Orange", tag: "Wasteland" },
+      { title: "Nectar Grape", tag: "GreatDesert" },
+      { title: "Nectar Apple", tag: "Spire4" },
+      { title: "Nectar Cranberry", tag: "GreatDesert" },
+      { title: "Elixir Carrot", tag: "Eidos7" },
+      { title: "Elixir Green", tag: "Wasteland" },
+      { title: "Behemoth Red", tag: "Xion" },
+      { title: "Behemoth Green", tag: "Wasteland" },
+      { title: "Behemoth Black", tag: "GreatDesert" },
+      { title: "Liquid Fire", tag: "GreatDesert" },
+      { title: "Liquid Lightning", tag: "Spire4" },
+      { title: "Liquid Nuclear", tag: "GreatDesert" },
+      { title: "Potential Blast", tag: "Eidos7" },
+      { title: "Potential Tempest", tag: "Wasteland" },
+      { title: "Potential Frost", tag: "GreatDesert" },
+      { title: "Dionysus C", tag: "Xion" },
+      { title: "Moonwell", tag: "Spire4" },
+      { title: "Starwell", tag: "GreatDesert" },
+      { title: "Mountain Sparkle Mont Blanc", tag: "Xion" },
+      { title: "Mountain Sparkle Everest", tag: "GreatDesert" },
+      { title: "Mountain Sparkle Halla", tag: "Wasteland" },
+      { title: "Cryo The Clear", tag: "Wasteland" },
+      { title: "Cryo The Malt", tag: "GreatDesert" },
+      { title: "Bayern Hefe Weissbier", tag: "Wasteland" },
+      { title: "Bayern Weissbier Dunkel", tag: "Xion" },
+      { title: "Corsair Lager", tag: "Wasteland" },
+      { title: "Corsair Ale", tag: "Matrix11" },
+      { title: "Johnson's Highball Lemon", tag: "GreatDesert" },
+      { title: "Johnson's Highball Ginger", tag: "GreatDesert" },
+    ];
+
+    const locations = [
+      "All", "Xion", "Eidos7", "Wasteland", "Matrix11",
+      "GreatDesert", "Spire4"
+    ];
+
+    const canFilters = document.getElementById("can-filters");
+    locations.forEach((loc) => {
+      const btn = document.createElement("div");
+      btn.className = "tab-button";
+      btn.textContent = loc;
+      btn.addEventListener("click", () => filterCansByLocation(loc));
+      canFilters.appendChild(btn);
+    });
+
+    function createTag(text, className) {
+      const span = document.createElement("span");
+      span.className = `tag ${className}`;
+      span.textContent = text;
+      return span;
+    }
+
+    function createChecklistItem(item, type, container) {
+      const STORAGE_PREFIX = "stellar-blade";
+      const id = `${STORAGE_PREFIX}-${type}-${item.title.replace(/\s+/g, "-").toLowerCase()}`;
+      const li = document.createElement("li");
+
+      const checkbox = document.createElement("input");
+      checkbox.type = "checkbox";
+      checkbox.id = id;
+      checkbox.checked = localStorage.getItem(id) === "true";
+      const progressIdMap = {
+        "main-Quests": "main-Progress",
+        "side-Quests": "side-Progress",
+        "requests": "request-Progress",
+        "cans": "can-Progress",
+      };
+      checkbox.addEventListener("change", () => {
+        localStorage.setItem(id, checkbox.checked);
+        const progressId = progressIdMap[container.id];
+        if (progressId) updateProgress(progressId, type);
+      });
+
+      const label = document.createElement("label");
+      label.setAttribute("for", id);
+      label.textContent = ` ${item.title}`;
+
+      li.appendChild(checkbox);
+      li.appendChild(label);
+
+      if (item.giver) li.appendChild(createTag(item.giver, "tagGiver"));
+      if (item.note) li.appendChild(createTag(item.note, "tagNote"));
+
+      if (type === "boss") {
+        const className = item.tag === "Required" ? "tagRequired" : "tagOptional";
+        li.appendChild(createTag(item.tag, className));
+      }
+
+      if (type === "can") {
+        const tags = Array.isArray(item.tag) ? item.tag : [item.tag];
+        tags.forEach((t) => {
+          if (!t) return;
+          const className = `tag${t.replace(/\s+/g, "")}`;
+          li.appendChild(createTag(t, className));
+        });
+      }
+
+      container.appendChild(li);
+      return checkbox;
+    }
+
+    function filterCansByLocation(location) {
+      const canList = document.getElementById("cans");
+      canList.innerHTML = ""; // Clear current list
+
+      const filtered = location === "All"
+        ? cans
+        : cans.filter((can) => {
+          const tags = Array.isArray(can.tag) ? can.tag : [can.tag];
+          return tags.includes(location);
+        });
+
+      filtered.forEach((can) => createChecklistItem(can, "can", canList));
+      updateProgress("can-Progress", "can");
+
+      // Update active state on buttons
+      document.querySelectorAll("#can-filters .tab-button").forEach((btn) => {
+        btn.classList.remove("active");
+        if (btn.textContent === location) btn.classList.add("active");
+      });
+    }
+
+    // Update the progress text for a checklist
+    function updateProgress(progressId, type) {
+      const progressEl = document.getElementById(progressId);
+      if (!progressEl) return;
+
+      // Get the related list by converting progressId to listId
+      // e.g. main-progress → main-quests, boss-progress → baseGame-Bosses, weapon-progress → weapons
+      let listId;
+      if (progressId === "main-Progress") listId = "main-Quests";
+      else if (progressId === "side-Progress") listId = "side-Quests";
+      else if (progressId === "request-Progress") listId = "requests";
+      else if (progressId === "can-Progress") listId = "cans";
+      else return;
+
+      const list = document.getElementById(listId);
+      const checkboxes = list.querySelectorAll("input[type=checkbox]");
+
+      let completed = 0;
+      checkboxes.forEach((cb) => {
+        if (cb.checked) completed++;
+      });
+
+      progressEl.textContent = `Completed ${completed} / ${checkboxes.length}`;
+    }
+
+    const mainQuestList = document.getElementById("main-Quests");
+    mainQuests.forEach((q) => createChecklistItem(q, "main", mainQuestList));
+    updateProgress("main-Progress", "main");
+
+    const sideQuestList = document.getElementById("side-Quests");
+    sideQuests.forEach((s) => createChecklistItem(s, "side", sideQuestList));
+    updateProgress("side-Progress", "side");
+
+    const requestList = document.getElementById("requests");
+    requests.forEach((r) => createChecklistItem(r, "request", requestList));
+    updateProgress("request-Progress", "request");
+
+    const canList = document.getElementById("cans");
+    cans.forEach((r) => createChecklistItem(r, "can", canList));
+    updateProgress("can-Progress", "can");
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const faqTemplate = document.getElementById("github-link-template-faq");
+      const footerTemplate = document.getElementById("github-link-template-footer");
+
+      // Clone templates
+      const faqClone = faqTemplate.content.cloneNode(true);
+      const footerClone = footerTemplate.content.cloneNode(true);
+
+      // Insert into containers
+      document.getElementById("faq-link-container").appendChild(faqClone);
+      document.getElementById("footer-link-container").appendChild(footerClone);
+    });
+
+    function exportChecklist() {
+      const STORAGE_PREFIX = "stellar-blade";
+      const categories = ["main", "side", "request", "can"];
+
+      const sortedData = {
+        prefix: STORAGE_PREFIX,
+        main: [],
+        side: [],
+        request: [],
+        can: []
+      };
+
+      categories.forEach((category) => {
+        const entries = [];
+
+        for (let i = 0; i < localStorage.length; i++) {
+          const key = localStorage.key(i);
+          if (key.startsWith(`${STORAGE_PREFIX}-${category}-`) && localStorage.getItem(key) === "true") {
+            const cleanTitle = key.slice(`${STORAGE_PREFIX}-${category}-`.length);
+            sortedData[category].push(cleanTitle);
+          }
+        }
+
+        sortedData[category].sort();
+      });
+
+      const blob = new Blob([JSON.stringify(sortedData, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "stellar-blade-checklist.json";
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function importChecklist() {
+      const fileInput = document.getElementById("import-file");
+      fileInput.click();
+
+      fileInput.onchange = (event) => {
+        const file = event.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          try {
+            const imported = JSON.parse(e.target.result);
+
+            const STORAGE_PREFIX = "stellar-blade";
+
+            if (imported.prefix !== STORAGE_PREFIX) {
+              alert(`This checklist file is for a different game or project ("${imported.prefix}"). Import aborted.`);
+              return;
+            }
+
+            for (const category in imported) {
+              if (category === "prefix") continue;
+              const items = imported[category];
+              if (!Array.isArray(items)) continue;
+
+              items.forEach((slug) => {
+                const key = `${STORAGE_PREFIX}-${category}-${slug}`;
+                localStorage.setItem(key, "true");
+              });
+            }
+
+            alert("Checklist progress imported! Refresh the page to see updates.");
+          } catch (err) {
+            alert("Failed to import: Invalid file format.");
+          }
+        };
+
+        reader.readAsText(file);
+      };
+    }
+  </script>
+
+  <!-- Footer -->
+  <footer style="text-align: center; margin-top: 40px; font-size: 0.9em; color: #aaa;">Check out the project or <span
+      id="footer-link-container"></span>.</footer>
+</body>
+
+</html>

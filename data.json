@@ -1,0 +1,1986 @@
+{
+  "$completed": [
+    "comrades/adam-clothes/sewer-rat",
+    "comrades/drone-appearance/tactical-pack",
+    "comrades/lily-clothes/artemis",
+    "exterior/hair/planet-diving-tail",
+    "exterior/nano-suit/skin-suit"
+  ],
+  "locations": {
+    "title": "Locations",
+    "list": [
+      { "title": "Eidos 7", "key": "eidos-7" },
+      { "title": "Xion", "key": "xion" },
+      { "title": "Wasteland", "key": "wasteland" },
+      { "title": "Altess Levoire", "key": "altess-levoire" },
+      { "title": "Matrix 11", "key": "matrix-11" },
+      { "title": "Great Desert", "key": "great-desert" },
+      { "title": "Abyss Levoire", "key": "abyss-levoire" },
+      { "title": "Eidos 9", "key": "eidos-9" },
+      { "title": "Spire 4", "key": "spire-4" }
+    ]
+  },
+  "camp": {
+    "title": "Camp",
+    "list": {
+      "eidos-7": {
+        "title": "Eidos 7",
+        "list": [
+          { "name": "Silent Street Camp", "key": "silent-street-camp", "sector": "Silent Street" },
+          { "name": "Submerged Rooftops Camp", "key": "submerged-rooftops-camp", "sector": "Submerged" },
+          { "name": "Parking Tower Supply Camp", "key": "parking-tower-supply-camp", "sector": "Parking Garage" },
+          { "name": "Parking Tower Roof Camp", "key": "parking-tower-roof-camp", "sector": "Parking Tower" },
+          { "name": "Bottom of Parking Tower Camp", "key": "bottom-of-parking-tower-camp", "sector": "Parking Tower" },
+          { "name": "Abandoned Station Supply Camp", "key": "abandoned-station-supply-camp", "sector": "Abandoned Station" },
+          { "name": "Flooded Commercial Sector Camp", "key": "flooded-commercial-sector-camp", "sector": "Flooded Commercial Plaza" },
+          { "name": "Plaza Entryway Supply Camp", "key": "plaza-entryway-supply-camp", "sector": "Flooded Commercial Sector" },
+          { "name": "Path to the Victory Monument Camp", "key": "path-to-the-victory-monument-camp", "sector": "Flooded Commercial Sector" },
+          { "name": "Highway Bridge Camp", "key": "highway-bridge-camp", "sector": "Highway Bridge" },
+          { "name": "Construction Zone Supply Camp", "key": "construction-zone-supply-camp", "sector": "Construction Zone" },
+          { "name": "City Underground Sector Entrance Camp", "key": "city-underground-sector-entrance-camp", "sector": "City Underground Sector" },
+          { "name": "City Underground Sector Depths Camp", "key": "city-underground-sector-depths-camp", "sector": "Underground Sector" },
+          { "name": "Crater Supply Camp", "key": "crater-supply-camp", "sector": "Crater Area" }
+        ]
+      },
+      "xion": {
+        "title": "Xion",
+        "list": [
+          { "name": "Xion Helipad Supply Camp", "key": "xion-helipad-supply-camp", "sector": "Helipad" },
+          { "name": "Xion Presence Chamber Camp", "key": "xion-presence-chamber-camp", "sector": "Presence Chamber" }
+        ]
+      },
+      "wasteland": {
+        "title": "Wasteland",
+        "list": [
+          { "name": "The Hidden Path Supply Camp", "key": "the-hidden-path-supply-camp", "sector": "Entrance of Wasteland" },
+          { "name": "Barren Land Camp", "key": "barren-land-camp", "sector": "Barren Land" },
+          { "name": "Solar Tower Entrance Camp", "key": "solar-tower-entrance-camp", "sector": "Solar Tower" },
+          { "name": "The Western Great Canyon Supply Camp", "key": "the-western-great-canyon-supply-camp", "sector": "Great Canyon" },
+          { "name": "Central Great Canyon Camp", "key": "central-great-canyon-camp", "sector": "Great Canyon" },
+          { "name": "Central Scrap Plains Supply Camp", "key": "central-scrap-plains-supply-camp", "sector": "Scrap Plains" },
+          { "name": "Scrap Yard Entrance Supply Camp", "key": "scrap-yard-entrance-supply-camp", "sector": "Scrap Yard" },
+          { "name": "Bus Stop Camp", "key": "bus-stop-camp", "sector": "Scrap Plains" },
+          { "name": "Junkyard Supply Camp", "key": "junkyard-supply-camp", "sector": "Scrap Plains" },
+          { "name": "Eastern Great Canyon Camp", "key": "eastern-great-canyon-camp", "sector": "Scrap Plains" },
+          { "name": "Altess Levoire Entrance Supply Camp", "key": "altess-levoire-entrance-supply-camp", "sector": "Entrance of Altess Levoire" },
+          { "name": "Hidden Canyon Camp", "key": "hidden-canyon-camp", "sector": "Hidden Canyon" }
+        ]
+      },
+      "altess-levoire": {
+        "title": "Altess Levoire",
+        "list": [
+          { "name": "Altess Levoire Security Chamber Camp", "key": "altess-levoire-security-chamber-camp", "sector": "Long corridor of capsules" },
+          { "name": "Altess Levoire Sector AO7 Camp", "key": "altess-levoire-sector-ao7-camp", "sector": "Sector AO7" },
+          { "name": "Top-Secret Research Complex Camp", "key": "top-secret-research-complex-camp", "sector": "Top-Secret Research Complex area" },
+          { "name": "Deteriorated Lobby Camp", "key": "deteriorated-lobby-camp", "sector": "Second floor of the Deteriorated Lobby" },
+          { "name": "Bottom of the Heart of the Infection Supply Camp", "key": "bottom-of-the-heart-of-the-infection-supply-camp", "sector": "Heart of the Infection" }
+        ]
+      },
+      "matrix-11": {
+        "title": "Matrix 11",
+        "list": [
+          { "name": "Matrix 11 Tetrapod Pad Supply Camp", "key": "matrix-11-tetrapod-pad-supply-camp", "sector": "Matrix 11 landing pad" },
+          { "name": "Closed-Off Platform Workshop Camp", "key": "closed-off-platform-workshop-camp", "sector": "Closed Off Platform" },
+          { "name": "Collapsed Rail Bridge Camp", "key": "collapsed-rail-bridge-camp", "sector": "Collapsed Rail Bridge" },
+          { "name": "Twisted Iron Bridge Supply Camp", "key": "twisted-iron-bridge-supply-camp", "sector": "Collapsed Rail Bridge" },
+          { "name": "Drug Store Camp", "key": "drug-store-camp", "sector": "Collapsed Rail Bridge" },
+          { "name": "Rail Yard Supply Camp", "key": "rail-yard-supply-camp", "sector": "Rail Yard" },
+          { "name": "Rotten Labyrinth Camp", "key": "rotten-labyrinth-camp", "sector": "Rotten Labyrinth" },
+          { "name": "Abandoned Survivor Hideout Camp", "key": "abandoned-survivor-hideout-camp", "sector": "Rotten Labyrinth" },
+          { "name": "Temporary Armoury Supply Camp", "key": "temporary-armoury-supply-camp", "sector": "Rotten Labyrinth" },
+          { "name": "Juggernaut Boss Arena Camp", "key": "juggernaut-boss-arena-camp", "sector": "Juggernaut Boss Arena" },
+          { "name": "Train Graveyard Camp", "key": "train-graveyard-camp", "sector": "Train Graveyard" },
+          { "name": "Contaminated Water Purification Plant Entrance Supply Camp", "key": "contaminated-water-purification-plant-entrance-supply-camp", "sector": "Second Alpha Naytiba" }
+        ]
+      },
+      "great-desert": {
+        "title": "Great Desert",
+        "list": [
+          { "name": "Great Desert Tetrapod Landing Pad Supply Camp", "key": "great-desert-tetrapod-landing-pad-supply-camp", "sector": "Tetrapod Landing Pad" },
+          { "name": "Abandoned Overpass Supply Camp", "key": "abandoned-overpass-supply-camp", "sector": "Solar Tower" },
+          { "name": "Oasis Supply Camp", "key": "oasis-supply-camp", "sector": "Oasis" },
+          { "name": "Buried Ruins Outskirt Supply Camp", "key": "buried-ruins-outskirt-supply-camp", "sector": "East side of the Great Desert" },
+          { "name": "Middle Path between Ruins Camp", "key": "middle-path-between-ruins-camp", "sector": "Central Buried Ruins" },
+          { "name": "North of Buried Ruins Camp", "key": "north-of-buried-ruins-camp", "sector": "North Buried Ruins" },
+          { "name": "West of Buried Ruins Camp", "key": "west-of-buried-ruins-camp", "sector": "West Buried Ruins" },
+          { "name": "Debris-filled Entryway Supply Camp", "key": "debris-filled-entryway-supply-camp", "sector": "South Buried Ruins" },
+          { "name": "South of Buried Ruins Camp", "key": "south-of-buried-ruins-camp", "sector": "South Buried Ruins" },
+          { "name": "Way to the Solar Tower Supply Camp", "key": "way-to-the-solar-tower-supply-camp", "sector": "Collapsed Overpass" },
+          { "name": "Exile’s Passage Supply Camp", "key": "exile-passage-supply-camp", "sector": "The passage leading back to Xion" },
+          { "name": "Northern Great Desert Camp", "key": "northern-great-desert-camp", "sector": "South of the Great Desert Tetrapod" },
+          { "name": "Underground Secret Passage Camp", "key": "underground-secret-passage-camp", "sector": "North Buried Ruins" },
+          { "name": "Hypertube Camp", "key": "hypertube-camp", "sector": "Northern Desert" },
+          { "name": "Twin Rocks Supply Camp", "key": "twin-rocks-supply-camp", "sector": "Northern Desert" },
+          { "name": "Central Great Desert Supply Camp", "key": "central-great-desert-supply-camp", "sector": "Central Great Desert" },
+          { "name": "Crumbling Rooftop Supply Camp", "key": "crumbling-rooftop-supply-camp", "sector": "Centre of the Buried Ruins" },
+          { "name": "Abyss Levoire Entrance Supply Camp", "key": "abyss-levoire-entrance-supply-camp", "sector": "West of the entrance to Abyss Levoire" },
+          { "name": "Great Desert Outskirts Supply Camp", "key": "great-desert-outskirts-supply-camp", "sector": "West of the Great Desert" }
+        ]
+      },
+      "abyss-levoire": {
+        "title": "Abyss Levoire",
+        "list": [
+          { "name": "Ventilation Sector Supply Camp", "key": "ventilation-sector-supply-camp", "sector": "Emergency Exit" },
+          { "name": "Ventilation Shaft Camp", "key": "ventilation-shaft-camp", "sector": "Emergency Exit" },
+          { "name": "Capsule Containment Room Camp", "key": "capsule-containment-room-camp", "sector": "Capsule Containment Room tunnel" },
+          { "name": "Underground Passage Camp", "key": "underground-passage-camp", "sector": "Underground Passage" },
+          { "name": "Laser Room Camp", "key": "laser-room-camp", "sector": "Underground Passage" },
+          { "name": "Laboratory Ruins Camp", "key": "laboratory-ruins-camp", "sector": "Laboratory Ruins" },
+          { "name": "Heart of the Contamination Supply Camp", "key": "heart-of-the-contamination-supply-camp", "sector": "Heart of the Contamination" }
+        ]
+      },
+      "eidos-9": {
+        "title": "Eidos 9",
+        "list": [
+          { "name": "Sector 2 Camp", "key": "sector-2-camp", "sector": "Sector 2" },
+          { "name": "Sector 2 Parking Garage Camp", "key": "sector-2-parking-garage-camp", "sector": "Sector 2" },
+          { "name": "Submerged City Camp", "key": "submerged-city-camp", "sector": "Submerged City" },
+          { "name": "Submerged City Skyscraper Supply Camp", "key": "submerged-city-skyscraper-supply-camp", "sector": "Submerged City" },
+          { "name": "Sector 2 Highrise Camp", "key": "sector-2-highrise-camp", "sector": "Sector 2" },
+          { "name": "Atelier Camp", "key": "atelier-camp", "sector": "Atelier" }
+        ]
+      },
+      "spire-4": {
+        "title": "Spire 4",
+        "list": [
+          { "name": "Water Gate Camp", "key": "water-gate-camp", "sector": "Orca Space Complex" },
+          { "name": "Hypertube Entrance Supply Camp", "key": "hypertube-entrance-supply-camp", "sector": "Hypertube" },
+          { "name": "Space Logistics Complex Entrance Supply Camp", "key": "space-logistics-complex-entrance-supply-camp", "sector": "Space Logistics Complex" },
+          { "name": "Space Logistics Complex Shipping Container Facility Camp", "key": "space-logistics-complex-shipping-container-facility-camp", "sector": "Space Logistics Complex" },
+          { "name": "Space Logistics Center Supply Camp", "key": "space-logistics-center-supply-camp", "sector": "Space Logistics Complex" },
+          { "name": "Raphael Space Center Parking Lot Camp", "key": "raphael-space-center-parking-lot-camp", "sector": "Raphael Space Center" },
+          { "name": "Raphael Space Center Camp", "key": "raphael-space-center-camp", "sector": "Raphael Space Center" },
+          { "name": "Cargo Lift 121 Camp", "key": "cargo-lift-121-camp", "sector": "Cargo Lift" },
+          { "name": "Maintenance Sector Camp", "key": "maintenance-sector-camp", "sector": "Maintenance Sector" },
+          { "name": "Passenger Lift 161 Camp", "key": "passenger-lift-161-camp", "sector": "Passenger Lift 161" },
+          { "name": "Prestige Lounge Supply Camp", "key": "prestige-lounge-supply-camp", "sector": "Prestige Lounge" },
+          { "name": "Central Core Entrance Supply Camp", "key": "central-core-entrance-supply-camp", "sector": "High Orbit Sation" },
+          { "name": "Nest Supply Camp", "key": "nest-supply-camp", "sector": "Nest" }
+        ]
+      }
+    }
+  },
+  "missions": {
+    "title": "Missions",
+    "list": {
+      "main-missions": {
+        "title": "Missions",
+        "list": [
+            { "title": "7th Airborne Squad", "key": "7th-airborne-squad", "location": "Eidos 7", "notes": "" },
+            { "title": "Scavenger Adam", "key": "scavenger-adam", "location": "Eidos 7", "notes": "" },
+            { "title": "Xion, The Last Remaining City", "key": "xion-the-last-remaining-city", "location": "Xion", "notes": "" },
+            { "title": "Altess Levaire", "key": "altess-levaire", "location": "Wasteland", "notes": "" },
+            { "title": "Light of Hope", "key": "light-of-hope", "location": "Xion", "notes": "" },
+            { "title": "Alpha Signal", "key": "alpha-signal", "location": "Matrix 11", "notes": "" },
+            { "title": "Hidden Truth", "key": "hidden-truth", "location": "Xion", "notes": "" },
+            { "title": "Abyss Levoire", "key": "abyss-levoire", "location": "Great Desert", "notes": "" },
+            { "title": "Orcal’s Testimony", "key": "orcal-testimony", "location": "Xion", "notes": "" },
+            { "title": "Secret Garden", "key": "secret-garden", "location": "Eidos 9", "notes": "Only on `Making New Memories` path" },
+            { "title": "Eye of the Hurricane", "key": "eye-of-the-hurricane", "location": "Spire 4", "notes": "" },
+            { "title": "Burning Xion", "key": "burning-xion", "location": "Xion", "notes": "" },
+            { "title": "Last Fragment", "key": "last-fragment", "location": "Wasteland", "notes": "" },
+            { "title": "Selection of Species", "key": "selection-of-species", "location": "Nest", "notes": "" },
+            { "title": "EVE Protocol", "key": "eve-protocol", "location": "Nest", "notes": "" }
+        ]
+      },
+      "side-quests": {
+        "title": "Side Quest",
+        "list": [
+          { "title": "The Scavenger’s Story", "key": "the-scavenger-story", "location": "Xion", "notes": "Talk to Kaya after reaching the city of Xion." },
+          { "title": "Urgent Information", "key": "urgent-information", "location": "Xion", "notes": "Talk to Hugh at the entrance of Xion City. Available after completing `The Scavenger’s Story` Side Quest." },
+          { "title": "Looking at You", "key": "looking-at-you", "location": "Xion", "notes": "Talk to Su after reaching the city of Xion." },
+          { "title": "First Customer", "key": "first-customer", "location": "Xion", "notes": "Talk to Kasim. Available after accepting `Urgent Information` Sidequest." },
+          { "title": "Life of the Scavengers", "key": "life-of-the-scavengers", "location": "Xion", "notes": "Talk to Cyrus inside The Last Cup bar in Xion" },
+          { "title": "Angel of Death", "key": "angel-of-death", "location": "Xion", "notes": "Talk to the Scavenger near the Alley" },
+          { "title": "Stolen Treasure", "key": "stolen-treasure", "location": "Xion", "notes": "Talk to Lyle inside his shop" },
+          { "title": "The Words of Mother Sphere", "key": "the-words-of-mother-sphere", "location": "Xion", "notes": "Talk to Francis at the Library in Xion" },
+          { "title": "Oblivion", "key": "oblivion", "location": "Xion", "notes": "Talk to the girl found on the small house located under the bridge at the entrace of Xion." },
+          { "title": "Taboo", "key": "taboo", "location": "Xion", "notes": "Talk to Luther which is found near the bridge leading to the Wastelands in Xion" },
+          { "title": "An Unknown Present", "key": "an-unknown-present", "location": "Xion", "notes": "Encounter Inn just behind Gwen’s Salon." },
+          { "title": "Keeping Secrets", "key": "keeping-secrets", "location": "Xion", "notes": "Talk to Enya inside the bar in Xion." },
+          { "title": "A Treasure with a Name", "key": "a-treasure-with-a-name", "location": "Xion", "notes": "Talk to June while in Xion" },
+          { "title": "Memories in the Doll", "key": "memories-in-the-doll", "location": "Xion", "notes": "Talk to Jett in the house full of teddy bears." },
+          { "title": "An Eye for an Eye, a Tooth for a Tooth", "key": "an-eye-for-an-eye-a-tooth-for-a-tooth", "location": "Xion", "notes": "Talk to Min, one of the guards near the entrance of the elevator leading to the Great Desert" },
+          { "title": "The King of the Tunnel", "key": "the-king-of-the-tunnel", "location": "Xion", "notes": "Talk to Cedric near the vending machine on the alley around Sisters’ Junk in Xion" },
+          { "title": "Encounter", "key": "encounter", "location": "Xion", "notes": "Talk to Kaya after completing the Alpha SIgnal main mission. You must also have max affection with Kaya to start the quest." },
+          { "title": "An Offer You Can’t Refuse", "key": "an-offer-you-cant-refuse", "location": "Xion", "notes": "Talk to Roxanne after completing the `Alpha Signal` main mission." },
+          { "title": "I Won’t Forget You", "key": "i-wont-forget-you", "location": "Xion", "notes": "Talk to Beatrice who is idling by at the cross roads on the bridge leading to xion, the tetrapod, and the road to wastelands." },
+          { "title": "Lost Ark", "key": "lost-ark", "location": "Xion", "notes": "Talk to Mann while on the Presence Chamber." },
+          { "title": "A United People Cannot be Defeated", "key": "a-united-people-cannot-be-defeated", "location": "Xion", "notes": "Interact with the record at the table at the small restaurant in Xion." },
+          { "title": "Let There Be Light Again", "key": "let-there-be-light-again", "location": "Xion", "notes": "Talk to Francis at the library in Xion" },
+          { "title": "Madama Machine", "key": "madama-machine", "location": "Xion", "notes": "After completing `CNL - Communicate and Link`, return to the Tetrapod. Su and Enya will approach you and initiate the quest." },
+          { "title": "Stubbornness", "key": "stubbornness", "location": "Xion", "notes": "Talk to Barry in his still at Xion." },
+          { "title": "Barry and Wine", "key": "barry-and-wine", "location": "Xion", "notes": "Talk to Barry in his still at Xion." },
+          { "title": "Barry in Trouble", "key": "barry-in-trouble", "location": "Xion", "notes": "Talk to Barry in his still at Xion." },
+          { "title": "Reboot!", "key": "reboot-wasteland", "location": "Wasteland", "notes": "Interact with the supply camp on the entrance of the wasteland from Xion." },
+          { "title": "Plan to Clean the Earth", "key": "plan-to-clean-the-earth", "location": "Wasteland", "notes": "Approach the Scrap Yard and Listen to the Distress Signal" },
+          { "title": "CnL - Communicate and Link", "key": "cnl-communicate-and-link", "location": "Wasteland", "notes": "Improve D1G-g2r’s affinity to 2 and listen to his “Fantabolous Theory”." },
+          { "title": "Incarceration", "key": "incarceration", "location": "Wasteland", "notes": "Talk to Jonny who’s hiding in one of the containers in the Eastern Great Canyon." },
+          { "title": "Reboot!!!", "key": "reboot-great-desert", "location": "Great Desert", "notes": "" },
+          { "title": "Looking Glass", "key": "looking-glass", "location": "Great Desert", "notes": "" },
+          { "title": "Fallen Angel", "key": "fallen-angel", "location": "Great Desert", "notes": "" },
+          { "title": "Siren’s Song", "key": "siren-song", "location": "Eidos 7", "notes": "" },
+          { "title": "End of the Nightmare", "key": "end-of-the-nightmare", "location": "Eidos 7", "notes": "" }
+        ]
+      },
+      "bulletin-board": {
+        "title": "Bulletin Board Request",
+        "list": [
+          { "title": "Sleeping Beauty", "key": "sleeping-beauty", "notes": "Unlocked by default" },
+          { "title": "Find the Cat", "key": "find-the-cat", "notes": "Unlocked by default" },
+          { "title": "Looking for My Brother", "key": "looking-for-my-brother", "notes": "Unlocked by default" },
+          { "title": "Simple Puzzle", "key": "simple-puzzle", "notes": "Unlocked by default" },
+          { "title": "Missing Husband", "key": "missing-husband", "notes": "Unlocked by default" },
+          { "title": "Wisdom Puzzle", "key": "wisdom-puzzle", "notes": "Unlocked after giving the 2nd Hyper Cell" },
+          { "title": "Time for Revenge", "key": "time-for-revenge", "notes": "Unlocked after completing `Missing Wife`" },
+          { "title": "Secret Request ", "key": "secret-request", "notes": "Unlocked after completing `Missing Wife`, Automatically refused" },
+          { "title": "Generous Drop Pod", "key": "generous-drop-pod", "notes": "Unlocked after giving the 2nd Hyper Cell" },
+          { "title": "Legion’s Secret Stash", "key": "legion-secret-stash", "notes": "Unlocked after giving the 2nd Hyper Cell" },
+          { "title": "Missing Wife", "key": "missing-wife", "notes": "Unlocked after completing `Sleeping Beauty`" },
+          { "title": "Lost Device", "key": "lost-device", "notes": "Unlocked after completing `Sleeping Beauty`" },
+          { "title": "Source of the Nightmare", "key": "source-of-the-nightmare", "notes": "Unlocked after completing `Wisdom Puzzle`" },
+          { "title": "Wife’s Medicine", "key": "wife-medicine", "notes": "Unlocked after completing `Wisdom Puzzle`" },
+          { "title": "Recruit Passcode Specialists", "key": "recruit-passcode-specialists", "notes": "Acceptable in the request board after obtaining a `Chapter of Trial` document." },
+          { "title": "Valuable Cargo", "key": "valuable-cargo", "notes": "Unlocked after completing `Lost Device`" },
+          { "title": "The Diary’s Revenge ", "key": "the-diary-revenge", "notes": "Automatically refused, Unlocked after giving the 2nd Hyper Cell" },
+          { "title": "Where’s the Item", "key": "where-the-item", "notes": "Unlocked after completing `Alpha Signal`" },
+          { "title": "Lurker Hunt", "key": "lurker-hunt", "notes": "Unlocked after completing `Alpha Signal`" },
+          { "title": "Precious Treasure", "key": "precious-treasure", "notes": "Unlocked after completing `Where’s the Item`" },
+          { "title": "The Last Wine", "key": "the-last-wine", "notes": "Unlocked after giving the 2nd Hyper Cell" },
+          { "title": "Wife’s Water Tank", "key": "wife-water-tank", "notes": "Unlocked after the `Looking Glass` sidequest" },
+          { "title": "An Unforgettable Fish Dish", "key": "an-unforgettable-fish-dish", "notes": "Unlocked after the `Wife’s Water Tank` sidequest" },
+          { "title": "Fish Research", "key": "fish-research", "notes": "Unlocked after the Unforgettable `Fish Dish` sidequest" },
+          { "title": "A Gift for a Fishing Maniac", "key": "a-gift-for-a-fishing-maniac", "notes": "Unlocked after the `Fish Research` sidequest" },
+          { "title": "Where Is the Fantastic Bait?", "key": "where-is-the-fantastic-bait", "notes": "Unlocked after the A Gift for a `Fishing Maniac` sidequest" },
+          { "title": "The Fish of Legends", "key": "the-fish-of-legends", "notes": "Unlocked after Where is the `Fantastic Bait` sidequest" },
+          { "title": "Photography Club", "key": "photography-club", "notes": "Unlocked by default. Photo Challenge: `Memories of Xion`" },
+          { "title": "Like Butterflies", "key": "like-butterflies", "notes": "Unlocked after completing the Photography Club. Photo Challenge: `Butterflies in the Wasteland`" },
+          { "title": "Cat Photo Exhibition", "key": "cat-photo-exhibition", "notes": "Photo Challenge: `Cats in the Cold City`" },
+          { "title": "Pisces", "key": "pisces", "notes": "Photo Challenge: `Fish in the Great Desert`" }
+        ]
+      },
+      "nikke-dlc": {
+        "name": "NIKKE - DLC",
+        "title": "Stellar Blade X GODDESS OF VICTORY: NIKKE",
+        "list": [
+          { "title": "Scarlet and Volt’s Situation", "key": "scarlet-and-volt-situation", "location": "Wasteland" },
+          { "title": "Scarlet and Volt’s Predicament", "key": "scarlet-and-volt-predicament", "location": "Wasteland" },
+          { "title": "Scarlet and Volt’s Plight", "key": "scarlet-and-volt-plight", "location": "Great Desert" },
+          { "title": "Scarlet and Volt’s Circumstance", "key": "scarlet-and-volt-circumstance", "location": "Great Desert" },
+          { "title": "Scarlet and Volt’s Quagmire", "key": "scarlet-and-volt-quagmire", "location": "Great Desert" }
+        ]
+      },
+      "endings": {
+        "title": "Endings",
+        "list": [
+          { "title": "Return to the Colony", "key": "return-to-the-colony", "notes": "Eve and Lily will meet Mother Sphere" },
+          { "title": "Cost of Lost Memories", "key": "cost-of-lost-memories", "notes": "Lily will die and Mother Sphere will send an army against Eve" },
+          { "title": "Making New Memories", "key": "making-new-memories", "notes": "Lily will be alive. Eve will become victorious against Mother Sphere’s army" }
+        ]
+      }
+    }
+  },
+  "cans": {
+    "title": "Can",
+    "list": [
+      { "title": "Potential Blast", "key": "potential-blast", "serial":33, "location": "Eidos 7", "sector": "Construction Area" },
+      { "title": "Elixir Carrot", "key": "elixir-carrot", "serial": 25, "location": "Eidos 7", "sector": "Flooded Commercial Sector" },
+      { "title": "Cryo Original", "key": "cryo-original", "serial": 1, "location": "Eidos 7", "sector": "Flooded Commercial Sector" },
+      { "title": "Pixie", "key": "pixie", "serial": 3, "location": "Xion", "sector": "North Xion" },
+      { "title": "The Machinetta Americano", "key": "the-machinetta-americano", "serial": 9, "location": "Xion", "sector": "Central section of Xion" },
+      { "title": "The Machinetta Caramel Macchiato", "key": "the-machinetta-caramel-macchiato", "serial": 11, "location": "Xion", "sector": "North Xion" },
+      { "title": "GrainT Oolong", "key": "graint-oolong", "serial": 19, "location": "Xion", "sector": "South section of Xion" },
+      { "title": "Behemoth Red", "key": "behemoth-red", "serial": 27, "location": "Xion", "sector": "Central section of Xion" },
+      { "title": "Dionysus C", "key": "dionysus-c", "serial": 36, "location": "Xion", "sector": "East Xion" },
+      { "title": "Mountain Sparkle Mont Blanc", "key": "mountain-sparkle-mont-blanc", "serial": 39, "location": "Xion", "sector": "West Xion" },
+      { "title": "Bayern Weissbier Dunkel", "key": "bayern-weissbier-dunkel", "serial": 45, "location": "Xion", "sector": "East Xion" },
+      { "title": "Cryo Zero", "key": "cryo-zero", "serial": 2, "location": "Wasteland", "sector": "Great Canyon" },
+      { "title": "Pixie Zero", "key": "pixie-zero", "serial": 4, "location": "Wasteland", "sector": "Scrap Plains" },
+      { "title": "The Machinetta Cafe Latte", "key": "the-machinetta-cafe-latte", "serial": 10, "location": "Wasteland", "sector": "Power Plant" },
+      { "title": "Cryo Cafe Original", "key": "cryo-cafe-original", "serial": 12, "location": "Wasteland", "sector": "Great Canyon area" },
+      { "title": "The Haven Green Tea", "key": "the-haven-green-tea", "serial": 17, "location": "Wasteland", "sector": "Solar Tower" },
+      { "title": "GrainT Barley", "key": "graint-barley", "serial": 18, "location": "Wasteland", "sector": "Path to the Altess Levoire" },
+      { "title": "GrainT Corn", "key": "graint-corn", "serial": 20, "location": "Wasteland", "sector": "South Barren Land" },
+      { "title": "Nectar Orange", "key": "nectar-orange", "serial": 21, "location": "Wasteland", "sector": "Great Canyon" },
+      { "title": "Elixir Green", "key": "elixir-green", "serial": 26, "location": "Wasteland", "sector": "Scrap Plains" },
+      { "title": "Behemoth Green", "key": "behemoth-green", "serial": 28, "location": "Wasteland", "sector": "Great Canyon area" },
+      { "title": "Potential Tempest", "key": "potential-tempest", "serial": 34, "location": "Wasteland", "sector": "Solar Tower" },
+      { "title": "Mountain Sparkle Halla", "key": "mountain-sparkle-halla", "serial": 41, "location": "Wasteland", "sector": "Great Canyon" },
+      { "title": "Cryo The Clear", "key": "cryo-the-clear", "serial": 42, "location": "Wasteland", "sector": "Forbidden Area" },
+      { "title": "Bayern Hefe Weissbier", "key": "bayern-hefe-weissbier", "serial": 44, "location": "Wasteland", "sector": "Wasteland Basin" },
+      { "title": "Corsair Lager", "key": "corsair-lager", "serial": 46, "location": "Wasteland", "sector": "Scrap Plains" },
+      { "title": "Cryo Cafe Vanilla", "key": "cryo-cafe-vanilla", "serial": 13, "location": "Matrix 11", "sector": "Rail Yard" },
+      { "title": "New Foundland Dry", "key": "new-foundland-dry", "serial": 5, "location": "Matrix 11", "sector": "Juggernaut Boss arena" },
+      { "title": "Corsair Ale", "key": "corsair-ale", "serial": 47, "location": "Matrix 11", "sector": "Train Graveyard" },
+      { "title": "Newfoundland Dry Zero", "key": "newfoundland-dry-zero", "serial": 6, "location": "Great Desert", "sector": "Central Great Desert" },
+      { "title": "Milky Pop Zero", "key": "milky-pop-zero", "serial": 8, "location": "Great Desert", "sector": "West of the Tetrapod landing pod" },
+      { "title": "Cryo Cafe Mocha", "key": "cryo-cafe-mocha", "serial": 14, "location": "Great Desert", "sector": "Northern Great Desert" },
+      { "title": "Haven Earl Grey", "key": "haven-earl-grey", "serial": 15, "location": "Great Desert", "sector": "Broken Hypertube" },
+      { "title": "The Haven Milk Tea", "key": "the-haven-milk-tea", "serial": 16, "location": "Great Desert", "sector": "Central Buried Ruins" },
+      { "title": "Nectar Grape", "key": "nectar-grape", "serial": 22, "location": "Great Desert", "sector": "Oasis" },
+      { "title": "Nectar Cranberry", "key": "nectar-cranberry", "serial": 24, "location": "Great Desert", "sector": "Central Great Desert" },
+      { "title": "Behemoth Black", "key": "behemoth-black", "serial": 29, "location": "Great Desert", "sector": "Central Buried Ruins" },
+      { "title": "Liquid Fire", "key": "liquid-fire", "serial": 30, "location": "Great Desert", "sector": "North Buried Ruins" },
+      { "title": "Liquid Nuclear", "key": "liquid-nuclear", "serial": 32, "location": "Great Desert", "sector": "Central Buried Ruins" },
+      { "title": "Potential Frost", "key": "potential-frost", "serial": 35, "location": "Great Desert", "sector": "West Buried Ruins" },
+      { "title": "Starwell", "key": "starwell", "serial": 38, "location": "Great Desert", "sector": "Oasis" },
+      { "title": "Mountain Sparkle Everest", "key": "mountain-sparkle-everest", "serial": 40, "location": "Great Desert", "sector": "Central Buried Ruins" },
+      { "title": "Cryo the Malt", "key": "cryo-the-malt", "serial": 43, "location": "Great Desert", "sector": "West Buried Ruins area" },
+      { "title": "Johnson’s Highball Lemon", "key": "johnson-highball-lemon", "serial": 48, "location": "Great Desert", "sector": "Southeast corner of the Great Desert" },
+      { "title": "Johnson’s Highball Ginger", "key": "johnson-highball-ginger", "serial": 49, "location": "Great Desert", "sector": "Central Buried Ruins" },
+      { "title": "Milky Pop ", "key": "milky-pop", "serial": 7, "location": "Spire 4", "sector": "Hypertube" },
+      { "title": "Liquid Lightning", "key": "liquid-lightning", "serial": 31, "location": "Spire 4", "sector": "Space Logistics Complex" },
+      { "title": "Nectar Apple", "key": "nectar-apple", "serial": 23, "location": "Spire 4", "sector": "Raphael's Space Centre" },
+      { "title": "Moonwell", "key": "moonwell", "serial": 37, "location": "Spire 4", "sector": "Maintenance Sector" }
+    ]
+  },
+  "exospine": {
+    "title": "Exospine",
+    "list": [
+      { 
+        "name": "Beta Trace-Type Exospine", 
+        "key": "beta-trace-type-exospine", 
+        "variants": [ 
+          { "key": "mk1", "title": "Mk1" }, 
+          { "key": "mk2", "title": "Mk2" }
+        ]
+      },
+      { 
+        "name": "Burst Trace-Type Exospine", 
+        "key": "burst-trace-type-exospine", 
+        "variants": [ 
+          { "key": "mk1", "title": "Mk1" }, 
+          { "key": "mk2", "title": "Mk2" }
+        ]
+      },
+      { 
+        "name": "Camouflage-Type Exospine", 
+        "key": "camouflage-type-exospine", 
+        "variants": [ 
+          { "key": "mk1", "title": "Mk1" }, 
+          { "key": "mk2", "title": "Mk2" }
+        ]
+      },
+      { 
+        "name": "Chain-Type Exospine", 
+        "key": "chain-type-exospine",
+        "variants": [ 
+          { "key": "mk1", "title": "Mk1" }, 
+          { "key": "mk2", "title": "Mk2" }
+        ]
+      },
+      { 
+        "name": "Eagle Eye-Type Exospine", 
+        "key": "eagle-eye-type-exospine", 
+        "variants": [ 
+          { "key": "mk1", "title": "Mk1" }, 
+          { "key": "mk2", "title": "Mk2" }
+        ]
+      },
+      { 
+        "name": "Grenadier-Type Exospine", 
+        "key": "grenadier-type-exospine", 
+        "variants": [ 
+          { "key": "mk1", "title": "Mk1" }, 
+          { "key": "mk2", "title": "Mk2" }
+        ]
+      },
+      { 
+        "name": "Impact-Type Exospine", 
+        "key": "impact-type-exospine", 
+        "variants": [ 
+          { "key": "mk1", "title": "Mk1" }, 
+          { "key": "mk2", "title": "Mk2" }
+        ]
+      },
+      { 
+        "name": "Judgement-Type Exospine", 
+        "key": "judgement-type-exospine", 
+        "variants": [ 
+          { "key": "mk1", "title": "Mk1" }, 
+          { "key": "mk2", "title": "Mk2" }
+        ]
+      },
+      { 
+        "name": "Protection-Type Exospine", 
+        "key": "protection-type-exospine", 
+        "variants": [ 
+          { "key": "mk1", "title": "Mk1" }, 
+          { "key": "mk2", "title": "Mk2" }
+        ]
+      },
+      { 
+        "name": "Recovery-Type Exospine", 
+        "key": "recovery-type-exospine", 
+        "variants": [ 
+          { "key": "mk1", "title": "Mk1" }, 
+          { "key": "mk2", "title": "Mk2" }
+        ]
+      },
+      { 
+        "name": "Reflex-Type Exospine", 
+        "key": "reflex-type-exospine", 
+        "variants": [ 
+          { "key": "mk1", "title": "Mk1" }, 
+          { "key": "mk2", "title": "Mk2" }
+        ]
+      },
+      { 
+        "name": "Suppression-Type Exospine", 
+        "key": "suppression-type-exospine", 
+        "variants": [ 
+          { "key": "mk1", "title": "Mk1" }, 
+          { "key": "mk2", "title": "Mk2" }
+        ]
+      }
+    ]
+  },
+  "gear": {
+    "title": "Gear",
+    "list": [
+      {
+        "name": "Beta Charge Gear",
+        "key": "beta-charge-gear",
+        "variants": [
+          { "key": "1star", "title": "★" },
+          { "key": "2stars", "title": "★★" },
+          { "key": "3stars", "title": "★★★" },
+          { "key": "mk2-1star", "title": "Mk2 ★" },
+          { "key": "mk2-2stars", "title": "Mk2 ★★" },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+        ]
+      },
+      {
+        "name": "Beta Enhancement Gear",
+        "key": "beta-enhancement-gear",
+        "variants": [
+          { "key": "1star", "title": "★" },
+          { "key": "2stars", "title": "★★" },
+          { "key": "3stars", "title": "★★★" },
+          { "key": "mk2-1star", "title": "Mk2 ★" },
+          { "key": "mk2-2stars", "title": "Mk2 ★★" },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+        ]
+      },
+      {
+        "name": "Beta Recovery Gear",
+        "key": "beta-recovery-gear",
+        "variants": [
+          { "key": "1star", "title": "★" },
+          { "key": "2stars", "title": "★★" },
+          { "key": "3stars", "title": "★★★" },
+          { "key": "mk2-1star", "title": "Mk2 ★" },
+          { "key": "mk2-2stars", "title": "Mk2 ★★" },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+        ]
+      },
+      {
+        "name": "Burst Charge Gear",
+        "key": "burst-charge-gear",
+        "variants": [
+          { "key": "1star", "title": "★" },
+          { "key": "2stars", "title": "★★" },
+          { "key": "3stars", "title": "★★★" },
+          { "key": "mk2-1star", "title": "Mk2 ★" },
+          { "key": "mk2-2stars", "title": "Mk2 ★★" },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+        ]
+      },
+      {
+        "name": "Burst Enhancement Gear",
+        "key": "burst-enhancement-gear",
+        "variants": [
+          { "key": "1star", "title": "★" },
+          { "key": "2stars", "title": "★★" },
+          { "key": "3stars", "title": "★★★" },
+          { "key": "mk2-1star", "title": "Mk2 ★" },
+          { "key": "mk2-2stars", "title": "Mk2 ★★" },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+        ]
+      },
+      {
+        "name": "Burst Expansion Gear",
+        "key": "burst-expansion-gear",
+        "variants": [
+          { "key": "2stars", "title": "★★" },
+          { "key": "3stars", "title": "★★★" },
+          { "key": "mk2-2stars", "title": "Mk2 ★★" },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+        ]
+      },
+      {
+        "name": "Burst Recovery Gear",
+        "key": "burst-recovery-gear",
+        "variants": [
+          { "key": "1star", "title": "★" },
+          { "key": "2stars", "title": "★★" },
+          { "key": "3stars", "title": "★★★" },
+          { "key": "mk2-1star", "title": "Mk2 ★" },
+          { "key": "mk2-2stars", "title": "Mk2 ★★" },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+        ]
+      },
+      {
+        "name": "Combat Continuation Gear",
+        "key": "combat-continuation-gear",
+        "variants": [
+          { "key": "1star", "title": "★" },
+          { "key": "2stars", "title": "★★" },
+          { "key": "3stars", "title": "★★★" },
+          { "key": "mk2-1star", "title": "Mk2 ★" },
+          { "key": "mk2-2stars", "title": "Mk2 ★★" },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+        ]
+      },
+      {
+        "name": "Combat Supply Gear",
+        "key": "combat-supply-gear",
+        "variants": [
+          { "key": "1star", "title": "★" },
+          { "key": "2stars", "title": "★★" },
+          { "key": "3stars", "title": "★★★" },
+          { "key": "mk2-1star", "title": "Mk2 ★" },
+          { "key": "mk2-2stars", "title": "Mk2 ★★" },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+        ]
+      },
+      {
+        "name": "Combo Attack Enhancement Gear",
+        "key": "combo-attack-enhancement-gear",
+        "variants": [
+          { "key": "1star", "title": "★" },
+          { "key": "2stars", "title": "★★" },
+          { "key": "3stars", "title": "★★★" },
+          { "key": "mk2-1star", "title": "Mk2 ★" },
+          { "key": "mk2-2stars", "title": "Mk2 ★★" },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+        ]
+      },
+      {
+        "name": "Crit Boost Gear",
+        "key": "crit-boost-gear",
+        "variants": [
+          { "key": "1star", "title": "★" },
+          { "key": "2stars", "title": "★★" },
+          { "key": "3stars", "title": "★★★" },
+          { "key": "mk2-1star", "title": "Mk2 ★" },
+          { "key": "mk2-2stars", "title": "Mk2 ★★" },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+        ]
+      },
+      {
+        "name": "Crit Enhancement Gear",
+        "key": "crit-enhancement-gear",
+        "variants": [
+          { "key": "1star", "title": "★" },
+          { "key": "2stars", "title": "★★" },
+          { "key": "3stars", "title": "★★★" },
+          { "key": "mk2-1star", "title": "Mk2 ★" },
+          { "key": "mk2-2stars", "title": "Mk2 ★★" },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+        ]
+      },
+      {
+        "name": "Double Edged Gear",
+        "key": "double-edged-gear",
+        "variants": [
+          { "key": "1star", "title": "★" },
+          { "key": "2stars", "title": "★★" },
+          { "key": "3stars", "title": "★★★" },
+          { "key": "mk2-1star", "title": "Mk2 ★" },
+          { "key": "mk2-2stars", "title": "Mk2 ★★" },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+        ]
+      },
+      {
+        "name": "Fixed Damage Gear",
+        "key": "fixed-damage-gear",
+        "variants": [
+          { "key": "1star", "title": "★" },
+          { "key": "2stars", "title": "★★" },
+          { "key": "3stars", "title": "★★★" },
+          { "key": "mk2-1star", "title": "Mk2 ★" },
+          { "key": "mk2-2stars", "title": "Mk2 ★★" },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+        ]
+      },
+      {
+        "name": "Gold Gear",
+        "key": "gold-gear",
+        "variants": [
+          { "key": "1star", "title": "★" },
+          { "key": "2stars", "title": "★★" },
+          { "key": "3stars", "title": "★★★" },
+          { "key": "mk2-1star", "title": "Mk2 ★" },
+          { "key": "mk2-2stars", "title": "Mk2 ★★" },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+        ]
+      },
+      {
+        "name": "Melee Protection Gear",
+        "key": "melee-protection-gear",
+        "variants": [
+          { "key": "1star", "title": "★" },
+          { "key": "2stars", "title": "★★" },
+          { "key": "3stars", "title": "★★★" },
+          { "key": "mk2-1star", "title": "Mk2 ★" },
+          { "key": "mk2-2stars", "title": "Mk2 ★★" },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+        ]
+      },
+      {
+        "name": "Perfect Combat Gear",
+        "key": "perfect-combat-gear",
+        "variants": [
+          { "key": "1star", "title": "★" },
+          { "key": "2stars", "title": "★★" },
+          { "key": "3stars", "title": "★★★" },
+          { "key": "mk2-1star", "title": "Mk2 ★" },
+          { "key": "mk2-2stars", "title": "Mk2 ★★" },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+        ]
+      },
+      {
+        "name": "Protection Gear",
+        "key": "protection-gear",
+        "variants": [
+          { "key": "1star", "title": "★" },
+          { "key": "2stars", "title": "★★" },
+          { "key": "3stars", "title": "★★★" },
+          { "key": "mk2-1star", "title": "Mk2 ★" },
+          { "key": "mk2-2stars", "title": "Mk2 ★★" },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+        ]
+      },
+      {
+        "name": "Ranged Enhancement Gear",
+        "key": "ranged-enhancement-gear",
+        "variants": [
+          { "key": "1star", "title": "★" },
+          { "key": "2stars", "title": "★★" },
+          { "key": "3stars", "title": "★★★" },
+          { "key": "mk2-1star", "title": "Mk2 ★" },
+          { "key": "mk2-2stars", "title": "Mk2 ★★" },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+        ]
+      },
+      {
+        "name": "Ranged Protection Gear",
+        "key": "ranged-protection-gear",
+        "variants": [
+          { "key": "1star", "title": "★" },
+          { "key": "2stars", "title": "★★" },
+          { "key": "3stars", "title": "★★★" },
+          { "key": "mk2-1star", "title": "Mk2 ★" },
+          { "key": "mk2-2stars", "title": "Mk2 ★★" },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+        ]
+      },
+      {
+        "name": "Risk Taking Gear",
+        "key": "risk-taking-gear",
+        "variants": [
+          { "key": "1star", "title": "★" },
+          { "key": "2stars", "title": "★★" },
+          { "key": "3stars", "title": "★★★" },
+          { "key": "mk2-1star", "title": "Mk2 ★" },
+          { "key": "mk2-2stars", "title": "Mk2 ★★" },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+        ]
+      },
+      {
+        "name": "Shield Destruction Gear",
+        "key": "shield-destruction-gear",
+        "variants": [
+          { "key": "1star", "title": "★" },
+          { "key": "2stars", "title": "★★" },
+          { "key": "3stars", "title": "★★★" },
+          { "key": "mk2-1star", "title": "Mk2 ★" },
+          { "key": "mk2-2stars", "title": "Mk2 ★★" },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+        ]
+      },
+      {
+        "name": "Shield Enhancement Gear",
+        "key": "shield-enhancement-gear",
+        "variants": [
+          { "key": "1star", "title": "★" },
+          { "key": "2stars", "title": "★★" },
+          { "key": "3stars", "title": "★★★" },
+          { "key": "mk2-1star", "title": "Mk2 ★" },
+          { "key": "mk2-2stars", "title": "Mk2 ★★" },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+        ]
+      },
+      {
+        "name": "Shield Penetration Gear",
+        "key": "shield-penetration-gear",
+        "variants": [
+          { "key": "1star", "title": "★" },
+          { "key": "2stars", "title": "★★" },
+          { "key": "3stars", "title": "★★★" },
+          { "key": "mk2-1star", "title": "Mk2 ★" },
+          { "key": "mk2-2stars", "title": "Mk2 ★★" },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+        ]
+      },
+      {
+        "name": "Speed Increase Gear",
+        "key": "speed-increase-gear",
+        "variants": [
+          { "key": "1star", "title": "★" },
+          { "key": "2stars", "title": "★★" },
+          { "key": "3stars", "title": "★★★" },
+          { "key": "mk2-1star", "title": "Mk2 ★" },
+          { "key": "mk2-2stars", "title": "Mk2 ★★" },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+        ]
+      },
+      {
+        "name": "Training Gear",
+        "key": "training-gear",
+        "variants": [
+          { "key": "1star", "title": "★" },
+          { "key": "2stars", "title": "★★" },
+          { "key": "3stars", "title": "★★★" },
+          { "key": "mk2-1star", "title": "Mk2 ★" },
+          { "key": "mk2-2stars", "title": "Mk2 ★★" },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+        ]
+      }
+    ]
+  },
+  "exterior": {
+    "title": "Exterior",
+    "list": {
+      "nano-suit": {
+        "title": "Nano Suit",
+        "list": [
+          { "name": "Skin Suit", "key": "skin-suit", "location": "", "sector": "", "shop": "", "tags": [ "Base body" ] },
+          { "name": "Santa Dress", "key": "santa-dress", "location": "Xion", "sector": "", "shop": "", "tags": [ "Seasonal Christmas event" ] },
+          { "name": "Crimson Wings", "key": "crimson-wings", "location": "", "sector": "", "shop": "", "tags": [ "1.011 Patch Update" ] },
+          { "name": "Stargazer Suit", "key": "stargazer-suit", "location": "", "sector": "", "shop": "", "tags": [ "Digital Deluxe - DLC" ] },
+          { "name": "Neurolink Suit", "key": "neurolink-suit", "location": "", "sector": "", "shop": "", "tags": [ "Boss Challenge", "All Normal Bosses" ] },
+          { "name": "Cyber Illusionist", "key": "cyber-illusionist", "location": "", "sector": "", "shop": "", "tags": [ "Boss Challenge", "Raven - Hard Mode" ] },
+          { "name": "Royal Guard Suit", "key": "royal-guard-suit", "location": "", "sector": "", "shop": "", "tags": [ "Boss Challenge", "Mann - Normal Mode" ] },
+          { "name": "Wandering Swordfighter Outfit", "key": "wandering-swordfighter-outfit", "location": "", "sector": "", "shop": "", "tags": [ "Boss Challenge", "Scarlet - Normal Mode", "Nikke - DLC" ] },
+          { "name": "Cooling Suit", "key": "cooling-suit", "location": "Wasteland", "sector": "", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ] },
+          { "name": "Elegant Dress", "key": "elegant-dress", "location": "Wasteland", "sector": "", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ] },
+          { "name": "Elysion Combat Uniform", "key": "elysion-combat-uniform", "location": "Wasteland", "sector": "", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ] },
+          { "name": "Missing Link", "key": "missing-link", "location": "Wasteland", "sector": "", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ] },
+          { "name": "Never Look Back", "key": "never-look-back", "location": "Wasteland", "sector": "", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ] },
+          { "name": "YoRHa No.2 Type B Uniform", "key": "yorha-no-2-type-b-uniform", "location": "", "sector": "", "shop": "Emil’s Shop", "tags": [ "EVE NieR - DLC" ] },
+          { "name": "YoRHa Type A No.2 Uniform", "key": "yorha-type-a-no-2-uniform", "location": "", "sector": "", "shop": "Emil’s Shop", "tags": [ "EVE NieR - DLC" ] },
+          { "name": "YoRHa Uniform 1", "key": "yorha-uniform-1", "location": "", "sector": "", "shop": "Emil’s Shop", "tags": [ "EVE NieR - DLC" ] },
+          { "name": "YoRHa Unofficial Ceremonial Attire", "key": "yorha-unofficial-ceremonial-attire", "location": "", "sector": "", "shop": "Emil’s Shop", "tags": [ "EVE NieR - DLC" ] },
+          { "name": "Planet Diving Suit (7th)", "key": "planet-diving-suit-7th", "location": "", "sector": "", "shop": "", "tags": [ "Beginning of the game" ] },
+          { "name": "Black Kunoichi", "key": "black-kunoichi", "location": "Xion", "sector": "Adam’s Safehouse", "shop": "", "tags": [] },
+          { "name": "White Kunoichi", "key": "white-kunoichi", "location": "Xion", "sector": "Adam’s Safehouse", "shop": "", "tags": [] },
+          { "name": "Planet Diving Suit (Captain)", "key": "planet-diving-suit-captain", "location": "Xion", "sector": "Adam’s Safehouse", "shop": "", "tags": [] },
+          { "name": "Black Full Dress", "key": "black-full-dress", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [] },
+          { "name": "Daily Biker", "key": "daily-biker", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [] },
+          { "name": "Daily Denim", "key": "daily-denim", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [] },
+          { "name": "Junk Mechanic", "key": "junk-mechanic", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [] },
+          { "name": "Cyber Bunny", "key": "cyber-bunny", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
+          { "name": "Cybernetic Dress", "key": "cybernetic-dress", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
+          { "name": "FourSeconds Destroyed Denim", "key": "fourseconds-destroyed-denim", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
+          { "name": "Keyhole Suit", "key": "keyhole-suit", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
+          { "name": "Midsummer Alice", "key": "midsummer-alice", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
+          { "name": "Midsummer Redhood", "key": "midsummer-redhood", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
+          { "name": "Moutan Peony", "key": "moutan-peony", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
+          { "name": "Orca Exploration Suit", "key": "orca-exploration-suit", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
+          { "name": "Planet Diving Suit (2nd)", "key": "planet-diving-suit-2nd", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
+          { "name": "Prototype Planet Diving Suit", "key": "prototype-planet-diving-suit", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
+          { "name": "Wave Diver Bikini", "key": "wave-diver-bikini", "location": "Great Desert", "sector": "", "shop": "Clyde’s shop", "tags": [] },
+          { "name": "Wave Oblique Monokini", "key": "wave-oblique-monokini", "location": "Great Desert", "sector": "", "shop": "Clyde’s shop", "tags": [] },
+          { "name": "Black Pearl", "key": "black-pearl", "location": "Xion", "sector": "", "shop": "", "tags": [ "Collect 49 Cans" ] },
+          { "name": "Ocean Maid", "key": "ocean-maid", "location": "Great Desert", "sector": "", "shop": "Clyde’s shop", "tags": [ "Collect All 25 Fish" ] },
+          { "name": "Blue Monsoon", "key": "blue-monsoon", "location": "", "sector": "", "shop": "", "tags": [ "Side Quest: `Precious Treasure`" ] },
+          { "name": "Fluffy Bear", "key": "fluffy-bear", "location": "", "sector": "", "shop": "", "tags": [ "Side Quest: Memories in the Doll" ] },
+          { "name": "FourSeconds Black Denim", "key": "fourseconds-black-denim", "location": "", "sector": "", "shop": "", "tags": [ "Side Quest: `Like Butterflies`" ] },
+          { "name": "FourSeconds Everyday Wear", "key": "fourseconds-everyday-wear", "location": "", "sector": "", "shop": "", "tags": [ "Side Quest: `Photography Club`" ] },
+          { "name": "La Vie en Rose", "key": "la-vie-en-rose", "location": "", "sector": "", "shop": "", "tags": [ "Side Quest: `Recruit Passcode Specialists`" ] },
+          { "name": "Neurolink Skin", "key": "neurolink-skin", "location": "", "sector": "", "shop": "", "tags": [ "Side Quest: `Cat Photo Exhibition`" ] },
+          { "name": "Sky Ace", "key": "sky-ace", "location": "", "sector": "", "shop": "", "tags": [ "Side Quest: `Encounter`" ] },
+          { "name": "War Dress", "key": "war-dress", "location": "", "sector": "", "shop": "", "tags": [ "Side Quest: `Pisces`" ] },
+          { "name": "Wasteland Adventurer", "key": "wasteland-adventurer", "location": "Eidos 7", "sector": "Flooded sector", "shop": "", "tags": [] },
+          { "name": "Planet Diving Suit (7th) V2", "key": "planet-diving-suit-7th-v2", "location": "Eidos 7", "sector": "Abandoned Station", "shop": "", "tags": [] },
+          { "name": "Red Passion", "key": "red-passion", "location": "Eidos 7", "sector": "Construction Zone", "shop": "", "tags": [] },
+          { "name": "Cyber Magician", "key": "cyber-magician", "location": "Wasteland", "sector": "Wasteland Basin", "shop": "", "tags": [] },
+          { "name": "Holiday Rabbit", "key": "holiday-rabbit", "location": "Wasteland", "sector": "Wasteland Basin", "shop": "", "tags": [] },
+          { "name": "Racer’s High", "key": "racer-high", "location": "Wasteland", "sector": "West side", "shop": "", "tags": [] },
+          { "name": "Sporty Yellow", "key": "sporty-yellow", "location": "Wasteland", "sector": "Forbidden Area", "shop": "", "tags": [] },
+          { "name": "Daily Force", "key": "daily-force", "location": "Matrix 11", "sector": "Rotten Labyrinth", "shop": "", "tags": [] },
+          { "name": "Daily Knitted Dress", "key": "daily-knitted-dress", "location": "Matrix 11", "sector": "Closed-Off Platform", "shop": "", "tags": [] },
+          { "name": "Daily Mascot", "key": "daily-mascot", "location": "Matrix 11", "sector": "Underground Sewer", "shop": "", "tags": [] },
+          { "name": "Black Wave", "key": "black-wave", "location": "Great Desert", "sector": "Buried Ruins", "shop": "", "tags": [] },
+          { "name": "Cybernetic Bondage", "key": "cybernetic-bondage", "location": "Great Desert", "sector": "Oasis", "shop": "", "tags": [] },
+          { "name": "Daily Sailor", "key": "daily-sailor", "location": "Great Desert", "sector": "Northern Desert", "shop": "", "tags": [] },
+          { "name": "Planet Diving Suit (3rd)", "key": "planet-diving-suit-3rd", "location": "Abyss Levoire", "sector": "Ventilation Sector", "shop": "", "tags": [] },
+          { "name": "Planet Diving Suit (6th)", "key": "planet-diving-suit-6th", "location": "Eidos 9", "sector": "Secret Garden", "shop": "", "tags": [] },
+          { "name": "Punk Top", "key": "punk-top", "location": "Eidos 9", "sector": "", "shop": "Sector 2", "tags": [] },
+          { "name": "Motivation", "key": "motivation", "location": "Eidos 9", "sector": "Rollercoaster", "shop": "", "tags": [] },
+          { "name": "Orca Engineer", "key": "orca-engineer", "location": "Spire 4", "sector": "Hypertube", "shop": "", "tags": [] },
+          { "name": "Black Rose", "key": "black-rose", "location": "Spire 4", "sector": "Raphael Space Centre", "shop": "", "tags": [] },
+          { "name": "Photogenic", "key": "photogenic", "location": "Spire 4", "sector": "Prestige Lounge", "shop": "", "tags": [] },
+          { "name": "Raven Suit", "key": "raven-suit", "location": "", "sector": "", "shop": "", "tags": [ "NG+", "Beginning of the game" ] },
+          { "name": "FourSeconds Biker", "key": "fourseconds-biker", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [ "NG+" ] },
+          { "name": "FourSeconds Denim", "key": "fourseconds-denim", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [ "NG+" ] },
+          { "name": "Junk Engineer", "key": "junk-engineer", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [ "NG+" ] },
+          { "name": "White Full Dress", "key": "white-full-dress", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [ "NG+" ] },
+          { "name": "Cybernetic Suit", "key": "cybernetic-suit", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [ "NG+" ] },
+          { "name": "Keyhole Dress", "key": "keyhole-dress", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [ "NG+" ] },
+          { "name": "Orca Pathfinder", "key": "orca-pathfinder", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [ "NG+" ] },
+          { "name": "Planet Diving Suit (2nd) V2", "key": "planet-diving-suit-2nd-v2", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [ "NG+" ] },
+          { "name": "Prototype Planet Diving Suit V2", "key": "prototype-planet-diving-suit-v2", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [ "NG+" ] },
+          { "name": "Red Pearl", "key": "red-pearl", "location": "Xion", "sector": "", "shop": "", "tags": [ "NG+", "Collect 49 Cans" ] },
+          { "name": "Pink Bear", "key": "pink-bear", "location": "", "sector": "", "shop": "", "tags": [ "NG+", "Side Quest: `Memories in the Doll`" ] },
+          { "name": "Air Ace", "key": "air-ace", "location": "", "sector": "", "shop": "", "tags": [ "NG+", "Side Quest: `Encounter`" ] },
+          { "name": "White Monsoon", "key": "white-monsoon", "location": "", "sector": "", "shop": "", "tags": [ "NG+", "Side Quest: `Precious Treasure`" ] },
+          { "name": "Wasteland Explorer", "key": "wasteland-explorer", "location": "Eidos 7", "sector": "Flooded sector", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Planet Diving Suit (7th) V3", "key": "planet-diving-suit-7th-v3", "location": "Eidos 7", "sector": "Abandoned Station", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Emerald Passion", "key": "emerald-passion", "location": "Eidos 7", "sector": "Construction Zone", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Crew Style", "key": "crew-style", "location": "Wasteland", "sector": "South of Wasteland", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Sporty Energy", "key": "sporty-energy", "location": "Wasteland", "sector": "Forbidden Area", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Cyber Trickster", "key": "cyber-trickster", "location": "Wasteland", "sector": "Wasteland Basin", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Holiday Bunny", "key": "holiday-bunny", "location": "Wasteland", "sector": "Wasteland Basin", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Speeder’s High", "key": "speeder-high", "location": "Wasteland", "sector": "West side", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Comfort Force", "key": "comfort-force", "location": "Matrix 11", "sector": "Rotten Labyrinth", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Comfort Knitted Dress", "key": "comfort-knitted-dress", "location": "Matrix 11", "sector": "Closed-Off Platform", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Comfort Mascot", "key": "comfort-mascot", "location": "Matrix 11", "sector": "Underground Sewer", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Comfort Sailor Outfit", "key": "comfort-sailor-outfit", "location": "Great Desert", "sector": "Northern Desert", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Autonetic Bondage", "key": "autonetic-bondage", "location": "Great Desert", "sector": "Oasis", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Wild Wave", "key": "wild-wave", "location": "Great Desert", "sector": "Buried Ruins", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Planet Diving Suit (3rd) V2", "key": "planet-diving-suit-3rd-v2", "location": "Abyss Levoire", "sector": "Ventilation Sector", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Resonance", "key": "resonance", "location": "Eidos 9", "sector": "Rollercoaster", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Planet Diving Suit (6th) V2", "key": "planet-diving-suit-6th-v2", "location": "Eidos 9", "sector": "Secret Garden", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Punk Style", "key": "punk-style", "location": "Eidos 9", "sector": "Sector 2", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Telegenic", "key": "telegenic", "location": "Spire 4", "sector": "Prestige Lounge", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Angelic Rose", "key": "angelic-rose", "location": "Spire 4", "sector": "Raphael Space Centre", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Orca Techie", "key": "orca-techie", "location": "Spire 4", "sector": "Hypertube", "shop": "", "tags": [ "NG+" ] },
+          { "name": "FourSeconds Essential Wear", "key": "fourseconds-essential-wear", "location": "", "sector": "", "shop": "", "tags": [ "NG++", "Side Quest: `Precious Treasure`" ] },
+          { "name": "Planet Diving Protection Suit (7th)", "key": "planet-diving-protection-suit-7th", "location": "Eidos 7", "sector": "Abandoned Station", "shop": "", "tags": [ "NG++" ] },
+          { "name": "Peony", "key": "peony", "location": "Eidos 7", "sector": "Construction Zone", "shop": "", "tags": [ "NG++" ] },
+          { "name": "Black Lotus", "key": "black-lotus", "location": "Eidos 7", "sector": "Drained plaza", "shop": "", "tags": [ "NG++" ] },
+          { "name": "Sensate Skin", "key": "sensate-skin", "location": "Wasteland", "sector": "West side", "shop": "", "tags": [ "NG++" ] },
+          { "name": "White Pearl", "key": "white-pearl", "location": "Wasteland", "sector": "Wasteland Basin", "shop": "", "tags": [ "NG++" ] },
+          { "name": "Prototype Neurolink Suit", "key": "prototype-neurolink-suit", "location": "Wasteland", "sector": "Wasteland Basin", "shop": "", "tags": [ "NG++" ] },
+          { "name": "Extreme Bunny", "key": "extreme-bunny", "location": "Wasteland", "sector": "Forbidden Area", "shop": "", "tags": [ "NG++" ] },
+          { "name": "Office Style", "key": "office-style", "location": "Wasteland", "sector": "South of Wasteland", "shop": "", "tags": [ "NG++" ] },
+          { "name": "Aqua Pearl", "key": "aqua-pearl", "location": "Matrix 11", "sector": "Closed-Off Platform", "shop": "", "tags": [ "NG++" ] },
+          { "name": "Shadow Kunoichi", "key": "shadow-kunoichi", "location": "Matrix 11", "sector": "Underground Sewer", "shop": "", "tags": [ "NG++" ] },
+          { "name": "Planet Diving Suit (5th)", "key": "planet-diving-suit-5th", "location": "Matrix 11", "sector": "Rotten Labyrinth", "shop": "", "tags": [ "NG++" ] },
+          { "name": "Prototype Sensate Skin", "key": "prototype-sensate-skin", "location": "Great Desert", "sector": "Northern Desert", "shop": "", "tags": [ "NG++" ] },
+          { "name": "War Aegis", "key": "war-aegis", "location": "Great Desert", "sector": "Buried Ruins", "shop": "", "tags": [ "NG++" ] },
+          { "name": "Neurocircuit Bondage", "key": "neurocircuit-bondage", "location": "Great Desert", "sector": "Oasis", "shop": "", "tags": [ "NG++" ] },
+          { "name": "Planet Diving Protection Suit (7th) V2", "key": "planet-diving-protection-suit-7th-v2", "location": "Abyss Levoire", "sector": "Ventilation Sector", "shop": "", "tags": [ "NG++" ] },
+          { "name": "Planet Diving Suit (6th) V3", "key": "planet-diving-suit-6th-v3", "location": "Eidos 9", "sector": "Secret Garden", "shop": "", "tags": [ "NG++" ] },
+          { "name": "Hydrangea", "key": "hydrangea", "location": "Eidos 9", "sector": "Sector 2", "shop": "", "tags": [ "NG++" ] },
+          { "name": "War Suit", "key": "war-suit", "location": "Eidos 9", "sector": "Rollercoaster", "shop": "", "tags": [ "NG++" ] },
+          { "name": "Silver Kunoichi", "key": "silver-kunoichi", "location": "Spire 4", "sector": "Hypertube", "shop": "", "tags": [ "NG++" ] },
+          { "name": "Ultimate Bunny", "key": "ultimate-bunny", "location": "Spire 4", "sector": "Raphael Space Centre", "shop": "", "tags": [ "NG++" ] }
+        ]
+      },
+      "face-decorations": {
+        "title": "Face Decorations",
+        "list": [
+          { "name": "Brown Horn-Rimmed Glasses", "key": "brown-horn-rimmed-glasses", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [] },
+          { "name": "Cat’s Eye", "key": "cat-eye", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [] },
+          { "name": "Laboratory Goggles", "key": "laboratory-goggles", "location": "Wasteland", "sector": "D1G-g2r’s shop", "shop": "", "tags": [] },
+          { "name": "Large Round Glasses", "key": "large-round-glasses", "location": "Spire 4", "sector": "Cargo Lift 121", "shop": "", "tags": [] },
+          { "name": "Oversized Round Glasses", "key": "oversized-round-glasses", "location": "Spire 4", "sector": "Cargo Lift 121", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Metal-Framed Glasses", "key": "metal-framed-glasses", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [] },
+          { "name": "Orange Aviators", "key": "orange-aviators", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [] },
+          { "name": "Oval Horn-Rimmed Glasses", "key": "oval-horn-rimmed-glasses", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [] },
+          { "name": "Oversized Sunglasses", "key": "oversized-sunglasses", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [] },
+          { "name": "Polygonal-Framed Glasses", "key": "polygonal-framed-glasses", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [] },
+          { "name": "Skinny Sunglasses", "key": "skinny-sunglasses", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [] },
+          { "name": "Square-Framed Glasses", "key": "square-framed-glasses", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [] },
+          { "name": "Eyepatch", "key": "eyepatch", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [] },
+          { "name": "Spiraling Glasses", "key": "spiraling-glasses", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [] },
+          { "name": "Wraparound Sunglasses", "key": "wraparound-sunglasses", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [] },
+          { "name": "Battle Goggles", "key": "battle-goggles", "location": "", "sector": "", "shop": "Emil’s shop", "tags": [] },
+          { "name": "Classic Round Glasses", "key": "classic-round-glasses", "location": "Xion", "sector": "Adam’s Safehouse", "shop": "", "tags": [] },
+          { "name": "Half-Rim Glasses", "key": "half-rim-glasses", "location": "Xion", "sector": "Adam’s Safehouse", "shop": "", "tags": [] },
+          { "name": "Polarized Sunglasses", "key": "polarized-sunglasses", "location": "Great Desert", "sector": "", "shop": "Clyde’s shop", "tags": [] },
+          { "name": "Snow Crystal Glasses", "key": "snow-crystal-glasses", "location": "Xion", "sector": "", "shop": "", "tags": [ "Seasonal Christmas event" ] }
+        ]
+      },
+      "earrings": {
+        "title": "Earrings",
+        "list": [
+          { "name": "Black Rectangle", "key": "black-rectangle", "location": "Xion", "sector": "", "shop": "Kaya’s Shop", "tags": [] },
+          { "name": "Blue Point", "key": "blue-point", "location": "Matrix 11", "sector": "Closed Off Platform", "shop": "", "tags": [] },
+          { "name": "Shining Point", "key": "shining-point", "location": "Matrix 11", "sector": "Closed Off Platform", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Jade and Amber", "key": "jade-and-amber", "location": "Matrix 11", "sector": "Closed Off Platform", "shop": "", "tags": [ "NG++" ] },
+          { "name": "Crimson Tear", "key": "crimson-tear", "location": "Eidos 7", "sector": "Construction Zone", "shop": "", "tags": [] },
+          { "name": "Noble Tear", "key": "noble-tear", "location": "Eidos 7", "sector": "Construction Zone", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Golden Heart", "key": "golden-heart", "location": "Eidos 7", "sector": "Construction Zone", "shop": "", "tags": [ "NG++" ] },
+          { "name": "Fusion Light", "key": "fusion-light", "location": "Xion", "sector": "", "shop": "Kaya’s Shop", "tags": [] },
+          { "name": "Hanging Memory", "key": "hanging-memory", "location": "Xion", "sector": "", "shop": "", "tags": [ "Bulletin Board Request: `Generous Drop Pod`" ] },
+          { "name": "Shining Memory", "key": "shining-memory", "location": "Xion", "sector": "", "shop": "", "tags": [ "NG+", "Bulletin Board Request: `Generous Drop Pod`" ] },
+          { "name": "Crystal Drop", "key": "crystal-drop", "location": "Xion", "sector": "", "shop": "", "tags": [ "NG++", "Bulletin Board Request: `Generous Drop Pod`" ] },
+          { "name": "Radial Pendulum", "key": "radial-pendulum", "location": "Xion", "sector": "", "shop": "Kaya’s Shop", "tags": [] },
+          { "name": "Silver Tooth", "key": "silver-tooth", "location": "Spire 4", "sector": "Prestige Lounge", "shop": "", "tags": [] },
+          { "name": "Cybernetic Tooth", "key": "cybernetic-tooth", "location": "Spire 4", "sector": "Prestige Lounge", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Sun Drop", "key": "sun-drop", "location": "Xion", "sector": "", "shop": "Kaya’s Shop", "tags": [] },
+          { "name": "Turquoise Hoops", "key": "turquoise-hoops", "location": "Xion", "sector": "", "shop": "Kaya’s Shop", "tags": [] },
+          { "name": "Dangling Bunny", "key": "dangling-bunny", "location": "Xion", "sector": "", "shop": "Kaya’s Shop", "tags": [] },
+          { "name": "Golden Branch", "key": "golden-branch", "location": "Xion", "sector": "", "shop": "Kaya’s Shop", "tags": [] },
+          { "name": "Ruby Drop", "key": "ruby-drop", "location": "Xion", "sector": "", "shop": "Kaya’s Shop", "tags": [] },
+          { "name": "Symbol of Legacy", "key": "symbol-of-legacy", "location": "", "sector": "", "shop": "Emil’s Shop", "tags": [] },
+          { "name": "Ear Armor", "key": "ear-armor", "location": "Xion", "sector": "Adam’s Safehouse", "shop": "", "tags": [] },
+          { "name": "Quadruple Rectangle", "key": "quadruple-rectangle", "location": "Xion", "sector": "Adam’s Safehouse", "shop": "", "tags": [] },
+          { "name": "Sleigh Earcuff", "key": "sleigh-earcuff", "location": "Xion", "sector": "", "shop": "", "tags": [ "Seasonal Christmas event" ] },
+          { "name": "Wreath Earrings", "key": "wreath-earrings", "location": "Xion", "sector": "", "shop": "", "tags": [ "Seasonal Christmas event" ] }
+        ]
+      },
+      "hair": {
+        "title": "Hair Salon",
+        "list": [
+          { "name": "Planet Diving Tail", "key": "planet-diving-tail", "location": "", "shop": "", "tags": [ "Default" ] },
+          { "name": "A Daughter’s Memories", "key": "a-daughter-memories", "location": "Xion", "shop": "Gwen’s Hair Salon", "tags": [] },
+          { "name": "Kasim’s Choice", "key": "kasim-choice", "location": "Xion", "shop": "Gwen’s Hair Salon", "tags": [] },
+          { "name": "The Cutest", "key": "the-cutest", "location": "Xion", "shop": "Gwen’s Hair Salon", "tags": [] },
+          { "name": "Princess of Xion", "key": "princess-of-xion", "location": "Xion", "shop": "Gwen’s Hair Salon", "tags": [] },
+          { "name": "Peach Fragrance", "key": "peach-fragrance", "location": "Xion", "shop": "Gwen’s Hair Salon", "tags": [] },
+          { "name": "Gothic Age", "key": "gothic-age", "location": "Xion", "shop": "Gwen’s Hair Salon", "tags": [] },
+          { "name": "Hatsukoi", "key": "hatsukoi", "location": "Xion", "shop": "Gwen’s Hair Salon", "tags": [] },
+          { "name": "Katana", "key": "katana", "location": "Xion", "shop": "Gwen’s Hair Salon", "tags": [] },
+          { "name": "Valentine", "key": "valentine", "location": "Xion", "shop": "Gwen’s Hair Salon", "tags": [] },
+          { "name": "Kasim’s Signature", "key": "kasim-signature", "location": "Xion", "shop": "Gwen’s Hair Salon", "tags": [] },
+          { "name": "Vacation", "key": "vacation", "location": "Xion", "shop": "Gwen’s Hair Salon", "tags": [] },
+          { "name": "Originative", "key": "originative", "location": "Xion", "shop": "Gwen’s Hair Salon", "tags": [] },
+          { "name": "Santa Girl", "key": "santa-girl", "location": "Xion", "shop": "", "tags": [ "Seasonal Christmas event" ] },
+          { "name": "YoRHa No.2 Type B Style", "key": "yorha-no-2-type-b-style", "location": "", "shop": "Emil’s Shop", "tags": [ "EVE NieR - DLC" ] },
+          { "name": "YoRHa Type A No.2 Style", "key": "yorha-type-a-no-2-style", "location": "", "shop": "Emil’s Shop", "tags": [ "EVE NieR - DLC" ] },
+          { "name": "White Fox Mask Style", "key": "white-fox-mask-style", "location": "", "shop": "Emil’s Shop", "tags": [ "EVE NieR - DLC" ] },
+          { "name": "Noble Elegance", "key": "noble-elegance", "location": "Wasteland", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ] },
+          { "name": "Standard Long", "key": "standard-long", "location": "Wasteland", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ] },
+          { "name": "Energetic Bangs", "key": "energetic-bangs", "location": "Wasteland", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ] },
+          { "name": "First Affection", "key": "first-affection", "location": "Wasteland", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ] },
+          { "name": "Poppin’ Twin Tails", "key": "poppin-twin-tails", "location": "Wasteland", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ] },
+          { "name": "Moonlit Beauty", "key": "moonlit-beauty", "location": "Wasteland", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ] }
+        ]
+      }
+    }
+  },
+  "comrades": {
+    "title": "Comrades",
+    "list": {
+      "drone-appearance": {
+        "title": "Drone Appearance",
+        "list": [
+          { "name": "Tactical Pack", "key": "tactical-pack", "location": "", "sector": "", "shop": "", "tags": [ "Default" ] },
+          { "name": "Armoured Pack", "key": "armoured-pack", "location": "Eidos 7", "sector": "Flooded Commercial Sector", "shop": "", "tags": [] },
+          { "name": "Ironclad Pack", "key": "ironclad-pack", "location": "Eidos 7", "sector": "Flooded Commercial Sector", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Lop Bunny Pack", "key": "lop-bunny-pack", "location": "Spire 4", "sector": "Orca Space Complex", "shop": "", "tags": [] },
+          { "name": "Dwarf Rabbit Pack", "key": "dwarf-rabbit-pack", "location": "Spire 4", "sector": "Orca Space Complex", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Pod 042 Pack", "key": "pod-042-pack", "location": "", "sector": "", "shop": "Emil’s shop", "tags": [] },
+          { "name": "Rudolf Pack", "key": "rudolf-pack", "location": "Xion", "sector": "", "shop": "", "tags": [ "Seasonal Christmas event" ] },
+          { "name": "Fluffy Bear Pack", "key": "fluffy-bear-pack", "location": "", "sector": "", "shop": "", "tags": [ "Bonus content" ] }
+        ]
+      },
+      "lily-clothes": {
+        "title": "Lily Clothes",
+        "list": [
+          { "name": "Artemis", "key": "artemis", "location": "", "sector": "", "shop": "", "tags": [ "Default" ] },
+          { "name": "Off-duty", "key": "off-duty", "location": "Great Desert", "sector": "Central Great Desert", "shop": "", "tags": [] },
+          { "name": "Day Off", "key": "day-off", "location": "Great Desert", "sector": "Central Great Desert", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Rainy Day", "key": "rainy-day", "location": "Wasteland", "sector": "Barren Land", "shop": "", "tags": [] },
+          { "name": "Shower Day", "key": "shower-day", "location": "Wasteland", "sector": "Barren Land", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Stargazer Coat", "key": "stargazer-coat", "location": "Xion", "sector": "Adam’s Safehouse", "shop": "", "tags": [] },
+          { "name": "YoRHa No.9 Type S Uniform", "key": "yorha-no-9-type-s-uniform", "location": "", "sector": "", "shop": "Emil’s shop", "tags": [] }
+        ]
+      },
+      "adam-clothes": {
+        "title": "Adam’s Clothes",
+        "list": [
+          { "name": "Sewer Rat", "key": "sewer-rat", "location": "", "sector": "", "shop": "", "tags": [ "Default" ] },
+          { "name": "Chameleon", "key": "chameleon", "location": "Matrix 11", "sector": "Collapsed Rail Bridge", "shop": "", "tags": [] },
+          { "name": "Nighthawk", "key": "nighthawk", "location": "Matrix 11", "sector": "Collapsed Rail Bridge", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Junkman", "key": "junkman", "location": "Wasteland", "sector": "Collectible Round-Up", "shop": "", "tags": [] },
+          { "name": "Ragman", "key": "ragman", "location": "Wasteland", "sector": "Collectible Round-Up", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Emil’s Head", "key": "emil-head", "location": "", "sector": "", "shop": "Emil’s shop", "tags": [] },
+          { "name": "I’m No Santa", "key": "i-m-no-santa", "location": "Xion", "sector": "", "shop": "", "tags": [ "Seasonal Christmas event" ] },
+          { "name": "Stargazer Wear", "key": "stargazer-wear", "location": "Xion", "sector": "Adam’s Safehouse", "shop": "", "tags": [] }
+        ]
+      }
+    }
+  },
+  "data-bank": {
+    "title": "Data Bank",
+    "list": {
+      "memorystick": {
+        "title": "Memorystick",
+        "list": {
+          "eidos-7": {
+            "title": "Eidos 7",
+            "location": "Eidos 7",
+            "list": [
+              { "title": "Legionnaire 451’s Resolution", "key": "legionnaire-451-resolution" },
+              { "title": "The Last Words of the Hopeless", "key": "the-last-words-of-the-hopeless" },
+              { "title": "Louis’s Testimony", "key": "louis-testimony" },
+              { "title": "Lament of Despair", "key": "lament-of-despair" },
+              { "title": "Legionnaire 204’s Memory", "key": "legionnaire-204-memory" },
+              { "title": "Outcry to the Sky", "key": "outcry-to-the-sky" },
+              { "title": "Legionnaire 302’s Sorrow", "key": "legionnaire-302-sorrow" },
+              { "title": "Request to Mother Sphere", "key": "request-to-mother-sphere" },
+              { "title": "Respite of the Hopeful", "key": "respite-of-the-hopeful" },
+              { "title": "Legionnaire 244’s Memory", "key": "legionnaire-244-memory" },
+              { "title": "Legionnaire 272’s Eyewitness Account", "key": "legionnaire-272-eyewitness-account" },
+              { "title": "Memory of a Believer", "key": "memory-of-a-believer" },
+              { "title": "Legionnaire 249’s Memory", "key": "legionnaire-249-memory" },
+              { "title": "Bitter Suicide Note", "key": "bitter-suicide-note" },
+              { "title": "Max’s Memory", "key": "max-memory" },
+              { "title": "Artemis 8’s Orders", "key": "artemis-8-orders" },
+              { "title": "Artemis 132’s Orders", "key": "artemis-132-orders" },
+              { "title": "Artemis 49’s Reply", "key": "artemis-49-reply" },
+              { "title": "Legionnaire 214’s Testament", "key": "legionnaire-214-testament" },
+              { "title": "Legionnaire 286’s Recollection", "key": "legionnaire-286-recollection" },
+              { "title": "Legionnaire 212’s Question", "key": "legionnaire-212-question" },
+              { "title": "Athena 82’s Order", "key": "athena-82-order" },
+              { "title": "Legionnaire 326’s Transmission", "key": "legionnaire-326-transmission" },
+              { "title": "Legionnaire 220’s Memory", "key": "legionnaire-220-memory" },
+              { "title": "Legionnaire 498’s Wish", "key": "legionnaire-498-wish" },
+              { "title": "Legionnaire 248’s Complaint", "key": "legionnaire-248-complaint" },
+              { "title": "Lament of the Disappointed", "key": "lament-of-the-disappointed" },
+              { "title": "Legionnaire 268’s Prayer", "key": "legionnaire-268-prayer" },
+              { "title": "Legionnaire 274’s Memory", "key": "legionnaire-274-memory" },
+              { "title": "She is Here", "key": "she-is-here" },
+              { "title": "Voice of Objection", "key": "voice-of-objection" },
+              { "title": "Memory of Despair", "key": "memory-of-despair" },
+              { "title": "Help", "key": "help" },
+              { "title": "A Melancholic Cry", "key": "a-melancholic-cry" }
+            ]
+          },
+          "wasteland": {
+            "title": "Wasteland",
+            "location": "Wasteland",
+            "list": [
+              { "title": "Citizen 439’s Resignation", "key": "citizen-439-resignation" },
+              { "title": "Sentinel 78’s Consolation", "key": "sentinel-78-consolation" },
+              { "title": "Citizen 224’s Memory", "key": "citizen-224-memory" },
+              { "title": "Sentinel 27’s Testimony", "key": "sentinel-27-testimony" },
+              { "title": "Citizen 275’s Testament", "key": "citizen-275-testament" },
+              { "title": "Scavenger 103’s Farewell", "key": "scavenger-103-farewell" },
+              { "title": "Scavenger 188’s Advice", "key": "scavenger-188-advice" },
+              { "title": "Yohan’s Testimony", "key": "yohan-testimony" },
+              { "title": "Citizen 212’s Memory", "key": "citizen-212-memory" },
+              { "title": "Citizen 303’s Plea", "key": "citizen-303-plea" },
+              { "title": "The Search for a Haven", "key": "the-search-for-a-haven" },
+              { "title": "Legionnaire 311’s Resolution", "key": "legionnaire-311-resolution" },
+              { "title": "Legionnaire 323’s Warning", "key": "legionnaire-323-warning" },
+              { "title": "Marco’s Recollection", "key": "marco-recollection" },
+              { "title": "Scavenger 102’s Decision", "key": "scavenger-102-decision" },
+              { "title": "Scavenger 160’s Advice", "key": "scavenger-160-advice" },
+              { "title": "Scavenger 131’s Memory", "key": "scavenger-131-memory" },
+              { "title": "Scavenger 212’s Testament", "key": "scavenger-212-testament" },
+              { "title": "Sentinel 82’s Report", "key": "sentinel-82-report" },
+              { "title": "Scavenger 248’s Despair", "key": "scavenger-248-despair" },
+              { "title": "Scavenger 216’s Advice", "key": "scavenger-216-advice" },
+              { "title": "Legionnaire 295’s Order", "key": "legionnaire-295-order" },
+              { "title": "Luke’s Memory", "key": "luke-memory" },
+              { "title": "Albert’s Memory", "key": "albert-memory" },
+              { "title": "Sentinel 47’s Decision", "key": "sentinel-47-decision" },
+              { "title": "Sentinel 90’s Resignation", "key": "sentinel-90-resignation" },
+              { "title": "Citizen 290’s Prayer", "key": "citizen-290-prayer" },
+              { "title": "Sentinel 65’s Testament", "key": "sentinel-65-testament" },
+              { "title": "Aaron’s Memory", "key": "aaron-memory" },
+              { "title": "Scavenger 114’s Wish", "key": "scavenger-114-wish" },
+              { "title": "Lee’s Complaint", "key": "lee-complaint" },
+              { "title": "Young’s Screams", "key": "young-screams" },
+              { "title": "Woo’s Record", "key": "woo-record" },
+              { "title": "Tommy’s Testament", "key": "tommy-testament" },
+              { "title": "Go’s Memory", "key": "go-memory" },
+              { "title": "Donna’s Memory", "key": "donna-memory" },
+              { "title": "Amanda’s Memory", "key": "amanda-memory" }
+            ]
+          },
+          "matrix-11": {
+            "title": "Matrix 11",
+            "location": "Matrix 11",
+            "list": [
+              { "title": "Employee 38’s Memory", "key": "employee-38-memory" },
+              { "title": "Legionnaire 547’s Testimony", "key": "legionnaire-547-testimony" },
+              { "title": "Legionnaire 569’s Recollection", "key": "legionnaire-569-recollection" },
+              { "title": "Legionnaire 552’s Advice", "key": "legionnaire-552-advice" },
+              { "title": "Employee 33’s Determination", "key": "employee-33-determination" },
+              { "title": "Legionnaire 507’s Regret", "key": "legionnaire-507-regret" },
+              { "title": "Alex’s Memory", "key": "alex-memory" },
+              { "title": "Robert’s Last Farewell", "key": "robert-last-farewell" },
+              { "title": "Legionnaire 514’s Memory", "key": "legionnaire-514-memory" },
+              { "title": "Paul’s Memory", "key": "paul-memory" },
+              { "title": "Jamie’s Plea", "key": "jamie-plea" },
+              { "title": "Norman’s Advice", "key": "norman-advice" },
+              { "title": "Pascal’s Warning", "key": "pascal-warning" },
+              { "title": "Daisy’s Memory", "key": "daisy-memory" },
+              { "title": "Jesse’s Memory", "key": "jesse-memory" },
+              { "title": "Harry’s Memory", "key": "harry-memory" },
+              { "title": "Leona’s Advice", "key": "leona-advice" },
+              { "title": "Susan’s Warning", "key": "susan-warning" },
+              { "title": "Jake’s Speech", "key": "jake-speech" },
+              { "title": "Katherine’s Testament", "key": "katherine-testament" },
+              { "title": "Sam’s Resignation", "key": "sam-resignation" },
+              { "title": "Legionnaire 516’s Memory", "key": "legionnaire-516-memory" },
+              { "title": "Legionnaire 511’s Prayer", "key": "legionnaire-511-prayer" }
+            ]
+          },
+          "great-desert": {
+            "title": "Great Desert",
+            "location": "Great Desert",
+            "list": [
+              { "title": "Citizen 109’s Resolution", "key": "citizen-109-resolution" },
+              { "title": "Citizen 206’s Memory", "key": "citizen-206-memory" },
+              { "title": "Citizen 246’s Recollection", "key": "citizen-246-recollection" },
+              { "title": "Sentinel 39’s Resolution", "key": "sentinel-39-resolution" },
+              { "title": "Emil’s Lament", "key": "emil-lament" },
+              { "title": "Citizen 218’s Memory", "key": "citizen-218-memory" },
+              { "title": "Sentinel 58’s Advice", "key": "sentinel-58-advice" },
+              { "title": "Sentinel 41’s Memory", "key": "sentinel-41-memory" },
+              { "title": "Scavenger 388’s Plea", "key": "scavenger-388-plea" },
+              { "title": "Sentinel 477’s Plea", "key": "sentinel-477-plea" },
+              { "title": "Citizen 360’s Complaint", "key": "citizen-360-complaint" },
+              { "title": "Naomi’s Testament", "key": "naomi-testament" },
+              { "title": "Scavenger 404’s Advice", "key": "scavenger-404-advice" },
+              { "title": "Sentinel 95’s Regret", "key": "sentinel-95-regret" },
+              { "title": "Sentinel 71’s Resignation", "key": "sentinel-71-resignation" },
+              { "title": "Sentinel 82’s Memory", "key": "sentinel-82-memory" },
+              { "title": "Scavenger 390’s Memory", "key": "scavenger-390-memory" },
+              { "title": "Citizen 779’s Consolation", "key": "citizen-779-consolation" },
+              { "title": "Scavenger 103’s Memory", "key": "scavenger-103-memory" },
+              { "title": "Scavenger 173’s Lament", "key": "scavenger-173-lament" },
+              { "title": "Sentinel 55’s Decision", "key": "sentinel-55-decision" },
+              { "title": "Harry’s Recollection", "key": "harry-recollection" },
+              { "title": "Sentinel 46’s Memory", "key": "sentinel-46-memory" },
+              { "title": "Scavenger 438’s Plea", "key": "scavenger-438-plea" },
+              { "title": "Sentinel 15’s Plea", "key": "sentinel-15-plea" },
+              { "title": "Teddy’s Memory", "key": "teddy-memory" },
+              { "title": "Galaxy Alan’s Lament", "key": "galaxy-alan-lament" },
+              { "title": "Jerome’s Faith", "key": "jerome-faith" },
+              { "title": "Believer’s Screams", "key": "believer-screams" },
+              { "title": "We Must Find Them", "key": "we-must-find-them" },
+              { "title": "Exile’s Resolution", "key": "exile-resolution" },
+              { "title": "The Last Theorem of the Unknown", "key": "the-last-theorem-of-the-unknown" },
+              { "title": "Rambling of the Ascended", "key": "rambling-of-the-ascended" },
+              { "title": "Lament of the Fearful", "key": "lament-of-the-fearful" },
+              { "title": "Lament of the Isolated", "key": "lament-of-the-isolated" },
+              { "title": "Laughter of the Isolated", "key": "laughter-of-the-isolated" },
+              { "title": "Words Spoken: Finding Peace Before Death", "key": "words-spoken-finding-peace-before-death" },
+              { "title": "Words Spoken: Embracing Death with a Smile", "key": "words-spoken-embracing-death-with-a-smile" },
+              { "title": "Failed Sentinel’s Lament", "key": "failed-sentinel-lament" },
+              { "title": "Whiiir Whiiir", "key": "whiiir-whiiir" },
+              { "title": "Luther’s Revelation", "key": "luther-revelation" },
+              { "title": "Echo’s Lament", "key": "echo-lament" },
+              { "title": "I Felt It", "key": "i-felt-it" },
+              { "title": "Yo’s Mutterings", "key": "yo-mutterings" },
+              { "title": "Ryu’s Rage", "key": "ryu-rage" },
+              { "title": "So’s Resolution", "key": "so-resolution" },
+              { "title": "Lune’s Last Words", "key": "lune-last-words" },
+              { "title": "Mel’s Faith", "key": "mel-faith" },
+              { "title": "Raan’s Testament", "key": "raan-testament" },
+              { "title": "May’s Memory", "key": "may-memory" },
+              { "title": "July’s Memory", "key": "july-memory" },
+              { "title": "August’s Memory", "key": "august-memory" }
+            ]
+          },
+          "eidos-9": {
+            "title": "Eidos 9",
+            "location": "Eidos 9",
+            "list": [
+              { "title": "Legionnaire 158’s Memory", "key": "legionnaire-158-memory" },
+              { "title": "Legionnaire 196’s Report", "key": "legionnaire-196-report" },
+              { "title": "Legionnaire 192’s Memory", "key": "legionnaire-192-memory" },
+              { "title": "Legionnaire 292’s Recollection", "key": "legionnaire-292-recollection" },
+              { "title": "Legionnaire 230’s Resignation", "key": "legionnaire-230-resignation" },
+              { "title": "Legionnaire 207’s Request", "key": "legionnaire-207-request" },
+              { "title": "Legionnaire 282’s Memory", "key": "legionnaire-282-memory" }
+            ]
+          },
+          "spire-4": {
+            "title": "Spire 4",
+            "location": "Spire 4",
+            "list": [
+              { "title": "Legionnaire 753’s Memory", "key": "legionnaire-753-memory" },
+              { "title": "Legionnaire 717’s Order", "key": "legionnaire-717-order" },
+              { "title": "Legionnaire 742’s Complaint", "key": "legionnaire-742-complaint" },
+              { "title": "Legionnaire 712’s Memory", "key": "legionnaire-712-memory" },
+              { "title": "Legionnaire 466’s Memory", "key": "legionnaire-466-memory" },
+              { "title": "Legionnaire 716’s Proposal", "key": "legionnaire-716-proposal" },
+              { "title": "Legionnaire 798’s Advice", "key": "legionnaire-798-advice" },
+              { "title": "Legionnaire 708’s Shout", "key": "legionnaire-708-shout" },
+              { "title": "Legionnaire 721’s Plea", "key": "legionnaire-721-plea" },
+              { "title": "Legionnaire 725’s Question", "key": "legionnaire-725-question" },
+              { "title": "Legionnaire 775’s Plea", "key": "legionnaire-775-plea" },
+              { "title": "Legionnaire 738’s Memory", "key": "legionnaire-738-memory" },
+              { "title": "Legionnaire 749’s Testament", "key": "legionnaire-749-testament" },
+              { "title": "Kane’s Memory", "key": "kane-memory" },
+              { "title": "Legionnaire 738’s Memory", "key": "legionnaire-738-memory" },
+              { "title": "Terry’s Resignation", "key": "terry-resignation" },
+              { "title": "Jim’s Resolution", "key": "jim-resolution" },
+              { "title": "Legionnaire 729’s Memory", "key": "legionnaire-729-memory" },
+              { "title": "Legionnaire 751’s Testament", "key": "legionnaire-751-testament" },
+              { "title": "Legionnaire 212’s End", "key": "legionnaire-212-end" },
+              { "title": "Legionnaire 251’s Resolution", "key": "legionnaire-251-resolution" },
+              { "title": "Legionnaire 754’s Shout", "key": "legionnaire-754-shout" },
+              { "title": "Legionnaire 759’s Resignation", "key": "legionnaire-759-resignation" },
+              { "title": "Legionnaire 761’s Request", "key": "legionnaire-761-request" },
+              { "title": "Legionnaire 760’s Memory", "key": "legionnaire-760-memory" },
+              { "title": "Legionnaire 743’s Shock", "key": "legionnaire-743-shock" },
+              { "title": "John’s Retrospective", "key": "john-retrospective" },
+              { "title": "Legionnaire 719’s Memory", "key": "legionnaire-719-memory" }
+            ]
+          },
+          "xion": {
+            "title": "Xion",
+            "location": "Xion",
+            "list": [
+              { "title": "Lament of the Trapped", "key": "lament-of-the-trapped" },
+              { "title": "Who Are You Guys?", "key": "who-are-you-guys" },
+              { "title": "Let Me Out", "key": "let-me-out" },
+              { "title": "Monologue of a Trapped Man", "key": "monologue-of-a-trapped-man" },
+              { "title": "Matthew’s Memory", "key": "matthew-memory" }
+            ]
+          }
+        }
+      },
+      "document": {
+        "title": "Document",
+        "list": {
+          "log-data": {
+            "title": "Log Data",
+            "list": [
+              { "title": "S2RV1C2-7812’s Data", "key": "s2rv1c2-7812-data", "location": "Wasteland", "sector": "North Scrap Plains" },
+              { "title": "To the Little Drone", "key": "to-the-little-drone", "location": "Matrix 11", "sector": "Underground Sewer" },
+              { "title": "Booting Sequence", "key": "booting-sequence", "location": "Altess Levoire", "sector": "" },
+              { "title": "Security Procedure Guide", "key": "security-procedure-guide", "location": "Altess Levoire", "sector": "" },
+              { "title": "S2RV1C2-875687’s Data", "key": "s2rv1c2-875687-data", "location": "Great Desert", "sector": "Central Great Desert" },
+              { "title": "S2RV1C2-99991’s Data", "key": "s2rv1c2-99991-data", "location": "Great Desert", "sector": "Buried Ruins" },
+              { "title": "Cultivation Experiment", "key": "cultivation-experiment", "location": "Abyss Levoire", "sector": "" },
+              { "title": "Attack Detected", "key": "attack-detected", "location": "Abyss Levoire", "sector": "" },
+              { "title": "Mass Production", "key": "mass-production", "location": "Abyss Levoire", "sector": "" },
+              { "title": "Quarantine Failure?", "key": "quarantine-failure", "location": "Abyss Levoire", "sector": "" },
+              { "title": "CT27932", "key": "ct27932", "location": "Xion", "sector": "", "tags": [ "Bulletin Board Request: `Sleeping Beauty`" ] }
+            ]
+          },
+          "journal": {
+            "title": "Journal",
+            "list": [
+              { "title": "Survival Journal", "key": "survival-journal", "location": "Eidos 7", "sector": "", "tags": [ "Side Quest: `End of the Nightmare`" ] },
+              { "title": "Search Record", "key": "search-record", "location": "Wasteland", "sector": "", "tags": [ "Side Quest: `Keeping Secrets`" ] },
+              { "title": "Investigation Journal", "key": "investigation-journal", "location": "Wasteland", "sector": "", "tags": [ "Side Quest: `Keeping Secrets`" ] },
+              { "title": "Arin’s Journal", "key": "arin-journal", "location": "Wasteland", "sector": "", "tags": [ "Side Quest: `Stolen Treasure`" ] },
+              { "title": "Crevice", "key": "crevice", "location": "Matrix 11", "sector": "Rotten Labyrinth", "tags": [] },
+              { "title": "Z’s Diary", "key": "z-diary", "location": "Matrix 11", "sector": "Rotten Labyrinth", "tags": [] },
+              { "title": "Aaron’s Journal", "key": "aaron-journal", "location": "Xion", "sector": "", "tags": [ "Bulletin Board Request: `Looking for My Brother`" ] },
+              { "title": "I Saw It", "key": "i-saw-it", "location": "Great Desert", "sector": "", "tags": [ "Side Quest: `Let There be Light Again`" ] },
+              { "title": "Orca Aerospace Company Hypertube System", "key": "orca-aerospace-company-hypertube-system", "location": "Great Desert", "sector": "North Great Desert", "tags": [] },
+              { "title": "Damaged Legacy", "key": "damaged-legacy", "location": "", "sector": "Great Desert", "tags": [ "Side Quest: `Let There be Light Again`" ] },
+              { "title": "Kill Mother Sphere", "key": "kill-mother-sphere", "location": "Abyss Levoire", "sector": "", "tags": [] },
+              { "title": "DB372-25", "key": "db372-25", "location": "Xion", "sector": "", "tags": [ "Bulletin Board Request: `Lost Device`" ] }
+            ]
+          },
+          "messages": {
+            "title": "Messages",
+            "list": [
+              { "title": "Memo", "key": "memo", "location": "Eidos 7", "sector": "Parking Tower", "tags": [] },
+              { "title": "I’m Leaving", "key": "i-m-leaving", "location": "Wasteland", "sector": "", "tags": [ "Side Quest: `CnL - Communicate and Link`" ] },
+              { "title": "Do Not Disturb", "key": "do-not-disturb", "location": "Wasteland", "sector": "North Scrap Plains", "tags": [] },
+              { "title": "You Are Fake", "key": "you-are-fake", "location": "Altess Levoire", "sector": "", "tags": [] },
+              { "title": "Humanity Liberation Front", "key": "humanity-liberation-front", "location": "Altess Levoire", "sector": "", "tags": [] },
+              { "title": "Request Letter", "key": "request-letter", "location": "Xion", "sector": "", "tags": [ "Side Quest: `Oblivion`" ] },
+              { "title": "Kasim’s Memo", "key": "kasim-memo", "location": "Xion", "sector": "", "tags": [ "Side Quest: `First Customer`" ] },
+              { "title": "J’s Memo", "key": "j-memo", "location": "Matrix 11", "sector": "Rotten Labyrinth", "tags": [] },
+              { "title": "Truth of the Cradle", "key": "truth-of-the-cradle", "location": "Great Desert", "sector": "", "tags": [ "Side Quest: `A United People Cannot be Defeated`" ] },
+              { "title": "The Truth Under the City of Xion", "key": "the-truth-under-the-city-of-xion", "location": "Great Desert", "sector": "", "tags": [ "Side Quest: `A United People Cannot be Defeated`" ] },
+              { "title": "Third Road", "key": "third-road", "location": "Great Desert", "sector": "North Great Desert", "tags": [] },
+              { "title": "What Will You Choose?", "key": "what-will-you-choose", "location": "Eidos 9", "sector": "Atelier", "tags": [] },
+              { "title": "Ticket to Heaven", "key": "ticket-to-heaven", "location": "Eidos 9", "sector": "Fallen Overpass - Sector 2", "tags": [] },
+              { "title": "Francis’s Letter", "key": "francis-letter", "location": "", "sector": "", "tags": [ "Seasonal Christmas event" ] }
+            ]
+          },
+          "announcements": {
+            "title": "Announcements",
+            "list": [
+              { "title": ":::WARNING:::", "key": "warning", "location": "Eidos 7", "sector": "", "tags": [ "Side Quest: `Taboo`" ] },
+              { "title": "Visitor Information", "key": "visitor-information", "location": "Altess Levoire", "sector": "", "tags": [] },
+              { "title": "Transport Delay Notice", "key": "transport-delay-notice", "location": "Matrix 11", "sector": "Closed Off Platform", "tags": [] },
+              { "title": "Great Desert Crossing Exploration Team Advertisement", "key": "great-desert-crossing-exploration-team-advertisement", "location": "Great Desert", "sector": "", "tags": [] }
+            ]
+          },
+          "series": {
+            "title": "Series",
+            "list": [
+              { "title": "THE TRUTH, Article 1", "key": "the-truth-article-1", "location": "Wasteland", "sector": "Altess Levoire Approach", "tags": [] },
+              { "title": "THE TRUTH, Article 2", "key": "the-truth-article-2", "location": "Xion", "sector": "", "tags": [] },
+              { "title": "THE TRUTH, Article 3", "key": "the-truth-article-3", "location": "Eidos 7", "sector": "Parking Tower", "tags": [] },
+              { "title": "THE TRUTH, Article 4", "key": "the-truth-article-4", "location": "Great Desert", "sector": "Central Great Desert", "tags": [] },
+              { "title": "THE TRUTH, Article 5", "key": "the-truth-article-5", "location": "Wasteland", "sector": "North Scrap Plains", "tags": [] },
+              { "title": "THE TRUTH, Article 6", "key": "the-truth-article-6", "location": "Great Desert", "sector": "Buried Ruins", "tags": [] },
+              { "title": "The Xion #1", "key": "the-xion-1", "location": "Xion", "sector": "", "tags": [] },
+              { "title": "The Xion #2", "key": "the-xion-2", "location": "Wasteland", "sector": "Barren Land", "tags": [] },
+              { "title": "The Xion #3", "key": "the-xion-3", "location": "Xion", "sector": "", "tags": [] },
+              { "title": "The Xion #4", "key": "the-xion-4", "location": "Great Desert", "sector": "Central Great Desert", "tags": [] },
+              { "title": "The Xion #5", "key": "the-xion-5", "location": "Xion", "sector": "", "tags": [] },
+              { "title": "The Xion #6", "key": "the-xion-6", "location": "Xion", "sector": "", "tags": [] },
+              { "title": "Plastic Hearts, Vol. 1", "key": "plastic-hearts-vol-1", "location": "Xion", "sector": "", "tags": [] },
+              { "title": "Plastic Hearts, Vol. 2", "key": "plastic-hearts-vol-2", "location": "Wasteland or Xion", "sector": "", "tags": [] },
+              { "title": "Plastic Hearts, Vol. 3", "key": "plastic-hearts-vol-3", "location": "Eidos 7", "sector": "Silent Street", "tags": [] },
+              { "title": "Plastic Hearts, Vol. 4", "key": "plastic-hearts-vol-4", "location": "Great Desert", "sector": "North Great Desert", "tags": [] },
+              { "title": "Plastic Hearts, Vol. 5", "key": "plastic-hearts-vol-5", "location": "Xion", "sector": "", "tags": [] },
+              { "title": "Book of Faith and Wisdom 2:1-4", "key": "book-of-faith-and-wisdom-2-1-4", "location": "Xion", "sector": "", "tags": [] },
+              { "title": "Book of Faith and Wisdom 2:3-6", "key": "book-of-faith-and-wisdom-2-3-6", "location": "Eidos 7", "sector": "", "tags": [ "Side Quest: `Oblivion`" ] },
+              { "title": "Notes on EVE Protocol 1", "key": "notes-on-eve-protocol-1", "location": "Xion", "sector": "", "tags": [] },
+              { "title": "Notes on EVE Protocol 2", "key": "notes-on-eve-protocol-2", "location": "Xion", "sector": "", "tags": [] },
+              { "title": "Notes on EVE Protocol 3", "key": "notes-on-eve-protocol-3", "location": "Xion", "sector": "", "tags": [] },
+              { "title": "Notes on EVE Protocol 4", "key": "notes-on-eve-protocol-4", "location": "Great Desert", "sector": "Central Great Desert", "tags": [] },
+              { "title": "The Lost 72 Years 1", "key": "the-lost-72-years-1", "location": "Xion", "sector": "", "tags": [] },
+              { "title": "The Lost 72 Years 2", "key": "the-lost-72-years-2", "location": "Xion", "sector": "", "tags": [] },
+              { "title": "The Lost 72 Years 3", "key": "the-lost-72-years-3", "location": "Xion", "sector": "", "tags": [] },
+              { "title": "The Lost 72 Years 4", "key": "the-lost-72-years-4", "location": "Xion", "sector": "", "tags": [ "Side Quest: `Taboo`" ] }
+            ]
+          },
+          "books": {
+            "title": "Books",
+            "list": [
+              { "title": "The Words of the Devout Felix", "key": "the-words-of-the-devout-felix", "location": "Eidos 7", "sector": "", "shop": "", "tags": [] },
+              { "title": "Light of the Colony", "key": "light-of-the-colony", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [] },
+              { "title": "Angel Accepting Shedding Tears", "key": "angel-accepting-shedding-tears", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [] },
+              { "title": "For a Better World", "key": "for-a-better-world", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [] },
+              { "title": "Book of Quotes 1", "key": "book-of-quotes-1", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [] },
+              { "title": "Book of Quotes 2", "key": "book-of-quotes-2", "location": "Eidos 9", "sector": "", "shop": "", "tags": [] },
+              { "title": "Eidos Company Promotion", "key": "eidos-company-promotion", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [] },
+              { "title": "How to Speak with Style", "key": "how-to-speak-with-style", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [] },
+              { "title": "Tattered Report", "key": "tattered-report", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [] },
+              { "title": "I Heard It", "key": "i-heard-it", "location": "Great Desert", "sector": "", "shop": "", "tags": [] }
+            ]
+          },
+          "information": {
+            "title": "Information",
+            "list": [
+              { "title": "Information: Oasis", "key": "information-oasis", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
+              { "title": "Information: Fantastic Bait", "key": "information-fantastic-bait", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
+              { "title": "Information: Hypertube", "key": "information-hypertube", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
+              { "title": "Information: Solar Tower", "key": "information-solar-tower", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
+              { "title": "Information: Can", "key": "information-can", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
+              { "title": "Information: Crazy Drone", "key": "information-crazy-drone", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
+              { "title": "Information: Prayer Passcode", "key": "information-prayer-passcode", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
+              { "title": "Information: Personal Link with Orcal", "key": "information-personal-link-with-orcal", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
+              { "title": "Information: Service Drones", "key": "information-service-drones", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
+              { "title": "Information: Conspiracy", "key": "information-conspiracy", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] }
+            ]
+          },
+          "promotions": {
+            "title": "Promotion",
+            "list": [
+              { "title": "Introducing the Ark-Tech’s Ark!", "key": "introducing-the-ark-tech-ark", "location": "Xion", "sector": "", "tags": [ "Side Quest: `Lost Ark`" ] },
+              { "title": "Experience Ark-Tech’s Ark!", "key": "experience-ark-tech-ark", "location": "Xion", "sector": "", "tags": [ "Side Quest: `Lost Ark`" ] },
+              { "title": "Ark-Tech delivers its best service by protecting its customers!", "key": "ark-tech-delivers-its-best-service-by-protecting-its-customers", "location": "Xion", "sector": "", "tags": [ "Side Quest: `Lost Ark`" ] },
+              { "title": "Ark-tech pioneers developing the green land!", "key": "ark-tech-pioneers-developing-the-green-land", "location": "Great Desert", "sector": "North Great Desert", "tags": [] },
+              { "title": "Help Wanted", "key": "help-wanted", "location": "Xion", "sector": "", "tags": [] },
+              { "title": "Xion Freedom Liberation Alliance Flyer", "key": "xion-freedom-liberation-alliance-flyer", "location": "Xion", "sector": "", "tags": [] },
+              { "title": "Attention, Citizens! 1", "key": "attention-citizens-1", "location": "Xion", "sector": "", "tags": [] },
+              { "title": "Attention, Citizens! 2", "key": "attention-citizens-2", "location": "Xion", "sector": "", "tags": [] },
+              { "title": "Curse the Heaven’s Royalty!", "key": "curse-the-heaven-royalty", "location": "Xion", "sector": "", "tags": [] },
+              { "title": "Funding Announcement: Colony-bound Rocket", "key": "funding-announcement-colony-bound-rocket", "location": "Xion", "sector": "", "tags": [] },
+              { "title": "Angels are Rigged", "key": "angels-are-rigged", "location": "Xion", "sector": "", "tags": [] },
+              { "title": "Prayer Meeting Guide", "key": "prayer-meeting-guide", "location": "Xion", "sector": "", "tags": [] },
+              { "title": "For You Dimwits Still Believing in Mother Sphere", "key": "for-you-dimwits-still-believing-in-mother-sphere", "location": "Xion", "sector": "", "tags": [] },
+              { "title": "Eidos Company Promotion", "key": "eidos-company-promotion", "location": "Altess Levoire", "sector": "", "tags": [] },
+              { "title": "To My Allies", "key": "to-my-allies", "location": "Xion", "sector": "", "tags": [ "Side Quest: `A United People Cannot be Defeated`" ] },
+              { "title": "Eidos 9, Of You and Mother", "key": "eidos-9-of-you-and-mother", "location": "Eidos 9", "sector": "Fallen Overpass - Sector 2", "tags": [] },
+              { "title": "Welcome to the Raphael Space Centre!", "key": "welcome-to-the-raphael-space-centre", "location": "Spire 4", "sector": "Space Logistics Complex", "tags": [] },
+              { "title": "Orca Aerospace Company Promotion", "key": "orca-aerospace-company-promotion", "location": "Spire 4", "sector": "Space Logistics Complex", "tags": [] }
+            ]
+          },
+          "prayers": {
+            "title": "Prayers",
+            "list": [
+              { "title": "Chapter of Trial 1-β", "key": "chapter-of-trial-1", "location": "Matrix 11", "sector": "Rotten Labyrinth", "tags": [] },
+              { "title": "Chapter of Trial 2-ϑ", "key": "chapter-of-trial-2", "location": "Great Desert", "sector": "North Great Desert", "tags": [] },
+              { "title": "Chapter of Trial 3-α", "key": "chapter-of-trial-3", "location": "Great Desert", "sector": "Central Great Desert", "tags": [] },
+              { "title": "Chapter of Trial 4-λ", "key": "chapter-of-trial-4", "location": "Great Desert", "sector": "North Great Desert", "tags": [] },
+              { "title": "Chapter of Trial 5-δ", "key": "chapter-of-trial-5", "location": "Wasteland", "sector": "Great Canyon", "tags": [] },
+              { "title": "Chapter of Trial 6-ζ", "key": "chapter-of-trial-6", "location": "Wasteland", "sector": "Altess Levoire Approach", "tags": [] },
+              { "title": "Chapter of Salvation -Ω", "key": "chapter-of-salvation", "location": "Wasteland", "sector": "Shipwreck container", "tags": [ "Bulletin Board Request: `Recruit Passcode Specialists`" ] }
+            ]
+          }
+        }
+      },
+      "passcode": {
+        "title": "Passcode",
+        "list": {
+          "eidos-7": {
+            "title": "Eidos 7",
+            "location": "Eidos 7",
+            "list": [
+              { "code": "γθαγθα", "key": "silent-street-gateway", "sector": "Silent Street, Gateway" },
+              { "code": "βθακθγ", "key": "silent-street-pharmacy", "sector": "Silent Street, Pharmacy" },
+              { "code": "δβµκδβ", "key": "flooded-underground-parking-lot", "sector": "Flooded Underground Parking Lot" },
+              { "code": "ααµθβθ", "key": "flooded-commercial-sector-rear-gate", "sector": "Flooded Commercial Sector, Rear Gate" },
+              { "code": "λµακθκ", "key": "underground-of-the-memory-tower", "sector": "Underground of the Memory Tower" },
+              { "code": "αααδδκ", "key": "plaza-entryway-flooded-commercial-district", "sector": "Plaza Entryway, Flooded Commercial District" }
+            ]
+          },
+          "wasteland": {
+            "title": "Wasteland",
+            "location": "Wasteland",
+            "list": [
+              { "code": "μλκιαβ", "key": "destroyed-monorail", "sector": "Destroyed Monorail" },
+              { "code": "θηγγγζ", "key": "antenna", "sector": "Antenna" },
+              { "code": "γβθαλα", "key": "collapsed-building-ruins", "sector": "Collapsed Building Ruins" }
+            ]
+          },
+          "altess-levoire": {
+            "title": "Altess Levoire",
+            "location": "Altess Levoire",
+            "list": [
+              { "code": "μηλαμη", "key": "air-vent-gate", "sector": "Air Vent Gate" }
+            ]
+          },
+          "matrix-11": {
+            "title": "Matrix 11",
+            "location": "Matrix 11",
+            "list": [
+              { "code": "λβκβδβ", "key": "rotten-labyrinth-hideout", "sector": "Rotten Labyrinth, Hideout" },
+              { "code": "αγδμθδ", "key": "landfill", "sector": "Landfill" },
+              { "code": "εκακδζ", "key": "train-graveyard-gate-4", "sector": "Train Graveyard, Gate 4" },
+              { "code": "μηλδκα", "key": "underground-sewer", "sector": "Underground Sewer" }
+            ]
+          },
+          "great-desert": {
+            "title": "Great Desert",
+            "location": "Great Desert",
+            "list": [
+              { "code": "λβιιδα", "key": "destroyed-hypertube", "sector": "Destroyed Hypertube" },
+              { "code": "μηζεεγ", "key": "solar-tower-area", "sector": "Solar Tower Area" },
+              { "code": "ηηαμμδ", "key": "buried-ruins", "sector": "Buried Ruins" },
+              { "code": "λλλλαθ", "key": "oasis", "sector": "Oasis" }
+            ]
+          },
+          "spire-4": {
+            "title": "Spire 4",
+            "location": "Spire 4",
+            "list": [
+              { "code": "ιθγηκλ", "key": "orca-space-complex-dam-maintenance-gate", "sector": "Orca Space Complex, Dam Maintenance Gate" },
+              { "code": "ηεγβεγ", "key": "raphael-space-center-gate-2", "sector": "Raphael Space Center, Gate 2" }
+            ]
+          },
+          "xion": {
+            "title": "Xion",
+            "location": "Xion",
+            "list": [
+              { "code": "αζαζαζ", "key": "aaron-locker", "sector": "Aaron’s Locker" },
+              { "code": "θθκκκε", "key": "alley-behind-memory-square", "sector": "Alley Behind Memory Square" },
+              { "code": "ηαεδγγ", "key": "teddy-locker", "sector": "Teddy’s Locker" }
+            ]
+          },
+          "side-quest": {
+            "title": "Side Quest",
+            "list": [
+              { "code": "θμκαεγ", "key": "lost-ark", "location": "Xion", "tags": [ "Side Quest: `Lost Ark`" ] },
+              { "code": "βθαλδζ", "key": "recruit-passcode-specialist", "location": "Xion", "tags": [ "Bulletin Board Request: `Recruit Passcode Specialist`" ] },
+              { "code": "λλλλλλ", "key": "three-witches", "location": "Xion", "tags": [ "Side Quest: `Three Witches`" ] }
+            ]
+          }
+        }
+      },
+      "charater": {
+        "title": "Charater",
+        "list": {
+          "charater": {
+            "title": "Charater",
+            "list": [
+              { "name": "Tachy", "key": "tachy" },
+              { "name": "Adam", "key": "adam" },
+              { "name": "Lily", "key": "lily" },
+              { "name": "Rael", "key": "rael" },
+              { "name": "Quiel", "key": "quiel" },
+              { "name": "Shael", "key": "shael" },
+              { "name": "Orcal", "key": "orcal" },
+              { "name": "Mann", "key": "mann" },
+              { "name": "Kaya", "key": "kaya" },
+              { "name": "Enya", "key": "enya" },
+              { "name": "Su", "key": "su" },
+              { "name": "Roxanne", "key": "roxanne" },
+              { "name": "Barry", "key": "barry" },
+              { "name": "D1G-g2r", "key": "d1g-g2r" },
+              { "name": "Kasim", "key": "kasim" },
+              { "name": "Clyde", "key": "clyde" },
+              { "name": "Raven", "key": "raven" },
+              { "name": "Mother Sphere", "key": "mother-sphere" }
+            ]
+          },
+          "nikke-dlc": {
+            "name": "NIKKE - DLC",
+            "title": "Stellar Blade X GODDESS OF VICTORY: NIKKE",
+            "list": [
+              { "name": "Scarlet", "key": "scarlet" },
+              { "name": "Volt", "key": "volt" }
+            ]
+          }
+        }
+      },
+      "naytiba": {
+        "title": "Naytiba",
+        "list": {
+          "minion": {
+            "title": "Naytiba Minion",
+            "list": [
+              { "name": "Thornhead", "key": "thornhead", "notes": "Thornheads are not overly intimidating enemies. They can easily be taken down from the front." },
+              { "name": "Creeper", "key": "creeper", "notes": "Creeper swarms usually contain unstable entities. They’ll charge at you and attempt to self-destruct, so stay on your toes." },
+              { "name": "Mite", "key": "mite", "notes": "Mites are not overly intimidating enemies. However, take care not to let them swarm you." },
+              { "name": "Mutated Mite", "key": "mutated-mite", "notes": "The mutated Mites can explode and spray poison. Deal with them before they detonate." },
+              { "name": "Boarlet", "key": "boarlet", "notes": "Boarlets are not overly intimidating enemies. They attack by swinging their tails or by rolling with their spikes out." },
+              { "name": "Tentacle", "key": "tentacle", "notes": "Tentacles can’t move and only attack things that are nearby. If you do not wish to deal with them, don’t go near them" },
+              { "name": "Test Subject", "key": "test-subject", "notes": "Several Naytibas carry these experimental subjects on their backs. Treating them as harmless plastic bags would be a deadly assumption." },
+              { "name": "Skulling", "key": "skulling", "notes": "Skullings are always in search of a stronger body. Subdue them before they can contaminate corpses." },
+              { "name": "Lesser Lurker", "key": "lesser-lurker", "notes": "Lesser Lurkers are not overly intimidating enemies. However, don’t let them swarm you." },
+              { "name": "Broken Droid ", "key": "broken-droid", "notes": "When the Droid is destroyed, its torso becomes detached. Subdue the torso to finish it off for good." },
+              { "name": "Aid Drone ", "key": "aid-drone", "notes": "Aid Drones heal enemies in the area. You must deal with them first" },
+              { "name": "Kokeshi ", "key": "kokeshi", "notes": "Kokeshi are small, spine-chilling machines, Be careful of theirs self-destruction attacks." }
+            ]
+          },
+          "warrior": {
+            "title": "Naytiba Warrior",
+            "list": [
+              { "name": "Beholder", "key": "beholder", "notes": "Beholders attack by slashing with their bone saw blades. Stay calm and fight back against them." },
+              { "name": "Mutated Creeper", "key": "mutated-creeper", "notes": "Mutated Creepers can spin and charge at great speeds. Try not to take a blow to the face." },
+              { "name": "Barnacle", "key": "barnacle", "notes": "Barnacles can render all attacks from the front useless when they lift their shell-covered legs. You’ll need a smarter strategy." },
+              { "name": "Cricket Slasher", "key": "cricket-slasher", "notes": "Cricket Slashers have two arms and one middle arm, which they swipe like a weapon." },
+              { "name": "Guardian", "key": "guardian", "notes": "Guardians have hard skin, but they are slow and simple. Be careful not to let them capture you in their giant arms, as this would spell danger for you." },
+              { "name": "Heavy Guardian", "key": "heavy-guardian", "notes": "Heavy Guardians change with their heavy bodies. Avoid them so you don’t get crushed." },
+              { "name": "Hydra", "key": "hydra", "notes": "Hydras can instantly become invisible. When they become invisible, it will be difficult to avoid their surprise charge attacks." },
+              { "name": "Cricket Boomer", "key": "cricket-boomer", "notes": "Cricket Boomers attack by spitting acidic saliva. They explode when they die, so don’t let your guard down." },
+              { "name": "Cannon Guardian", "key": "cannon-guardian", "notes": "Cannon Guardians are living cannons. They continuously fire or scatter biological bombs." },
+              { "name": "Dozer", "key": "dozer", "notes": "Dozers are agile creatures. Beware of their different kinds of charging attacks." },
+              { "name": "Cricket Butcher", "key": "cricket-butcher", "notes": "Critcket Butchers have not only two, but four lethal arms, which they can use to grab, slice, or stab." },
+              { "name": "Mutated Hydra", "key": "mutated-hydra", "notes": "Mutated Hydras can float and attack quickly. You need to find a weak point to hurt them." },
+              { "name": "Mutated Boarlet", "key": "mutated-boarlet", "notes": "A Mutated Boarlet is much more dangerous than a normal Boarlet. Beware of its rolling charge attack or tail binding attack." },
+              { "name": "Hedgeboar", "key": "hedgeboar", "notes": "Hedgeboars are clumsy, but sturdy. They cannot be stunned by most attacks." },
+              { "name": "Waster", "key": "waster", "notes": "Wasters fight fiercely with their disfigured bodies. Some of their attacks can be threatening, so stay alert." },
+              { "name": "Turret Droid", "key": "turret-droid", "notes": "Turret Droids are old, corroded turret robots. Their shells can be destroyed with a sword, but be careful when they begin to shoot beams." },
+              { "name": "Guard Turret", "key": "guard-turret", "notes": "Guard Turrets find and lock on to their targets to fire poweful beams. Quickly find cover if one locks on to you." },
+              { "name": "Old Droid", "key": "old-droid", "notes": "Old Droids are correoded security robots that have fallen into disuse. Their attacks are slow, but they can dash at random so stay vigilant." },
+              { "name": "Infector", "key": "infector", "notes": "Infectors use their long, mutated arms as weapons. They will try to grab and bite you if they can." },
+              { "name": "Defiler", "key": "defiler", "notes": "Defilers disguise themselves by using the test subjects on their backs. When you approach, they will spring up and lunge at you." },
+              { "name": "Mutated Defiler", "key": "mutated-defiler", "notes": "Mutated Defilers hide themselves by using the test subjects on their backs. When you approach, they will spring up and lunge at you." },
+              { "name": "Hive", "key": "hive", "notes": "The Hive is a living Naytiba nest. It rapidly produces small Naytibas, so you must act quickly." },
+              { "name": "Machine Hive", "key": "machine-hive", "notes": "Machine Hives are abominable nests of jumbled flesh and machine. They constantly produce contaminated machines, so they must be dealt with swiftly" },
+              { "name": "Skull Trooper", "key": "skull-trooper", "notes": "Skull Troopers use hammers as their weapons. Keep your cool when they go into a frenzy and wildly flail their weapon." },
+              { "name": "Skull Fighter", "key": "skull-fighter", "notes": "Skull Fighters use long spears as their weapons. Be careful they will not hesitate to put all their strength behind their strikes." },
+              { "name": "Skull Gunner", "key": "skull-gunner", "notes": "Skull Gunners use contaminated arms as organic guns. Move quickly or reflect their fluids to overpower them." },
+              { "name": "Skull Berserker", "key": "skull-berserker", "notes": "Skull Berserkers tear up pillars and carry them on their shoulders. Watch out for their devastating attacks." },
+              { "name": "Lurker", "key": "lurker", "notes": "Lurkers can burrow into the ground and perform surprise attacks. Agility is key to tkaing them down." },
+              { "name": "Lesser Behemoth", "key": "lesser-behemoth", "notes": "Lesser Behemoths are similar to Behemoths in many ways. However, they are much weaker, so you have more breathing room." },
+              { "name": "Cocoon", "key": "cocoon", "notes": "Cocoon attack by firing corrosive bodily fluids. You must be agile enough to avoid their attacks and defeat them." },
+              { "name": "Houndborg", "key": "houndborg", "notes": "Houndborgs are designed to behave like dogs, delivering quick, decisive blows" },
+              { "name": "Sentryborg", "key": "sentryborg", "notes": "Sentryborgs are armed with deadly projectiles. The bullets can be blocked or deflected, but not missiles." },
+              { "name": "Droid", "key": "droid", "notes": "Droid use wrist blades as a weapon." },
+              { "name": "Heavy Droid", "key": "heavy-droid", "notes": "Heavy Droids use wrist blades and shields as weapons." },
+              { "name": "Battle Droid", "key": "battle-droid", "notes": "Battle Droids can quickly transition between attack and defense modes. They may retreat or charge suddenly to change the tempo of combat" },
+              { "name": "Lump", "key": "lump", "notes": "Lumps use their giant tentacles as weapons. It would be wise to anticipate the direction and range of their attacks in order to strike back." }
+            ]
+          },
+          "elite-naytiba": {
+            "title": "Elite Naytiba",
+            "list": [
+              { "name": "Brute", "key": "brute", "notes": "Brutes’ explosive attacks come in a variety of forms, including continuous explosions, shockwaves, and ground blasts. Keep your distance and act fast." },
+              { "name": "Abaddon", "key": "abaddon", "notes": "Abaddon has the power to harnesss high-voltage electtricity. Do not get caught up in its lightning strikes." },
+              { "name": "Stalker", "key": "stalker", "notes": "Stalkers’ heads are devastating weapons. You must be agile to avoid getting cut by their bone saw blades." },
+              { "name": "Corrupter", "key": "corrupter", "notes": "Corrupters shoot toxins like cannonballs. You need to react accordingly, depending on the size." },
+              { "name": "Maelstrom", "key": "maelstrom", "notes": "Maelstrom throws explosive test subjects from its head. Be carefule of these living bombs" },
+              { "name": "Juggernaut", "key": "juggernaut", "notes": "Juggernauts are unexpectedly violent and quick, rather than slow and clumsy. Do not take them lightly." },
+              { "name": "Behemoth", "key": "behemoth", "notes": "Behemoths are ferocious creatures. They unleash various attacks, dealing an onslaught of blows that can be difficult to deal with straight on." },
+              { "name": "Belial", "key": "belial", "notes": "Belial has tremendous HP and tenacity. A single fight will most likely not be enough to finish it off." },
+              { "name": "Karakuri", "key": "karakuri", "notes": "Karukari are advanced version of Kokeshi. Watch out for attacks from smaller robots" },
+              { "name": "Democrawler", "key": "democrawler", "notes": "Democrawlers drive up their energy to fire barrages or shoot light beams. Be quick to avoid them" }
+            ]
+          },
+          "alpha-naytiba": {
+            "title": "Alpha Naytiba",
+            "list": [
+              { "name": "Gigas", "key": "gigas", "notes": "Gigas has strong physical strength and great agility. Beware of its continuous and charging attacks." },
+              { "name": "Tachy", "key": "tachy", "notes": "Tachy moves quickly to get tactical advantage. Pay attention to every single one of her movements" },
+              { "name": "Raven", "key": "raven", "notes": "Raven likes to toy with the enemy with deceptive movements. Do not fall for her tricks." },
+              { "name": "Demogorgon", "key": "demogorgon", "notes": "Destroying the Deomogorgon’s massive body is no easy feat, but focusing on its weakness may make this achievable." },
+              { "name": "Unidentified Naytiba", "key": "unidentified-naytiba", "notes": "The unidentified Naytiba is the embodiment of rage. It delivers brutal attacks fueled by pure, unfiltered emotion." }
+            ]
+          },
+          "elder-naytiba": {
+            "title": "Elder Naytiba",
+            "list": [
+              { "name": "Adam", "key": "adam-elder-1", "notes": "There is no known information." },
+              { "name": "Adam", "key": "adam-elder-2", "notes": "There is no known information." },
+              { "name": "Elder Naytiba", "key": "elder-naytiba", "notes": "There is no known information." }
+            ]
+          }
+        }
+      },
+      "miscellaneous": {
+        "title": "Miscellaneous",
+        "list": [
+          { "name": "Providence", "key": "providence", "notes": "Tachyon Blades are placed inside of both arms of the Providence, allowing it to slice and destroy virtually anything." }
+        ]
+      },
+      "fish": {
+        "title": "Fish",
+        "list": {
+          "small": {
+            "title": "Small",
+            "list": [
+              { "name": "Goldfish", "key": "goldfish", "bait": "Small Shrimp", "locations": [ "Great Desert: Oasis", "Wasteland: Northwestern cave" ] },
+              { "name": "Mudskipper", "key": "mudskipper", "bait": "Small Shrimp", "locations": [ "Great Desert: Oasis", "Eidos 7: Under the Clock Tower", "Eidos 9: Lily’s Hideout" ] },
+              { "name": "Betta", "key": "betta", "bait": "Small Shrimp", "locations": [ "Great Desert: Oasis" ] },
+              { "name": "Butterflyfish", "key": "butterflyfish", "bait": "Small Shrimp", "locations": [ "Great Desert: Oasis" ] },
+              { "name": "Porcupinefish", "key": "porcupinefish", "bait": "Small Shrimp", "locations": [ "Great Desert: Oasis", "Eidos 7: Under the Clock Tower", "Eidos 9: Lily’s Hideout" ] },
+              { "name": "Lobster", "key": "lobster", "bait": "Small Shrimp", "locations": [ "Great Desert: Oasis", "Eidos 7: Under the Clock Tower" ] }
+            ]
+          },
+          "medium": {
+            "title": "Medium",
+            "list": [
+              { "name": "Flying Fish", "key": "flying-fish", "bait": "Wriggling Insect", "locations": [ "Eidos 7: Under the Clock Tower", "Wasteland: Northwestern cave" ] },
+              { "name": "Triggerfish", "key": "triggerfish", "bait": "Wriggling Insect", "locations": [ "Eidos 7: Under the Clock Tower" ] },
+              { "name": "Footballfish", "key": "footballfish", "bait": "Wriggling Insect", "locations": [ "Xion: Wasteland Entrance", "Wasteland: Plant in southeastern area" ] },
+              { "name": "Sea Bass", "key": "sea-bass", "bait": "Wriggling Insect", "locations": [ "Wasteland: Northwestern cave" ] },
+              { "name": "Mackerel", "key": "mackerel", "bait": "Wriggling Insect", "locations": [ "Xion: Wasteland Entrance" ] },
+              { "name": "Red Seabream", "key": "red-seabream", "bait": "Wriggling Insect", "locations": [ "Wasteland: Plant in southeastern area" ] },
+              { "name": "Koi", "key": "koi", "bait": "Wriggling Insect", "locations": [ "Xion: Wasteland Entrance", "Eidos 7: Under the Clock Tower" ] },
+              { "name": "Channel Catfish", "key": "channel-catfish", "bait": "Wriggling Insect", "locations": [ "Xion: Wasteland Entrance", "Wasteland: Plant in southeastern area" ] },
+              { "name": "Salmon", "key": "salmon", "bait": "Wriggling Insect", "locations": [ "Xion: Wasteland Entrance", "Wasteland: Northwestern cave" ] }
+            ]
+          },
+          "large": {
+            "title": "Large",
+            "list": [
+              { "name": "Mahi-Mahi", "key": "mahi-mahi", "bait": "Fish Slice", "locations": [ "Eidos 7: Under the Clock Tower", "Wasteland: Northwestern cave" ] },
+              { "name": "Halibut", "key": "halibut", "bait": "Fish Slice", "locations": [ "Eidos 7: Under the Clock Tower", "Wasteland: Northwestern cave" ] },
+              { "name": "Ocean Sunfish", "key": "ocean-sunfish", "bait": "Fish Slice", "locations": [ "Eidos 7: Under the Clock Tower", "Eidos 9: Lily’s Hideout" ] },
+              { "name": "Sailfish", "key": "sailfish", "bait": "Fish Slice", "locations": [ "Wasteland: Northwestern cave" ] },
+              { "name": "Pacific Bluefin Tuna", "key": "pacific-bluefin-tuna", "bait": "Fish Slice", "locations": [ "Wasteland: Northwestern cave" ] }
+            ]
+          },
+          "gigantic": {
+            "title": "Gigantic",
+            "list": [
+              { "name": "Arowana", "key": "arowana", "bait": "Special Bait", "locations": [ "Eidos 9: Lily’s Hideout", "Great Desert: Oasis" ] },
+              { "name": "Pirarucu", "key": "pirarucu", "bait": "Special Bait", "locations": [ "Eidos 9: Lily’s Hideout", "Great Desert: Oasis" ] },
+              { "name": "Great White Shark", "key": "great-white-shark", "bait": "Special Bait", "locations": [ "Eidos 9: Lily’s Hideout", "Great Desert: Oasis" ] }
+            ]
+          },
+          "jumbo": {
+            "title": "Jumbo",
+            "list": [
+              { "name": "Whale Shark", "key": "whale-shark", "bait": "Fantastic Bait", "locations": [ "Great Desert: Oasis" ] },
+              { "name": "Dunkleosteus", "key": "dunkleosteus", "bait": "Fantastic Bait", "locations": [ "Great Desert: Oasis" ] }
+            ]
+          },
+          "nikke-dlc": {
+            "name": "NIKKE - DLC",
+            "title": "Stellar Blade X GODDESS OF VICTORY: NIKKE",
+            "list": [
+              { "name": "Poli", "key": "poli", "bait": "Special Bait", "locations": [ "Great Desert: Oasis" ] },
+              { "name": "Laplace", "key": "laplace", "bait": "Special Bait", "locations": [ "Great Desert: Oasis" ] },
+              { "name": "Rapunzel", "key": "rapunzel", "bait": "Special Bait", "locations": [ "Great Desert: Oasis" ] },
+              { "name": "Snow White", "key": "snow-white", "bait": "Special Bait", "locations": [ "Great Desert: Oasis" ] },
+              { "name": "Cassette Tape", "key": "cassette-tape", "bait": "Special Bait", "locations": [ "Great Desert: Oasis" ] },
+              { "name": "Neon’s Glasses", "key": "neon-glasses", "bait": "Special Bait", "locations": [ "Great Desert: Oasis" ] }
+            ]
+          }
+        }
+      },
+      "stellar-tears": {
+        "title": "Stellar Tears",
+        "list": {
+          "wasteland": {
+            "title": "Wasteland",
+            "location": "Wasteland",
+            "list": [
+              { "title": "Stellar Tear#AT8154E", "key": "stellar-tear-at8154e" },
+              { "title": "Stellar Tear#AC6258B", "key": "stellar-tear-ac6258b" },
+              { "title": "Stellar Tear#AB6148M", "key": "stellar-tear-ab6148m" },
+              { "title": "Stellar Tear#AJ4875L", "key": "stellar-tear-aj4875l" },
+              { "title": "Stellar Tear#AO3521P", "key": "stellar-tear-ao3521p" },
+              { "title": "Stellar Tear#AW42150", "key": "stellar-tear-aw42150" },
+              { "title": "Stellar Tear#AT4756L", "key": "stellar-tear-at4756l" },
+              { "title": "Stellar Tear#AC8653E", "key": "stellar-tear-ac8653e" }
+            ]
+          },
+          "great-desert": {
+            "title": "Great Desert",
+            "location": "Great Desert",
+            "list": [
+              { "title": "Stellar Tear#AN1632R", "key": "stellar-tear-an1632r" },
+              { "title": "Stellar Tear#AF8742F", "key": "stellar-tear-af8742f" },
+              { "title": "Stellar Tear#AB3459D", "key": "stellar-tear-ab3459d" },
+              { "title": "Stellar Tear#AJ9235H", "key": "stellar-tear-aj9235h" },
+              { "title": "Stellar Tear#A02489J", "key": "stellar-tear-a02489j" },
+              { "title": "Stellar Tear#AN5409P", "key": "stellar-tear-an5409p" },
+              { "title": "Stellar Tear#AM6131L", "key": "stellar-tear-am6131l" }
+            ]
+          }
+        }
+      },
+      "photo-challenge": {
+        "title": "Photo Challenge",
+        "list": {
+          "memories": {
+            "title": "Memories of Xion",
+            "quest": "Photography Club",
+            "location": "Xion",
+            "list": [
+              { "title": "Within the Memories", "key": "within-the-memories" }
+            ]
+          },
+          "butterflies": {
+            "title": "Butterflies in the Wasteland",
+            "quest": "Like Butterflies",
+            "location": "Wasteland",
+            "list": [
+              { "name": "Vibrant Butterfly", "key": "vibrant-butterfly" },
+              { "name": "Rare Butterfly", "key": "rare-butterfly" },
+              { "name": "Flamboyant Butterfly", "key": "flamboyant-butterfly" },
+              { "name": "Cute Butterfly", "key": "cute-butterfly" },
+              { "name": "Graceful Butterfly", "key": "graceful-butterfly" },
+              { "name": "Precious Butterfly", "key": "precious-butterfly" },
+              { "name": "Joyful Butterfly", "key": "joyful-butterfly" },
+              { "name": "Pure Butterfly", "key": "pure-butterfly" },
+              { "name": "Mysterious Butterfly", "key": "mysterious-butterfly" },
+              { "name": "Dreaming Butterfly", "key": "dreaming-butterfly" }
+            ]
+          },
+          "fishes": {
+            "title": "Fish in the Great Desert",
+            "quest": "Pisces",
+            "location": "Great Desert",
+            "list": [
+              { "name": "Vibrant Fish", "key": "vibrant-fish" },
+              { "name": "Rare Fish", "key": "rare-fish" },
+              { "name": "Flamboyant Fish", "key": "flamboyant-fish" },
+              { "name": "Cute Fish", "key": "cute-fish" },
+              { "name": "Graceful Fish", "key": "graceful-fish" },
+              { "name": "Precious Fish", "key": "precious-fish" },
+              { "name": "Joyful Fish", "key": "joyful-fish" },
+              { "name": "Pure Fish", "key": "pure-fish" },
+              { "name": "Mysterious Fish", "key": "mysterious-fish" },
+              { "name": "Dreaming Fish", "key": "dreaming-fish" }
+            ]
+          },
+          "cats": {
+            "title": "Cats in the Cold City",
+            "quest": "Cat Photo Exhibition",
+            "location": "Xion",
+            "list": [
+              { "name": "Vibrant Cat", "key": "vibrant-cat" },
+              { "name": "Rare Cat", "key": "rare-cat" },
+              { "name": "Flamboyant Cat", "key": "flamboyant-cat" },
+              { "name": "Cute Cat", "key": "cute-cat" },
+              { "name": "Graceful Cat", "key": "graceful-cat" },
+              { "name": "Precious Cat", "key": "precious-cat" },
+              { "name": "Joyful Cat", "key": "joyful-cat" },
+              { "name": "Pure Cat", "key": "pure-cat" },
+              { "name": "Mysterious Cat", "key": "mysterious-cat" },
+              { "name": "Dreaming Cat", "key": "dreaming-cat" }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "boss-challenge": {
+    "title": "Boss Challenge",
+    "list": [
+      { 
+        "name": "Abaddon", 
+        "key": "abaddon-eidos-7", 
+        "location": "Eidos 7", 
+        "variants": [ 
+          { "title": "Story Mode", "key": "story-mode" },
+          { "title": "Normal Mode", "key": "normal-mode" },
+          { "title": "Hard Mode", "key": "hard-mode" }
+        ]
+      },
+      { 
+        "name": "Corrupter", 
+        "key": "corrupter-eidos-7", 
+        "location": "Eidos 7", 
+        "variants": [ 
+          { "title": "Story Mode", "key": "story-mode" },
+          { "title": "Normal Mode", "key": "normal-mode" },
+          { "title": "Hard Mode", "key": "hard-mode" }
+        ]
+      },
+      { 
+        "name": "Gigas", 
+        "key": "gigas-eidos-7", 
+        "location": "Eidos 7", 
+        "variants": [ 
+          { "title": "Story Mode", "key": "story-mode" },
+          { "title": "Normal Mode", "key": "normal-mode" },
+          { "title": "Hard Mode", "key": "hard-mode" }
+        ]
+      },
+      { 
+        "name": "Brute", 
+        "key": "brute-wasteland", 
+        "location": "Wasteland",
+        "variants": [ 
+          { "title": "Story Mode", "key": "story-mode" },
+          { "title": "Normal Mode", "key": "normal-mode" },
+          { "title": "Hard Mode", "key": "hard-mode" }
+        ]
+      },
+      { 
+        "name": "Gigas", 
+        "key": "gigas-wasteland",
+        "location": "Wasteland",
+        "variants": [ 
+          { "title": "Story Mode", "key": "story-mode" },
+          { "title": "Normal Mode", "key": "normal-mode" },
+          { "title": "Hard Mode", "key": "hard-mode" }
+        ]
+      },
+      { 
+        "name": "Stalker",
+        "key": "stalker-matrix-11",
+        "location": "Matrix 11",
+        "variants": [ 
+          { "title": "Story Mode", "key": "story-mode" },
+          { "title": "Normal Mode", "key": "normal-mode" },
+          { "title": "Hard Mode", "key": "hard-mode" }
+        ]
+      },
+      { 
+        "name": "Juggernaut",
+        "key": "juggernaut-matrix-11",
+        "location": "Matrix 11",
+        "variants": [ 
+          { "title": "Story Mode", "key": "story-mode" },
+          { "title": "Normal Mode", "key": "normal-mode" },
+          { "title": "Hard Mode", "key": "hard-mode" }
+        ]
+      },
+      { 
+        "name": "Tachy", 
+        "key": "tachy-matrix-11", 
+        "location": "Matrix 11", 
+        "variants": [ 
+          { "title": "Story Mode", "key": "story-mode" },
+          { "title": "Normal Mode", "key": "normal-mode" },
+          { "title": "Hard Mode", "key": "hard-mode" }
+        ]
+      },
+      { 
+        "name": "Stalker", 
+        "key": "stalker-great-desert", 
+        "location": "Great Desert",
+        "variants": [ 
+          { "title": "Story Mode", "key": "story-mode" },
+          { "title": "Normal Mode", "key": "normal-mode" },
+          { "title": "Hard Mode", "key": "hard-mode" }
+        ]
+      },
+      { 
+        "name": "Abaddon",
+        "key": "abaddon-great-desert",
+        "location": "Great Desert",
+        "variants": [ 
+          { "title": "Story Mode", "key": "story-mode" },
+          { "title": "Normal Mode", "key": "normal-mode" },
+          { "title": "Hard Mode", "key": "hard-mode" }
+        ]
+      },
+      { 
+        "name": "Behemoth", 
+        "key": "behemoth-great-desert", 
+        "location": "Great Desert", 
+        "variants": [ 
+          { "title": "Story Mode", "key": "story-mode" },
+          { "title": "Normal Mode", "key": "normal-mode" },
+          { "title": "Hard Mode", "key": "hard-mode" }
+        ]
+      },
+      { 
+        "name": "Karakuri", 
+        "key": "karakuri-spire-4", 
+        "location": "Spire 4", 
+        "variants": [ 
+          { "title": "Story Mode", "key": "story-mode" },
+          { "title": "Normal Mode", "key": "normal-mode" },
+          { "title": "Hard Mode", "key": "hard-mode" }
+        ]
+      },
+      { 
+        "name": "Democrawler", 
+        "key": "democrawler-spire-4", 
+        "location": "Spire 4", 
+        "variants": [ 
+          { "title": "Story Mode", "key": "story-mode" },
+          { "title": "Normal Mode", "key": "normal-mode" },
+          { "title": "Hard Mode", "key": "hard-mode" }
+        ]
+      },
+      { 
+        "name": "UnIdentified Naytiba",
+        "key": "unidentified-naytiba-xion",
+        "location": "Xion",
+        "variants": [ 
+          { "title": "Story Mode", "key": "story-mode" },
+          { "title": "Normal Mode", "key": "normal-mode" },
+          { "title": "Hard Mode", "key": "hard-mode" }
+        ]
+      },
+      { 
+        "name": "Raven",
+        "key": "raven-wasteland",
+        "location": "Wasteland",
+        "variants": [ 
+          { "title": "Story Mode", "key": "story-mode" },
+          { "title": "Normal Mode", "key": "normal-mode" },
+          { "title": "Hard Mode", "key": "hard-mode" }
+        ]
+      },
+      { 
+        "name": "Providence", 
+        "key": "providence-nest", 
+        "location": "Nest", 
+        "variants": [ 
+          { "title": "Story Mode", "key": "story-mode" },
+          { "title": "Normal Mode", "key": "normal-mode" },
+          { "title": "Hard Mode", "key": "hard-mode" }
+        ]
+      },
+      { 
+        "name": "Elder Naytiba",
+        "key": "elder-naytiba-nest",
+        "location": "Nest",
+        "variants": [ 
+          { "title": "Story Mode", "key": "story-mode" },
+          { "title": "Normal Mode", "key": "normal-mode" },
+          { "title": "Hard Mode", "key": "hard-mode" }
+        ]
+      },
+      { 
+        "name": "Mann", 
+        "key": "mann-xion", 
+        "location": "Xion", 
+        "variants": [ 
+          { "title": "Story Mode", "key": "story-mode" },
+          { "title": "Normal Mode", "key": "normal-mode" },
+          { "title": "Hard Mode", "key": "hard-mode" }
+        ]
+      },
+      { 
+        "name": "Scarlet",
+        "key": "scarlet-moonlit-valley",
+        "location": "Moonlit Valley",
+        "variants": [
+          { "title": "Story Mode", "key": "story-mode" },
+          { "title": "Normal Mode", "key": "normal-mode" },
+          { "title": "Hard Mode", "key": "hard-mode" }
+        ]
+      }
+    ]
+  }
+}
