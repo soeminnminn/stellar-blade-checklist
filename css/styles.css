@@ -28,7 +28,7 @@
 
 body {
   position: relative;
-  font-family: sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: clamp(0.875em, 2vw, 1em);
   margin: 0;
   padding: 0;
@@ -350,15 +350,15 @@ span.side-button {
   flex-flow: column;
 }
 
-.checklist-item label {
+.checklist-item .checklist-label {
   cursor: pointer;
 }
 
-.checklist-item label input[type="checkbox"] {
+.checklist-item .checklist-label input[type="checkbox"] {
   margin-right: 0.5em;
 }
 
-.checklist-item label:has(input[type="checkbox"]:checked) {
+.checklist-item .checklist-label:has(input[type="checkbox"]:checked) {
   text-decoration: line-through;
   color: #999;
 }

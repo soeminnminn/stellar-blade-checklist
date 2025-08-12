@@ -57,6 +57,8 @@ export default {
   },
   render() {
     const label = () => {
+      const key = this.itemKey;
+
       if (typeof this.value === 'object' && Array.isArray(this.value.variants) && this.value.variants.length) {
         return h('div', { class: 'checklist-variants' }, [
           h('div', { class: 'variants-label' }, [
@@ -65,25 +67,24 @@ export default {
           ]),
           h('div', { class: 'variants' }, this.value.variants.map((v, i) => {
             let title = `${v}`;
-            let key = `${this.itemKey}/variant-${i}`;
+            let vkey = `${key}/variant-${i}`;
 
             if (typeof v === 'string') {
-              key = `${this.itemKey}/${this.escapeKey(v)}`;
+              vkey = `${key}/${this.escapeKey(v)}`;
 
             } else if (typeof v === 'object') {
               title = v.name || v.code || v.title;
-              key = `${this.itemKey}/${v.key || this.escapeKey(title)}`;
+              vkey = `${key}/${v.key || this.escapeKey(title)}`;
             }
 
             return h('label', { key: `variants-${i}`, class: 'checklist-label' }, [
-              h('input', { type: 'checkbox', value: key, checked: this.isChecked(key), onChange: this.handleChange }),
+              h('input', { type: 'checkbox', value: vkey, checked: this.isChecked(vkey), onChange: this.handleChange }),
               title
             ]);
           }))
         ]);
       }
 
-      const key = this.itemKey;
       return h('label', { class: 'checklist-label' }, [
         h('span', { class: 'item-index' }, `${this.index}`),
         h('input', { type: 'checkbox', value: key, checked: this.isChecked(key), onChange: this.handleChange }),
