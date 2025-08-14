@@ -27,15 +27,11 @@ export default {
 
       return '';
     },
-    itemKey() {
-      let key = `${this.dataKey}/${this.escapeKey(this.title)}`;
-      if (typeof this.value === 'object') {
-        key = `${this.dataKey}/${this.value.key || this.escapeKey(this.title)}`;
-      }
-      return key;
+    isCode() {
+      return typeof this.value === 'object' && this.value.code;
     }
   },
-  inject: [ 'setCompleted', 'isCompleted', 'escapeKey' ],
+  inject: [ 'setCompleted', 'isCompleted', 'makeKey' ],
   emits: [ 'change' ],
   methods: {
     isChecked(key) {
@@ -57,27 +53,19 @@ export default {
   },
   render() {
     const label = () => {
-      const key = this.itemKey;
+      const key = this.makeKey(this.dataKey, this.value);
 
       if (typeof this.value === 'object' && Array.isArray(this.value.variants) && this.value.variants.length) {
         return h('div', { class: 'checklist-variants' }, [
           h('div', { class: 'variants-label' }, [
             h('span', { class: 'item-index' }, `${this.index}`),
-            h('span', { class: 'checklist-label' }, this.title),
+            h('span', { class: [ 'checklist-label', this.isCode && 'code' ] }, this.title),
           ]),
           h('div', { class: 'variants' }, this.value.variants.map((v, i) => {
-            let title = `${v}`;
-            let vkey = `${key}/variant-${i}`;
+            const title = (typeof v === 'object') ? v.name || v.code || v.title : `${v}`;
+            const vkey = this.makeKey(key, v);
 
-            if (typeof v === 'string') {
-              vkey = `${key}/${this.escapeKey(v)}`;
-
-            } else if (typeof v === 'object') {
-              title = v.name || v.code || v.title;
-              vkey = `${key}/${v.key || this.escapeKey(title)}`;
-            }
-
-            return h('label', { key: `variants-${i}`, class: 'checklist-label' }, [
+            return h('label', { key: `variant-${i}`, class: [ 'checklist-label', v.code && 'code' ] }, [
               h('input', { type: 'checkbox', value: vkey, checked: this.isChecked(vkey), onChange: this.handleChange }),
               title
             ]);
@@ -85,7 +73,7 @@ export default {
         ]);
       }
 
-      return h('label', { class: 'checklist-label' }, [
+      return h('label', { class: [ 'checklist-label', this.isCode && 'code' ] }, [
         h('span', { class: 'item-index' }, `${this.index}`),
         h('input', { type: 'checkbox', value: key, checked: this.isChecked(key), onChange: this.handleChange }),
         this.title,

@@ -11,8 +11,8 @@
     "exterior/hair/planet-diving-tail",
     "exterior/nano-suit/skin-suit"
   ],
-  "locations": {
-    "title": "Locations",
+  "region": {
+    "title": "Region",
     "list": [
       { "title": "Eidos 7", "key": "eidos-7" },
       { "title": "Xion", "key": "xion" },
@@ -838,7 +838,7 @@
           { "name": "Orca Pathfinder", "key": "orca-pathfinder", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [ "NG+" ] },
           { "name": "Planet Diving Suit (2nd) V2", "key": "planet-diving-suit-2nd-v2", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [ "NG+" ] },
           { "name": "Prototype Planet Diving Suit V2", "key": "prototype-planet-diving-suit-v2", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [ "NG+" ] },
-          { "name": "Red Pearl", "key": "red-pearl", "location": "Xion", "sector": "", "shop": "", "tags": [ "NG+", "Collect 49 Cans" ] },
+          { "name": "Red Pearl", "key": "red-pearl", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [ "NG+" ] },
           { "name": "Pink Bear", "key": "pink-bear", "location": "", "sector": "", "shop": "", "tags": [ "NG+", "Side Quest: `Memories in the Doll`" ] },
           { "name": "Air Ace", "key": "air-ace", "location": "", "sector": "", "shop": "", "tags": [ "NG+", "Side Quest: `Encounter`" ] },
           { "name": "White Monsoon", "key": "white-monsoon", "location": "", "sector": "", "shop": "", "tags": [ "NG+", "Side Quest: `Precious Treasure`" ] },
@@ -1484,8 +1484,17 @@
             "title": "Side Quest",
             "list": [
               { "code": "θμκαεγ", "key": "lost-ark", "location": "Xion", "tags": [ "Side Quest: `Lost Ark`" ] },
+              { "code": "θθθθθ", "key": "sister-junk-chest", "location": "Xion", "tags": [ "Side Quest: `Life of the Scavengers`" ] },
               { "code": "βθαλδζ", "key": "recruit-passcode-specialist", "location": "Xion", "tags": [ "Bulletin Board Request: `Recruit Passcode Specialist`" ] },
+              { "code": "1228", "key": "three-witches", "location": "Eidos 7", "sector": "Slient Street, BAR 99", "tags": [ "Bulletin Board Request: `Legion’s Secret Stash`" ] },
               { "code": "λλλλλλ", "key": "three-witches", "location": "Xion", "tags": [ "Side Quest: `Three Witches`" ] }
+            ]
+          },
+          "door": {
+            "title": "Door",
+            "list": [
+              { "code": "1225", "key": "clock-tower-door", "location": "Eidos 7", "sector": "Commercial Sector", "tags": [ "Clock Tower Puzzle" ] },
+              { "code": "N72R5", "key": "train-cleaning-puzzle", "location": "Matrix 11", "sector": "Rail Yard", "tags": [ "Train Cleaning Puzzle" ] }
             ]
           }
         }

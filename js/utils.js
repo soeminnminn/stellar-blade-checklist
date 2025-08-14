@@ -1,15 +1,51 @@
 
+const greekAlphabets = [
+  { name: "alpha", upper: "Α", lower: "α" },
+  { name: "beta", upper: "Β", lower: "β" },
+  { name: "gamma", upper: "Γ", lower: "γ" },
+  { name: "delta", upper: "Δ", lower: "δ" },
+  { name: "epsilon", upper: "Ε", lower: "ε" },
+  { name: "zeta", upper: "Ζ", lower: "ζ" },
+  { name: "eta", upper: "Η", lower: "η" },
+  { name: "theta", upper: "Θ", lower: "θ" },
+  { name: "iota", upper: "Ι", lower: "ι" },
+  { name: "kappa", upper: "Κ", lower: "κ" },
+  { name: "lambda", upper: "Λ", lower: "λ" },
+  { name: "mu", upper: "Μ", lower: "μ" },
+  { name: "nu", upper: "Ν", lower: "ν" },
+  { name: "xi", upper: "Ξ", lower: "ξ" },
+  { name: "omicron", upper: "Ο", lower: "ο" },
+  { name: "pi", upper: "Π", lower: "π" },
+  { name: "rho", upper: "Ρ", lower: "ρ" },
+  { name: "sigma", upper: "Σ", lower: "σ" },
+  { name: "tau", upper: "Τ", lower: "τ" },
+  { name: "upsilon", upper: "Υ", lower: "υ" },
+  { name: "phi", upper: "Φ", lower: "φ" },
+  { name: "chi", upper: "Χ", lower: "χ" },
+  { name: "psi", upper: "Ψ", lower: "ψ" },
+  { name: "omega", upper: "Ω", lower: "ω" }
+];
+
 /**
  * @param {string} key 
  * @returns {string}
  */
 export function escapeKey(key) {
-  return key.toLocaleLowerCase()
+  return Array.from(key).reduce((a, c) => {
+      const gi = greekAlphabets.findIndex(g => [g.upper, g.lower].includes(c));
+      a += (gi > -1) ? `|${greekAlphabets[gi].name}|` : c;
+      return a;
+    }, "")
+    .toLocaleLowerCase()
+    .replaceAll('|', '-')
     .replaceAll('’s', '')
-    .replaceAll('’', '-')
+    .replaceAll("'s", '')
+    .replaceAll("'", '-')
+    .replaceAll('"', '')
+    .replaceAll(".", '')
     .replace(/[\s]+/g, '-')
-    .replace(/[^a-z0-9_-\u2605]/g, '-')
     .replace(/[\u2605]/g, '*')
+    .replace(/[^0-9a-z\*\-]/gi, '-')
     .replace(/[-]+/g, '-')
     .replace(/^[-]+/, '')
     .replace(/[-]+$/, '');

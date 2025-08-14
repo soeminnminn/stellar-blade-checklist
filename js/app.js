@@ -70,23 +70,41 @@ export default {
       exportMarkdown: this.exportMarkdown,
       exportChecklist: this.exportChecklist,
       importChecklist: this.importChecklist,
-      escapeKey: escapeKey,
+      makeKey: this.makeKey,
     };
   },
   methods: {
+    makeKey(dataKey, ...values) {
+      return values.reduce((t, v) => {
+        if (!Boolean(v)) return t;
+
+        if (typeof v === 'object') {
+          if (typeof v.key === 'string') {
+            t.push(v.key);
+
+          } else {
+            t.push(escapeKey(v.name || v.title));
+          }
+
+        } else if (typeof v === 'string') {
+          t.push(escapeKey(v));
+        }
+
+        return t;
+
+      }, [dataKey]).filter(Boolean).join('/');
+    },
     async loadData() {
       const res = await fetch('./data.json');
       if (res.ok) {
         const data = await res.json();
 
-        const completed = data['$completed'];
-        if (Array.isArray(completed)) {
-          for (const c of completed) {
-            const idx = this.completed.indexOf(c);
-            if (idx == -1) {
-              this.completed.push(c);
-            }
-          }
+        const defCompleted = data['$completed'];
+        if (Array.isArray(defCompleted)) {
+          const completed = [].concat(this.completed || [])
+            .concat(defCompleted)
+            .filter((x, i, arr) => arr.indexOf(x) === i);
+          this.completed = completed;
         }
 
         for (const key of Object.keys(data).filter(x => x.startsWith('$'))) {
