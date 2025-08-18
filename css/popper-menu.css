@@ -1,0 +1,91 @@
+.popper {
+  display: flex;
+  align-items: center;
+}
+
+.popper-button {
+  font-size: 1rem;
+  background: transparent;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+.popper-popup {
+  display: none;
+  box-sizing: content-box;
+  background: #333;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  padding: .325em 0;
+  border-radius: .375em;
+  display: none;
+  width: 100%;
+  min-width: 3em;
+  min-height: 1em;
+}
+.popper-popup .popper-menu {
+  display: flex;
+  flex-flow: column;
+  gap: 0.125em;
+}
+.popper-popup a:hover,
+.popper-popup span:hover {
+  background: #444444;
+}
+.popper-popup[data-popper-reference-hidden] {
+  visibility: hidden;
+  pointer-events: none;
+}
+.popper-popup[show-popper] {
+  display: block;
+  z-index: 9999;
+}
+
+/*build the arrow targeting the divider with class 'popper-arrow'*/
+.popper-arrow, .popper-arrow::before {
+  position: absolute;
+  width: .5em;
+  height: .5em;
+  background: #333333;
+}
+.popper-arrow {
+  visibility: hidden;
+}
+.popper-arrow::before {
+  visibility: visible;
+  content: "";
+  transform: rotate(45deg);
+}
+
+/*position arrow using popper.js data-popper-placement attribute*/
+.popper-popup[data-popper-placement^="top"] .popper-arrow,
+.popper-popup[x-placement^="top"] .popper-arrow {
+  bottom: -.25em;
+}
+
+.popper-popup[data-popper-placement^="bottom"] .popper-arrow,
+.popper-popup[x-placement^="bottom"] .popper-arrow {
+  top: -.25em;
+}
+
+.popper-popup[data-popper-placement^="left"] .popper-arrow,
+.popper-popup[x-placement^="left"] .popper-arrow {
+  right: -.25em;
+}
+
+.popper-popup[data-popper-placement^="right"] .popper-arrow,
+.popper-popup[x-placement^="right"] .popper-arrow {
+  left: -.25em;
+}
+
+/*hide arrow when reference outside of viewport*/
+.popper-popup:not([show-popper]) .popper-arrow::before {
+  visibility: hidden;
+}
+
+.popper-popup .popper-arrow,
+.popper-popup .popper-arrow::before {
+  display: none;
+}

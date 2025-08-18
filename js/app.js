@@ -6,6 +6,7 @@ import Sidebar from './sidebar.js';
 import HashRouter from './components/hash-router.js';
 import HomePage from './pages/home.js';
 import FAQPage from './pages/faq.js';
+import RegionPage from './pages/region.js';
 import ChecklistPage from './pages/checklist.js';
 import { escapeKey, generateMarkdown } from './utils.js';
 
@@ -21,18 +22,25 @@ export default {
     HashRouter,
     HomePage,
     FAQPage,
+    RegionPage,
     ChecklistPage,
   },
   data() {
     const ls = new LocalStorage(progressKey);
     ls.addProperty('completed', Array);
+    ls.addProperty('gameMode', Number);
+    ls.addProperty('region', Number);
 
     return {
       localStorage: ls,
+      conditionDefs: {},
       checklistData: {},
       sideMenuData: [],
       completed: ls.get('completed', []),
       pageId: false,
+      gameMode: ls.get('gameMode', 0),
+      lastRegion: ls.get('region', 0),
+      sort: {},
     };
   },
   watch: {
@@ -41,17 +49,27 @@ export default {
         this.sideMenuData = Object.keys(value).map(key => {
           const item = {
             key,
-            title: value[key].title
+            title: value[key].title,
+            '$condition': value[key]['$condition'],
           };
 
           if (key === 'data-bank') {
             const list = value[key].list;
-            item.children = Object.keys(list).map(k => ({ key: k, title: list[k].title }));
+            item.children = Object.keys(list).map(k => ({ key: k, title: list[k].title, '$condition': list[k]['$condition'] }));
           }
 
           return item;
         });
       }
+    },
+    gameMode() {
+      if (this.pageId) {
+        this.pageId = false;
+        
+        this.$nextTick(() => {
+          window.location.hash = '';
+        });
+      }      
     },
     completed: {
       handler(value) {
@@ -64,6 +82,11 @@ export default {
   },
   provide() {
     return {
+      getGameMode: () => this.gameMode,
+      setGameMode: this.setGameMode,
+      getLastRegion: () => this.lastRegion,
+      setLastRegion: this.setLastRegion,
+      isDisabled: this.isDisabled,
       setCompleted: this.setCompleted,
       isCompleted: this.isCompleted,
       getCompletedCount: this.getCompletedCount,
@@ -71,6 +94,10 @@ export default {
       exportChecklist: this.exportChecklist,
       importChecklist: this.importChecklist,
       makeKey: this.makeKey,
+      setSort: (dataKey, sortKey) => {
+        this.sort[dataKey] = sortKey;
+      },
+      getSort: (dataKey) => this.sort[dataKey] || '#',
     };
   },
   methods: {
@@ -98,6 +125,8 @@ export default {
       const res = await fetch('./data.json');
       if (res.ok) {
         const data = await res.json();
+
+        this.conditionDefs = data['$condition-defs'];
 
         const defCompleted = data['$completed'];
         if (Array.isArray(defCompleted)) {
@@ -137,8 +166,61 @@ export default {
     getCompletedCount(dataKey) {
       return this.completed.filter(x => x.startsWith(dataKey)).length;
     },
+    setGameMode(value) {
+      this.gameMode = value;
+
+      if (this.localStorage) {
+        this.localStorage.set('gameMode', value);
+      }
+    },
+    setLastRegion(value) {
+      this.lastRegion = value;
+
+      if (this.localStorage) {
+        this.localStorage.set('region', value);
+      }
+    },
+    isDisabled(value) {
+      if (typeof value === 'object' && typeof value['$condition'] === 'object') {
+        const condition = value['$condition'];
+        const gameMode = condition['game-mode'] || 0;
+        const region = condition['region'] || 0;
+
+        if (gameMode === 'any') {
+          return region > this.lastRegion;
+        }
+
+        if (region === 'any') {
+          return gameMode > this.gameMode;
+        }
+
+        let passed = gameMode < this.gameMode;
+        if (gameMode >= this.gameMode) {
+          passed = region <= this.lastRegion;
+        }
+
+        return passed === false;
+      }
+      return false;
+    },
     exportMarkdown() {
-      const markdown = generateMarkdown(appTitle, this.checklistData, this.completed);
+      const gameModes = this.conditionDefs['game-mode'].map((x, i) => {
+        return {
+          ...x,
+          completed: i <= this.gameMode
+        };
+      });
+
+      const regions = this.conditionDefs['region'].map((x, i) => {
+        return {
+          ...x,
+          completed: i <= this.lastRegion
+        };
+      });
+
+      const listData = { ...this.checklistData, region: undefined };
+
+      const markdown = generateMarkdown(appTitle, gameModes, regions, listData, this.completed);
 
       const blob = new Blob([markdown], { type: 'text/markdown' });
       const url = URL.createObjectURL(blob);
@@ -154,6 +236,8 @@ export default {
 
       const data = {
         key: progressKey,
+        gameMode: this.gameMode,
+        region: this.lastRegion,
         completed: this.completed.sort()
       };
 
@@ -171,6 +255,20 @@ export default {
         const data = JSON.parse(fileContent);
         if (data.key === progressKey && Array.isArray(data.completed)) {
           this.completed = data.completed;
+
+          if (typeof data.region !== 'undefined') {
+            const num = Number(data.region);
+            if (!Number.isNaN(num)) {
+              this.setLastRegion(num);
+            }
+          }
+
+          if (typeof data.gameMode !== 'undefined') {
+            const num = Number(data.gameMode);
+            if (!Number.isNaN(num)) {
+              this.setGameMode(num);
+            }
+          }
 
           this.$nextTick(() => {
             this.$notifications.open('Checklist progress imported!', {
@@ -198,12 +296,13 @@ export default {
   render() {
     return [
       h(AsyncLoader, { promise: this.loadData }),
-      h('div', { class: 'content-container' }, [
+      h('div', { key: `${this.gameMode}-${this.lastRegion}`, class: 'content-container' }, [
         h(Sidebar, { modelValue: this.sideMenuData, activeId: this.pageId }),
         h('div', { class: 'content-card' },
           h(HashRouter, { onChange: this.handlePageChange }, {
             default: () => h(HomePage, { title: appTitle }),
             faq: () => h(FAQPage),
+            region: () => h(RegionPage, { dataKey: 'region', listData: this.checklistData['region'] }),
             '#routes': (pathNames) => {
               if (pathNames) {
                 const parts = pathNames.split('/');
@@ -213,7 +312,8 @@ export default {
 
                   if (data) {
                     if (parts.length === 2) {
-                      return h(ChecklistPage, { key: pathNames, dataKey: pathNames, listData: data.list[parts[1]] });
+                      const subData = data.list[parts[1]];
+                      return h(ChecklistPage, { key: pathNames, dataKey: pathNames, listData: subData });
 
                     } else {
                       return h(ChecklistPage, { key: pathNames, dataKey: pathNames, listData: data })

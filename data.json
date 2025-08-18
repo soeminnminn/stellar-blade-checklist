@@ -4,6 +4,24 @@
     "https://game8.co/games/Stellar-Blade/",
     "https://www.neoseeker.com/stellar-blade/"
   ],
+  "$condition-defs": {
+    "game-mode": [
+      { "key": 0, "title": "Normal Mode" },
+      { "key": 1, "title": "New Game+" },
+      { "key": 2, "title": "New Game++" }
+    ],
+    "region": [
+      { "key": 0, "title": "Eidos 7" },
+      { "key": 1, "title": "Xion" },
+      { "key": 2, "title": "Wasteland" },
+      { "key": 3, "title": "Altess Levoire" },
+      { "key": 4, "title": "Matrix 11" },
+      { "key": 5, "title": "Great Desert" },
+      { "key": 6, "title": "Abyss Levoire" },
+      { "key": 7, "title": "Eidos 9" },
+      { "key": 8, "title": "Spire 4" }
+    ]
+  },
   "$completed": [
     "comrades/adam-clothes/sewer-rat",
     "comrades/drone-appearance/tactical-pack",
@@ -30,6 +48,7 @@
     "list": {
       "eidos-7": {
         "title": "Eidos 7",
+        "$condition": { "game-mode": "any", "region": 0 },
         "list": [
           { "name": "Silent Street Camp", "key": "silent-street-camp", "sector": "Silent Street" },
           { "name": "Submerged Rooftops Camp", "key": "submerged-rooftops-camp", "sector": "Submerged" },
@@ -49,6 +68,7 @@
       },
       "xion": {
         "title": "Xion",
+        "$condition": { "game-mode": "any", "region": 1 },
         "list": [
           { "name": "Xion Helipad Supply Camp", "key": "xion-helipad-supply-camp", "sector": "Helipad" },
           { "name": "Xion Presence Chamber Camp", "key": "xion-presence-chamber-camp", "sector": "Presence Chamber" }
@@ -56,6 +76,7 @@
       },
       "wasteland": {
         "title": "Wasteland",
+        "$condition": { "game-mode": "any", "region": 2 },
         "list": [
           { "name": "The Hidden Path Supply Camp", "key": "the-hidden-path-supply-camp", "sector": "Entrance of Wasteland" },
           { "name": "Barren Land Camp", "key": "barren-land-camp", "sector": "Barren Land" },
@@ -73,6 +94,7 @@
       },
       "altess-levoire": {
         "title": "Altess Levoire",
+        "$condition": { "game-mode": "any", "region": 3 },
         "list": [
           { "name": "Altess Levoire Security Chamber Camp", "key": "altess-levoire-security-chamber-camp", "sector": "Long corridor of capsules" },
           { "name": "Altess Levoire Sector AO7 Camp", "key": "altess-levoire-sector-ao7-camp", "sector": "Sector AO7" },
@@ -83,6 +105,7 @@
       },
       "matrix-11": {
         "title": "Matrix 11",
+        "$condition": { "game-mode": "any", "region": 4 },
         "list": [
           { "name": "Matrix 11 Tetrapod Pad Supply Camp", "key": "matrix-11-tetrapod-pad-supply-camp", "sector": "Matrix 11 landing pad" },
           { "name": "Closed-Off Platform Workshop Camp", "key": "closed-off-platform-workshop-camp", "sector": "Closed Off Platform" },
@@ -100,6 +123,7 @@
       },
       "great-desert": {
         "title": "Great Desert",
+        "$condition": { "game-mode": "any", "region": 5 },
         "list": [
           { "name": "Great Desert Tetrapod Landing Pad Supply Camp", "key": "great-desert-tetrapod-landing-pad-supply-camp", "sector": "Tetrapod Landing Pad" },
           { "name": "Abandoned Overpass Supply Camp", "key": "abandoned-overpass-supply-camp", "sector": "Solar Tower" },
@@ -124,6 +148,7 @@
       },
       "abyss-levoire": {
         "title": "Abyss Levoire",
+        "$condition": { "game-mode": "any", "region": 6 },
         "list": [
           { "name": "Ventilation Sector Supply Camp", "key": "ventilation-sector-supply-camp", "sector": "Emergency Exit" },
           { "name": "Ventilation Shaft Camp", "key": "ventilation-shaft-camp", "sector": "Emergency Exit" },
@@ -136,6 +161,7 @@
       },
       "eidos-9": {
         "title": "Eidos 9",
+        "$condition": { "game-mode": "any", "region": 7 },
         "list": [
           { "name": "Sector 2 Camp", "key": "sector-2-camp", "sector": "Sector 2" },
           { "name": "Sector 2 Parking Garage Camp", "key": "sector-2-parking-garage-camp", "sector": "Sector 2" },
@@ -147,6 +173,7 @@
       },
       "spire-4": {
         "title": "Spire 4",
+        "$condition": { "game-mode": "any", "region": 8 },
         "list": [
           { "name": "Water Gate Camp", "key": "water-gate-camp", "sector": "Orca Space Complex" },
           { "name": "Hypertube Entrance Supply Camp", "key": "hypertube-entrance-supply-camp", "sector": "Hypertube" },
@@ -171,93 +198,95 @@
       "main-missions": {
         "title": "Missions",
         "list": [
-            { "title": "7th Airborne Squad", "key": "7th-airborne-squad", "location": "Eidos 7", "notes": "" },
-            { "title": "Scavenger Adam", "key": "scavenger-adam", "location": "Eidos 7", "notes": "" },
-            { "title": "Xion, The Last Remaining City", "key": "xion-the-last-remaining-city", "location": "Xion", "notes": "" },
-            { "title": "Altess Levaire", "key": "altess-levaire", "location": "Wasteland", "notes": "" },
-            { "title": "Light of Hope", "key": "light-of-hope", "location": "Xion", "notes": "" },
-            { "title": "Alpha Signal", "key": "alpha-signal", "location": "Matrix 11", "notes": "" },
-            { "title": "Hidden Truth", "key": "hidden-truth", "location": "Xion", "notes": "" },
-            { "title": "Abyss Levoire", "key": "abyss-levoire", "location": "Great Desert", "notes": "" },
-            { "title": "Orcal’s Testimony", "key": "orcal-testimony", "location": "Xion", "notes": "" },
-            { "title": "Secret Garden", "key": "secret-garden", "location": "Eidos 9", "notes": "Only on `Making New Memories` path" },
-            { "title": "Eye of the Hurricane", "key": "eye-of-the-hurricane", "location": "Spire 4", "notes": "" },
-            { "title": "Burning Xion", "key": "burning-xion", "location": "Xion", "notes": "" },
-            { "title": "Last Fragment", "key": "last-fragment", "location": "Wasteland", "notes": "" },
-            { "title": "Selection of Species", "key": "selection-of-species", "location": "Nest", "notes": "" },
-            { "title": "EVE Protocol", "key": "eve-protocol", "location": "Nest", "notes": "" }
+            { "title": "7th Airborne Squad", "key": "7th-airborne-squad", "location": "Eidos 7", "notes": "", "$condition": { "game-mode": "any", "region": 0 } },
+            { "title": "Scavenger Adam", "key": "scavenger-adam", "location": "Eidos 7", "notes": "", "$condition": { "game-mode": "any", "region": 0 } },
+            { "title": "Xion, The Last Remaining City", "key": "xion-the-last-remaining-city", "location": "Xion", "notes": "", "$condition": { "game-mode": "any", "region": 1 } },
+            { "title": "Altess Levaire", "key": "altess-levaire", "location": "Wasteland", "notes": "", "$condition": { "game-mode": "any", "region": 2 } },
+            { "title": "Light of Hope", "key": "light-of-hope", "location": "Xion", "notes": "", "$condition": { "game-mode": "any", "region": 2 } },
+            { "title": "Alpha Signal", "key": "alpha-signal", "location": "Matrix 11", "notes": "", "$condition": { "game-mode": "any", "region": 4 } },
+            { "title": "Hidden Truth", "key": "hidden-truth", "location": "Xion", "notes": "", "$condition": { "game-mode": "any", "region": 4 } },
+            { "title": "Abyss Levoire", "key": "abyss-levoire", "location": "Great Desert", "notes": "", "$condition": { "game-mode": "any", "region": 5 } },
+            { "title": "Orcal’s Testimony", "key": "orcal-testimony", "location": "Xion", "notes": "", "$condition": { "game-mode": "any", "region": 5 } },
+            { "title": "Secret Garden", "key": "secret-garden", "location": "Eidos 9", "notes": "Only on `Making New Memories` path", "$condition": { "game-mode": "any", "region": 7 } },
+            { "title": "Eye of the Hurricane", "key": "eye-of-the-hurricane", "location": "Spire 4", "notes": "", "$condition": { "game-mode": "any", "region": 8 } },
+            { "title": "Burning Xion", "key": "burning-xion", "location": "Xion", "notes": "", "$condition": { "game-mode": "any", "region": 6 } },
+            { "title": "Last Fragment", "key": "last-fragment", "location": "Wasteland", "notes": "", "$condition": { "game-mode": "any", "region": 7 } },
+            { "title": "Selection of Species", "key": "selection-of-species", "location": "Spire 4", "notes": "", "$condition": { "game-mode": "any", "region": 8 } },
+            { "title": "EVE Protocol", "key": "eve-protocol", "location": "Spire 4", "notes": "", "$condition": { "game-mode": "any", "region": 8 } }
         ]
       },
       "side-quests": {
         "title": "Side Quest",
+        "$condition": { "game-mode": "any", "region": 1 },
         "list": [
-          { "title": "The Scavenger’s Story", "key": "the-scavenger-story", "location": "Xion", "notes": "Talk to Kaya after reaching the city of Xion." },
-          { "title": "Urgent Information", "key": "urgent-information", "location": "Xion", "notes": "Talk to Hugh at the entrance of Xion City. Available after completing `The Scavenger’s Story` Side Quest." },
-          { "title": "Looking at You", "key": "looking-at-you", "location": "Xion", "notes": "Talk to Su after reaching the city of Xion." },
-          { "title": "First Customer", "key": "first-customer", "location": "Xion", "notes": "Talk to Kasim. Available after accepting `Urgent Information` Sidequest." },
-          { "title": "Life of the Scavengers", "key": "life-of-the-scavengers", "location": "Xion", "notes": "Talk to Cyrus inside The Last Cup bar in Xion" },
-          { "title": "Angel of Death", "key": "angel-of-death", "location": "Xion", "notes": "Talk to the Scavenger near the Alley" },
-          { "title": "Stolen Treasure", "key": "stolen-treasure", "location": "Xion", "notes": "Talk to Lyle inside his shop" },
-          { "title": "The Words of Mother Sphere", "key": "the-words-of-mother-sphere", "location": "Xion", "notes": "Talk to Francis at the Library in Xion" },
-          { "title": "Oblivion", "key": "oblivion", "location": "Xion", "notes": "Talk to the girl found on the small house located under the bridge at the entrace of Xion." },
-          { "title": "Taboo", "key": "taboo", "location": "Xion", "notes": "Talk to Luther which is found near the bridge leading to the Wastelands in Xion" },
-          { "title": "An Unknown Present", "key": "an-unknown-present", "location": "Xion", "notes": "Encounter Inn just behind Gwen’s Salon." },
-          { "title": "Keeping Secrets", "key": "keeping-secrets", "location": "Xion", "notes": "Talk to Enya inside the bar in Xion." },
-          { "title": "A Treasure with a Name", "key": "a-treasure-with-a-name", "location": "Xion", "notes": "Talk to June while in Xion" },
-          { "title": "Memories in the Doll", "key": "memories-in-the-doll", "location": "Xion", "notes": "Talk to Jett in the house full of teddy bears." },
-          { "title": "An Eye for an Eye, a Tooth for a Tooth", "key": "an-eye-for-an-eye-a-tooth-for-a-tooth", "location": "Xion", "notes": "Talk to Min, one of the guards near the entrance of the elevator leading to the Great Desert" },
-          { "title": "The King of the Tunnel", "key": "the-king-of-the-tunnel", "location": "Xion", "notes": "Talk to Cedric near the vending machine on the alley around Sisters’ Junk in Xion" },
-          { "title": "Encounter", "key": "encounter", "location": "Xion", "notes": "Talk to Kaya after completing the Alpha SIgnal main mission. You must also have max affection with Kaya to start the quest." },
-          { "title": "An Offer You Can’t Refuse", "key": "an-offer-you-cant-refuse", "location": "Xion", "notes": "Talk to Roxanne after completing the `Alpha Signal` main mission." },
-          { "title": "I Won’t Forget You", "key": "i-wont-forget-you", "location": "Xion", "notes": "Talk to Beatrice who is idling by at the cross roads on the bridge leading to xion, the tetrapod, and the road to wastelands." },
-          { "title": "Lost Ark", "key": "lost-ark", "location": "Xion", "notes": "Talk to Mann while on the Presence Chamber." },
-          { "title": "A United People Cannot be Defeated", "key": "a-united-people-cannot-be-defeated", "location": "Xion", "notes": "Interact with the record at the table at the small restaurant in Xion." },
-          { "title": "Let There Be Light Again", "key": "let-there-be-light-again", "location": "Xion", "notes": "Talk to Francis at the library in Xion" },
-          { "title": "Madama Machine", "key": "madama-machine", "location": "Xion", "notes": "After completing `CNL - Communicate and Link`, return to the Tetrapod. Su and Enya will approach you and initiate the quest." },
-          { "title": "Stubbornness", "key": "stubbornness", "location": "Xion", "notes": "Talk to Barry in his still at Xion." },
-          { "title": "Barry and Wine", "key": "barry-and-wine", "location": "Xion", "notes": "Talk to Barry in his still at Xion." },
-          { "title": "Barry in Trouble", "key": "barry-in-trouble", "location": "Xion", "notes": "Talk to Barry in his still at Xion." },
-          { "title": "Reboot!", "key": "reboot-wasteland", "location": "Wasteland", "notes": "Interact with the supply camp on the entrance of the wasteland from Xion." },
-          { "title": "Plan to Clean the Earth", "key": "plan-to-clean-the-earth", "location": "Wasteland", "notes": "Approach the Scrap Yard and Listen to the Distress Signal" },
-          { "title": "CnL - Communicate and Link", "key": "cnl-communicate-and-link", "location": "Wasteland", "notes": "Improve D1G-g2r’s affinity to 2 and listen to his “Fantabolous Theory”." },
-          { "title": "Incarceration", "key": "incarceration", "location": "Wasteland", "notes": "Talk to Jonny who’s hiding in one of the containers in the Eastern Great Canyon." },
-          { "title": "Reboot!!!", "key": "reboot-great-desert", "location": "Great Desert", "notes": "" },
-          { "title": "Looking Glass", "key": "looking-glass", "location": "Great Desert", "notes": "" },
-          { "title": "Fallen Angel", "key": "fallen-angel", "location": "Great Desert", "notes": "" },
-          { "title": "Siren’s Song", "key": "siren-song", "location": "Eidos 7", "notes": "" },
-          { "title": "End of the Nightmare", "key": "end-of-the-nightmare", "location": "Eidos 7", "notes": "" }
+          { "title": "The Scavenger’s Story", "key": "the-scavenger-story", "location": "Xion", "notes": "Talk to Kaya after reaching the city of Xion.", "$condition": { "game-mode": "any", "region": 1 } },
+          { "title": "Urgent Information", "key": "urgent-information", "location": "Xion", "notes": "Talk to Hugh at the entrance of Xion City. Available after completing `The Scavenger’s Story` Side Quest.", "$condition": { "game-mode": "any", "region": 1 } },
+          { "title": "Looking at You", "key": "looking-at-you", "location": "Xion", "notes": "Talk to Su after reaching the city of Xion.", "$condition": { "game-mode": "any", "region": 1 } },
+          { "title": "First Customer", "key": "first-customer", "location": "Xion", "notes": "Talk to Kasim. Available after accepting `Urgent Information` Sidequest.", "$condition": { "game-mode": "any", "region": 1 } },
+          { "title": "Life of the Scavengers", "key": "life-of-the-scavengers", "location": "Xion", "notes": "Talk to Cyrus inside The Last Cup bar in Xion. Passcode: `θθθθθ`", "$condition": { "game-mode": "any", "region": 1 } },
+          { "title": "Angel of Death", "key": "angel-of-death", "location": "Xion", "notes": "Talk to the Scavenger near the Alley", "$condition": { "game-mode": "any", "region": 1 } },
+          { "title": "Stolen Treasure", "key": "stolen-treasure", "location": "Xion", "notes": "Talk to Lyle inside his shop", "$condition": { "game-mode": "any", "region": 1 } },
+          { "title": "The Words of Mother Sphere", "key": "the-words-of-mother-sphere", "location": "Xion", "notes": "Talk to Francis at the Library in Xion", "$condition": { "game-mode": "any", "region": 1 } },
+          { "title": "Oblivion", "key": "oblivion", "location": "Xion", "notes": "Talk to the girl found on the small house located under the bridge at the entrace of Xion.", "$condition": { "game-mode": "any", "region": 1 } },
+          { "title": "Taboo", "key": "taboo", "location": "Xion", "notes": "Talk to Luther which is found near the bridge leading to the Wastelands in Xion", "$condition": { "game-mode": "any", "region": 1 } },
+          { "title": "An Unknown Present", "key": "an-unknown-present", "location": "Xion", "notes": "Encounter Inn just behind Gwen’s Salon.", "$condition": { "game-mode": "any", "region": 1 } },
+          { "title": "Keeping Secrets", "key": "keeping-secrets", "location": "Xion", "notes": "Talk to Enya inside the bar in Xion.", "$condition": { "game-mode": "any", "region": 1 } },
+          { "title": "A Treasure with a Name", "key": "a-treasure-with-a-name", "location": "Xion", "notes": "Talk to June while in Xion", "$condition": { "game-mode": "any", "region": 1 } },
+          { "title": "Memories in the Doll", "key": "memories-in-the-doll", "location": "Xion", "notes": "Talk to Jett in the house full of teddy bears.", "$condition": { "game-mode": "any", "region": 1 } },
+          { "title": "An Eye for an Eye, a Tooth for a Tooth", "key": "an-eye-for-an-eye-a-tooth-for-a-tooth", "location": "Xion", "notes": "Talk to Min, one of the guards near the entrance of the elevator leading to the Great Desert", "$condition": { "game-mode": "any", "region": 1 } },
+          { "title": "The King of the Tunnel", "key": "the-king-of-the-tunnel", "location": "Xion", "notes": "Talk to Cedric near the vending machine on the alley around Sisters’ Junk in Xion", "$condition": { "game-mode": "any", "region": 1 } },
+          { "title": "Encounter", "key": "encounter", "location": "Xion", "notes": "Talk to Kaya after completing the Alpha SIgnal main mission. You must also have max affection with Kaya to start the quest.", "$condition": { "game-mode": "any", "region": 1 } },
+          { "title": "An Offer You Can’t Refuse", "key": "an-offer-you-cant-refuse", "location": "Xion", "notes": "Talk to Roxanne after completing the `Alpha Signal` main mission.", "$condition": { "game-mode": "any", "region": 0 } },
+          { "title": "I Won’t Forget You", "key": "i-wont-forget-you", "location": "Xion", "notes": "Talk to Beatrice who is idling by at the cross roads on the bridge leading to xion, the tetrapod, and the road to wastelands.", "$condition": { "game-mode": "any", "region": 1 } },
+          { "title": "Lost Ark", "key": "lost-ark", "location": "Xion", "notes": "Talk to Mann while on the Presence Chamber. Passcode: `θμκαεγ`", "$condition": { "game-mode": "any", "region": 1 } },
+          { "title": "A United People Cannot be Defeated", "key": "a-united-people-cannot-be-defeated", "location": "Xion", "notes": "Interact with the record at the table at the small restaurant in Xion.", "$condition": { "game-mode": "any", "region": 1 } },
+          { "title": "Let There Be Light Again", "key": "let-there-be-light-again", "location": "Xion", "notes": "Talk to Francis at the library in Xion", "$condition": { "game-mode": "any", "region": 1 } },
+          { "title": "Madama Machine", "key": "madama-machine", "location": "Xion", "notes": "After completing `CNL - Communicate and Link`, return to the Tetrapod. Su and Enya will approach you and initiate the quest.", "$condition": { "game-mode": "any", "region": 1 } },
+          { "title": "Stubbornness", "key": "stubbornness", "location": "Xion", "notes": "Talk to Barry in his still at Xion.", "$condition": { "game-mode": "any", "region": 1 } },
+          { "title": "Barry and Wine", "key": "barry-and-wine", "location": "Xion", "notes": "Talk to Barry in his still at Xion.", "$condition": { "game-mode": "any", "region": 1 } },
+          { "title": "Barry in Trouble", "key": "barry-in-trouble", "location": "Xion", "notes": "Talk to Barry in his still at Xion.", "$condition": { "game-mode": "any", "region": 1 } },
+          { "title": "Reboot!", "key": "reboot-wasteland", "location": "Wasteland", "notes": "Interact with the supply camp on the entrance of the wasteland from Xion.", "$condition": { "game-mode": "any", "region": 2 } },
+          { "title": "Plan to Clean the Earth", "key": "plan-to-clean-the-earth", "location": "Wasteland", "notes": "Approach the Scrap Yard and Listen to the Distress Signal", "$condition": { "game-mode": "any", "region": 2 } },
+          { "title": "CnL - Communicate and Link", "key": "cnl-communicate-and-link", "location": "Wasteland", "notes": "Improve D1G-g2r’s affinity to 2 and listen to his “Fantabolous Theory”.", "$condition": { "game-mode": "any", "region": 2 } },
+          { "title": "Incarceration", "key": "incarceration", "location": "Wasteland", "notes": "Talk to Jonny who’s hiding in one of the containers in the Eastern Great Canyon.", "$condition": { "game-mode": "any", "region": 2 } },
+          { "title": "Reboot!!!", "key": "reboot-great-desert", "location": "Great Desert", "notes": "", "$condition": { "game-mode": "any", "region": 5 } },
+          { "title": "Looking Glass", "key": "looking-glass", "location": "Great Desert", "notes": "", "$condition": { "game-mode": "any", "region": 5 } },
+          { "title": "Fallen Angel", "key": "fallen-angel", "location": "Great Desert", "notes": "", "$condition": { "game-mode": "any", "region": 5 } },
+          { "title": "Siren’s Song", "key": "siren-song", "location": "Eidos 7", "notes": "", "$condition": { "game-mode": "any", "region": 0 } },
+          { "title": "End of the Nightmare", "key": "end-of-the-nightmare", "location": "Eidos 7", "notes": "", "$condition": { "game-mode": "any", "region": 0 } }
         ]
       },
       "bulletin-board": {
         "title": "Bulletin Board Request",
+        "$condition": { "game-mode": "any", "region": 1 },
         "list": [
           { "title": "Sleeping Beauty", "key": "sleeping-beauty", "notes": "Unlocked by default" },
           { "title": "Find the Cat", "key": "find-the-cat", "notes": "Unlocked by default" },
           { "title": "Looking for My Brother", "key": "looking-for-my-brother", "notes": "Unlocked by default" },
-          { "title": "Simple Puzzle", "key": "simple-puzzle", "notes": "Unlocked by default" },
+          { "title": "Simple Puzzle", "key": "simple-puzzle", "notes": "Unlocked by default. Passcode: `304272`" },
           { "title": "Missing Husband", "key": "missing-husband", "notes": "Unlocked by default" },
-          { "title": "Wisdom Puzzle", "key": "wisdom-puzzle", "notes": "Unlocked after giving the 2nd Hyper Cell" },
+          { "title": "Wisdom Puzzle", "key": "wisdom-puzzle", "notes": "Unlocked after giving the 2nd Hyper Cell. Passcode: `5005`" },
           { "title": "Time for Revenge", "key": "time-for-revenge", "notes": "Unlocked after completing `Missing Wife`" },
           { "title": "Secret Request ", "key": "secret-request", "notes": "Unlocked after completing `Missing Wife`, Automatically refused" },
           { "title": "Generous Drop Pod", "key": "generous-drop-pod", "notes": "Unlocked after giving the 2nd Hyper Cell" },
-          { "title": "Legion’s Secret Stash", "key": "legion-secret-stash", "notes": "Unlocked after giving the 2nd Hyper Cell" },
+          { "title": "Legion’s Secret Stash", "key": "legion-secret-stash", "notes": "Unlocked after giving the 2nd Hyper Cell. Passcode: `1228`" },
           { "title": "Missing Wife", "key": "missing-wife", "notes": "Unlocked after completing `Sleeping Beauty`" },
           { "title": "Lost Device", "key": "lost-device", "notes": "Unlocked after completing `Sleeping Beauty`" },
           { "title": "Source of the Nightmare", "key": "source-of-the-nightmare", "notes": "Unlocked after completing `Wisdom Puzzle`" },
           { "title": "Wife’s Medicine", "key": "wife-medicine", "notes": "Unlocked after completing `Wisdom Puzzle`" },
-          { "title": "Recruit Passcode Specialists", "key": "recruit-passcode-specialists", "notes": "Acceptable in the request board after obtaining a `Chapter of Trial` document." },
+          { "title": "Recruit Passcode Specialists", "key": "recruit-passcode-specialists", "notes": "Acceptable in the request board after obtaining a `Chapter of Trial` document. Passcode: `βθαλδζ`" },
           { "title": "Valuable Cargo", "key": "valuable-cargo", "notes": "Unlocked after completing `Lost Device`" },
           { "title": "The Diary’s Revenge ", "key": "the-diary-revenge", "notes": "Automatically refused, Unlocked after giving the 2nd Hyper Cell" },
           { "title": "Where’s the Item", "key": "where-the-item", "notes": "Unlocked after completing `Alpha Signal`" },
           { "title": "Lurker Hunt", "key": "lurker-hunt", "notes": "Unlocked after completing `Alpha Signal`" },
           { "title": "Precious Treasure", "key": "precious-treasure", "notes": "Unlocked after completing `Where’s the Item`" },
           { "title": "The Last Wine", "key": "the-last-wine", "notes": "Unlocked after giving the 2nd Hyper Cell" },
-          { "title": "Wife’s Water Tank", "key": "wife-water-tank", "notes": "Unlocked after the `Looking Glass` sidequest" },
-          { "title": "An Unforgettable Fish Dish", "key": "an-unforgettable-fish-dish", "notes": "Unlocked after the `Wife’s Water Tank` sidequest" },
-          { "title": "Fish Research", "key": "fish-research", "notes": "Unlocked after the Unforgettable `Fish Dish` sidequest" },
-          { "title": "A Gift for a Fishing Maniac", "key": "a-gift-for-a-fishing-maniac", "notes": "Unlocked after the `Fish Research` sidequest" },
-          { "title": "Where Is the Fantastic Bait?", "key": "where-is-the-fantastic-bait", "notes": "Unlocked after the A Gift for a `Fishing Maniac` sidequest" },
-          { "title": "The Fish of Legends", "key": "the-fish-of-legends", "notes": "Unlocked after Where is the `Fantastic Bait` sidequest" },
+          { "title": "Wife’s Water Tank", "key": "wife-water-tank", "notes": "Unlocked after the `Looking Glass` side quest" },
+          { "title": "An Unforgettable Fish Dish", "key": "an-unforgettable-fish-dish", "notes": "Unlocked after the `Wife’s Water Tank` side quest" },
+          { "title": "Fish Research", "key": "fish-research", "notes": "Unlocked after the Unforgettable `Fish Dish` side quest" },
+          { "title": "A Gift for a Fishing Maniac", "key": "a-gift-for-a-fishing-maniac", "notes": "Unlocked after the `Fish Research` side quest" },
+          { "title": "Where Is the Fantastic Bait?", "key": "where-is-the-fantastic-bait", "notes": "Unlocked after the A Gift for a `Fishing Maniac` side quest" },
+          { "title": "The Fish of Legends", "key": "the-fish-of-legends", "notes": "Unlocked after Where is the `Fantastic Bait` side quest" },
           { "title": "Photography Club", "key": "photography-club", "notes": "Unlocked by default. Photo Challenge: `Memories of Xion`" },
           { "title": "Like Butterflies", "key": "like-butterflies", "notes": "Unlocked after completing the Photography Club. Photo Challenge: `Butterflies in the Wasteland`" },
           { "title": "Cat Photo Exhibition", "key": "cat-photo-exhibition", "notes": "Photo Challenge: `Cats in the Cold City`" },
@@ -267,6 +296,7 @@
       "nikke-dlc": {
         "name": "NIKKE - DLC",
         "title": "Stellar Blade X GODDESS OF VICTORY: NIKKE",
+        "$condition": { "game-mode": 0, "region": 2 },
         "list": [
           { "title": "Scarlet and Volt’s Situation", "key": "scarlet-and-volt-situation", "location": "Wasteland" },
           { "title": "Scarlet and Volt’s Predicament", "key": "scarlet-and-volt-predicament", "location": "Wasteland" },
@@ -277,6 +307,7 @@
       },
       "endings": {
         "title": "Endings",
+        "$condition": { "game-mode": 0, "region": 8 },
         "list": [
           { "title": "Return to the Colony", "key": "return-to-the-colony", "notes": "Eve and Lily will meet Mother Sphere" },
           { "title": "Cost of Lost Memories", "key": "cost-of-lost-memories", "notes": "Lily will die and Mother Sphere will send an army against Eve" },
@@ -287,155 +318,160 @@
   },
   "cans": {
     "title": "Can",
+    "$sort": [
+      { "key": "#", "title": "Default" },
+      { "key": "serial", "title": "In Game" },
+      { "key": "title", "title": "Alphabets" }
+    ],
     "list": [
-      { "title": "Potential Blast", "key": "potential-blast", "serial":33, "location": "Eidos 7", "sector": "Construction Area" },
-      { "title": "Elixir Carrot", "key": "elixir-carrot", "serial": 25, "location": "Eidos 7", "sector": "Flooded Commercial Sector" },
-      { "title": "Cryo Original", "key": "cryo-original", "serial": 1, "location": "Eidos 7", "sector": "Flooded Commercial Sector" },
-      { "title": "Pixie", "key": "pixie", "serial": 3, "location": "Xion", "sector": "North Xion" },
-      { "title": "The Machinetta Americano", "key": "the-machinetta-americano", "serial": 9, "location": "Xion", "sector": "Central section of Xion" },
-      { "title": "The Machinetta Caramel Macchiato", "key": "the-machinetta-caramel-macchiato", "serial": 11, "location": "Xion", "sector": "North Xion" },
-      { "title": "GrainT Oolong", "key": "graint-oolong", "serial": 19, "location": "Xion", "sector": "South section of Xion" },
-      { "title": "Behemoth Red", "key": "behemoth-red", "serial": 27, "location": "Xion", "sector": "Central section of Xion" },
-      { "title": "Dionysus C", "key": "dionysus-c", "serial": 36, "location": "Xion", "sector": "East Xion" },
-      { "title": "Mountain Sparkle Mont Blanc", "key": "mountain-sparkle-mont-blanc", "serial": 39, "location": "Xion", "sector": "West Xion" },
-      { "title": "Bayern Weissbier Dunkel", "key": "bayern-weissbier-dunkel", "serial": 45, "location": "Xion", "sector": "East Xion" },
-      { "title": "Cryo Zero", "key": "cryo-zero", "serial": 2, "location": "Wasteland", "sector": "Great Canyon" },
-      { "title": "Pixie Zero", "key": "pixie-zero", "serial": 4, "location": "Wasteland", "sector": "Scrap Plains" },
-      { "title": "The Machinetta Cafe Latte", "key": "the-machinetta-cafe-latte", "serial": 10, "location": "Wasteland", "sector": "Power Plant" },
-      { "title": "Cryo Cafe Original", "key": "cryo-cafe-original", "serial": 12, "location": "Wasteland", "sector": "Great Canyon area" },
-      { "title": "The Haven Green Tea", "key": "the-haven-green-tea", "serial": 17, "location": "Wasteland", "sector": "Solar Tower" },
-      { "title": "GrainT Barley", "key": "graint-barley", "serial": 18, "location": "Wasteland", "sector": "Path to the Altess Levoire" },
-      { "title": "GrainT Corn", "key": "graint-corn", "serial": 20, "location": "Wasteland", "sector": "South Barren Land" },
-      { "title": "Nectar Orange", "key": "nectar-orange", "serial": 21, "location": "Wasteland", "sector": "Great Canyon" },
-      { "title": "Elixir Green", "key": "elixir-green", "serial": 26, "location": "Wasteland", "sector": "Scrap Plains" },
-      { "title": "Behemoth Green", "key": "behemoth-green", "serial": 28, "location": "Wasteland", "sector": "Great Canyon area" },
-      { "title": "Potential Tempest", "key": "potential-tempest", "serial": 34, "location": "Wasteland", "sector": "Solar Tower" },
-      { "title": "Mountain Sparkle Halla", "key": "mountain-sparkle-halla", "serial": 41, "location": "Wasteland", "sector": "Great Canyon" },
-      { "title": "Cryo The Clear", "key": "cryo-the-clear", "serial": 42, "location": "Wasteland", "sector": "Forbidden Area" },
-      { "title": "Bayern Hefe Weissbier", "key": "bayern-hefe-weissbier", "serial": 44, "location": "Wasteland", "sector": "Wasteland Basin" },
-      { "title": "Corsair Lager", "key": "corsair-lager", "serial": 46, "location": "Wasteland", "sector": "Scrap Plains" },
-      { "title": "Cryo Cafe Vanilla", "key": "cryo-cafe-vanilla", "serial": 13, "location": "Matrix 11", "sector": "Rail Yard" },
-      { "title": "New Foundland Dry", "key": "new-foundland-dry", "serial": 5, "location": "Matrix 11", "sector": "Juggernaut Boss arena" },
-      { "title": "Corsair Ale", "key": "corsair-ale", "serial": 47, "location": "Matrix 11", "sector": "Train Graveyard" },
-      { "title": "Newfoundland Dry Zero", "key": "newfoundland-dry-zero", "serial": 6, "location": "Great Desert", "sector": "Central Great Desert" },
-      { "title": "Milky Pop Zero", "key": "milky-pop-zero", "serial": 8, "location": "Great Desert", "sector": "West of the Tetrapod landing pod" },
-      { "title": "Cryo Cafe Mocha", "key": "cryo-cafe-mocha", "serial": 14, "location": "Great Desert", "sector": "Northern Great Desert" },
-      { "title": "Haven Earl Grey", "key": "haven-earl-grey", "serial": 15, "location": "Great Desert", "sector": "Broken Hypertube" },
-      { "title": "The Haven Milk Tea", "key": "the-haven-milk-tea", "serial": 16, "location": "Great Desert", "sector": "Central Buried Ruins" },
-      { "title": "Nectar Grape", "key": "nectar-grape", "serial": 22, "location": "Great Desert", "sector": "Oasis" },
-      { "title": "Nectar Cranberry", "key": "nectar-cranberry", "serial": 24, "location": "Great Desert", "sector": "Central Great Desert" },
-      { "title": "Behemoth Black", "key": "behemoth-black", "serial": 29, "location": "Great Desert", "sector": "Central Buried Ruins" },
-      { "title": "Liquid Fire", "key": "liquid-fire", "serial": 30, "location": "Great Desert", "sector": "North Buried Ruins" },
-      { "title": "Liquid Nuclear", "key": "liquid-nuclear", "serial": 32, "location": "Great Desert", "sector": "Central Buried Ruins" },
-      { "title": "Potential Frost", "key": "potential-frost", "serial": 35, "location": "Great Desert", "sector": "West Buried Ruins" },
-      { "title": "Starwell", "key": "starwell", "serial": 38, "location": "Great Desert", "sector": "Oasis" },
-      { "title": "Mountain Sparkle Everest", "key": "mountain-sparkle-everest", "serial": 40, "location": "Great Desert", "sector": "Central Buried Ruins" },
-      { "title": "Cryo the Malt", "key": "cryo-the-malt", "serial": 43, "location": "Great Desert", "sector": "West Buried Ruins area" },
-      { "title": "Johnson’s Highball Lemon", "key": "johnson-highball-lemon", "serial": 48, "location": "Great Desert", "sector": "Southeast corner of the Great Desert" },
-      { "title": "Johnson’s Highball Ginger", "key": "johnson-highball-ginger", "serial": 49, "location": "Great Desert", "sector": "Central Buried Ruins" },
-      { "title": "Milky Pop ", "key": "milky-pop", "serial": 7, "location": "Spire 4", "sector": "Hypertube" },
-      { "title": "Liquid Lightning", "key": "liquid-lightning", "serial": 31, "location": "Spire 4", "sector": "Space Logistics Complex" },
-      { "title": "Nectar Apple", "key": "nectar-apple", "serial": 23, "location": "Spire 4", "sector": "Raphael’s Space Centre" },
-      { "title": "Moonwell", "key": "moonwell", "serial": 37, "location": "Spire 4", "sector": "Maintenance Sector" }
+      { "title": "Potential Blast", "key": "potential-blast", "serial":33, "location": "Eidos 7", "sector": "Construction Area", "$condition": { "region": 0 } },
+      { "title": "Elixir Carrot", "key": "elixir-carrot", "serial": 25, "location": "Eidos 7", "sector": "Flooded Commercial Sector", "$condition": { "region": 0 } },
+      { "title": "Cryo Original", "key": "cryo-original", "serial": 1, "location": "Eidos 7", "sector": "Flooded Commercial Sector", "$condition": { "region": 0 } },
+      { "title": "Pixie", "key": "pixie", "serial": 3, "location": "Xion", "sector": "North Xion", "$condition": { "region": 1 } },
+      { "title": "The Machinetta Americano", "key": "the-machinetta-americano", "serial": 9, "location": "Xion", "sector": "Central section of Xion", "$condition": { "region": 1 } },
+      { "title": "The Machinetta Caramel Macchiato", "key": "the-machinetta-caramel-macchiato", "serial": 11, "location": "Xion", "sector": "North Xion", "$condition": { "region": 1 } },
+      { "title": "GrainT Oolong", "key": "graint-oolong", "serial": 19, "location": "Xion", "sector": "South section of Xion", "$condition": { "region": 1 } },
+      { "title": "Behemoth Red", "key": "behemoth-red", "serial": 27, "location": "Xion", "sector": "Central section of Xion", "$condition": { "region": 1 } },
+      { "title": "Dionysus C", "key": "dionysus-c", "serial": 36, "location": "Xion", "sector": "East Xion", "$condition": { "region": 1 } },
+      { "title": "Mountain Sparkle Mont Blanc", "key": "mountain-sparkle-mont-blanc", "serial": 39, "location": "Xion", "sector": "West Xion", "$condition": { "region": 1 } },
+      { "title": "Bayern Weissbier Dunkel", "key": "bayern-weissbier-dunkel", "serial": 45, "location": "Xion", "sector": "East Xion", "$condition": { "region": 1 } },
+      { "title": "Cryo Zero", "key": "cryo-zero", "serial": 2, "location": "Wasteland", "sector": "Great Canyon", "$condition": { "region": 2 } },
+      { "title": "Pixie Zero", "key": "pixie-zero", "serial": 4, "location": "Wasteland", "sector": "Scrap Plains", "$condition": { "region": 2 } },
+      { "title": "The Machinetta Cafe Latte", "key": "the-machinetta-cafe-latte", "serial": 10, "location": "Wasteland", "sector": "Power Plant", "$condition": { "region": 2 } },
+      { "title": "Cryo Cafe Original", "key": "cryo-cafe-original", "serial": 12, "location": "Wasteland", "sector": "Great Canyon area", "$condition": { "region": 2 } },
+      { "title": "The Haven Green Tea", "key": "the-haven-green-tea", "serial": 17, "location": "Wasteland", "sector": "Solar Tower", "$condition": { "region": 2 } },
+      { "title": "GrainT Barley", "key": "graint-barley", "serial": 18, "location": "Wasteland", "sector": "Path to the Altess Levoire", "$condition": { "region": 2 } },
+      { "title": "GrainT Corn", "key": "graint-corn", "serial": 20, "location": "Wasteland", "sector": "South Barren Land", "$condition": { "region": 2 } },
+      { "title": "Nectar Orange", "key": "nectar-orange", "serial": 21, "location": "Wasteland", "sector": "Great Canyon", "$condition": { "region": 2 } },
+      { "title": "Elixir Green", "key": "elixir-green", "serial": 26, "location": "Wasteland", "sector": "Scrap Plains", "$condition": { "region": 2 } },
+      { "title": "Behemoth Green", "key": "behemoth-green", "serial": 28, "location": "Wasteland", "sector": "Great Canyon area", "$condition": { "region": 2 } },
+      { "title": "Potential Tempest", "key": "potential-tempest", "serial": 34, "location": "Wasteland", "sector": "Solar Tower", "$condition": { "region": 2 } },
+      { "title": "Mountain Sparkle Halla", "key": "mountain-sparkle-halla", "serial": 41, "location": "Wasteland", "sector": "Great Canyon", "$condition": { "region": 2 } },
+      { "title": "Cryo The Clear", "key": "cryo-the-clear", "serial": 42, "location": "Wasteland", "sector": "Forbidden Area", "$condition": { "region": 2 } },
+      { "title": "Bayern Hefe Weissbier", "key": "bayern-hefe-weissbier", "serial": 44, "location": "Wasteland", "sector": "Wasteland Basin", "$condition": { "region": 2 } },
+      { "title": "Corsair Lager", "key": "corsair-lager", "serial": 46, "location": "Wasteland", "sector": "Scrap Plains", "$condition": { "region": 2 } },
+      { "title": "Cryo Cafe Vanilla", "key": "cryo-cafe-vanilla", "serial": 13, "location": "Matrix 11", "sector": "Rail Yard", "$condition": { "region": 4 } },
+      { "title": "New Foundland Dry", "key": "new-foundland-dry", "serial": 5, "location": "Matrix 11", "sector": "Juggernaut Boss arena", "$condition": { "region": 4 } },
+      { "title": "Corsair Ale", "key": "corsair-ale", "serial": 47, "location": "Matrix 11", "sector": "Train Graveyard", "$condition": { "region": 4 } },
+      { "title": "Newfoundland Dry Zero", "key": "newfoundland-dry-zero", "serial": 6, "location": "Great Desert", "sector": "Central Great Desert", "$condition": { "region": 5 } },
+      { "title": "Milky Pop Zero", "key": "milky-pop-zero", "serial": 8, "location": "Great Desert", "sector": "West of the Tetrapod landing pod", "$condition": { "region": 5 } },
+      { "title": "Cryo Cafe Mocha", "key": "cryo-cafe-mocha", "serial": 14, "location": "Great Desert", "sector": "Northern Great Desert", "$condition": { "region": 5 } },
+      { "title": "Haven Earl Grey", "key": "haven-earl-grey", "serial": 15, "location": "Great Desert", "sector": "Broken Hypertube", "$condition": { "region": 5 } },
+      { "title": "The Haven Milk Tea", "key": "the-haven-milk-tea", "serial": 16, "location": "Great Desert", "sector": "Central Buried Ruins", "$condition": { "region": 5 } },
+      { "title": "Nectar Grape", "key": "nectar-grape", "serial": 22, "location": "Great Desert", "sector": "Oasis", "$condition": { "region": 5 } },
+      { "title": "Nectar Cranberry", "key": "nectar-cranberry", "serial": 24, "location": "Great Desert", "sector": "Central Great Desert", "$condition": { "region": 5 } },
+      { "title": "Behemoth Black", "key": "behemoth-black", "serial": 29, "location": "Great Desert", "sector": "Central Buried Ruins", "$condition": { "region": 5 } },
+      { "title": "Liquid Fire", "key": "liquid-fire", "serial": 30, "location": "Great Desert", "sector": "North Buried Ruins", "$condition": { "region": 5 } },
+      { "title": "Liquid Nuclear", "key": "liquid-nuclear", "serial": 32, "location": "Great Desert", "sector": "Central Buried Ruins", "$condition": { "region": 5 } },
+      { "title": "Potential Frost", "key": "potential-frost", "serial": 35, "location": "Great Desert", "sector": "West Buried Ruins", "$condition": { "region": 5 } },
+      { "title": "Starwell", "key": "starwell", "serial": 38, "location": "Great Desert", "sector": "Oasis", "$condition": { "region": 5 } },
+      { "title": "Mountain Sparkle Everest", "key": "mountain-sparkle-everest", "serial": 40, "location": "Great Desert", "sector": "Central Buried Ruins", "$condition": { "region": 5 } },
+      { "title": "Cryo the Malt", "key": "cryo-the-malt", "serial": 43, "location": "Great Desert", "sector": "West Buried Ruins area", "$condition": { "region": 5 } },
+      { "title": "Johnson’s Highball Lemon", "key": "johnson-highball-lemon", "serial": 48, "location": "Great Desert", "sector": "Southeast corner of the Great Desert", "$condition": { "region": 5 } },
+      { "title": "Johnson’s Highball Ginger", "key": "johnson-highball-ginger", "serial": 49, "location": "Great Desert", "sector": "Central Buried Ruins", "$condition": { "region": 5 } },
+      { "title": "Milky Pop ", "key": "milky-pop", "serial": 7, "location": "Spire 4", "sector": "Hypertube", "$condition": { "region": 8 } },
+      { "title": "Liquid Lightning", "key": "liquid-lightning", "serial": 31, "location": "Spire 4", "sector": "Space Logistics Complex", "$condition": { "region": 8 } },
+      { "title": "Nectar Apple", "key": "nectar-apple", "serial": 23, "location": "Spire 4", "sector": "Raphael’s Space Centre", "$condition": { "region": 8 } },
+      { "title": "Moonwell", "key": "moonwell", "serial": 37, "location": "Spire 4", "sector": "Maintenance Sector", "$condition": { "region": 8 } }
     ]
   },
   "exospine": {
     "title": "Exospine",
     "list": [
       { 
+        "name": "Chain-Type Exospine", 
+        "key": "chain-type-exospine",
+        "variants": [ 
+          { "key": "mk1", "title": "Mk1", "$condition": { "region": "any" } }, 
+          { "key": "mk2", "title": "Mk2", "$condition": { "game-mode": 1, "region": "any" } }
+        ]
+      },
+      { 
         "name": "Beta Trace-Type Exospine", 
         "key": "beta-trace-type-exospine", 
         "variants": [ 
-          { "key": "mk1", "title": "Mk1" }, 
-          { "key": "mk2", "title": "Mk2" }
+          { "key": "mk1", "title": "Mk1", "$condition": { "region": "any" } }, 
+          { "key": "mk2", "title": "Mk2", "$condition": { "game-mode": 1, "region": "any" } }
         ]
       },
       { 
         "name": "Burst Trace-Type Exospine", 
         "key": "burst-trace-type-exospine", 
         "variants": [ 
-          { "key": "mk1", "title": "Mk1" }, 
-          { "key": "mk2", "title": "Mk2" }
-        ]
-      },
-      { 
-        "name": "Camouflage-Type Exospine", 
-        "key": "camouflage-type-exospine", 
-        "variants": [ 
-          { "key": "mk1", "title": "Mk1" }, 
-          { "key": "mk2", "title": "Mk2" }
-        ]
-      },
-      { 
-        "name": "Chain-Type Exospine", 
-        "key": "chain-type-exospine",
-        "variants": [ 
-          { "key": "mk1", "title": "Mk1" }, 
-          { "key": "mk2", "title": "Mk2" }
-        ]
-      },
-      { 
-        "name": "Eagle Eye-Type Exospine", 
-        "key": "eagle-eye-type-exospine", 
-        "variants": [ 
-          { "key": "mk1", "title": "Mk1" }, 
-          { "key": "mk2", "title": "Mk2" }
-        ]
-      },
-      { 
-        "name": "Grenadier-Type Exospine", 
-        "key": "grenadier-type-exospine", 
-        "variants": [ 
-          { "key": "mk1", "title": "Mk1" }, 
-          { "key": "mk2", "title": "Mk2" }
-        ]
-      },
-      { 
-        "name": "Impact-Type Exospine", 
-        "key": "impact-type-exospine", 
-        "variants": [ 
-          { "key": "mk1", "title": "Mk1" }, 
-          { "key": "mk2", "title": "Mk2" }
+          { "key": "mk1", "title": "Mk1", "$condition": { "region": "any" } }, 
+          { "key": "mk2", "title": "Mk2", "$condition": { "game-mode": 1, "region": "any" } }
         ]
       },
       { 
         "name": "Judgement-Type Exospine", 
         "key": "judgement-type-exospine", 
         "variants": [ 
-          { "key": "mk1", "title": "Mk1" }, 
-          { "key": "mk2", "title": "Mk2" }
+          { "key": "mk1", "title": "Mk1", "$condition": { "region": "any" } }, 
+          { "key": "mk2", "title": "Mk2", "$condition": { "game-mode": 1, "region": "any" } }
         ]
       },
       { 
         "name": "Protection-Type Exospine", 
         "key": "protection-type-exospine", 
         "variants": [ 
-          { "key": "mk1", "title": "Mk1" }, 
-          { "key": "mk2", "title": "Mk2" }
-        ]
-      },
-      { 
-        "name": "Recovery-Type Exospine", 
-        "key": "recovery-type-exospine", 
-        "variants": [ 
-          { "key": "mk1", "title": "Mk1" }, 
-          { "key": "mk2", "title": "Mk2" }
+          { "key": "mk1", "title": "Mk1", "$condition": { "region": "any" } }, 
+          { "key": "mk2", "title": "Mk2", "$condition": { "game-mode": 1, "region": "any" } }
         ]
       },
       { 
         "name": "Reflex-Type Exospine", 
         "key": "reflex-type-exospine", 
         "variants": [ 
-          { "key": "mk1", "title": "Mk1" }, 
-          { "key": "mk2", "title": "Mk2" }
+          { "key": "mk1", "title": "Mk1", "$condition": { "region": "any" } }, 
+          { "key": "mk2", "title": "Mk2", "$condition": { "game-mode": 1, "region": "any" } }
+        ]
+      },
+      { 
+        "name": "Impact-Type Exospine", 
+        "key": "impact-type-exospine", 
+        "variants": [ 
+          { "key": "mk1", "title": "Mk1", "$condition": { "region": "any" } }, 
+          { "key": "mk2", "title": "Mk2", "$condition": { "game-mode": 1, "region": "any" } }
+        ]
+      },
+      { 
+        "name": "Eagle Eye-Type Exospine", 
+        "key": "eagle-eye-type-exospine", 
+        "variants": [ 
+          { "key": "mk1", "title": "Mk1", "$condition": { "region": "any" } }, 
+          { "key": "mk2", "title": "Mk2", "$condition": { "game-mode": 1, "region": "any" } }
         ]
       },
       { 
         "name": "Suppression-Type Exospine", 
         "key": "suppression-type-exospine", 
         "variants": [ 
-          { "key": "mk1", "title": "Mk1" }, 
-          { "key": "mk2", "title": "Mk2" }
+          { "key": "mk1", "title": "Mk1", "$condition": { "region": "any" } }, 
+          { "key": "mk2", "title": "Mk2", "$condition": { "game-mode": 1, "region": "any" } }
+        ]
+      },
+      { 
+        "name": "Grenadier-Type Exospine", 
+        "key": "grenadier-type-exospine", 
+        "variants": [ 
+          { "key": "mk1", "title": "Mk1", "$condition": { "region": "any" } }, 
+          { "key": "mk2", "title": "Mk2", "$condition": { "game-mode": 1, "region": "any" } }
+        ]
+      },
+      { 
+        "name": "Camouflage-Type Exospine", 
+        "key": "camouflage-type-exospine", 
+        "variants": [ 
+          { "key": "mk1", "title": "Mk1", "$condition": { "region": "any" } }, 
+          { "key": "mk2", "title": "Mk2", "$condition": { "game-mode": 1, "region": "any" } }
+        ]
+      },
+      { 
+        "name": "Recovery-Type Exospine", 
+        "key": "recovery-type-exospine", 
+        "variants": [ 
+          { "key": "mk1", "title": "Mk1", "$condition": { "region": "any" } }, 
+          { "key": "mk2", "title": "Mk2", "$condition": { "game-mode": 1, "region": "any" } }
         ]
       }
     ]
@@ -447,310 +483,310 @@
         "name": "Beta Charge Gear",
         "key": "beta-charge-gear",
         "variants": [
-          { "key": "1star", "title": "★" },
-          { "key": "2stars", "title": "★★" },
-          { "key": "3stars", "title": "★★★" },
-          { "key": "mk2-1star", "title": "Mk2 ★" },
-          { "key": "mk2-2stars", "title": "Mk2 ★★" },
-          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+          { "key": "1star", "title": "★", "$condition": { "region": "any" } },
+          { "key": "2stars", "title": "★★", "$condition": { "region": "any" } },
+          { "key": "3stars", "title": "★★★", "$condition": { "region": "any" } },
+          { "key": "mk2-1star", "title": "Mk2 ★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-2stars", "title": "Mk2 ★★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★", "$condition": { "game-mode": 1, "region": "any" } }
         ]
       },
       {
         "name": "Beta Enhancement Gear",
         "key": "beta-enhancement-gear",
         "variants": [
-          { "key": "1star", "title": "★" },
-          { "key": "2stars", "title": "★★" },
-          { "key": "3stars", "title": "★★★" },
-          { "key": "mk2-1star", "title": "Mk2 ★" },
-          { "key": "mk2-2stars", "title": "Mk2 ★★" },
-          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+          { "key": "1star", "title": "★", "$condition": { "region": "any" } },
+          { "key": "2stars", "title": "★★", "$condition": { "region": "any" } },
+          { "key": "3stars", "title": "★★★", "$condition": { "region": "any" } },
+          { "key": "mk2-1star", "title": "Mk2 ★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-2stars", "title": "Mk2 ★★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★", "$condition": { "game-mode": 1, "region": "any" } }
         ]
       },
       {
         "name": "Beta Recovery Gear",
         "key": "beta-recovery-gear",
         "variants": [
-          { "key": "1star", "title": "★" },
-          { "key": "2stars", "title": "★★" },
-          { "key": "3stars", "title": "★★★" },
-          { "key": "mk2-1star", "title": "Mk2 ★" },
-          { "key": "mk2-2stars", "title": "Mk2 ★★" },
-          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+          { "key": "1star", "title": "★", "$condition": { "region": "any" } },
+          { "key": "2stars", "title": "★★", "$condition": { "region": "any" } },
+          { "key": "3stars", "title": "★★★", "$condition": { "region": "any" } },
+          { "key": "mk2-1star", "title": "Mk2 ★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-2stars", "title": "Mk2 ★★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★", "$condition": { "game-mode": 1, "region": "any" } }
         ]
       },
       {
         "name": "Burst Charge Gear",
         "key": "burst-charge-gear",
         "variants": [
-          { "key": "1star", "title": "★" },
-          { "key": "2stars", "title": "★★" },
-          { "key": "3stars", "title": "★★★" },
-          { "key": "mk2-1star", "title": "Mk2 ★" },
-          { "key": "mk2-2stars", "title": "Mk2 ★★" },
-          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+          { "key": "1star", "title": "★", "$condition": { "region": "any" } },
+          { "key": "2stars", "title": "★★", "$condition": { "region": "any" } },
+          { "key": "3stars", "title": "★★★", "$condition": { "region": "any" } },
+          { "key": "mk2-1star", "title": "Mk2 ★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-2stars", "title": "Mk2 ★★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★", "$condition": { "game-mode": 1, "region": "any" } }
         ]
       },
       {
         "name": "Burst Enhancement Gear",
         "key": "burst-enhancement-gear",
         "variants": [
-          { "key": "1star", "title": "★" },
-          { "key": "2stars", "title": "★★" },
-          { "key": "3stars", "title": "★★★" },
-          { "key": "mk2-1star", "title": "Mk2 ★" },
-          { "key": "mk2-2stars", "title": "Mk2 ★★" },
-          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+          { "key": "1star", "title": "★", "$condition": { "region": "any" } },
+          { "key": "2stars", "title": "★★", "$condition": { "region": "any" } },
+          { "key": "3stars", "title": "★★★", "$condition": { "region": "any" } },
+          { "key": "mk2-1star", "title": "Mk2 ★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-2stars", "title": "Mk2 ★★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★", "$condition": { "game-mode": 1, "region": "any" } }
         ]
       },
       {
         "name": "Burst Expansion Gear",
         "key": "burst-expansion-gear",
         "variants": [
-          { "key": "2stars", "title": "★★" },
-          { "key": "3stars", "title": "★★★" },
-          { "key": "mk2-2stars", "title": "Mk2 ★★" },
-          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+          { "key": "2stars", "title": "★★", "$condition": { "region": "any" } },
+          { "key": "3stars", "title": "★★★", "$condition": { "region": "any" } },
+          { "key": "mk2-2stars", "title": "Mk2 ★★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★", "$condition": { "game-mode": 1, "region": "any" } }
         ]
       },
       {
         "name": "Burst Recovery Gear",
         "key": "burst-recovery-gear",
         "variants": [
-          { "key": "1star", "title": "★" },
-          { "key": "2stars", "title": "★★" },
-          { "key": "3stars", "title": "★★★" },
-          { "key": "mk2-1star", "title": "Mk2 ★" },
-          { "key": "mk2-2stars", "title": "Mk2 ★★" },
-          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
-        ]
-      },
-      {
-        "name": "Combat Continuation Gear",
-        "key": "combat-continuation-gear",
-        "variants": [
-          { "key": "1star", "title": "★" },
-          { "key": "2stars", "title": "★★" },
-          { "key": "3stars", "title": "★★★" },
-          { "key": "mk2-1star", "title": "Mk2 ★" },
-          { "key": "mk2-2stars", "title": "Mk2 ★★" },
-          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
-        ]
-      },
-      {
-        "name": "Combat Supply Gear",
-        "key": "combat-supply-gear",
-        "variants": [
-          { "key": "1star", "title": "★" },
-          { "key": "2stars", "title": "★★" },
-          { "key": "3stars", "title": "★★★" },
-          { "key": "mk2-1star", "title": "Mk2 ★" },
-          { "key": "mk2-2stars", "title": "Mk2 ★★" },
-          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
-        ]
-      },
-      {
-        "name": "Combo Attack Enhancement Gear",
-        "key": "combo-attack-enhancement-gear",
-        "variants": [
-          { "key": "1star", "title": "★" },
-          { "key": "2stars", "title": "★★" },
-          { "key": "3stars", "title": "★★★" },
-          { "key": "mk2-1star", "title": "Mk2 ★" },
-          { "key": "mk2-2stars", "title": "Mk2 ★★" },
-          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
-        ]
-      },
-      {
-        "name": "Crit Boost Gear",
-        "key": "crit-boost-gear",
-        "variants": [
-          { "key": "1star", "title": "★" },
-          { "key": "2stars", "title": "★★" },
-          { "key": "3stars", "title": "★★★" },
-          { "key": "mk2-1star", "title": "Mk2 ★" },
-          { "key": "mk2-2stars", "title": "Mk2 ★★" },
-          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
-        ]
-      },
-      {
-        "name": "Crit Enhancement Gear",
-        "key": "crit-enhancement-gear",
-        "variants": [
-          { "key": "1star", "title": "★" },
-          { "key": "2stars", "title": "★★" },
-          { "key": "3stars", "title": "★★★" },
-          { "key": "mk2-1star", "title": "Mk2 ★" },
-          { "key": "mk2-2stars", "title": "Mk2 ★★" },
-          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
-        ]
-      },
-      {
-        "name": "Double Edged Gear",
-        "key": "double-edged-gear",
-        "variants": [
-          { "key": "1star", "title": "★" },
-          { "key": "2stars", "title": "★★" },
-          { "key": "3stars", "title": "★★★" },
-          { "key": "mk2-1star", "title": "Mk2 ★" },
-          { "key": "mk2-2stars", "title": "Mk2 ★★" },
-          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
-        ]
-      },
-      {
-        "name": "Fixed Damage Gear",
-        "key": "fixed-damage-gear",
-        "variants": [
-          { "key": "1star", "title": "★" },
-          { "key": "2stars", "title": "★★" },
-          { "key": "3stars", "title": "★★★" },
-          { "key": "mk2-1star", "title": "Mk2 ★" },
-          { "key": "mk2-2stars", "title": "Mk2 ★★" },
-          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
-        ]
-      },
-      {
-        "name": "Gold Gear",
-        "key": "gold-gear",
-        "variants": [
-          { "key": "1star", "title": "★" },
-          { "key": "2stars", "title": "★★" },
-          { "key": "3stars", "title": "★★★" },
-          { "key": "mk2-1star", "title": "Mk2 ★" },
-          { "key": "mk2-2stars", "title": "Mk2 ★★" },
-          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
-        ]
-      },
-      {
-        "name": "Melee Protection Gear",
-        "key": "melee-protection-gear",
-        "variants": [
-          { "key": "1star", "title": "★" },
-          { "key": "2stars", "title": "★★" },
-          { "key": "3stars", "title": "★★★" },
-          { "key": "mk2-1star", "title": "Mk2 ★" },
-          { "key": "mk2-2stars", "title": "Mk2 ★★" },
-          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
-        ]
-      },
-      {
-        "name": "Perfect Combat Gear",
-        "key": "perfect-combat-gear",
-        "variants": [
-          { "key": "1star", "title": "★" },
-          { "key": "2stars", "title": "★★" },
-          { "key": "3stars", "title": "★★★" },
-          { "key": "mk2-1star", "title": "Mk2 ★" },
-          { "key": "mk2-2stars", "title": "Mk2 ★★" },
-          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+          { "key": "1star", "title": "★", "$condition": { "region": "any" } },
+          { "key": "2stars", "title": "★★", "$condition": { "region": "any" } },
+          { "key": "3stars", "title": "★★★", "$condition": { "region": "any" } },
+          { "key": "mk2-1star", "title": "Mk2 ★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-2stars", "title": "Mk2 ★★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★", "$condition": { "game-mode": 1, "region": "any" } }
         ]
       },
       {
         "name": "Protection Gear",
         "key": "protection-gear",
         "variants": [
-          { "key": "1star", "title": "★" },
-          { "key": "2stars", "title": "★★" },
-          { "key": "3stars", "title": "★★★" },
-          { "key": "mk2-1star", "title": "Mk2 ★" },
-          { "key": "mk2-2stars", "title": "Mk2 ★★" },
-          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+          { "key": "1star", "title": "★", "$condition": { "region": "any" } },
+          { "key": "2stars", "title": "★★", "$condition": { "region": "any" } },
+          { "key": "3stars", "title": "★★★", "$condition": { "region": "any" } },
+          { "key": "mk2-1star", "title": "Mk2 ★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-2stars", "title": "Mk2 ★★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★", "$condition": { "game-mode": 1, "region": "any" } }
+        ]
+      },
+      {
+        "name": "Combat Continuation Gear",
+        "key": "combat-continuation-gear",
+        "variants": [
+          { "key": "1star", "title": "★", "$condition": { "region": "any" } },
+          { "key": "2stars", "title": "★★", "$condition": { "region": "any" } },
+          { "key": "3stars", "title": "★★★", "$condition": { "region": "any" } },
+          { "key": "mk2-1star", "title": "Mk2 ★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-2stars", "title": "Mk2 ★★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★", "$condition": { "game-mode": 1, "region": "any" } }
+        ]
+      },
+      {
+        "name": "Combat Supply Gear",
+        "key": "combat-supply-gear",
+        "variants": [
+          { "key": "1star", "title": "★", "$condition": { "region": "any" } },
+          { "key": "2stars", "title": "★★", "$condition": { "region": "any" } },
+          { "key": "3stars", "title": "★★★", "$condition": { "region": "any" } },
+          { "key": "mk2-1star", "title": "Mk2 ★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-2stars", "title": "Mk2 ★★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★", "$condition": { "game-mode": 1, "region": "any" } }
+        ]
+      },
+      {
+        "name": "Combo Attack Enhancement Gear",
+        "key": "combo-attack-enhancement-gear",
+        "variants": [
+          { "key": "1star", "title": "★", "$condition": { "region": "any" } },
+          { "key": "2stars", "title": "★★", "$condition": { "region": "any" } },
+          { "key": "3stars", "title": "★★★", "$condition": { "region": "any" } },
+          { "key": "mk2-1star", "title": "Mk2 ★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-2stars", "title": "Mk2 ★★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★", "$condition": { "game-mode": 1, "region": "any" } }
+        ]
+      },
+      {
+        "name": "Crit Boost Gear",
+        "key": "crit-boost-gear",
+        "variants": [
+          { "key": "1star", "title": "★", "$condition": { "region": "any" } },
+          { "key": "2stars", "title": "★★", "$condition": { "region": "any" } },
+          { "key": "3stars", "title": "★★★", "$condition": { "region": "any" } },
+          { "key": "mk2-1star", "title": "Mk2 ★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-2stars", "title": "Mk2 ★★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★", "$condition": { "game-mode": 1, "region": "any" } }
+        ]
+      },
+      {
+        "name": "Crit Enhancement Gear",
+        "key": "crit-enhancement-gear",
+        "variants": [
+          { "key": "1star", "title": "★", "$condition": { "region": "any" } },
+          { "key": "2stars", "title": "★★", "$condition": { "region": "any" } },
+          { "key": "3stars", "title": "★★★", "$condition": { "region": "any" } },
+          { "key": "mk2-1star", "title": "Mk2 ★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-2stars", "title": "Mk2 ★★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★", "$condition": { "game-mode": 1, "region": "any" } }
+        ]
+      },
+      {
+        "name": "Double Edged Gear",
+        "key": "double-edged-gear",
+        "variants": [
+          { "key": "1star", "title": "★", "$condition": { "region": "any" } },
+          { "key": "2stars", "title": "★★", "$condition": { "region": "any" } },
+          { "key": "3stars", "title": "★★★", "$condition": { "region": "any" } },
+          { "key": "mk2-1star", "title": "Mk2 ★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-2stars", "title": "Mk2 ★★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★", "$condition": { "game-mode": 1, "region": "any" } }
+        ]
+      },
+      {
+        "name": "Fixed Damage Gear",
+        "key": "fixed-damage-gear",
+        "variants": [
+          { "key": "1star", "title": "★", "$condition": { "region": "any" } },
+          { "key": "2stars", "title": "★★", "$condition": { "region": "any" } },
+          { "key": "3stars", "title": "★★★", "$condition": { "region": "any" } },
+          { "key": "mk2-1star", "title": "Mk2 ★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-2stars", "title": "Mk2 ★★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★", "$condition": { "game-mode": 1, "region": "any" } }
+        ]
+      },
+      {
+        "name": "Gold Gear",
+        "key": "gold-gear",
+        "variants": [
+          { "key": "1star", "title": "★", "$condition": { "region": "any" } },
+          { "key": "2stars", "title": "★★", "$condition": { "region": "any" } },
+          { "key": "3stars", "title": "★★★", "$condition": { "region": "any" } },
+          { "key": "mk2-1star", "title": "Mk2 ★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-2stars", "title": "Mk2 ★★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★", "$condition": { "game-mode": 1, "region": "any" } }
+        ]
+      },
+      {
+        "name": "Melee Protection Gear",
+        "key": "melee-protection-gear",
+        "variants": [
+          { "key": "1star", "title": "★", "$condition": { "region": "any" } },
+          { "key": "2stars", "title": "★★", "$condition": { "region": "any" } },
+          { "key": "3stars", "title": "★★★", "$condition": { "region": "any" } },
+          { "key": "mk2-1star", "title": "Mk2 ★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-2stars", "title": "Mk2 ★★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★", "$condition": { "game-mode": 1, "region": "any" } }
+        ]
+      },
+      {
+        "name": "Perfect Combat Gear",
+        "key": "perfect-combat-gear",
+        "variants": [
+          { "key": "1star", "title": "★", "$condition": { "region": "any" } },
+          { "key": "2stars", "title": "★★", "$condition": { "region": "any" } },
+          { "key": "3stars", "title": "★★★", "$condition": { "region": "any" } },
+          { "key": "mk2-1star", "title": "Mk2 ★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-2stars", "title": "Mk2 ★★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★", "$condition": { "game-mode": 1, "region": "any" } }
         ]
       },
       {
         "name": "Ranged Enhancement Gear",
         "key": "ranged-enhancement-gear",
         "variants": [
-          { "key": "1star", "title": "★" },
-          { "key": "2stars", "title": "★★" },
-          { "key": "3stars", "title": "★★★" },
-          { "key": "mk2-1star", "title": "Mk2 ★" },
-          { "key": "mk2-2stars", "title": "Mk2 ★★" },
-          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+          { "key": "1star", "title": "★", "$condition": { "region": "any" } },
+          { "key": "2stars", "title": "★★", "$condition": { "region": "any" } },
+          { "key": "3stars", "title": "★★★", "$condition": { "region": "any" } },
+          { "key": "mk2-1star", "title": "Mk2 ★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-2stars", "title": "Mk2 ★★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★", "$condition": { "game-mode": 1, "region": "any" } }
         ]
       },
       {
         "name": "Ranged Protection Gear",
         "key": "ranged-protection-gear",
         "variants": [
-          { "key": "1star", "title": "★" },
-          { "key": "2stars", "title": "★★" },
-          { "key": "3stars", "title": "★★★" },
-          { "key": "mk2-1star", "title": "Mk2 ★" },
-          { "key": "mk2-2stars", "title": "Mk2 ★★" },
-          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+          { "key": "1star", "title": "★", "$condition": { "region": "any" } },
+          { "key": "2stars", "title": "★★", "$condition": { "region": "any" } },
+          { "key": "3stars", "title": "★★★", "$condition": { "region": "any" } },
+          { "key": "mk2-1star", "title": "Mk2 ★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-2stars", "title": "Mk2 ★★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★", "$condition": { "game-mode": 1, "region": "any" } }
         ]
       },
       {
         "name": "Risk Taking Gear",
         "key": "risk-taking-gear",
         "variants": [
-          { "key": "1star", "title": "★" },
-          { "key": "2stars", "title": "★★" },
-          { "key": "3stars", "title": "★★★" },
-          { "key": "mk2-1star", "title": "Mk2 ★" },
-          { "key": "mk2-2stars", "title": "Mk2 ★★" },
-          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+          { "key": "1star", "title": "★", "$condition": { "region": "any" } },
+          { "key": "2stars", "title": "★★", "$condition": { "region": "any" } },
+          { "key": "3stars", "title": "★★★", "$condition": { "region": "any" } },
+          { "key": "mk2-1star", "title": "Mk2 ★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-2stars", "title": "Mk2 ★★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★", "$condition": { "game-mode": 1, "region": "any" } }
         ]
       },
       {
         "name": "Shield Destruction Gear",
         "key": "shield-destruction-gear",
         "variants": [
-          { "key": "1star", "title": "★" },
-          { "key": "2stars", "title": "★★" },
-          { "key": "3stars", "title": "★★★" },
-          { "key": "mk2-1star", "title": "Mk2 ★" },
-          { "key": "mk2-2stars", "title": "Mk2 ★★" },
-          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+          { "key": "1star", "title": "★", "$condition": { "region": "any" } },
+          { "key": "2stars", "title": "★★", "$condition": { "region": "any" } },
+          { "key": "3stars", "title": "★★★", "$condition": { "region": "any" } },
+          { "key": "mk2-1star", "title": "Mk2 ★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-2stars", "title": "Mk2 ★★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★", "$condition": { "game-mode": 1, "region": "any" } }
         ]
       },
       {
         "name": "Shield Enhancement Gear",
         "key": "shield-enhancement-gear",
         "variants": [
-          { "key": "1star", "title": "★" },
-          { "key": "2stars", "title": "★★" },
-          { "key": "3stars", "title": "★★★" },
-          { "key": "mk2-1star", "title": "Mk2 ★" },
-          { "key": "mk2-2stars", "title": "Mk2 ★★" },
-          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+          { "key": "1star", "title": "★", "$condition": { "region": "any" } },
+          { "key": "2stars", "title": "★★", "$condition": { "region": "any" } },
+          { "key": "3stars", "title": "★★★", "$condition": { "region": "any" } },
+          { "key": "mk2-1star", "title": "Mk2 ★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-2stars", "title": "Mk2 ★★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★", "$condition": { "game-mode": 1, "region": "any" } }
         ]
       },
       {
         "name": "Shield Penetration Gear",
         "key": "shield-penetration-gear",
         "variants": [
-          { "key": "1star", "title": "★" },
-          { "key": "2stars", "title": "★★" },
-          { "key": "3stars", "title": "★★★" },
-          { "key": "mk2-1star", "title": "Mk2 ★" },
-          { "key": "mk2-2stars", "title": "Mk2 ★★" },
-          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+          { "key": "1star", "title": "★", "$condition": { "region": "any" } },
+          { "key": "2stars", "title": "★★", "$condition": { "region": "any" } },
+          { "key": "3stars", "title": "★★★", "$condition": { "region": "any" } },
+          { "key": "mk2-1star", "title": "Mk2 ★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-2stars", "title": "Mk2 ★★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★", "$condition": { "game-mode": 1, "region": "any" } }
         ]
       },
       {
         "name": "Speed Increase Gear",
         "key": "speed-increase-gear",
         "variants": [
-          { "key": "1star", "title": "★" },
-          { "key": "2stars", "title": "★★" },
-          { "key": "3stars", "title": "★★★" },
-          { "key": "mk2-1star", "title": "Mk2 ★" },
-          { "key": "mk2-2stars", "title": "Mk2 ★★" },
-          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+          { "key": "1star", "title": "★", "$condition": { "region": "any" } },
+          { "key": "2stars", "title": "★★", "$condition": { "region": "any" } },
+          { "key": "3stars", "title": "★★★", "$condition": { "region": "any" } },
+          { "key": "mk2-1star", "title": "Mk2 ★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-2stars", "title": "Mk2 ★★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★", "$condition": { "game-mode": 1, "region": "any" } }
         ]
       },
       {
         "name": "Training Gear",
         "key": "training-gear",
         "variants": [
-          { "key": "1star", "title": "★" },
-          { "key": "2stars", "title": "★★" },
-          { "key": "3stars", "title": "★★★" },
-          { "key": "mk2-1star", "title": "Mk2 ★" },
-          { "key": "mk2-2stars", "title": "Mk2 ★★" },
-          { "key": "mk2-3stars", "title": "Mk2 ★★★" }
+          { "key": "1star", "title": "★", "$condition": { "region": "any" } },
+          { "key": "2stars", "title": "★★", "$condition": { "region": "any" } },
+          { "key": "3stars", "title": "★★★", "$condition": { "region": "any" } },
+          { "key": "mk2-1star", "title": "Mk2 ★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-2stars", "title": "Mk2 ★★", "$condition": { "game-mode": 1, "region": "any" } },
+          { "key": "mk2-3stars", "title": "Mk2 ★★★", "$condition": { "game-mode": 1, "region": "any" } }
         ]
       }
     ]
@@ -760,188 +796,204 @@
     "list": {
       "nano-suit": {
         "title": "Nano Suit",
+        "$sort": [
+          { "key": "#", "title": "Default" },
+          { "key": "name", "title": "Alphabets" }
+        ],
         "list": [
           { "name": "Skin Suit", "key": "skin-suit", "location": "", "sector": "", "shop": "", "tags": [ "Base body" ] },
-          { "name": "Santa Dress", "key": "santa-dress", "location": "Xion", "sector": "", "shop": "", "tags": [ "Seasonal Christmas event" ] },
-          { "name": "Crimson Wings", "key": "crimson-wings", "location": "", "sector": "", "shop": "", "tags": [ "1.011 Patch Update" ] },
-          { "name": "Stargazer Suit", "key": "stargazer-suit", "location": "", "sector": "", "shop": "", "tags": [ "Digital Deluxe - DLC" ] },
-          { "name": "Neurolink Suit", "key": "neurolink-suit", "location": "", "sector": "", "shop": "", "tags": [ "Boss Challenge", "All Normal Bosses" ] },
-          { "name": "Cyber Illusionist", "key": "cyber-illusionist", "location": "", "sector": "", "shop": "", "tags": [ "Boss Challenge", "Raven - Hard Mode" ] },
-          { "name": "Royal Guard Suit", "key": "royal-guard-suit", "location": "", "sector": "", "shop": "", "tags": [ "Boss Challenge", "Mann - Normal Mode" ] },
-          { "name": "Wandering Swordfighter Outfit", "key": "wandering-swordfighter-outfit", "location": "", "sector": "", "shop": "", "tags": [ "Boss Challenge", "Scarlet - Normal Mode", "Nikke - DLC" ] },
-          { "name": "Cooling Suit", "key": "cooling-suit", "location": "Wasteland", "sector": "", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ] },
-          { "name": "Elegant Dress", "key": "elegant-dress", "location": "Wasteland", "sector": "", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ] },
-          { "name": "Elysion Combat Uniform", "key": "elysion-combat-uniform", "location": "Wasteland", "sector": "", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ] },
-          { "name": "Missing Link", "key": "missing-link", "location": "Wasteland", "sector": "", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ] },
-          { "name": "Never Look Back", "key": "never-look-back", "location": "Wasteland", "sector": "", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ] },
-          { "name": "YoRHa No.2 Type B Uniform", "key": "yorha-no-2-type-b-uniform", "location": "", "sector": "", "shop": "Emil’s Shop", "tags": [ "EVE NieR - DLC" ] },
-          { "name": "YoRHa Type A No.2 Uniform", "key": "yorha-type-a-no-2-uniform", "location": "", "sector": "", "shop": "Emil’s Shop", "tags": [ "EVE NieR - DLC" ] },
-          { "name": "YoRHa Uniform 1", "key": "yorha-uniform-1", "location": "", "sector": "", "shop": "Emil’s Shop", "tags": [ "EVE NieR - DLC" ] },
-          { "name": "YoRHa Unofficial Ceremonial Attire", "key": "yorha-unofficial-ceremonial-attire", "location": "", "sector": "", "shop": "Emil’s Shop", "tags": [ "EVE NieR - DLC" ] },
           { "name": "Planet Diving Suit (7th)", "key": "planet-diving-suit-7th", "location": "", "sector": "", "shop": "", "tags": [ "Beginning of the game" ] },
-          { "name": "Black Kunoichi", "key": "black-kunoichi", "location": "Xion", "sector": "Adam’s Safehouse", "shop": "", "tags": [] },
-          { "name": "White Kunoichi", "key": "white-kunoichi", "location": "Xion", "sector": "Adam’s Safehouse", "shop": "", "tags": [] },
-          { "name": "Planet Diving Suit (Captain)", "key": "planet-diving-suit-captain", "location": "Xion", "sector": "Adam’s Safehouse", "shop": "", "tags": [] },
-          { "name": "Black Full Dress", "key": "black-full-dress", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [] },
-          { "name": "Daily Biker", "key": "daily-biker", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [] },
-          { "name": "Daily Denim", "key": "daily-denim", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [] },
-          { "name": "Junk Mechanic", "key": "junk-mechanic", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [] },
-          { "name": "Cyber Bunny", "key": "cyber-bunny", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
-          { "name": "Cybernetic Dress", "key": "cybernetic-dress", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
-          { "name": "FourSeconds Destroyed Denim", "key": "fourseconds-destroyed-denim", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
-          { "name": "Keyhole Suit", "key": "keyhole-suit", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
-          { "name": "Midsummer Alice", "key": "midsummer-alice", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
-          { "name": "Midsummer Redhood", "key": "midsummer-redhood", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
-          { "name": "Moutan Peony", "key": "moutan-peony", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
-          { "name": "Orca Exploration Suit", "key": "orca-exploration-suit", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
-          { "name": "Planet Diving Suit (2nd)", "key": "planet-diving-suit-2nd", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
-          { "name": "Prototype Planet Diving Suit", "key": "prototype-planet-diving-suit", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
-          { "name": "Wave Diver Bikini", "key": "wave-diver-bikini", "location": "Great Desert", "sector": "", "shop": "Clyde’s shop", "tags": [] },
-          { "name": "Wave Oblique Monokini", "key": "wave-oblique-monokini", "location": "Great Desert", "sector": "", "shop": "Clyde’s shop", "tags": [] },
-          { "name": "Black Pearl", "key": "black-pearl", "location": "Xion", "sector": "", "shop": "", "tags": [ "Collect 49 Cans" ] },
-          { "name": "Ocean Maid", "key": "ocean-maid", "location": "Great Desert", "sector": "", "shop": "Clyde’s shop", "tags": [ "Collect All 25 Fish" ] },
-          { "name": "Blue Monsoon", "key": "blue-monsoon", "location": "", "sector": "", "shop": "", "tags": [ "Side Quest: `Precious Treasure`" ] },
-          { "name": "Fluffy Bear", "key": "fluffy-bear", "location": "", "sector": "", "shop": "", "tags": [ "Side Quest: Memories in the Doll" ] },
-          { "name": "FourSeconds Black Denim", "key": "fourseconds-black-denim", "location": "", "sector": "", "shop": "", "tags": [ "Side Quest: `Like Butterflies`" ] },
-          { "name": "FourSeconds Everyday Wear", "key": "fourseconds-everyday-wear", "location": "", "sector": "", "shop": "", "tags": [ "Side Quest: `Photography Club`" ] },
-          { "name": "La Vie en Rose", "key": "la-vie-en-rose", "location": "", "sector": "", "shop": "", "tags": [ "Side Quest: `Recruit Passcode Specialists`" ] },
-          { "name": "Neurolink Skin", "key": "neurolink-skin", "location": "", "sector": "", "shop": "", "tags": [ "Side Quest: `Cat Photo Exhibition`" ] },
-          { "name": "Sky Ace", "key": "sky-ace", "location": "", "sector": "", "shop": "", "tags": [ "Side Quest: `Encounter`" ] },
-          { "name": "War Dress", "key": "war-dress", "location": "", "sector": "", "shop": "", "tags": [ "Side Quest: `Pisces`" ] },
-          { "name": "Wasteland Adventurer", "key": "wasteland-adventurer", "location": "Eidos 7", "sector": "Flooded sector", "shop": "", "tags": [] },
           { "name": "Planet Diving Suit (7th) V2", "key": "planet-diving-suit-7th-v2", "location": "Eidos 7", "sector": "Abandoned Station", "shop": "", "tags": [] },
-          { "name": "Red Passion", "key": "red-passion", "location": "Eidos 7", "sector": "Construction Zone", "shop": "", "tags": [] },
-          { "name": "Cyber Magician", "key": "cyber-magician", "location": "Wasteland", "sector": "Wasteland Basin", "shop": "", "tags": [] },
-          { "name": "Holiday Rabbit", "key": "holiday-rabbit", "location": "Wasteland", "sector": "Wasteland Basin", "shop": "", "tags": [] },
-          { "name": "Racer’s High", "key": "racer-high", "location": "Wasteland", "sector": "West side", "shop": "", "tags": [] },
-          { "name": "Sporty Yellow", "key": "sporty-yellow", "location": "Wasteland", "sector": "Forbidden Area", "shop": "", "tags": [] },
-          { "name": "Daily Force", "key": "daily-force", "location": "Matrix 11", "sector": "Rotten Labyrinth", "shop": "", "tags": [] },
-          { "name": "Daily Knitted Dress", "key": "daily-knitted-dress", "location": "Matrix 11", "sector": "Closed-Off Platform", "shop": "", "tags": [] },
-          { "name": "Daily Mascot", "key": "daily-mascot", "location": "Matrix 11", "sector": "Underground Sewer", "shop": "", "tags": [] },
-          { "name": "Black Wave", "key": "black-wave", "location": "Great Desert", "sector": "Buried Ruins", "shop": "", "tags": [] },
-          { "name": "Cybernetic Bondage", "key": "cybernetic-bondage", "location": "Great Desert", "sector": "Oasis", "shop": "", "tags": [] },
-          { "name": "Daily Sailor", "key": "daily-sailor", "location": "Great Desert", "sector": "Northern Desert", "shop": "", "tags": [] },
-          { "name": "Planet Diving Suit (3rd)", "key": "planet-diving-suit-3rd", "location": "Abyss Levoire", "sector": "Ventilation Sector", "shop": "", "tags": [] },
-          { "name": "Planet Diving Suit (6th)", "key": "planet-diving-suit-6th", "location": "Eidos 9", "sector": "Secret Garden", "shop": "", "tags": [] },
-          { "name": "Punk Top", "key": "punk-top", "location": "Eidos 9", "sector": "Sector 2", "shop": "", "tags": [] },
-          { "name": "Motivation", "key": "motivation", "location": "Eidos 9", "sector": "Rollercoaster", "shop": "", "tags": [] },
-          { "name": "Orca Engineer", "key": "orca-engineer", "location": "Spire 4", "sector": "Hypertube", "shop": "", "tags": [] },
-          { "name": "Black Rose", "key": "black-rose", "location": "Spire 4", "sector": "Raphael Space Centre", "shop": "", "tags": [] },
-          { "name": "Photogenic", "key": "photogenic", "location": "Spire 4", "sector": "Prestige Lounge", "shop": "", "tags": [] },
-          { "name": "Raven Suit", "key": "raven-suit", "location": "", "sector": "", "shop": "", "tags": [ "NG+", "Beginning of the game" ] },
-          { "name": "FourSeconds Biker", "key": "fourseconds-biker", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [ "NG+" ] },
-          { "name": "FourSeconds Denim", "key": "fourseconds-denim", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [ "NG+" ] },
-          { "name": "Junk Engineer", "key": "junk-engineer", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [ "NG+" ] },
-          { "name": "White Full Dress", "key": "white-full-dress", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [ "NG+" ] },
-          { "name": "Cybernetic Suit", "key": "cybernetic-suit", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [ "NG+" ] },
-          { "name": "Keyhole Dress", "key": "keyhole-dress", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [ "NG+" ] },
-          { "name": "Orca Pathfinder", "key": "orca-pathfinder", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [ "NG+" ] },
-          { "name": "Planet Diving Suit (2nd) V2", "key": "planet-diving-suit-2nd-v2", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [ "NG+" ] },
-          { "name": "Prototype Planet Diving Suit V2", "key": "prototype-planet-diving-suit-v2", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [ "NG+" ] },
-          { "name": "Red Pearl", "key": "red-pearl", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [ "NG+" ] },
-          { "name": "Pink Bear", "key": "pink-bear", "location": "", "sector": "", "shop": "", "tags": [ "NG+", "Side Quest: `Memories in the Doll`" ] },
-          { "name": "Air Ace", "key": "air-ace", "location": "", "sector": "", "shop": "", "tags": [ "NG+", "Side Quest: `Encounter`" ] },
-          { "name": "White Monsoon", "key": "white-monsoon", "location": "", "sector": "", "shop": "", "tags": [ "NG+", "Side Quest: `Precious Treasure`" ] },
-          { "name": "Wasteland Explorer", "key": "wasteland-explorer", "location": "Eidos 7", "sector": "Flooded sector", "shop": "", "tags": [ "NG+" ] },
-          { "name": "Planet Diving Suit (7th) V3", "key": "planet-diving-suit-7th-v3", "location": "Eidos 7", "sector": "Abandoned Station", "shop": "", "tags": [ "NG+" ] },
-          { "name": "Emerald Passion", "key": "emerald-passion", "location": "Eidos 7", "sector": "Construction Zone", "shop": "", "tags": [ "NG+" ] },
-          { "name": "Crew Style", "key": "crew-style", "location": "Wasteland", "sector": "South of Wasteland", "shop": "", "tags": [ "NG+" ] },
-          { "name": "Sporty Energy", "key": "sporty-energy", "location": "Wasteland", "sector": "Forbidden Area", "shop": "", "tags": [ "NG+" ] },
-          { "name": "Cyber Trickster", "key": "cyber-trickster", "location": "Wasteland", "sector": "Wasteland Basin", "shop": "", "tags": [ "NG+" ] },
-          { "name": "Holiday Bunny", "key": "holiday-bunny", "location": "Wasteland", "sector": "Wasteland Basin", "shop": "", "tags": [ "NG+" ] },
-          { "name": "Speeder’s High", "key": "speeder-high", "location": "Wasteland", "sector": "West side", "shop": "", "tags": [ "NG+" ] },
-          { "name": "Comfort Force", "key": "comfort-force", "location": "Matrix 11", "sector": "Rotten Labyrinth", "shop": "", "tags": [ "NG+" ] },
-          { "name": "Comfort Knitted Dress", "key": "comfort-knitted-dress", "location": "Matrix 11", "sector": "Closed-Off Platform", "shop": "", "tags": [ "NG+" ] },
-          { "name": "Comfort Mascot", "key": "comfort-mascot", "location": "Matrix 11", "sector": "Underground Sewer", "shop": "", "tags": [ "NG+" ] },
-          { "name": "Comfort Sailor Outfit", "key": "comfort-sailor-outfit", "location": "Great Desert", "sector": "Northern Desert", "shop": "", "tags": [ "NG+" ] },
-          { "name": "Autonetic Bondage", "key": "autonetic-bondage", "location": "Great Desert", "sector": "Oasis", "shop": "", "tags": [ "NG+" ] },
-          { "name": "Wild Wave", "key": "wild-wave", "location": "Great Desert", "sector": "Buried Ruins", "shop": "", "tags": [ "NG+" ] },
-          { "name": "Planet Diving Suit (3rd) V2", "key": "planet-diving-suit-3rd-v2", "location": "Abyss Levoire", "sector": "Ventilation Sector", "shop": "", "tags": [ "NG+" ] },
-          { "name": "Resonance", "key": "resonance", "location": "Eidos 9", "sector": "Rollercoaster", "shop": "", "tags": [ "NG+" ] },
+          { "name": "Planet Diving Suit (7th) V3", "key": "planet-diving-suit-7th-v3", "location": "Eidos 7", "sector": "Abandoned Station", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1 } },
+          { "name": "Planet Diving Protection Suit (7th)", "key": "planet-diving-protection-suit-7th", "location": "Eidos 7", "sector": "Abandoned Station", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2 } },
+          { "name": "Planet Diving Protection Suit (7th) V2", "key": "planet-diving-protection-suit-7th-v2", "location": "Abyss Levoire", "sector": "Ventilation Sector", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 6 } },
+          { "name": "Stargazer Suit", "key": "stargazer-suit", "location": "", "sector": "", "shop": "", "tags": [ "Digital Deluxe - DLC" ] },
+          { "name": "Keyhole Suit", "key": "keyhole-suit", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [], "$condition": { "region": 1 } },
+          { "name": "Keyhole Dress", "key": "keyhole-dress", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 1 } },
+          { "name": "Raven Suit", "key": "raven-suit", "location": "", "sector": "", "shop": "", "tags": [ "NG+", "Beginning of the game" ], "$condition": { "game-mode": 1 } },
+          { "name": "Fluffy Bear", "key": "fluffy-bear", "location": "Xion", "sector": "", "shop": "", "tags": [ "Side Quest: `Memories in the Doll`" ], "$condition": { "region": 1 } },
+          { "name": "Pink Bear", "key": "pink-bear", "location": "Xion", "sector": "", "shop": "", "tags": [ "NG+", "Side Quest: `Memories in the Doll`" ], "$condition": { "game-mode": 1, "region": 1 } },
+          { "name": "Sky Ace", "key": "sky-ace", "location": "Xion", "sector": "", "shop": "", "tags": [ "Side Quest: `Encounter`" ], "$condition": { "region": 1 } },
+          { "name": "Air Ace", "key": "air-ace", "location": "Xion", "sector": "", "shop": "", "tags": [ "NG+", "Side Quest: `Encounter`" ], "$condition": { "game-mode": 1, "region": 1 } },
+          { "name": "Black Rose", "key": "black-rose", "location": "Spire 4", "sector": "Raphael Space Centre", "shop": "", "tags": [], "$condition": { "region": 8 } },
+          { "name": "La Vie en Rose", "key": "la-vie-en-rose", "location": "Xion", "sector": "", "shop": "", "tags": [ "Side Quest: `Recruit Passcode Specialists`" ], "$condition": { "region": 1 } },
+          { "name": "Angelic Rose", "key": "angelic-rose", "location": "Spire 4", "sector": "Raphael Space Centre", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 8 } },
+          { "name": "Blue Monsoon", "key": "blue-monsoon", "location": "Xion", "sector": "", "shop": "", "tags": [ "Side Quest: `Precious Treasure`" ], "$condition": { "region": 1 } },
+          { "name": "White Monsoon", "key": "white-monsoon", "location": "Xion", "sector": "", "shop": "", "tags": [ "NG+", "Side Quest: `Precious Treasure`" ], "$condition": { "game-mode": 1, "region": 1 } },
+          { "name": "Black Pearl", "key": "black-pearl", "location": "Xion", "sector": "", "shop": "", "tags": [ "Collect 49 Cans" ], "$condition": { "region": 1 } },
+          { "name": "Red Pearl", "key": "red-pearl", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 1 } },
+          { "name": "Ocean Maid", "key": "ocean-maid", "location": "Great Desert", "sector": "", "shop": "Clyde’s shop", "tags": [ "Collect All 25 Fish" ], "$condition": { "region": 5 } },
+          { "name": "Tidal Maid", "key": "tidal-maid", "location": "Great Desert", "sector": "Oasis", "shop": "", "tags": [], "notes": "Tidal Wave can be acquired by fishing in the Oasis in the Great Desert using strange bait while wearing Ocean Maid. It is found in a cardboard box.", "$condition": { "region": 5 } },
+          { "name": "Planet Diving Suit (6th)", "key": "planet-diving-suit-6th", "location": "Eidos 9", "sector": "Secret Garden", "shop": "", "tags": [], "$condition": { "region": 7 } },
           { "name": "Planet Diving Suit (6th) V2", "key": "planet-diving-suit-6th-v2", "location": "Eidos 9", "sector": "Secret Garden", "shop": "", "tags": [ "NG+" ] },
-          { "name": "Punk Style", "key": "punk-style", "location": "Eidos 9", "sector": "Sector 2", "shop": "", "tags": [ "NG+" ] },
-          { "name": "Telegenic", "key": "telegenic", "location": "Spire 4", "sector": "Prestige Lounge", "shop": "", "tags": [ "NG+" ] },
-          { "name": "Angelic Rose", "key": "angelic-rose", "location": "Spire 4", "sector": "Raphael Space Centre", "shop": "", "tags": [ "NG+" ] },
-          { "name": "Orca Techie", "key": "orca-techie", "location": "Spire 4", "sector": "Hypertube", "shop": "", "tags": [ "NG+" ] },
-          { "name": "FourSeconds Essential Wear", "key": "fourseconds-essential-wear", "location": "", "sector": "", "shop": "", "tags": [ "NG++", "Side Quest: `Precious Treasure`" ] },
-          { "name": "Planet Diving Protection Suit (7th)", "key": "planet-diving-protection-suit-7th", "location": "Eidos 7", "sector": "Abandoned Station", "shop": "", "tags": [ "NG++" ] },
-          { "name": "Peony", "key": "peony", "location": "Eidos 7", "sector": "Construction Zone", "shop": "", "tags": [ "NG++" ] },
-          { "name": "Black Lotus", "key": "black-lotus", "location": "Eidos 7", "sector": "Drained plaza", "shop": "", "tags": [ "NG++" ] },
-          { "name": "Sensate Skin", "key": "sensate-skin", "location": "Wasteland", "sector": "West side", "shop": "", "tags": [ "NG++" ] },
-          { "name": "White Pearl", "key": "white-pearl", "location": "Wasteland", "sector": "Wasteland Basin", "shop": "", "tags": [ "NG++" ] },
-          { "name": "Prototype Neurolink Suit", "key": "prototype-neurolink-suit", "location": "Wasteland", "sector": "Wasteland Basin", "shop": "", "tags": [ "NG++" ] },
-          { "name": "Extreme Bunny", "key": "extreme-bunny", "location": "Wasteland", "sector": "Forbidden Area", "shop": "", "tags": [ "NG++" ] },
-          { "name": "Office Style", "key": "office-style", "location": "Wasteland", "sector": "South of Wasteland", "shop": "", "tags": [ "NG++" ] },
-          { "name": "Aqua Pearl", "key": "aqua-pearl", "location": "Matrix 11", "sector": "Closed-Off Platform", "shop": "", "tags": [ "NG++" ] },
-          { "name": "Shadow Kunoichi", "key": "shadow-kunoichi", "location": "Matrix 11", "sector": "Underground Sewer", "shop": "", "tags": [ "NG++" ] },
-          { "name": "Planet Diving Suit (5th)", "key": "planet-diving-suit-5th", "location": "Matrix 11", "sector": "Rotten Labyrinth", "shop": "", "tags": [ "NG++" ] },
-          { "name": "Prototype Sensate Skin", "key": "prototype-sensate-skin", "location": "Great Desert", "sector": "Northern Desert", "shop": "", "tags": [ "NG++" ] },
-          { "name": "War Aegis", "key": "war-aegis", "location": "Great Desert", "sector": "Buried Ruins", "shop": "", "tags": [ "NG++" ] },
-          { "name": "Neurocircuit Bondage", "key": "neurocircuit-bondage", "location": "Great Desert", "sector": "Oasis", "shop": "", "tags": [ "NG++" ] },
-          { "name": "Planet Diving Protection Suit (7th) V2", "key": "planet-diving-protection-suit-7th-v2", "location": "Abyss Levoire", "sector": "Ventilation Sector", "shop": "", "tags": [ "NG++" ] },
-          { "name": "Planet Diving Suit (6th) V3", "key": "planet-diving-suit-6th-v3", "location": "Eidos 9", "sector": "Secret Garden", "shop": "", "tags": [ "NG++" ] },
-          { "name": "Hydrangea", "key": "hydrangea", "location": "Eidos 9", "sector": "Sector 2", "shop": "", "tags": [ "NG++" ] },
-          { "name": "War Suit", "key": "war-suit", "location": "Eidos 9", "sector": "Rollercoaster", "shop": "", "tags": [ "NG++" ] },
-          { "name": "Silver Kunoichi", "key": "silver-kunoichi", "location": "Spire 4", "sector": "Hypertube", "shop": "", "tags": [ "NG++" ] },
-          { "name": "Ultimate Bunny", "key": "ultimate-bunny", "location": "Spire 4", "sector": "Raphael Space Centre", "shop": "", "tags": [ "NG++" ] }
+          { "name": "Planet Diving Suit (6th) V3", "key": "planet-diving-suit-6th-v3", "location": "Eidos 9", "sector": "Secret Garden", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 7 } },
+          { "name": "Planet Diving Suit (5th)", "key": "planet-diving-suit-5th", "location": "Matrix 11", "sector": "Rotten Labyrinth", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 4 } },
+          { "name": "Planet Diving Suit (3rd)", "key": "planet-diving-suit-3rd", "location": "Abyss Levoire", "sector": "Ventilation Sector", "shop": "", "tags": [], "$condition": { "region": 6 } },
+          { "name": "Planet Diving Suit (3rd) V2", "key": "planet-diving-suit-3rd-v2", "location": "Abyss Levoire", "sector": "Ventilation Sector", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 6 } },
+          { "name": "Prototype Planet Diving Suit", "key": "prototype-planet-diving-suit", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [], "$condition": { "region": 1 } },
+          { "name": "Prototype Planet Diving Suit V2", "key": "prototype-planet-diving-suit-v2", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 1 } },
+          { "name": "Planet Diving Suit (2nd)", "key": "planet-diving-suit-2nd", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [], "$condition": { "region": 1 } },
+          { "name": "Planet Diving Suit (2nd) V2", "key": "planet-diving-suit-2nd-v2", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 1 } },
+          { "name": "Planet Diving Suit (Captain)", "key": "planet-diving-suit-captain", "location": "Xion", "sector": "Adam’s Safehouse", "shop": "", "tags": [], "$condition": { "region": 1 } },
+          { "name": "Prototype Neurolink Suit", "key": "prototype-neurolink-suit", "location": "Wasteland", "sector": "Wasteland Basin", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 2 } },
+          { "name": "Prototype Sensate Skin", "key": "prototype-sensate-skin", "location": "Great Desert", "sector": "Northern Desert", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 5 } },
+          { "name": "Neurolink Suit", "key": "neurolink-suit", "location": "", "sector": "", "shop": "", "tags": [ "Boss Challenge", "All Normal Bosses" ], "$condition": { "game-mode": 1 } },
+          { "name": "Neurolink Skin", "key": "neurolink-skin", "location": "Xion", "sector": "", "shop": "", "tags": [ "Side Quest: `Cat Photo Exhibition`" ], "$condition": { "region": 1 } },
+          { "name": "Sensate Skin", "key": "sensate-skin", "location": "Wasteland", "sector": "West side", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 2 } },
+          { "name": "Royal Guard Suit", "key": "royal-guard-suit", "location": "", "sector": "", "shop": "", "tags": [ "Boss Challenge", "Mann - Normal Mode" ], "$condition": { "game-mode": 1 } },
+          { "name": "Photogenic", "key": "photogenic", "location": "Spire 4", "sector": "Prestige Lounge", "shop": "", "tags": [], "$condition": { "region": 8 } },
+          { "name": "Telegenic", "key": "telegenic", "location": "Spire 4", "sector": "Prestige Lounge", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 8 } },
+          { "name": "Daily Mascot", "key": "daily-mascot", "location": "Matrix 11", "sector": "Underground Sewer", "shop": "", "tags": [], "$condition": { "region": 4 } },
+          { "name": "Comfort Mascot", "key": "comfort-mascot", "location": "Matrix 11", "sector": "Underground Sewer", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 4 } },
+          { "name": "Daily Force", "key": "daily-force", "location": "Matrix 11", "sector": "Rotten Labyrinth", "shop": "", "tags": [], "$condition": { "region": 4 } },
+          { "name": "Comfort Force", "key": "comfort-force", "location": "Matrix 11", "sector": "Rotten Labyrinth", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 4 } },
+          { "name": "Daily Biker", "key": "daily-biker", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [], "$condition": { "region": 1 } },
+          { "name": "FourSeconds Biker", "key": "fourseconds-biker", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 1 } },
+          { "name": "Daily Sailor", "key": "daily-sailor", "location": "Great Desert", "sector": "Northern Desert", "shop": "", "tags": [], "$condition": { "region": 5 } },
+          { "name": "Comfort Sailor", "key": "comfort-sailor-outfit", "location": "Great Desert", "sector": "Northern Desert", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 5 } },
+          { "name": "Daily Denim", "key": "daily-denim", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [], "$condition": { "region": 1 } },
+          { "name": "FourSeconds Denim", "key": "fourseconds-denim", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 1 } },
+          { "name": "FourSeconds Destroyed Denim", "key": "fourseconds-destroyed-denim", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [], "$condition": { "region": 1 } },
+          { "name": "FourSeconds Everyday Wear", "key": "fourseconds-everyday-wear", "location": "Xion", "sector": "", "shop": "", "tags": [ "Side Quest: `Photography Club`" ], "$condition": { "region": 1 } },
+          { "name": "FourSeconds Essential Wear", "key": "fourseconds-essential-wear", "location": "Xion", "sector": "", "shop": "", "tags": [ "NG++", "Side Quest: `Precious Treasure`" ], "$condition": { "game-mode": 2, "region": 1 } },
+          { "name": "FourSeconds Black Denim", "key": "fourseconds-black-denim", "location": "Xion", "sector": "", "shop": "", "tags": [ "Side Quest: `Like Butterflies`" ], "$condition": { "region": 1 } },
+          { "name": "FourSeconds Striped Denim", "key": "fourseconds-striped-denim", "location": "Xion", "sector": "", "shop": "", "tags": [ "NG+", "Side Quest: `Recruit Passcode Specialists`" ], "$condition": { "game-mode": 1, "region": 1 } },
+          { "name": "Office Style", "key": "office-style", "location": "Wasteland", "sector": "South of Wasteland", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 2 } },
+          { "name": "Midsummer Alice", "key": "midsummer-alice", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [], "$condition": { "region": 1 } },
+          { "name": "Midsummer Redhood", "key": "midsummer-redhood", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [], "$condition": { "region": 1 } },
+          { "name": "Black Kunoichi", "key": "black-kunoichi", "location": "Xion", "sector": "Adam’s Safehouse", "shop": "", "tags": [], "$condition": { "region": 1 } },
+          { "name": "White Kunoichi", "key": "white-kunoichi", "location": "Xion", "sector": "Adam’s Safehouse", "shop": "", "tags": [], "$condition": { "region": 1 } },
+          { "name": "Silver Kunoichi", "key": "silver-kunoichi", "location": "Spire 4", "sector": "Hypertube", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 8 } },
+          { "name": "Shadow Kunoichi", "key": "shadow-kunoichi", "location": "Matrix 11", "sector": "Underground Sewer", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 4 } },
+          { "name": "Peony", "key": "peony", "location": "Eidos 7", "sector": "Construction Zone", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2 } },
+          { "name": "Moutan Peony", "key": "moutan-peony", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [], "$condition": { "region": 1 } },
+          { "name": "Black Lotus", "key": "black-lotus", "location": "Eidos 7", "sector": "Drained plaza", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2 } },
+          { "name": "Cybernetic Bondage", "key": "cybernetic-bondage", "location": "Great Desert", "sector": "Oasis", "shop": "", "tags": [], "$condition": { "region": 5 } },
+          { "name": "Autonetic Bondage", "key": "autonetic-bondage", "location": "Great Desert", "sector": "Oasis", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 5 } },
+          { "name": "Neurocircuit Bondage", "key": "neurocircuit-bondage", "location": "Great Desert", "sector": "Oasis", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 5 } },
+          { "name": "Racer’s High", "key": "racer-high", "location": "Wasteland", "sector": "West side", "shop": "", "tags": [], "$condition": { "region": 2 } },
+          { "name": "Speeder’s High", "key": "speeder-high", "location": "Wasteland", "sector": "West side", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 2 } },
+          { "name": "Holiday Rabbit", "key": "holiday-rabbit", "location": "Wasteland", "sector": "Wasteland Basin", "shop": "", "tags": [], "$condition": { "region": 2 } },
+          { "name": "Holiday Bunny", "key": "holiday-bunny", "location": "Wasteland", "sector": "Wasteland Basin", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 2 } },
+          { "name": "Black Wave", "key": "black-wave", "location": "Great Desert", "sector": "Buried Ruins", "shop": "", "tags": [], "$condition": { "region": 5 } },
+          { "name": "Wild Wave", "key": "wild-wave", "location": "Great Desert", "sector": "Buried Ruins", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 5 } },
+          { "name": "Cyber Magician", "key": "cyber-magician", "location": "Wasteland", "sector": "Wasteland Basin", "shop": "", "tags": [], "$condition": { "region": 2 } },
+          { "name": "Cyber Trickster", "key": "cyber-trickster", "location": "Wasteland", "sector": "Wasteland Basin", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 2 } },
+          { "name": "Cyber Illusionist", "key": "cyber-illusionist", "location": "", "sector": "", "shop": "", "tags": [ "Boss Challenge", "Raven - Hard Mode" ], "$condition": { "game-mode": 1 } },
+          { "name": "Cybernetic Dress", "key": "cybernetic-dress", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [], "$condition": { "region": 1 } },
+          { "name": "Cybernetic Suit", "key": "cybernetic-suit", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 1 } },
+          { "name": "Motivation", "key": "motivation", "location": "Eidos 9", "sector": "Rollercoaster", "shop": "", "tags": [], "$condition": { "region": 7 } },
+          { "name": "Resonance", "key": "resonance", "location": "Eidos 9", "sector": "Rollercoaster", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 7 } },
+          { "name": "War Dress", "key": "war-dress", "location": "Xion", "sector": "", "shop": "", "tags": [ "Side Quest: `Pisces`" ], "$condition": { "region": 1 } },
+          { "name": "War Suit", "key": "war-suit", "location": "Eidos 9", "sector": "Rollercoaster", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 7 } },
+          { "name": "War Aegis", "key": "war-aegis", "location": "Great Desert", "sector": "Buried Ruins", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 5 } },
+          { "name": "Cyber Bunny", "key": "cyber-bunny", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [], "$condition": { "region": 1 } },
+          { "name": "Aqua Pearl", "key": "aqua-pearl", "location": "Matrix 11", "sector": "Closed-Off Platform", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 4 } },
+          { "name": "White Pearl", "key": "white-pearl", "location": "Wasteland", "sector": "Wasteland Basin", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 2 } },
+          { "name": "Ultimate Bunny", "key": "ultimate-bunny", "location": "Spire 4", "sector": "Raphael Space Centre", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 8 } },
+          { "name": "Extreme Bunny", "key": "extreme-bunny", "location": "Wasteland", "sector": "Forbidden Area", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 2 } },
+          { "name": "Crimson Wings", "key": "crimson-wings", "location": "", "sector": "", "shop": "", "tags": [ "1.011 Patch Update" ] },
+          { "name": "Punk Top", "key": "punk-top", "location": "Eidos 9", "sector": "Sector 2", "shop": "", "tags": [], "$condition": { "region": 7 } },
+          { "name": "Punk Style", "key": "punk-style", "location": "Eidos 9", "sector": "Sector 2", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 7 } },
+          { "name": "Hydrangea", "key": "hydrangea", "location": "Eidos 9", "sector": "Sector 2", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 7 } },
+          { "name": "Orca Exploration Suit", "key": "orca-exploration-suit", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [], "$condition": { "region": 1 } },
+          { "name": "Orca Pathfinder", "key": "orca-pathfinder", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 1 } },
+          { "name": "Orca Engineer", "key": "orca-engineer", "location": "Spire 4", "sector": "Hypertube", "shop": "", "tags": [], "$condition": { "region": 8 } },
+          { "name": "Orca Techie", "key": "orca-techie", "location": "Spire 4", "sector": "Hypertube", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 8 } },
+          { "name": "Wasteland Adventurer", "key": "wasteland-adventurer", "location": "Eidos 7", "sector": "Flooded sector", "shop": "", "tags": [] },
+          { "name": "Wasteland Explorer", "key": "wasteland-explorer", "location": "Eidos 7", "sector": "Flooded sector", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1 } },
+          { "name": "Red Passion", "key": "red-passion", "location": "Eidos 7", "sector": "Construction Zone", "shop": "", "tags": [] },
+          { "name": "Emerald Passion", "key": "emerald-passion", "location": "Eidos 7", "sector": "Construction Zone", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1 } },
+          { "name": "Sporty Yellow", "key": "sporty-yellow", "location": "Wasteland", "sector": "Forbidden Area", "shop": "", "tags": [], "$condition": { "region": 2 } },
+          { "name": "Sporty Energy", "key": "sporty-energy", "location": "Wasteland", "sector": "Forbidden Area", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 2 } },
+          { "name": "Crew Style", "key": "crew-style", "location": "Wasteland", "sector": "South of Wasteland", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 2 } },
+          { "name": "Junk Mechanic", "key": "junk-mechanic", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [], "$condition": { "region": 1 } },
+          { "name": "Junk Engineer", "key": "junk-engineer", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 1 } },
+          { "name": "Black Full Dress", "key": "black-full-dress", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [], "$condition": { "region": 1 } },
+          { "name": "White Full Dress", "key": "white-full-dress", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 1 } },
+          { "name": "Daily Knitted Dress", "key": "daily-knitted-dress", "location": "Matrix 11", "sector": "Closed-Off Platform", "shop": "", "tags": [], "$condition": { "region": 4 } },
+          { "name": "Comfort Knitted Dress", "key": "comfort-knitted-dress", "location": "Matrix 11", "sector": "Closed-Off Platform", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 4 } },
+          { "name": "Wave Diver Bikini", "key": "wave-diver-bikini", "location": "Great Desert", "sector": "", "shop": "Clyde’s shop", "tags": [], "$condition": { "region": 5 } },
+          { "name": "Wave Oblique Monokini", "key": "wave-oblique-monokini", "location": "Great Desert", "sector": "", "shop": "Clyde’s shop", "tags": [], "$condition": { "region": 5 } },
+          { "name": "Santa Dress", "key": "santa-dress", "location": "Xion", "sector": "", "shop": "", "tags": [ "Seasonal Christmas event" ], "$condition": { "region": 1 } },
+          { "name": "YoRHa No.2 Type B Uniform", "key": "yorha-no-2-type-b-uniform", "location": "", "sector": "", "shop": "Emil’s Shop", "tags": [ "EVE NieR - DLC" ], "$condition": { "region": 2 } },
+          { "name": "YoRHa Uniform 1", "key": "yorha-uniform-1", "location": "", "sector": "", "shop": "Emil’s Shop", "tags": [ "EVE NieR - DLC" ], "$condition": { "region": 2 } },
+          { "name": "YoRHa Unofficial Ceremonial Attire", "key": "yorha-unofficial-ceremonial-attire", "location": "", "sector": "", "shop": "Emil’s Shop", "tags": [ "EVE NieR - DLC" ], "$condition": { "region": 2 } },
+          { "name": "YoRHa Type A No.2 Uniform", "key": "yorha-type-a-no-2-uniform", "location": "", "sector": "", "shop": "Emil’s Shop", "tags": [ "EVE NieR - DLC" ], "$condition": { "region": 2 } },
+          { "name": "Elegant Dress", "key": "elegant-dress", "location": "Wasteland", "sector": "", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ], "$condition": { "region": 2 } },
+          { "name": "Elysion Combat Uniform", "key": "elysion-combat-uniform", "location": "Wasteland", "sector": "", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ], "$condition": { "region": 2 } },
+          { "name": "Never Look Back", "key": "never-look-back", "location": "Wasteland", "sector": "", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ], "$condition": { "region": 2 } },
+          { "name": "Missing Link", "key": "missing-link", "location": "Wasteland", "sector": "", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ], "$condition": { "region": 2 } },
+          { "name": "Cooling Suit", "key": "cooling-suit", "location": "Wasteland", "sector": "", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ], "$condition": { "region": 2 } },
+          { "name": "Wandering Swordfighter Outfit", "key": "wandering-swordfighter-outfit", "location": "", "sector": "", "shop": "", "tags": [ "Boss Challenge", "Scarlet - Normal Mode", "Nikke - DLC" ], "$condition": { "game-mode": 1 } }
         ]
       },
       "face-decorations": {
         "title": "Face Decorations",
+        "$condition": { "region": 1 },
+        "$sort": [
+          { "key": "#", "title": "Default" },
+          { "key": "name", "title": "Alphabets" }
+        ],
         "list": [
-          { "name": "Brown Horn-Rimmed Glasses", "key": "brown-horn-rimmed-glasses", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [] },
-          { "name": "Cat’s Eye", "key": "cat-eye", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [] },
-          { "name": "Laboratory Goggles", "key": "laboratory-goggles", "location": "Wasteland", "sector": "D1G-g2r’s shop", "shop": "", "tags": [] },
-          { "name": "Large Round Glasses", "key": "large-round-glasses", "location": "Spire 4", "sector": "Cargo Lift 121", "shop": "", "tags": [] },
-          { "name": "Oversized Round Glasses", "key": "oversized-round-glasses", "location": "Spire 4", "sector": "Cargo Lift 121", "shop": "", "tags": [ "NG+" ] },
-          { "name": "Metal-Framed Glasses", "key": "metal-framed-glasses", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [] },
-          { "name": "Orange Aviators", "key": "orange-aviators", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [] },
-          { "name": "Oval Horn-Rimmed Glasses", "key": "oval-horn-rimmed-glasses", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [] },
-          { "name": "Oversized Sunglasses", "key": "oversized-sunglasses", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [] },
-          { "name": "Polygonal-Framed Glasses", "key": "polygonal-framed-glasses", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [] },
-          { "name": "Skinny Sunglasses", "key": "skinny-sunglasses", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [] },
-          { "name": "Square-Framed Glasses", "key": "square-framed-glasses", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [] },
-          { "name": "Eyepatch", "key": "eyepatch", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [] },
-          { "name": "Spiraling Glasses", "key": "spiraling-glasses", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [] },
-          { "name": "Wraparound Sunglasses", "key": "wraparound-sunglasses", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [] },
-          { "name": "Battle Goggles", "key": "battle-goggles", "location": "", "sector": "", "shop": "Emil’s shop", "tags": [] },
-          { "name": "Classic Round Glasses", "key": "classic-round-glasses", "location": "Xion", "sector": "Adam’s Safehouse", "shop": "", "tags": [] },
-          { "name": "Half-Rim Glasses", "key": "half-rim-glasses", "location": "Xion", "sector": "Adam’s Safehouse", "shop": "", "tags": [] },
-          { "name": "Polarized Sunglasses", "key": "polarized-sunglasses", "location": "Great Desert", "sector": "", "shop": "Clyde’s shop", "tags": [] },
-          { "name": "Snow Crystal Glasses", "key": "snow-crystal-glasses", "location": "Xion", "sector": "", "shop": "", "tags": [ "Seasonal Christmas event" ] }
+          { "name": "Oval Horn-Rimmed Glasses", "key": "oval-horn-rimmed-glasses", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [], "$condition": { "region": 2 } },
+          { "name": "Large Round Glasses", "key": "large-round-glasses", "location": "Spire 4", "sector": "Cargo Lift 121", "shop": "", "tags": [], "$condition": { "region": 8 } },
+          { "name": "Oversized Round Glasses", "key": "oversized-round-glasses", "location": "Spire 4", "sector": "Cargo Lift 121", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 8 } },
+          { "name": "Classic Round Glasses", "key": "classic-round-glasses", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [], "$condition": { "region": 1 } },
+          { "name": "Brown Horn-Rimmed Glasses", "key": "brown-horn-rimmed-glasses", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [], "$condition": { "region": 2 } },
+          { "name": "Metal-Framed Glasses", "key": "metal-framed-glasses", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [], "$condition": { "region": 2 } },
+          { "name": "Cat’s Eye", "key": "cat-eye", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [], "$condition": { "region": 2 } },
+          { "name": "Laboratory Goggles", "key": "laboratory-goggles", "location": "Wasteland", "sector": "D1G-g2r’s shop", "shop": "", "tags": [], "$condition": { "region": 2 } },
+          { "name": "Skinny Sunglasses", "key": "skinny-sunglasses", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [], "$condition": { "region": 2 } },
+          { "name": "Orange Aviators", "key": "orange-aviators", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [], "$condition": { "region": 2 } },
+          { "name": "Polygonal-Framed Glasses", "key": "polygonal-framed-glasses", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [], "$condition": { "region": 2 } },
+          { "name": "Square-Framed Glasses", "key": "square-framed-glasses", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [], "$condition": { "region": 2 } },
+          { "name": "Half-Rim Glasses", "key": "half-rim-glasses", "location": "Xion", "sector": "Adam’s Safehouse", "shop": "", "tags": [ "Digital Deluxe - DLC" ], "$condition": { "region": 1 } },
+          { "name": "Oversized Sunglasses", "key": "oversized-sunglasses", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [], "$condition": { "region": 2 } },
+          { "name": "Wraparound Sunglasses", "key": "wraparound-sunglasses", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [], "$condition": { "region": 2 } },
+          { "name": "Spiraling Glasses", "key": "spiraling-glasses", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [], "$condition": { "region": 2 } },
+          { "name": "Eyepatch", "key": "eyepatch", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [], "$condition": { "region": 2 } },
+          { "name": "Polarized Sunglasses", "key": "polarized-sunglasses", "location": "Great Desert", "sector": "", "shop": "Clyde’s shop", "tags": [], "$condition": { "region": 5 } },
+          { "name": "Snow Crystal Glasses", "key": "snow-crystal-glasses", "location": "Xion", "sector": "", "shop": "", "tags": [ "Seasonal Christmas event" ], "$condition": { "region": 1 } },
+          { "name": "Battle Goggles", "key": "battle-goggles", "location": "", "sector": "", "shop": "Emil’s shop", "tags": [ "EVE NieR - DLC" ], "$condition": { "region": 2 } }
         ]
       },
       "earrings": {
         "title": "Earrings",
+        "$sort": [
+          { "key": "#", "title": "Default" },
+          { "key": "name", "title": "Alphabets" }
+        ],
         "list": [
-          { "name": "Black Rectangle", "key": "black-rectangle", "location": "Xion", "sector": "", "shop": "Kaya’s Shop", "tags": [] },
-          { "name": "Blue Point", "key": "blue-point", "location": "Matrix 11", "sector": "Closed Off Platform", "shop": "", "tags": [] },
-          { "name": "Shining Point", "key": "shining-point", "location": "Matrix 11", "sector": "Closed Off Platform", "shop": "", "tags": [ "NG+" ] },
-          { "name": "Jade and Amber", "key": "jade-and-amber", "location": "Matrix 11", "sector": "Closed Off Platform", "shop": "", "tags": [ "NG++" ] },
           { "name": "Crimson Tear", "key": "crimson-tear", "location": "Eidos 7", "sector": "Construction Zone", "shop": "", "tags": [] },
-          { "name": "Noble Tear", "key": "noble-tear", "location": "Eidos 7", "sector": "Construction Zone", "shop": "", "tags": [ "NG+" ] },
-          { "name": "Golden Heart", "key": "golden-heart", "location": "Eidos 7", "sector": "Construction Zone", "shop": "", "tags": [ "NG++" ] },
-          { "name": "Fusion Light", "key": "fusion-light", "location": "Xion", "sector": "", "shop": "Kaya’s Shop", "tags": [] },
-          { "name": "Hanging Memory", "key": "hanging-memory", "location": "Xion", "sector": "", "shop": "", "tags": [ "Bulletin Board Request: `Generous Drop Pod`" ] },
-          { "name": "Shining Memory", "key": "shining-memory", "location": "Xion", "sector": "", "shop": "", "tags": [ "NG+", "Bulletin Board Request: `Generous Drop Pod`" ] },
-          { "name": "Crystal Drop", "key": "crystal-drop", "location": "Xion", "sector": "", "shop": "", "tags": [ "NG++", "Bulletin Board Request: `Generous Drop Pod`" ] },
-          { "name": "Radial Pendulum", "key": "radial-pendulum", "location": "Xion", "sector": "", "shop": "Kaya’s Shop", "tags": [] },
-          { "name": "Silver Tooth", "key": "silver-tooth", "location": "Spire 4", "sector": "Prestige Lounge", "shop": "", "tags": [] },
-          { "name": "Cybernetic Tooth", "key": "cybernetic-tooth", "location": "Spire 4", "sector": "Prestige Lounge", "shop": "", "tags": [ "NG+" ] },
-          { "name": "Sun Drop", "key": "sun-drop", "location": "Xion", "sector": "", "shop": "Kaya’s Shop", "tags": [] },
-          { "name": "Turquoise Hoops", "key": "turquoise-hoops", "location": "Xion", "sector": "", "shop": "Kaya’s Shop", "tags": [] },
-          { "name": "Dangling Bunny", "key": "dangling-bunny", "location": "Xion", "sector": "", "shop": "Kaya’s Shop", "tags": [] },
-          { "name": "Golden Branch", "key": "golden-branch", "location": "Xion", "sector": "", "shop": "Kaya’s Shop", "tags": [] },
-          { "name": "Ruby Drop", "key": "ruby-drop", "location": "Xion", "sector": "", "shop": "Kaya’s Shop", "tags": [] },
-          { "name": "Symbol of Legacy", "key": "symbol-of-legacy", "location": "", "sector": "", "shop": "Emil’s Shop", "tags": [] },
-          { "name": "Ear Armor", "key": "ear-armor", "location": "Xion", "sector": "Adam’s Safehouse", "shop": "", "tags": [] },
-          { "name": "Quadruple Rectangle", "key": "quadruple-rectangle", "location": "Xion", "sector": "Adam’s Safehouse", "shop": "", "tags": [] },
-          { "name": "Sleigh Earcuff", "key": "sleigh-earcuff", "location": "Xion", "sector": "", "shop": "", "tags": [ "Seasonal Christmas event" ] },
-          { "name": "Wreath Earrings", "key": "wreath-earrings", "location": "Xion", "sector": "", "shop": "", "tags": [ "Seasonal Christmas event" ] }
+          { "name": "Noble Tear", "key": "noble-tear", "location": "Eidos 7", "sector": "Construction Zone", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1 } },
+          { "name": "Blue Point", "key": "blue-point", "location": "Matrix 11", "sector": "Closed Off Platform", "shop": "", "tags": [], "$condition": { "region": 4 } },
+          { "name": "Shining Point", "key": "shining-point", "location": "Matrix 11", "sector": "Closed Off Platform", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 4 } },
+          { "name": "Silver Tooth", "key": "silver-tooth", "location": "Spire 4", "sector": "Prestige Lounge", "shop": "", "tags": [], "$condition": { "region": 8 } },
+          { "name": "Cybernetic Tooth", "key": "cybernetic-tooth", "location": "Spire 4", "sector": "Prestige Lounge", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 8 } },
+          { "name": "Fusion Light", "key": "fusion-light", "location": "Xion", "sector": "", "shop": "Kaya’s Shop", "tags": [], "$condition": { "region": 1 } },
+          { "name": "Ear Armor", "key": "ear-armor", "location": "Xion", "sector": "Adam’s Safehouse", "shop": "", "tags": [], "$condition": { "region": 1 } },
+          { "name": "Turquoise Hoops", "key": "turquoise-hoops", "location": "Xion", "sector": "", "shop": "Kaya’s Shop", "tags": [], "$condition": { "region": 1 } },
+          { "name": "Sun Drop", "key": "sun-drop", "location": "Xion", "sector": "", "shop": "Kaya’s Shop", "tags": [], "$condition": { "region": 1 } },
+          { "name": "Hanging Memory", "key": "hanging-memory", "location": "Xion", "sector": "", "shop": "", "tags": [ "Bulletin Board Request: `Generous Drop Pod`" ], "$condition": { "region": 1 } },
+          { "name": "Shining Memory", "key": "shining-memory", "location": "Xion", "sector": "", "shop": "", "tags": [ "NG+", "Bulletin Board Request: `Generous Drop Pod`" ], "$condition": { "game-mode": 1, "region": 1 } },
+          { "name": "Radial Pendulum", "key": "radial-pendulum", "location": "Xion", "sector": "", "shop": "Kaya’s Shop", "tags": [], "$condition": { "region": 1 } },
+          { "name": "Black Rectangle", "key": "black-rectangle", "location": "Xion", "sector": "", "shop": "Kaya’s Shop", "tags": [], "$condition": { "region": 1 } },
+          { "name": "Quadruple Rectangle", "key": "quadruple-rectangle", "location": "Xion", "sector": "Adam’s Safehouse", "shop": "", "tags": [], "$condition": { "region": 1 } },
+          { "name": "Golden Heart", "key": "golden-heart", "location": "Eidos 7", "sector": "Construction Zone", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2 } },
+          { "name": "Jade and Amber", "key": "jade-and-amber", "location": "Matrix 11", "sector": "Closed Off Platform", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 4 } },
+          { "name": "Ruby Drop", "key": "ruby-drop", "location": "Xion", "sector": "", "shop": "Kaya’s Shop", "tags": [], "$condition": { "region": 1 } },
+          { "name": "Crystal Drop", "key": "crystal-drop", "location": "Xion", "sector": "", "shop": "", "tags": [ "NG++", "Bulletin Board Request: `Generous Drop Pod`" ], "$condition": { "game-mode": 2, "region": 1 } },
+          { "name": "Dangling Bunny", "key": "dangling-bunny", "location": "Xion", "sector": "", "shop": "Kaya’s Shop", "tags": [], "$condition": { "region": 1 } },
+          { "name": "Golden Branch", "key": "golden-branch", "location": "Xion", "sector": "", "shop": "Kaya’s Shop", "tags": [], "$condition": { "region": 1 } },
+          { "name": "Symbol of Legacy", "key": "symbol-of-legacy", "location": "", "sector": "", "shop": "Emil’s Shop", "tags": [ "EVE NieR - DLC" ], "$condition": { "region": 2 } },
+          { "name": "Wreath Earrings", "key": "wreath-earrings", "location": "Xion", "sector": "", "shop": "", "tags": [ "Seasonal Christmas event" ], "$condition": { "region": 1 } },
+          { "name": "Sleigh Earcuff", "key": "sleigh-earcuff", "location": "Xion", "sector": "", "shop": "", "tags": [ "Seasonal Christmas event" ], "$condition": { "region": 1 } }
         ]
       },
       "hair": {
         "title": "Hair Salon",
+        "$condition": { "region": 1 },
         "list": [
           { "name": "Planet Diving Tail", "key": "planet-diving-tail", "location": "", "shop": "", "tags": [ "Default" ] },
           { "name": "A Daughter’s Memories", "key": "a-daughter-memories", "location": "Xion", "shop": "Gwen’s Hair Salon", "tags": [] },
@@ -958,14 +1010,14 @@
           { "name": "Originative", "key": "originative", "location": "Xion", "shop": "Gwen’s Hair Salon", "tags": [] },
           { "name": "Santa Girl", "key": "santa-girl", "location": "Xion", "shop": "", "tags": [ "Seasonal Christmas event" ] },
           { "name": "YoRHa No.2 Type B Style", "key": "yorha-no-2-type-b-style", "location": "", "shop": "Emil’s Shop", "tags": [ "EVE NieR - DLC" ] },
-          { "name": "YoRHa Type A No.2 Style", "key": "yorha-type-a-no-2-style", "location": "", "shop": "Emil’s Shop", "tags": [ "EVE NieR - DLC" ] },
           { "name": "White Fox Mask Style", "key": "white-fox-mask-style", "location": "", "shop": "Emil’s Shop", "tags": [ "EVE NieR - DLC" ] },
+          { "name": "YoRHa Type A No.2 Style", "key": "yorha-type-a-no-2-style", "location": "", "shop": "Emil’s Shop", "tags": [ "EVE NieR - DLC" ] },
           { "name": "Noble Elegance", "key": "noble-elegance", "location": "Wasteland", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ] },
           { "name": "Standard Long", "key": "standard-long", "location": "Wasteland", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ] },
           { "name": "Energetic Bangs", "key": "energetic-bangs", "location": "Wasteland", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ] },
           { "name": "First Affection", "key": "first-affection", "location": "Wasteland", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ] },
           { "name": "Poppin’ Twin Tails", "key": "poppin-twin-tails", "location": "Wasteland", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ] },
-          { "name": "Moonlit Beauty", "key": "moonlit-beauty", "location": "Wasteland", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ] }
+          { "name": "Moonlit Beauty", "key": "moonlit-beauty", "location": "", "shop": "", "tags": [ "Boss Challenge", "Scarlet - Normal Mode", "Nikke - DLC" ] }
         ]
       }
     }
@@ -975,40 +1027,53 @@
     "list": {
       "drone-appearance": {
         "title": "Drone Appearance",
+        "$sort": [
+          { "key": "#", "title": "Default" },
+          { "key": "name", "title": "Alphabets" }
+        ],
         "list": [
           { "name": "Tactical Pack", "key": "tactical-pack", "location": "", "sector": "", "shop": "", "tags": [ "Default" ] },
+          { "name": "Stargazer Pack", "key": "stargazer-pack", "location": "Xion", "sector": "Adam’s Safehouse", "shop": "", "tags": [ "Digital Deluxe - DLC" ] },
           { "name": "Armoured Pack", "key": "armoured-pack", "location": "Eidos 7", "sector": "Flooded Commercial Sector", "shop": "", "tags": [] },
-          { "name": "Ironclad Pack", "key": "ironclad-pack", "location": "Eidos 7", "sector": "Flooded Commercial Sector", "shop": "", "tags": [ "NG+" ] },
-          { "name": "Lop Bunny Pack", "key": "lop-bunny-pack", "location": "Spire 4", "sector": "Orca Space Complex", "shop": "", "tags": [] },
-          { "name": "Dwarf Rabbit Pack", "key": "dwarf-rabbit-pack", "location": "Spire 4", "sector": "Orca Space Complex", "shop": "", "tags": [ "NG+" ] },
-          { "name": "Pod 042 Pack", "key": "pod-042-pack", "location": "", "sector": "", "shop": "Emil’s shop", "tags": [] },
-          { "name": "Rudolf Pack", "key": "rudolf-pack", "location": "Xion", "sector": "", "shop": "", "tags": [ "Seasonal Christmas event" ] },
-          { "name": "Fluffy Bear Pack", "key": "fluffy-bear-pack", "location": "", "sector": "", "shop": "", "tags": [ "Bonus content" ] }
+          { "name": "Ironclad Pack", "key": "ironclad-pack", "location": "Eidos 7", "sector": "Flooded Commercial Sector", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1 } },
+          { "name": "Lop Bunny Pack", "key": "lop-bunny-pack", "location": "Spire 4", "sector": "Orca Space Complex", "shop": "", "tags": [], "$condition": { "region": 8 } },
+          { "name": "Dwarf Rabbit Pack", "key": "dwarf-rabbit-pack", "location": "Spire 4", "sector": "Orca Space Complex", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 8 } },
+          { "name": "Fluffy Bear Pack", "key": "fluffy-bear-pack", "location": "", "sector": "", "shop": "", "tags": [ "PC Complete Edition", "Tachyon Pack - DLC" ] },
+          { "name": "Rudolf Pack", "key": "rudolf-pack", "location": "Xion", "sector": "", "shop": "", "tags": [ "Seasonal Christmas event" ], "$condition": { "region": 1 } },
+          { "name": "Pod 042 Pack", "key": "pod-042-pack", "location": "", "sector": "", "shop": "Emil’s shop", "tags": [ "EVE NieR - DLC" ], "$condition": { "region": 2 } }
         ]
       },
       "lily-clothes": {
         "title": "Lily Clothes",
+        "$sort": [
+          { "key": "#", "title": "Default" },
+          { "key": "name", "title": "Alphabets" }
+        ],
         "list": [
           { "name": "Artemis", "key": "artemis", "location": "", "sector": "", "shop": "", "tags": [ "Default" ] },
-          { "name": "Off-duty", "key": "off-duty", "location": "Great Desert", "sector": "Central Great Desert", "shop": "", "tags": [] },
-          { "name": "Day Off", "key": "day-off", "location": "Great Desert", "sector": "Central Great Desert", "shop": "", "tags": [ "NG+" ] },
-          { "name": "Rainy Day", "key": "rainy-day", "location": "Wasteland", "sector": "Barren Land", "shop": "", "tags": [] },
-          { "name": "Shower Day", "key": "shower-day", "location": "Wasteland", "sector": "Barren Land", "shop": "", "tags": [ "NG+" ] },
-          { "name": "Stargazer Coat", "key": "stargazer-coat", "location": "Xion", "sector": "Adam’s Safehouse", "shop": "", "tags": [] },
-          { "name": "YoRHa No.9 Type S Uniform", "key": "yorha-no-9-type-s-uniform", "location": "", "sector": "", "shop": "Emil’s shop", "tags": [] }
+          { "name": "Stargazer Coat", "key": "stargazer-coat", "location": "Xion", "sector": "Adam’s Safehouse", "shop": "", "tags": [ "Digital Deluxe - DLC" ], "$condition": { "region": 1 } },
+          { "name": "Rainy Day", "key": "rainy-day", "location": "Wasteland", "sector": "Barren Land", "shop": "", "tags": [], "$condition": { "region": 2 } },
+          { "name": "Shower Day", "key": "shower-day", "location": "Wasteland", "sector": "Barren Land", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 2 } },
+          { "name": "Off-duty", "key": "off-duty", "location": "Great Desert", "sector": "Central Great Desert", "shop": "", "tags": [], "$condition": { "region": 5 } },
+          { "name": "Day Off", "key": "day-off", "location": "Great Desert", "sector": "Central Great Desert", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 5 } },
+          { "name": "YoRHa No.9 Type S Uniform", "key": "yorha-no-9-type-s-uniform", "location": "", "sector": "", "shop": "Emil’s shop", "tags": [ "EVE NieR - DLC" ], "$condition": { "region": 2 } }
         ]
       },
       "adam-clothes": {
         "title": "Adam’s Clothes",
+        "$sort": [
+          { "key": "#", "title": "Default" },
+          { "key": "name", "title": "Alphabets" }
+        ],
         "list": [
           { "name": "Sewer Rat", "key": "sewer-rat", "location": "", "sector": "", "shop": "", "tags": [ "Default" ] },
-          { "name": "Chameleon", "key": "chameleon", "location": "Matrix 11", "sector": "Collapsed Rail Bridge", "shop": "", "tags": [] },
-          { "name": "Nighthawk", "key": "nighthawk", "location": "Matrix 11", "sector": "Collapsed Rail Bridge", "shop": "", "tags": [ "NG+" ] },
-          { "name": "Junkman", "key": "junkman", "location": "Wasteland", "sector": "Collectible Round-Up", "shop": "", "tags": [] },
-          { "name": "Ragman", "key": "ragman", "location": "Wasteland", "sector": "Collectible Round-Up", "shop": "", "tags": [ "NG+" ] },
-          { "name": "Emil’s Head", "key": "emil-head", "location": "", "sector": "", "shop": "Emil’s shop", "tags": [] },
-          { "name": "I’m No Santa", "key": "i-m-no-santa", "location": "Xion", "sector": "", "shop": "", "tags": [ "Seasonal Christmas event" ] },
-          { "name": "Stargazer Wear", "key": "stargazer-wear", "location": "Xion", "sector": "Adam’s Safehouse", "shop": "", "tags": [] }
+          { "name": "Stargazer Wear", "key": "stargazer-wear", "location": "Xion", "sector": "Adam’s Safehouse", "shop": "", "tags": [ "Digital Deluxe - DLC" ], "$condition": { "region": 1 } },
+          { "name": "Junkman", "key": "junkman", "location": "Wasteland", "sector": "Collectible Round-Up", "shop": "", "tags": [], "$condition": { "region": 2 } },
+          { "name": "Ragman", "key": "ragman", "location": "Wasteland", "sector": "Collectible Round-Up", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 2 } },
+          { "name": "Chameleon", "key": "chameleon", "location": "Matrix 11", "sector": "Collapsed Rail Bridge", "shop": "", "tags": [], "$condition": { "region": 4 } },
+          { "name": "Nighthawk", "key": "nighthawk", "location": "Matrix 11", "sector": "Collapsed Rail Bridge", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 4 } },
+          { "name": "I’m No Santa", "key": "i-m-no-santa", "location": "Xion", "sector": "", "shop": "", "tags": [ "Seasonal Christmas event" ], "$condition": { "region": 1 } },
+          { "name": "Emil’s Head", "key": "emil-head", "location": "", "sector": "", "shop": "Emil’s shop", "tags": [ "EVE NieR - DLC" ], "$condition": { "region": 2 } }
         ]
       }
     }
@@ -1022,6 +1087,7 @@
           "eidos-7": {
             "title": "Eidos 7",
             "location": "Eidos 7",
+            "$condition": { "region": 0 },
             "list": [
               { "title": "Legionnaire 451’s Resolution", "key": "legionnaire-451-resolution", "sector": "Silent Street" },
               { "title": "The Last Words of the Hopeless", "key": "the-last-words-of-the-hopeless", "sector": "Silent Street" },
@@ -1062,6 +1128,7 @@
           "wasteland": {
             "title": "Wasteland",
             "location": "Wasteland",
+            "$condition": { "region": 2 },
             "list": [
               { "title": "Citizen 439’s Resignation", "key": "citizen-439-resignation", "sector": "Barren Land" },
               { "title": "Sentinel 78’s Consolation", "key": "sentinel-78-consolation", "sector": "Barren Land" },
@@ -1105,6 +1172,7 @@
           "matrix-11": {
             "title": "Matrix 11",
             "location": "Matrix 11",
+            "$condition": { "region": 4 },
             "list": [
               { "title": "Employee 38’s Memory", "key": "employee-38-memory", "sector": "Closed-Off Platform" },
               { "title": "Legionnaire 547’s Testimony", "key": "legionnaire-547-testimony", "sector": "Closed-Off Platform" },
@@ -1134,6 +1202,7 @@
           "great-desert": {
             "title": "Great Desert",
             "location": "Great Desert",
+            "$condition": { "region": 5 },
             "list": [
               { "title": "Citizen 109’s Resolution", "key": "citizen-109-resolution", "sector": "Central Great Desert" },
               { "title": "Citizen 206’s Memory", "key": "citizen-206-memory", "sector": "Central Great Desert" },
@@ -1192,6 +1261,7 @@
           "eidos-9": {
             "title": "Eidos 9",
             "location": "Eidos 9",
+            "$condition": { "region": 7 },
             "list": [
               { "title": "Legionnaire 158’s Memory", "key": "legionnaire-158-memory", "sector": "Fallen Overpass - Sector 1" },
               { "title": "Legionnaire 196’s Report", "key": "legionnaire-196-report", "sector": "Fallen Overpass - Sector 1" },
@@ -1205,6 +1275,7 @@
           "spire-4": {
             "title": "Spire 4",
             "location": "Spire 4",
+            "$condition": { "region": 8 },
             "list": [
               { "title": "Legionnaire 753’s Memory", "key": "legionnaire-753-memory", "sector": "Orca Space Complex" },
               { "title": "Legionnaire 717’s Order", "key": "legionnaire-717-order", "sector": "Orca Space Complex" },
@@ -1239,6 +1310,7 @@
           "xion": {
             "title": "Xion",
             "location": "Xion",
+            "$condition": { "region": 1 },
             "list": [
               { "title": "Lament of the Trapped", "key": "lament-of-the-trapped", "sector": "North Xion", "tags": [ "Side Quest: `Lost Ark`" ] },
               { "title": "Who Are You Guys?", "key": "who-are-you-guys", "sector": "North Xion", "tags": [ "Side Quest: `Lost Ark`" ] },
@@ -1254,114 +1326,116 @@
         "list": {
           "log-data": {
             "title": "Log Data",
+            "$condition": { "region": 1 },
             "list": [
-              { "title": "S2RV1C2-7812’s Data", "key": "s2rv1c2-7812-data", "location": "Wasteland", "sector": "North Scrap Plains" },
-              { "title": "To the Little Drone", "key": "to-the-little-drone", "location": "Matrix 11", "sector": "Underground Sewer" },
-              { "title": "Booting Sequence", "key": "booting-sequence", "location": "Altess Levoire", "sector": "" },
-              { "title": "Security Procedure Guide", "key": "security-procedure-guide", "location": "Altess Levoire", "sector": "" },
-              { "title": "S2RV1C2-875687’s Data", "key": "s2rv1c2-875687-data", "location": "Great Desert", "sector": "Central Great Desert" },
-              { "title": "S2RV1C2-99991’s Data", "key": "s2rv1c2-99991-data", "location": "Great Desert", "sector": "Buried Ruins" },
-              { "title": "Cultivation Experiment", "key": "cultivation-experiment", "location": "Abyss Levoire", "sector": "" },
-              { "title": "Attack Detected", "key": "attack-detected", "location": "Abyss Levoire", "sector": "" },
-              { "title": "Mass Production", "key": "mass-production", "location": "Abyss Levoire", "sector": "" },
-              { "title": "Quarantine Failure?", "key": "quarantine-failure", "location": "Abyss Levoire", "sector": "" },
-              { "title": "CT27932", "key": "ct27932", "location": "Xion", "sector": "", "tags": [ "Bulletin Board Request: `Sleeping Beauty`" ] }
+              { "title": "S2RV1C2-7812’s Data", "key": "s2rv1c2-7812-data", "location": "Wasteland", "sector": "North Scrap Plains", "$condition": { "region": 2 } },
+              { "title": "To the Little Drone", "key": "to-the-little-drone", "location": "Matrix 11", "sector": "Underground Sewer", "$condition": { "region": 4 } },
+              { "title": "Booting Sequence", "key": "booting-sequence", "location": "Altess Levoire", "sector": "", "$condition": { "region": 3 } },
+              { "title": "Security Procedure Guide", "key": "security-procedure-guide", "location": "Altess Levoire", "sector": "", "$condition": { "region": 3 } },
+              { "title": "S2RV1C2-875687’s Data", "key": "s2rv1c2-875687-data", "location": "Great Desert", "sector": "Central Great Desert", "$condition": { "region": 5 } },
+              { "title": "S2RV1C2-99991’s Data", "key": "s2rv1c2-99991-data", "location": "Great Desert", "sector": "Buried Ruins", "$condition": { "region": 5 } },
+              { "title": "Cultivation Experiment", "key": "cultivation-experiment", "location": "Abyss Levoire", "sector": "", "$condition": { "region": 6 } },
+              { "title": "Attack Detected", "key": "attack-detected", "location": "Abyss Levoire", "sector": "", "$condition": { "region": 6 } },
+              { "title": "Mass Production", "key": "mass-production", "location": "Abyss Levoire", "sector": "", "$condition": { "region": 6 } },
+              { "title": "Quarantine Failure?", "key": "quarantine-failure", "location": "Abyss Levoire", "sector": "", "$condition": { "region": 6 } },
+              { "title": "CT27932", "key": "ct27932", "location": "Xion", "sector": "", "tags": [ "Bulletin Board Request: `Sleeping Beauty`" ], "$condition": { "region": 1 } }
             ]
           },
           "journal": {
             "title": "Journal",
             "list": [
               { "title": "Survival Journal", "key": "survival-journal", "location": "Eidos 7", "sector": "", "tags": [ "Side Quest: `End of the Nightmare`" ] },
-              { "title": "Search Record", "key": "search-record", "location": "Wasteland", "sector": "", "tags": [ "Side Quest: `Keeping Secrets`" ] },
-              { "title": "Investigation Journal", "key": "investigation-journal", "location": "Wasteland", "sector": "", "tags": [ "Side Quest: `Keeping Secrets`" ] },
-              { "title": "Arin’s Journal", "key": "arin-journal", "location": "Wasteland", "sector": "", "tags": [ "Side Quest: `Stolen Treasure`" ] },
-              { "title": "Crevice", "key": "crevice", "location": "Matrix 11", "sector": "Rotten Labyrinth", "tags": [] },
-              { "title": "Z’s Diary", "key": "z-diary", "location": "Matrix 11", "sector": "Rotten Labyrinth", "tags": [] },
-              { "title": "Aaron’s Journal", "key": "aaron-journal", "location": "Xion", "sector": "", "tags": [ "Bulletin Board Request: `Looking for My Brother`" ] },
-              { "title": "I Saw It", "key": "i-saw-it", "location": "Great Desert", "sector": "", "tags": [ "Side Quest: `Let There be Light Again`" ] },
-              { "title": "Orca Aerospace Company Hypertube System", "key": "orca-aerospace-company-hypertube-system", "location": "Great Desert", "sector": "North Great Desert", "tags": [] },
-              { "title": "Damaged Legacy", "key": "damaged-legacy", "location": "", "sector": "Great Desert", "tags": [ "Side Quest: `Let There be Light Again`" ] },
-              { "title": "Kill Mother Sphere", "key": "kill-mother-sphere", "location": "Abyss Levoire", "sector": "", "tags": [] },
-              { "title": "DB372-25", "key": "db372-25", "location": "Xion", "sector": "", "tags": [ "Bulletin Board Request: `Lost Device`" ] }
+              { "title": "Search Record", "key": "search-record", "location": "Wasteland", "sector": "", "tags": [ "Side Quest: `Keeping Secrets`" ], "$condition": { "region": 2 } },
+              { "title": "Investigation Journal", "key": "investigation-journal", "location": "Wasteland", "sector": "", "tags": [ "Side Quest: `Keeping Secrets`" ], "$condition": { "region": 2 } },
+              { "title": "Arin’s Journal", "key": "arin-journal", "location": "Wasteland", "sector": "", "tags": [ "Side Quest: `Stolen Treasure`" ], "$condition": { "region": 2 } },
+              { "title": "Crevice", "key": "crevice", "location": "Matrix 11", "sector": "Rotten Labyrinth", "tags": [], "$condition": { "region": 4 } },
+              { "title": "Z’s Diary", "key": "z-diary", "location": "Matrix 11", "sector": "Rotten Labyrinth", "tags": [], "$condition": { "region": 41 } },
+              { "title": "Aaron’s Journal", "key": "aaron-journal", "location": "Xion", "sector": "", "tags": [ "Bulletin Board Request: `Looking for My Brother`" ], "$condition": { "region": 1 } },
+              { "title": "I Saw It", "key": "i-saw-it", "location": "Great Desert", "sector": "", "tags": [ "Side Quest: `Let There be Light Again`" ], "$condition": { "region": 5 } },
+              { "title": "Orca Aerospace Company Hypertube System", "key": "orca-aerospace-company-hypertube-system", "location": "Great Desert", "sector": "North Great Desert", "tags": [], "$condition": { "region": 5 } },
+              { "title": "Damaged Legacy", "key": "damaged-legacy", "location": "", "sector": "Great Desert", "tags": [ "Side Quest: `Let There be Light Again`" ], "$condition": { "region": 5 } },
+              { "title": "Kill Mother Sphere", "key": "kill-mother-sphere", "location": "Abyss Levoire", "sector": "", "tags": [], "$condition": { "region": 6 } },
+              { "title": "DB372-25", "key": "db372-25", "location": "Xion", "sector": "", "tags": [ "Bulletin Board Request: `Lost Device`" ], "$condition": { "region": 1 } }
             ]
           },
           "messages": {
             "title": "Messages",
             "list": [
               { "title": "Memo", "key": "memo", "location": "Eidos 7", "sector": "Parking Tower", "tags": [] },
-              { "title": "I’m Leaving", "key": "i-m-leaving", "location": "Wasteland", "sector": "", "tags": [ "Side Quest: `CnL - Communicate and Link`" ] },
-              { "title": "Do Not Disturb", "key": "do-not-disturb", "location": "Wasteland", "sector": "North Scrap Plains", "tags": [] },
-              { "title": "You Are Fake", "key": "you-are-fake", "location": "Altess Levoire", "sector": "", "tags": [] },
-              { "title": "Humanity Liberation Front", "key": "humanity-liberation-front", "location": "Altess Levoire", "sector": "", "tags": [] },
-              { "title": "Request Letter", "key": "request-letter", "location": "Xion", "sector": "", "tags": [ "Side Quest: `Oblivion`" ] },
-              { "title": "Kasim’s Memo", "key": "kasim-memo", "location": "Xion", "sector": "", "tags": [ "Side Quest: `First Customer`" ] },
-              { "title": "J’s Memo", "key": "j-memo", "location": "Matrix 11", "sector": "Rotten Labyrinth", "tags": [] },
-              { "title": "Truth of the Cradle", "key": "truth-of-the-cradle", "location": "Great Desert", "sector": "", "tags": [ "Side Quest: `A United People Cannot be Defeated`" ] },
-              { "title": "The Truth Under the City of Xion", "key": "the-truth-under-the-city-of-xion", "location": "Great Desert", "sector": "", "tags": [ "Side Quest: `A United People Cannot be Defeated`" ] },
-              { "title": "Third Road", "key": "third-road", "location": "Great Desert", "sector": "North Great Desert", "tags": [] },
-              { "title": "What Will You Choose?", "key": "what-will-you-choose", "location": "Eidos 9", "sector": "Atelier", "tags": [] },
-              { "title": "Ticket to Heaven", "key": "ticket-to-heaven", "location": "Eidos 9", "sector": "Fallen Overpass - Sector 2", "tags": [] },
-              { "title": "Francis’s Letter", "key": "francis-letter", "location": "", "sector": "", "tags": [ "Seasonal Christmas event" ] }
+              { "title": "I’m Leaving", "key": "i-m-leaving", "location": "Wasteland", "sector": "", "tags": [ "Side Quest: `CnL - Communicate and Link`" ], "$condition": { "region": 2 } },
+              { "title": "Do Not Disturb", "key": "do-not-disturb", "location": "Wasteland", "sector": "North Scrap Plains", "tags": [], "$condition": { "region": 2 } },
+              { "title": "You Are Fake", "key": "you-are-fake", "location": "Altess Levoire", "sector": "", "tags": [], "$condition": { "region": 3 } },
+              { "title": "Humanity Liberation Front", "key": "humanity-liberation-front", "location": "Altess Levoire", "sector": "", "tags": [], "$condition": { "region": 3 } },
+              { "title": "Request Letter", "key": "request-letter", "location": "Xion", "sector": "", "tags": [ "Side Quest: `Oblivion`" ], "$condition": { "region": 1 } },
+              { "title": "Kasim’s Memo", "key": "kasim-memo", "location": "Xion", "sector": "", "tags": [ "Side Quest: `First Customer`" ], "$condition": { "region": 1 } },
+              { "title": "J’s Memo", "key": "j-memo", "location": "Matrix 11", "sector": "Rotten Labyrinth", "tags": [], "$condition": { "region": 4 } },
+              { "title": "Truth of the Cradle", "key": "truth-of-the-cradle", "location": "Great Desert", "sector": "", "tags": [ "Side Quest: `A United People Cannot be Defeated`" ], "$condition": { "region": 5 } },
+              { "title": "The Truth Under the City of Xion", "key": "the-truth-under-the-city-of-xion", "location": "Great Desert", "sector": "", "tags": [ "Side Quest: `A United People Cannot be Defeated`" ], "$condition": { "region": 5 } },
+              { "title": "Third Road", "key": "third-road", "location": "Great Desert", "sector": "North Great Desert", "tags": [], "notes": "Three Witches for Children Passcode: `λλλλλλ`", "$condition": { "region": 5 } },
+              { "title": "What Will You Choose?", "key": "what-will-you-choose", "location": "Eidos 9", "sector": "Atelier", "tags": [], "$condition": { "region": 7 } },
+              { "title": "Ticket to Heaven", "key": "ticket-to-heaven", "location": "Eidos 9", "sector": "Fallen Overpass - Sector 2", "tags": [], "$condition": { "region": 7 } },
+              { "title": "Francis’s Letter", "key": "francis-letter", "location": "Xion", "sector": "", "tags": [ "Seasonal Christmas event" ], "$condition": { "region": 1 } }
             ]
           },
           "announcements": {
             "title": "Announcements",
             "list": [
               { "title": ":::WARNING:::", "key": "warning", "location": "Eidos 7", "sector": "", "tags": [ "Side Quest: `Taboo`" ] },
-              { "title": "Visitor Information", "key": "visitor-information", "location": "Altess Levoire", "sector": "", "tags": [] },
-              { "title": "Transport Delay Notice", "key": "transport-delay-notice", "location": "Matrix 11", "sector": "Closed Off Platform", "tags": [] },
-              { "title": "Great Desert Crossing Exploration Team Advertisement", "key": "great-desert-crossing-exploration-team-advertisement", "location": "Great Desert", "sector": "", "tags": [] }
+              { "title": "Visitor Information", "key": "visitor-information", "location": "Altess Levoire", "sector": "", "tags": [], "$condition": { "region": 3 } },
+              { "title": "Transport Delay Notice", "key": "transport-delay-notice", "location": "Matrix 11", "sector": "Closed Off Platform", "tags": [], "$condition": { "region": 4 } },
+              { "title": "Great Desert Crossing Exploration Team Advertisement", "key": "great-desert-crossing-exploration-team-advertisement", "location": "Great Desert", "sector": "", "tags": [], "$condition": { "region": 5 } }
             ]
           },
           "series": {
             "title": "Series",
             "list": [
-              { "title": "THE TRUTH, Article 1", "key": "the-truth-article-1", "location": "Wasteland", "sector": "Altess Levoire Approach", "tags": [] },
-              { "title": "THE TRUTH, Article 2", "key": "the-truth-article-2", "location": "Xion", "sector": "", "tags": [] },
+              { "title": "THE TRUTH, Article 1", "key": "the-truth-article-1", "location": "Wasteland", "sector": "Altess Levoire Approach", "tags": [], "$condition": { "region": 2 } },
+              { "title": "THE TRUTH, Article 2", "key": "the-truth-article-2", "location": "Xion", "sector": "", "tags": [], "$condition": { "region": 1 } },
               { "title": "THE TRUTH, Article 3", "key": "the-truth-article-3", "location": "Eidos 7", "sector": "Parking Tower", "tags": [] },
-              { "title": "THE TRUTH, Article 4", "key": "the-truth-article-4", "location": "Great Desert", "sector": "Central Great Desert", "tags": [] },
-              { "title": "THE TRUTH, Article 5", "key": "the-truth-article-5", "location": "Wasteland", "sector": "North Scrap Plains", "tags": [] },
-              { "title": "THE TRUTH, Article 6", "key": "the-truth-article-6", "location": "Great Desert", "sector": "Buried Ruins", "tags": [] },
-              { "title": "The Xion #1", "key": "the-xion-1", "location": "Xion", "sector": "", "tags": [] },
-              { "title": "The Xion #2", "key": "the-xion-2", "location": "Wasteland", "sector": "Barren Land", "tags": [] },
-              { "title": "The Xion #3", "key": "the-xion-3", "location": "Xion", "sector": "", "tags": [] },
-              { "title": "The Xion #4", "key": "the-xion-4", "location": "Great Desert", "sector": "Central Great Desert", "tags": [] },
-              { "title": "The Xion #5", "key": "the-xion-5", "location": "Xion", "sector": "", "tags": [] },
-              { "title": "The Xion #6", "key": "the-xion-6", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
-              { "title": "Plastic Hearts, Vol. 1", "key": "plastic-hearts-vol-1", "location": "Xion", "sector": "", "shop": "D1G-g2r’s shop", "tags": [] },
-              { "title": "Plastic Hearts, Vol. 2", "key": "plastic-hearts-vol-2", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
+              { "title": "THE TRUTH, Article 4", "key": "the-truth-article-4", "location": "Great Desert", "sector": "Central Great Desert", "tags": [], "$condition": { "region": 5 } },
+              { "title": "THE TRUTH, Article 5", "key": "the-truth-article-5", "location": "Wasteland", "sector": "North Scrap Plains", "tags": [], "$condition": { "region": 2 } },
+              { "title": "THE TRUTH, Article 6", "key": "the-truth-article-6", "location": "Great Desert", "sector": "Buried Ruins", "tags": [], "$condition": { "region": 5 } },
+              { "title": "The Xion #1", "key": "the-xion-1", "location": "Xion", "sector": "", "tags": [], "$condition": { "region": 1 } },
+              { "title": "The Xion #2", "key": "the-xion-2", "location": "Wasteland", "sector": "Barren Land", "tags": [], "$condition": { "region": 2 } },
+              { "title": "The Xion #3", "key": "the-xion-3", "location": "Xion", "sector": "", "tags": [], "$condition": { "region": 1 } },
+              { "title": "The Xion #4", "key": "the-xion-4", "location": "Great Desert", "sector": "Central Great Desert", "tags": [], "$condition": { "region": 5 } },
+              { "title": "The Xion #5", "key": "the-xion-5", "location": "Xion", "sector": "", "tags": [], "$condition": { "region": 1 } },
+              { "title": "The Xion #6", "key": "the-xion-6", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [], "$condition": { "region": 1 } },
+              { "title": "Plastic Hearts, Vol. 1", "key": "plastic-hearts-vol-1", "location": "Wasteland", "sector": "", "shop": "D1G-g2r’s shop", "tags": [], "$condition": { "region": 2 } },
+              { "title": "Plastic Hearts, Vol. 2", "key": "plastic-hearts-vol-2", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [], "$condition": { "region": 1 } },
               { "title": "Plastic Hearts, Vol. 3", "key": "plastic-hearts-vol-3", "location": "Eidos 7", "sector": "Silent Street", "tags": [] },
-              { "title": "Plastic Hearts, Vol. 4", "key": "plastic-hearts-vol-4", "location": "Great Desert", "sector": "North Great Desert", "tags": [] },
-              { "title": "Plastic Hearts, Vol. 5", "key": "plastic-hearts-vol-5", "location": "Xion", "sector": "", "tags": [] },
-              { "title": "Book of Faith and Wisdom 2:1-4", "key": "book-of-faith-and-wisdom-2-1-4", "location": "Xion", "sector": "", "tags": [] },
+              { "title": "Plastic Hearts, Vol. 4", "key": "plastic-hearts-vol-4", "location": "Great Desert", "sector": "North Great Desert", "tags": [], "$condition": { "region": 5 } },
+              { "title": "Plastic Hearts, Vol. 5", "key": "plastic-hearts-vol-5", "location": "Xion", "sector": "", "tags": [], "$condition": { "region": 1 } },
+              { "title": "Book of Faith and Wisdom 2:1-4", "key": "book-of-faith-and-wisdom-2-1-4", "location": "Xion", "sector": "", "tags": [], "$condition": { "region": 1 } },
               { "title": "Book of Faith and Wisdom 2:3-6", "key": "book-of-faith-and-wisdom-2-3-6", "location": "Eidos 7", "sector": "", "tags": [ "Side Quest: `Oblivion`" ] },
-              { "title": "Notes on EVE Protocol 1", "key": "notes-on-eve-protocol-1", "location": "Xion", "sector": "", "tags": [] },
-              { "title": "Notes on EVE Protocol 2", "key": "notes-on-eve-protocol-2", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [ "Side Quest: `Stolen Treasure`" ] },
-              { "title": "Notes on EVE Protocol 3", "key": "notes-on-eve-protocol-3", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
-              { "title": "Notes on EVE Protocol 4", "key": "notes-on-eve-protocol-4", "location": "Great Desert", "sector": "Central Great Desert", "tags": [] },
-              { "title": "The Lost 72 Years 1", "key": "the-lost-72-years-1", "location": "Xion", "sector": "", "tags": [] },
-              { "title": "The Lost 72 Years 2", "key": "the-lost-72-years-2", "location": "Xion", "sector": "", "tags": [] },
-              { "title": "The Lost 72 Years 3", "key": "the-lost-72-years-3", "location": "Xion", "sector": "", "tags": [] },
-              { "title": "The Lost 72 Years 4", "key": "the-lost-72-years-4", "location": "Xion", "sector": "", "tags": [ "Side Quest: `Taboo`" ] }
+              { "title": "Notes on EVE Protocol 1", "key": "notes-on-eve-protocol-1", "location": "Xion", "sector": "", "tags": [], "$condition": { "region": 1 } },
+              { "title": "Notes on EVE Protocol 2", "key": "notes-on-eve-protocol-2", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [ "Side Quest: `Stolen Treasure`" ], "$condition": { "region": 1 } },
+              { "title": "Notes on EVE Protocol 3", "key": "notes-on-eve-protocol-3", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [], "$condition": { "region": 1 } },
+              { "title": "Notes on EVE Protocol 4", "key": "notes-on-eve-protocol-4", "location": "Great Desert", "sector": "Central Great Desert", "tags": [], "$condition": { "region": 5 } },
+              { "title": "The Lost 72 Years 1", "key": "the-lost-72-years-1", "location": "Xion", "sector": "", "tags": [], "$condition": { "region": 1 } },
+              { "title": "The Lost 72 Years 2", "key": "the-lost-72-years-2", "location": "Xion", "sector": "", "tags": [], "$condition": { "region": 1 } },
+              { "title": "The Lost 72 Years 3", "key": "the-lost-72-years-3", "location": "Xion", "sector": "", "tags": [], "$condition": { "region": 1 } },
+              { "title": "The Lost 72 Years 4", "key": "the-lost-72-years-4", "location": "Xion", "sector": "", "tags": [ "Side Quest: `Taboo`" ], "$condition": { "region": 1 } }
             ]
           },
           "books": {
             "title": "Books",
             "list": [
               { "title": "The Words of the Devout Felix", "key": "the-words-of-the-devout-felix", "location": "Eidos 7", "sector": "", "shop": "", "tags": [ "Side Quest: `The Words of Mother Sphere`" ] },
-              { "title": "Light of the Colony", "key": "light-of-the-colony", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [ "Side Quest: `Stolen Treasure`" ] },
-              { "title": "Angel Accepting Shedding Tears", "key": "angel-accepting-shedding-tears", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [ "Side Quest: `Stolen Treasure`" ] },
-              { "title": "For a Better World", "key": "for-a-better-world", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [ "Side Quest: `Stolen Treasure`" ] },
-              { "title": "Book of Quotes 1", "key": "book-of-quotes-1", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [ "Side Quest: `Stolen Treasure`" ] },
-              { "title": "Book of Quotes 2", "key": "book-of-quotes-2", "location": "Eidos 9", "sector": "Submerged City", "shop": "", "tags": [] },
-              { "title": "Eidos Company Promotion", "key": "eidos-company-promotion", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [ "Side Quest: `Stolen Treasure`" ] },
-              { "title": "How to Speak with Style", "key": "how-to-speak-with-style", "location": "Xion", "sector": "", "shop": "", "tags": [] },
-              { "title": "Tattered Report", "key": "tattered-report", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [ "Side Quest: `Stolen Treasure`" ] },
-              { "title": "I Heard It", "key": "i-heard-it", "location": "Great Desert", "sector": "", "shop": "", "tags": [ "Side Quest: `Let There be Light Again`" ] }
+              { "title": "Light of the Colony", "key": "light-of-the-colony", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [ "Side Quest: `Stolen Treasure`" ], "$condition": { "region": 1 } },
+              { "title": "Angel Accepting Shedding Tears", "key": "angel-accepting-shedding-tears", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [ "Side Quest: `Stolen Treasure`" ], "$condition": { "region": 1 } },
+              { "title": "For a Better World", "key": "for-a-better-world", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [ "Side Quest: `Stolen Treasure`" ], "$condition": { "region": 1 } },
+              { "title": "Book of Quotes 1", "key": "book-of-quotes-1", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [ "Side Quest: `Stolen Treasure`" ], "$condition": { "region": 1 } },
+              { "title": "Book of Quotes 2", "key": "book-of-quotes-2", "location": "Eidos 9", "sector": "Submerged City", "shop": "", "tags": [], "$condition": { "region": 7 } },
+              { "title": "Eidos Company Promotion", "key": "eidos-company-promotion", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [ "Side Quest: `Stolen Treasure`" ], "$condition": { "region": 1 } },
+              { "title": "How to Speak with Style", "key": "how-to-speak-with-style", "location": "Xion", "sector": "", "shop": "", "tags": [], "$condition": { "region": 1 } },
+              { "title": "Tattered Report", "key": "tattered-report", "location": "Xion", "sector": "", "shop": "Lyle’s General Store", "tags": [ "Side Quest: `Stolen Treasure`" ], "$condition": { "region": 1 } },
+              { "title": "I Heard It", "key": "i-heard-it", "location": "Great Desert", "sector": "", "shop": "", "tags": [ "Side Quest: `Let There be Light Again`" ], "$condition": { "region": 5 } }
             ]
           },
           "information": {
             "title": "Information",
+            "$condition": { "region": 1 },
             "list": [
               { "title": "Information: Oasis", "key": "information-oasis", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [] },
               { "title": "Information: Fantastic Bait", "key": "information-fantastic-bait", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [ "Bulletin Board Request: `Where Is the Fantastic Bait?`" ] },
@@ -1377,37 +1451,39 @@
           },
           "promotions": {
             "title": "Promotion",
+            "$condition": { "region": 1 },
             "list": [
-              { "title": "Introducing the Ark-Tech’s Ark!", "key": "introducing-the-ark-tech-ark", "location": "Xion", "sector": "", "tags": [ "Side Quest: `Lost Ark`" ] },
-              { "title": "Experience Ark-Tech’s Ark!", "key": "experience-ark-tech-ark", "location": "Xion", "sector": "", "tags": [ "Side Quest: `Lost Ark`" ] },
-              { "title": "Ark-Tech delivers its best service by protecting its customers!", "key": "ark-tech-delivers-its-best-service-by-protecting-its-customers", "location": "Xion", "sector": "", "tags": [ "Side Quest: `Lost Ark`" ] },
-              { "title": "Ark-tech pioneers developing the green land!", "key": "ark-tech-pioneers-developing-the-green-land", "location": "Great Desert", "sector": "North Great Desert", "tags": [] },
-              { "title": "Help Wanted", "key": "help-wanted", "location": "Xion", "sector": "", "tags": [] },
-              { "title": "Xion Freedom Liberation Alliance Flyer", "key": "xion-freedom-liberation-alliance-flyer", "location": "Xion", "sector": "", "tags": [] },
-              { "title": "Attention, Citizens! 1", "key": "attention-citizens-1", "location": "Xion", "sector": "", "tags": [] },
-              { "title": "Attention, Citizens! 2", "key": "attention-citizens-2", "location": "Xion", "sector": "", "tags": [] },
-              { "title": "Curse the Heaven’s Royalty!", "key": "curse-the-heaven-royalty", "location": "Xion", "sector": "", "tags": [] },
-              { "title": "Funding Announcement: Colony-bound Rocket", "key": "funding-announcement-colony-bound-rocket", "location": "Xion", "sector": "", "tags": [] },
-              { "title": "Angels are Rigged", "key": "angels-are-rigged", "location": "Xion", "sector": "", "tags": [] },
-              { "title": "Prayer Meeting Guide", "key": "prayer-meeting-guide", "location": "Xion", "sector": "", "tags": [] },
-              { "title": "For You Dimwits Still Believing in Mother Sphere", "key": "for-you-dimwits-still-believing-in-mother-sphere", "location": "Xion", "sector": "", "tags": [] },
-              { "title": "Eidos Company Promotion", "key": "eidos-company-promotion", "location": "Altess Levoire", "sector": "", "tags": [] },
-              { "title": "To My Allies", "key": "to-my-allies", "location": "Xion", "sector": "", "tags": [ "Side Quest: `A United People Cannot be Defeated`" ] },
-              { "title": "Eidos 9, Of You and Mother", "key": "eidos-9-of-you-and-mother", "location": "Eidos 9", "sector": "Fallen Overpass - Sector 2", "tags": [] },
-              { "title": "Welcome to the Raphael Space Centre!", "key": "welcome-to-the-raphael-space-centre", "location": "Spire 4", "sector": "Space Logistics Complex", "tags": [] },
-              { "title": "Orca Aerospace Company Promotion", "key": "orca-aerospace-company-promotion", "location": "Spire 4", "sector": "Space Logistics Complex", "tags": [] }
+              { "title": "Introducing the Ark-Tech’s Ark!", "key": "introducing-the-ark-tech-ark", "location": "Xion", "sector": "", "tags": [ "Side Quest: `Lost Ark`" ], "$condition": { "region": 1 } },
+              { "title": "Experience Ark-Tech’s Ark!", "key": "experience-ark-tech-ark", "location": "Xion", "sector": "", "tags": [ "Side Quest: `Lost Ark`" ], "$condition": { "region": 1 } },
+              { "title": "Ark-Tech delivers its best service by protecting its customers!", "key": "ark-tech-delivers-its-best-service-by-protecting-its-customers", "location": "Xion", "sector": "", "tags": [ "Side Quest: `Lost Ark`" ], "$condition": { "region": 1 } },
+              { "title": "Ark-tech pioneers developing the green land!", "key": "ark-tech-pioneers-developing-the-green-land", "location": "Great Desert", "sector": "North Great Desert", "tags": [], "$condition": { "region": 5 } },
+              { "title": "Help Wanted", "key": "help-wanted", "location": "Xion", "sector": "", "tags": [], "$condition": { "region": 1 } },
+              { "title": "Xion Freedom Liberation Alliance Flyer", "key": "xion-freedom-liberation-alliance-flyer", "location": "Xion", "sector": "", "tags": [], "$condition": { "region": 1 } },
+              { "title": "Attention, Citizens! 1", "key": "attention-citizens-1", "location": "Xion", "sector": "", "tags": [], "$condition": { "region": 1 } },
+              { "title": "Attention, Citizens! 2", "key": "attention-citizens-2", "location": "Xion", "sector": "", "tags": [], "$condition": { "region": 1 } },
+              { "title": "Curse the Heaven’s Royalty!", "key": "curse-the-heaven-royalty", "location": "Xion", "sector": "", "tags": [], "$condition": { "region": 1 } },
+              { "title": "Funding Announcement: Colony-bound Rocket", "key": "funding-announcement-colony-bound-rocket", "location": "Xion", "sector": "", "tags": [], "$condition": { "region": 1 } },
+              { "title": "Angels are Rigged", "key": "angels-are-rigged", "location": "Xion", "sector": "", "tags": [], "$condition": { "region": 1 } },
+              { "title": "Prayer Meeting Guide", "key": "prayer-meeting-guide", "location": "Xion", "sector": "", "tags": [], "$condition": { "region": 1 } },
+              { "title": "For You Dimwits Still Believing in Mother Sphere", "key": "for-you-dimwits-still-believing-in-mother-sphere", "location": "Xion", "sector": "", "tags": [], "$condition": { "region": 1 } },
+              { "title": "Eidos Company Promotion", "key": "eidos-company-promotion", "location": "Altess Levoire", "sector": "", "tags": [], "$condition": { "region": 3 } },
+              { "title": "To My Allies", "key": "to-my-allies", "location": "Xion", "sector": "", "tags": [ "Side Quest: `A United People Cannot be Defeated`" ], "$condition": { "region": 1 } },
+              { "title": "Eidos 9, Of You and Mother", "key": "eidos-9-of-you-and-mother", "location": "Eidos 9", "sector": "Fallen Overpass - Sector 2", "tags": [], "$condition": { "region": 7 } },
+              { "title": "Welcome to the Raphael Space Centre!", "key": "welcome-to-the-raphael-space-centre", "location": "Spire 4", "sector": "Space Logistics Complex", "tags": [], "$condition": { "region": 8 } },
+              { "title": "Orca Aerospace Company Promotion", "key": "orca-aerospace-company-promotion", "location": "Spire 4", "sector": "Space Logistics Complex", "tags": [], "$condition": { "region": 8 } }
             ]
           },
           "prayers": {
             "title": "Prayers",
+            "$condition": { "region": 2 },
             "list": [
-              { "title": "Chapter of Trial 1-β", "key": "chapter-of-trial-1", "location": "Matrix 11", "sector": "Rotten Labyrinth", "tags": [] },
-              { "title": "Chapter of Trial 2-ϑ", "key": "chapter-of-trial-2", "location": "Great Desert", "sector": "North Great Desert", "tags": [] },
-              { "title": "Chapter of Trial 3-α", "key": "chapter-of-trial-3", "location": "Great Desert", "sector": "Central Great Desert", "tags": [] },
-              { "title": "Chapter of Trial 4-λ", "key": "chapter-of-trial-4", "location": "Great Desert", "sector": "North Great Desert", "tags": [] },
-              { "title": "Chapter of Trial 5-δ", "key": "chapter-of-trial-5", "location": "Wasteland", "sector": "Great Canyon", "tags": [] },
-              { "title": "Chapter of Trial 6-ζ", "key": "chapter-of-trial-6", "location": "Wasteland", "sector": "Altess Levoire Approach", "tags": [] },
-              { "title": "Chapter of Salvation -Ω", "key": "chapter-of-salvation", "location": "Wasteland", "sector": "Shipwreck container", "tags": [ "Bulletin Board Request: `Recruit Passcode Specialists`" ] }
+              { "title": "Chapter of Trial 1-β", "key": "chapter-of-trial-1", "location": "Matrix 11", "sector": "Rotten Labyrinth", "tags": [], "$condition": { "region": 4 } },
+              { "title": "Chapter of Trial 2-ϑ", "key": "chapter-of-trial-2", "location": "Great Desert", "sector": "North Great Desert", "tags": [], "$condition": { "region": 5 } },
+              { "title": "Chapter of Trial 3-α", "key": "chapter-of-trial-3", "location": "Great Desert", "sector": "Central Great Desert", "tags": [], "$condition": { "region": 5 } },
+              { "title": "Chapter of Trial 4-λ", "key": "chapter-of-trial-4", "location": "Great Desert", "sector": "North Great Desert", "tags": [], "$condition": { "region": 5 } },
+              { "title": "Chapter of Trial 5-δ", "key": "chapter-of-trial-5", "location": "Wasteland", "sector": "Great Canyon", "tags": [], "$condition": { "region": 2 } },
+              { "title": "Chapter of Trial 6-ζ", "key": "chapter-of-trial-6", "location": "Wasteland", "sector": "Altess Levoire Approach", "tags": [], "$condition": { "region": 2 } },
+              { "title": "Chapter of Salvation -Ω", "key": "chapter-of-salvation", "location": "Wasteland", "sector": "Shipwreck container", "tags": [ "Bulletin Board Request: `Recruit Passcode Specialists`" ], "$condition": { "region": 2 } }
             ]
           }
         }
@@ -1418,6 +1494,7 @@
           "eidos-7": {
             "title": "Eidos 7",
             "location": "Eidos 7",
+            "$condition": { "game-mode": "any", "region": 0 },
             "list": [
               { "code": "γθαγθα", "key": "gateway", "sector": "Silent Street, Gateway" },
               { "code": "βθακθγ", "key": "pharmacy", "sector": "Silent Street, Pharmacy" },
@@ -1430,6 +1507,7 @@
           "wasteland": {
             "title": "Wasteland",
             "location": "Wasteland",
+            "$condition": { "game-mode": "any", "region": 2 },
             "list": [
               { "code": "μλκιαβ", "key": "destroyed-monorail", "sector": "Destroyed Monorail" },
               { "code": "θηγγγζ", "key": "antenna", "sector": "Antenna" },
@@ -1439,6 +1517,7 @@
           "altess-levoire": {
             "title": "Altess Levoire",
             "location": "Altess Levoire",
+            "$condition": { "game-mode": "any", "region": 3 },
             "list": [
               { "code": "μηλαμη", "key": "air-vent-gate", "sector": "Air Vent Gate" }
             ]
@@ -1446,6 +1525,7 @@
           "matrix-11": {
             "title": "Matrix 11",
             "location": "Matrix 11",
+            "$condition": { "game-mode": "any", "region": 4 },
             "list": [
               { "code": "λβκβδβ", "key": "hideout", "sector": "Rotten Labyrinth, Hideout" },
               { "code": "αγδμθδ", "key": "landfill", "sector": "Landfill" },
@@ -1456,6 +1536,7 @@
           "great-desert": {
             "title": "Great Desert",
             "location": "Great Desert",
+            "$condition": { "game-mode": "any", "region": 5 },
             "list": [
               { "code": "λβιιδα", "key": "destroyed-hypertube", "sector": "Destroyed Hypertube" },
               { "code": "μηζεεγ", "key": "solar-tower-area", "sector": "Solar Tower Area" },
@@ -1466,6 +1547,7 @@
           "spire-4": {
             "title": "Spire 4",
             "location": "Spire 4",
+            "$condition": { "game-mode": "any", "region": 8 },
             "list": [
               { "code": "ιθγηκλ", "key": "orca-space-complex-dam-maintenance-gate", "sector": "Orca Space Complex, Dam Maintenance Gate" },
               { "code": "ηεγβεγ", "key": "raphael-space-center-gate-2", "sector": "Raphael Space Center, Gate 2" }
@@ -1474,27 +1556,11 @@
           "xion": {
             "title": "Xion",
             "location": "Xion",
+            "$condition": { "game-mode": "any", "region": 1 },
             "list": [
               { "code": "αζαζαζ", "key": "aaron-locker", "sector": "Aaron’s Locker" },
               { "code": "θθκκκε", "key": "alley-behind-memory-square", "sector": "Alley Behind Memory Square" },
               { "code": "ηαεδγγ", "key": "teddy-locker", "sector": "Teddy’s Locker" }
-            ]
-          },
-          "side-quest": {
-            "title": "Side Quest",
-            "list": [
-              { "code": "θμκαεγ", "key": "lost-ark", "location": "Xion", "tags": [ "Side Quest: `Lost Ark`" ] },
-              { "code": "θθθθθ", "key": "sister-junk-chest", "location": "Xion", "tags": [ "Side Quest: `Life of the Scavengers`" ] },
-              { "code": "βθαλδζ", "key": "recruit-passcode-specialist", "location": "Xion", "tags": [ "Bulletin Board Request: `Recruit Passcode Specialist`" ] },
-              { "code": "1228", "key": "three-witches", "location": "Eidos 7", "sector": "Slient Street, BAR 99", "tags": [ "Bulletin Board Request: `Legion’s Secret Stash`" ] },
-              { "code": "λλλλλλ", "key": "three-witches", "location": "Xion", "tags": [ "Side Quest: `Three Witches`" ] }
-            ]
-          },
-          "door": {
-            "title": "Door",
-            "list": [
-              { "code": "1225", "key": "clock-tower-door", "location": "Eidos 7", "sector": "Commercial Sector", "tags": [ "Clock Tower Puzzle" ] },
-              { "code": "N72R5", "key": "train-cleaning-puzzle", "location": "Matrix 11", "sector": "Rail Yard", "tags": [ "Train Cleaning Puzzle" ] }
             ]
           }
         }
@@ -1528,6 +1594,7 @@
           "nikke-dlc": {
             "name": "NIKKE - DLC",
             "title": "Stellar Blade X GODDESS OF VICTORY: NIKKE",
+            "$condition": { "region": 2 },
             "list": [
               { "name": "Scarlet", "key": "scarlet" },
               { "name": "Volt", "key": "volt" }
@@ -1633,12 +1700,14 @@
       },
       "miscellaneous": {
         "title": "Miscellaneous",
+        "$condition": { "region": 8 },
         "list": [
           { "name": "Providence", "key": "providence", "notes": "Tachyon Blades are placed inside of both arms of the Providence, allowing it to slice and destroy virtually anything." }
         ]
       },
       "fish": {
         "title": "Fish",
+        "$condition": { "region": 5 },
         "list": {
           "small": {
             "title": "Small",
@@ -1706,10 +1775,12 @@
       },
       "stellar-tears": {
         "title": "Stellar Tears",
+        "$condition": { "game-mode": "any", "region": 2 },
         "list": {
           "wasteland": {
             "title": "Wasteland",
             "location": "Wasteland",
+            "$condition": { "game-mode": "any", "region": 2 },
             "list": [
               { "title": "Stellar Tear#AT8154E", "key": "stellar-tear-at8154e", "sector": "Southeast, Fishing Area" },
               { "title": "Stellar Tear#AC6258B", "key": "stellar-tear-ac6258b", "sector": "Southwest, Giant Boat" },
@@ -1724,6 +1795,7 @@
           "great-desert": {
             "title": "Great Desert",
             "location": "Great Desert",
+            "$condition": { "game-mode": "any", "region": 5 },
             "list": [
               { "title": "Stellar Tear#AN1632R", "key": "stellar-tear-an1632r", "sector": "North-Northwest" },
               { "title": "Stellar Tear#AF8742F", "key": "stellar-tear-af8742f", "sector": "South" },
@@ -1738,11 +1810,13 @@
       },
       "photo-challenge": {
         "title": "Photo Challenge",
+        "$condition": { "game-mode": "any", "region": 1 },
         "list": {
           "memories": {
             "title": "Memories of Xion",
             "quest": "Photography Club",
             "location": "Xion",
+            "$condition": { "game-mode": "any", "region": 1 },
             "list": [
               { "title": "Within the Memories", "key": "within-the-memories", "sector": "Memory Square" }
             ]
@@ -1751,6 +1825,7 @@
             "title": "Butterflies in the Wasteland",
             "quest": "Like Butterflies",
             "location": "Wasteland",
+            "$condition": { "game-mode": "any", "region": 2 },
             "list": [
               { "name": "Vibrant Butterfly", "key": "vibrant-butterfly", "sector": "Great Canyon" },
               { "name": "Rare Butterfly", "key": "rare-butterfly", "sector": "Solar Tower" },
@@ -1768,6 +1843,7 @@
             "title": "Fish in the Great Desert",
             "quest": "Pisces",
             "location": "Great Desert",
+            "$condition": { "game-mode": "any", "region": 5 },
             "list": [
               { "name": "Vibrant Fish", "key": "vibrant-fish", "sector": "Oasis" },
               { "name": "Rare Fish", "key": "rare-fish", "sector": "Oasis" },
@@ -1785,6 +1861,7 @@
             "title": "Cats in the Cold City",
             "quest": "Cat Photo Exhibition",
             "location": "Xion",
+            "$condition": { "game-mode": "any", "region": 1 },
             "list": [
               { "name": "Vibrant Cat", "key": "vibrant-cat", "sector": "Path to the Great Desert" },
               { "name": "Rare Cat", "key": "rare-cat", "sector": "The Last Gulp bar" },
@@ -1804,6 +1881,7 @@
   },
   "boss-challenge": {
     "title": "Boss Challenge",
+    "$condition": { "game-mode": 1, "region": "any" },
     "list": [
       { 
         "name": "Abaddon", 

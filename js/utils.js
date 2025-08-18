@@ -1,29 +1,29 @@
 
 const greekAlphabets = [
-  { name: "alpha", upper: "Α", lower: "α" },
-  { name: "beta", upper: "Β", lower: "β" },
-  { name: "gamma", upper: "Γ", lower: "γ" },
-  { name: "delta", upper: "Δ", lower: "δ" },
-  { name: "epsilon", upper: "Ε", lower: "ε" },
-  { name: "zeta", upper: "Ζ", lower: "ζ" },
-  { name: "eta", upper: "Η", lower: "η" },
-  { name: "theta", upper: "Θ", lower: "θ" },
-  { name: "iota", upper: "Ι", lower: "ι" },
-  { name: "kappa", upper: "Κ", lower: "κ" },
-  { name: "lambda", upper: "Λ", lower: "λ" },
-  { name: "mu", upper: "Μ", lower: "μ" },
-  { name: "nu", upper: "Ν", lower: "ν" },
-  { name: "xi", upper: "Ξ", lower: "ξ" },
-  { name: "omicron", upper: "Ο", lower: "ο" },
-  { name: "pi", upper: "Π", lower: "π" },
-  { name: "rho", upper: "Ρ", lower: "ρ" },
-  { name: "sigma", upper: "Σ", lower: "σ" },
-  { name: "tau", upper: "Τ", lower: "τ" },
-  { name: "upsilon", upper: "Υ", lower: "υ" },
-  { name: "phi", upper: "Φ", lower: "φ" },
-  { name: "chi", upper: "Χ", lower: "χ" },
-  { name: "psi", upper: "Ψ", lower: "ψ" },
-  { name: "omega", upper: "Ω", lower: "ω" }
+  { name: "Alpha", upper: "Α", lower: "α" },
+  { name: "Beta", upper: "Β", lower: "β" },
+  { name: "Gamma", upper: "Γ", lower: "γ" },
+  { name: "Delta", upper: "Δ", lower: "δ" },
+  { name: "Epsilon", upper: "Ε", lower: "ε" },
+  { name: "Zeta", upper: "Ζ", lower: "ζ" },
+  { name: "Eta", upper: "Η", lower: "η" },
+  { name: "Theta", upper: "Θ", lower: "θ" },
+  { name: "Iota", upper: "Ι", lower: "ι" },
+  { name: "Kappa", upper: "Κ", lower: "κ" },
+  { name: "Lambda", upper: "Λ", lower: "λ" },
+  { name: "Mu", upper: "Μ", lower: "μ" },
+  { name: "Nu", upper: "Ν", lower: "ν" },
+  { name: "Xi", upper: "Ξ", lower: "ξ" },
+  { name: "Omicron", upper: "Ο", lower: "ο" },
+  { name: "Pi", upper: "Π", lower: "π" },
+  { name: "Rho", upper: "Ρ", lower: "ρ" },
+  { name: "Sigma", upper: "Σ", lower: "σ" },
+  { name: "Tau", upper: "Τ", lower: "τ" },
+  { name: "Upsilon", upper: "Υ", lower: "υ" },
+  { name: "Phi", upper: "Φ", lower: "φ" },
+  { name: "Chi", upper: "Χ", lower: "χ" },
+  { name: "Psi", upper: "Ψ", lower: "ψ" },
+  { name: "Omega", upper: "Ω", lower: "ω" }
 ];
 
 /**
@@ -41,6 +41,8 @@ export function escapeKey(key) {
     .replaceAll('’s', '')
     .replaceAll("'s", '')
     .replaceAll("'", '-')
+    .replaceAll('“', '')
+    .replaceAll('”', '')
     .replaceAll('"', '')
     .replaceAll(".", '')
     .replace(/[\s]+/g, '-')
@@ -52,12 +54,37 @@ export function escapeKey(key) {
 }
 
 /**
+ * @param {string} text 
+ * @returns {string}
+ */
+export function escapeGreekAlphabets(text) {
+  return Array.from(text).reduce((s, c) => {
+    const giu = greekAlphabets.findIndex(g => g.upper === c);
+    const gil = greekAlphabets.findIndex(g => g.lower === c);
+
+    if (giu > -1) {
+      s += `&${greekAlphabets[giu].name};`
+
+    } else if (gil > -1) {
+      s += `&${greekAlphabets[gil].name.toLocaleLowerCase()};`
+
+    } else {
+      s += c;
+    }
+
+    return s;
+  }, "");
+}
+
+/**
  * @param {string} title 
+ * @param {Object[]} gameModes 
+ * @param {Object[]} regions 
  * @param {Object} listData 
  * @param {Array<string>} completed 
  * @returns {string}
  */
-export function generateMarkdown(title, listData, completed) {
+export function generateMarkdown(title, gameModes, regions, listData, completed) {
   const dataKeys = Object.keys(listData).filter(x => !x.startsWith('$'));
   if (dataKeys.length == 0) return;
 
@@ -123,8 +150,24 @@ export function generateMarkdown(title, listData, completed) {
     }
   };
 
+  lines.push('## Game Mode\n');
+  for (const i in gameModes) {
+    const mode = gameModes[i];
+    lines.push(` ${parseInt(i, 10) + 1}. ${mode.completed ? '[x]' : '[ ]'} ${mode.title}`);
+  }
+  lines.push('\n--------------------------------------\n');
+
+  lines.push('## Region\n');
+  for (const i in regions) {
+    const region = regions[i];
+    lines.push(` ${parseInt(i, 10) + 1}. ${region.completed ? '[x]' : '[ ]'} ${region.title}`);
+  }
+  lines.push('\n--------------------------------------\n');
+
   for (const key of dataKeys) {
     const data = listData[key];
+    if (!data) continue;
+
     lines.push(`## ${data.title}\n`);
 
     if (typeof data.list === 'object') {

@@ -118,7 +118,7 @@ export default class LocalStorage {
         }
       }
 
-      return this._process(type, this._lsGet(lsKey));
+      return this._process(type, this._lsGet(lsKey), defaultValue);
     }
 
     return defaultValue !== null ? defaultValue : null;
@@ -186,31 +186,35 @@ export default class LocalStorage {
    *
    * @param {String} type
    * @param {*} value
+   * @param {*} [defaultValue]
    * @returns {*}
    * @private
    */
-  _process(type, value) {
+  _process(type, value, defaultValue) {
     switch (type) {
-      case Boolean:
+      case Boolean: {
+        if (!['false', 'true'].includes(value)) return defaultValue || false;
         return value === 'true';
-      case Number:
-        return parseFloat(value);
+      }
+      case Number: {
+        const num = parseFloat(value);
+        return Number.isNaN(num) ? defaultValue || 0 : num;
+      }
       case Array:
         try {
           const array = JSON.parse(value);
-
-          return Array.isArray(array) ? array : [];
+          return Array.isArray(array) ? array : defaultValue || [];
         } catch (e) {
-          return [];
+          return defaultValue || [];
         }
       case Object:
         try {
           return JSON.parse(value);
         } catch (e) {
-          return {};
+          return defaultValue || {};
         }
       default:
-        return value;
+        return typeof value === 'undefined' ? defaultValue || null : value;
     }
   }
 }

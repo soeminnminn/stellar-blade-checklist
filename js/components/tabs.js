@@ -21,6 +21,7 @@ export const Tab = defineComponent({
       type: Boolean,
       default: false,
     },
+    disabled: Boolean,
   },
   inject: ['addTab', 'removeTab', 'updateTab'],
   data() {
@@ -29,18 +30,19 @@ export const Tab = defineComponent({
       isActive: false,
     };
   },
-  watch: {
-    header(val) {
+  methods: {
+    updateTabData() {
       if (typeof this.updateTab === 'function') {
         this.updateTab(this.tabId, {
           header: val,
           hidden: this.hidden,
+          disabled: this.disabled,
           setActive: (active) => {
             this.isActive = active;
           },
         });
-      }      
-    },
+      }
+    }
   },
   mounted() {
     if (typeof this.addTab === 'function') {
@@ -48,20 +50,25 @@ export const Tab = defineComponent({
         tabId: this.tabId,
         header: this.header,
         hidden: this.hidden,
+        disabled: this.disabled,
         setActive: (active) => {
           this.isActive = active;
         },
       });
-    }    
+    }
+
+    this.$watch(vm => [ vm.header, vm.hidden, vm.disabled ], this.updateTabData, {
+      deep: true
+    });
   },
   beforeUnmount() {
     if (typeof this.removeTab === 'function') {
       this.removeTab(this.tabId);
-    }    
+    }
   },
   render() {
     const defaultSlot = typeof this.$slots === 'function' ? this.$slots : typeof this.$slots.default === 'function' ? this.$slots.default : (() => null);
-    return this.isActive && h('section', { id: this.tabId, role: 'tabpanel', tabIndex: '-1' }, defaultSlot());
+    return this.isActive && h('section', { id: this.tabId, role: 'tabpanel', tabIndex: '-1', 'aria-disabled': this.disabled }, defaultSlot());
   }
 });
 
@@ -76,6 +83,7 @@ export default {
     navClass: String,
     itemClass: String,
     itemActiveClass: String,
+    itemDisabledClass: String,
     panelWrapperClass: String,
   },
   data() {
@@ -132,7 +140,12 @@ export default {
         this.$emit('change', selectedTab.tabId);
       }
     },
-    handleInputChange(ev) {
+    handleInputChange(ev, tab) {
+      if (tab.disabled) {
+        ev.preventDefault();
+        ev.stopPropagation();
+        return;
+      }
       this.selectTab(ev.target.value);
     },
   },
@@ -141,8 +154,25 @@ export default {
       if (this.tabs.length) {
         const tabId = this.activeTab ?? window.location.hash.slice(1);
         let tabIndex = this.tabs.findIndex((tab) => tab.tabId === tabId);
-        if (tabIndex == -1) tabIndex = 0;
-        this.selectTab(this.tabs[tabIndex].tabId);
+
+        if (tabIndex == -1) {
+          tabIndex = 0;
+
+          for (const t of this.tabs) {
+            if (t.disabled) {
+              tabIndex += 1;
+            } else {
+              break;
+            }
+          }
+          if (tabIndex == this.tabs.length) {
+            tabIndex = -1;
+          }
+        }
+
+        if (tabIndex > -1) {
+          this.selectTab(this.tabs[tabIndex].tabId);
+        }
       }
     });
   },
@@ -151,8 +181,8 @@ export default {
 
     return h('div', { class: this.wrapperClass }, [
       h('nav', { role: 'tablist', class: this.navClass }, this.tabs.filter(tab => !tab.hidden).map((tab, i) =>
-        h('label', { key: `tab-${i}`, role: 'presentation', class: [this.itemClass, tab.isActive && this.itemActiveClass].filter(Boolean).join(' ') }, [
-          h('input', { type: 'radio', name: this.tabName, role: 'tab', tabIndex: '0', checked: tab.isActive, value: tab.tabId, style: 'appearance: none; display: none;', onChange: this.handleInputChange }),
+        h('label', { key: `tab-${i}`, role: 'presentation', class: [this.itemClass, tab.isActive && this.itemActiveClass, tab.disabled && this.itemDisabledClass] }, [
+          h('input', { type: 'radio', name: this.tabName, role: 'tab', tabIndex: '0', disabled: tab.disabled === true ? 'true' : undefined, checked: tab.isActive, value: tab.tabId, style: 'appearance: none; display: none;', onChange: (ev) => this.handleInputChange(ev, tab) }),
           tab.header
         ])
       )),

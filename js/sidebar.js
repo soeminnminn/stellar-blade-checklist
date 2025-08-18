@@ -13,11 +13,24 @@ export default {
   },
   data() {
     return {
-      isOpen: false
+      isOpen: false,
+      gameMode: 0,
     };
   },
-  inject: [ 'exportMarkdown', 'exportChecklist', 'importChecklist' ],
+  inject: [ 'getGameMode', 'setGameMode', 'isDisabled', 'exportMarkdown', 'exportChecklist', 'importChecklist' ],
   methods: {
+    handleGameModeChange(ev) {
+      const key = Number(ev.target.value);
+      const isChecked = ev.target.checked;
+
+      if (!Number.isNaN(key) && isChecked) {
+        this.gameMode = key;
+
+        if (typeof this.setGameMode === 'function') {
+          this.setGameMode(key);
+        }
+      }
+    },
     handleClickOutside(ev) {
       if (!this.$refs.sidebar.contains(ev.target)) {
         this.isOpen = false;
@@ -60,11 +73,19 @@ export default {
   },
   mounted() {
     document.addEventListener('pointerdown', this.handleClickOutside);
+
+    this.$nextTick(() => {
+      if (typeof this.getGameMode === 'function') {
+        this.gameMode = this.getGameMode();
+      }
+    });
   },
   beforeUnmount() {
     document.removeEventListener('pointerdown', this.handleClickOutside);
   },
   render() {
+    const isDisabled = typeof this.isDisabled === 'function' ? this.isDisabled : (() => false);
+
     return [
       h('div', { class: 'side-menu' }, 
         h('button', { type: 'button', onClick: this.handleOpen },
@@ -81,13 +102,33 @@ export default {
           h('img', { src: './images/logo.png' })
         ),
         h('div', { class: 'side-content' }, [
+          h('menu', { class: 'side-card' }, [
+            h('li', { key: 'game-mode-ng' }, 
+              h('label', { class: 'side-button' }, [
+                h('input', { type: 'radio', name: 'game-mode', value: 0, checked: this.gameMode == 0, style: 'appearance: none; display: none;', onChange: this.handleGameModeChange }),
+                'New Game'
+              ])
+            ),
+            h('li', { key: 'game-mode-ng-plus' }, 
+              h('label', { class: 'side-button' }, [
+                h('input', { type: 'radio', name: 'game-mode', value: 1, checked: this.gameMode == 1, style: 'appearance: none; display: none;', onChange: this.handleGameModeChange }),
+                'New Game+'
+              ])
+            ),
+            h('li', { key: 'game-mode-ng-plus-plus' }, 
+              h('label', { class: 'side-button' }, [
+                h('input', { type: 'radio', name: 'game-mode', value: 2, checked: this.gameMode == 2, style: 'appearance: none; display: none;', onChange: this.handleGameModeChange }),
+                'New Game++'
+              ])
+            )
+          ]),
           h('menu', { class: 'side-card' }, 
             this.modelValue.map((x, i) => 
               h('li', { key: x.key }, [
-                h(x.children ? 'span' : 'a', { href: `#${x.key}`, class: ['side-button', this.activeId === x.key && 'active'] }, x.title),
+                h(x.children ? 'span' : 'a', { href: `#${x.key}`, class: ['side-button', this.activeId === x.key && 'active', isDisabled(x) && 'disabled'] }, x.title),
                 x.children && h('menu', { class: 'side-sub-menu' }, x.children.map(c => 
-                  h('li', { key: `${x.key}-${c.key}` }, 
-                    h('a', { href: `#${x.key}/${c.key}`, class: this.activeId === `${x.key}/${c.key}` && 'active' }, c.title)
+                  h('li', { key: `${x.key}-${c.key}`, class: isDisabled(c) ? 'disabled' : '' }, 
+                    h('a', { href: `#${x.key}/${c.key}`, class: [isDisabled(c) && 'disabled', this.activeId === `${x.key}/${c.key}` && 'active'] }, c.title)
                   )
                 ))
               ])

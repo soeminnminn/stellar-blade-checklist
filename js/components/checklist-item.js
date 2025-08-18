@@ -8,7 +8,7 @@ export default {
     index: {
       type: Number,
       default: 0,
-    }
+    },
   },
   computed: {
     title() {
@@ -31,7 +31,7 @@ export default {
       return typeof this.value === 'object' && this.value.code;
     }
   },
-  inject: [ 'setCompleted', 'isCompleted', 'makeKey' ],
+  inject: [ 'makeKey', 'setCompleted', 'isCompleted', 'isDisabled' ],
   emits: [ 'change' ],
   methods: {
     isChecked(key) {
@@ -41,6 +41,12 @@ export default {
       return false;
     },
     handleChange(ev) {
+      if (this.disabled === true) {
+        ev.preventDefault();
+        ev.stopPropagation();
+        return;
+      }
+
       const key = ev.target.value;
       const isChecked = ev.target.checked;
 
@@ -52,6 +58,8 @@ export default {
     }
   },
   render() {
+    const isDisabled = typeof this.isDisabled === 'function' ? this.isDisabled : (() => false);
+
     const label = () => {
       const key = this.makeKey(this.dataKey, this.value);
 
@@ -64,18 +72,20 @@ export default {
           h('div', { class: 'variants' }, this.value.variants.map((v, i) => {
             const title = (typeof v === 'object') ? v.name || v.code || v.title : `${v}`;
             const vkey = this.makeKey(key, v);
+            const disabled = isDisabled(v);
 
-            return h('label', { key: `variant-${i}`, class: [ 'checklist-label', v.code && 'code' ] }, [
-              h('input', { type: 'checkbox', value: vkey, checked: this.isChecked(vkey), onChange: this.handleChange }),
+            return h('label', { key: `variant-${i}`, class: [ 'checklist-label', v.code && 'code', disabled && 'disabled' ], 'aria-disabled': disabled ? undefined : 'true' }, [
+              h('input', { type: 'checkbox', value: vkey, disabled: disabled ? 'true' : undefined, checked: this.isChecked(vkey), onChange: this.handleChange }),
               title
             ]);
           }))
         ]);
       }
 
-      return h('label', { class: [ 'checklist-label', this.isCode && 'code' ] }, [
+      const disabled = isDisabled(this.value);
+      return h('label', { class: [ 'checklist-label', this.isCode && 'code', disabled && 'disabled' ], 'aria-disabled': disabled ? 'true' : undefined }, [
         h('span', { class: 'item-index' }, `${this.index}`),
-        h('input', { type: 'checkbox', value: key, checked: this.isChecked(key), onChange: this.handleChange }),
+        h('input', { type: 'checkbox', value: key, disabled: disabled ? 'true' : undefined, checked: this.isChecked(key), onChange: this.handleChange }),
         this.title,
       ]);
     };

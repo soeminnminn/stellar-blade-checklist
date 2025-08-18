@@ -1,6 +1,7 @@
 @import './async-loader.css';
 @import './notifications.css';
 @import './dialog-modal.css';
+@import './popper-menu.css';
 
 *,
 *::before,
@@ -28,7 +29,7 @@
 
 body {
   position: relative;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: clamp(0.875em, 2vw, 1em);
   margin: 0;
   padding: 0;
@@ -226,7 +227,7 @@ a:hover {
   background: var(--color-bg-button);
   color: var(--color-fg-card);
   border: none;
-  border-radius: 6px;
+  border-radius: var(--border-radius-button);
   text-align: center;
   cursor: pointer;
   transition: background 0.2s;
@@ -241,6 +242,11 @@ span.side-button {
 
 .side-button:not(span):hover,
 .side-button.active {
+  background: var(--color-bg-button-active);
+  color: var(--color-fg-card-active);
+}
+
+.side-button:has(input[type="radio"]:checked) {
   background: var(--color-bg-button-active);
   color: var(--color-fg-card-active);
 }
@@ -267,6 +273,12 @@ span.side-button {
 .side-sub-menu > li > a.active,
 .side-sub-menu > li > a.active:hover {
   color: var(--color-fg-card-active);
+}
+
+.side-button.disabled,
+.side-sub-menu > li.disabled {
+  pointer-events: none;
+  opacity: 0.6;
 }
 
 .content-card {
@@ -340,9 +352,60 @@ span.side-button {
   gap: 0.5em;
 }
 
+.checklist-header .title {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
 .checklist-header .location {
   margin-bottom: 1em;
   color: #999;
+}
+
+.checklist-header .title .popper-popup {
+  border-radius: var(--border-radius-card);
+}
+
+.checklist-header .title .popper-button {
+  padding: 0.625em;
+  background: var(--color-bg-button);
+  color: var(--color-fg-card);
+  border-radius: var(--border-radius-button);
+}
+
+.checklist-header .title .popper-button:hover,
+.checklist-header .title .popper-button:focus {
+  background: var(--color-bg-button-active);
+  color: var(--color-fg-card-active);
+}
+
+.popper-popup .menu-item {
+  display: flex;
+  flex-flow: row;
+  gap: .25em;
+  align-items: center;
+  padding: 0.25em 0.5em 0.25em 0.5em;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--color-fg-card);
+}
+
+.popper-popup .menu-item::before {
+  content: '\f00c';
+  font-family: var(--fa-family-classic);
+  font-weight: 900;
+  display: inline-block;
+  text-align: center;
+  width: 1.5em;
+  margin: 0 0.25em;
+  color: transparent;
+  font-size: small;
+}
+
+.popper-popup .menu-item.sorted::before {
+  color: inherit;
 }
 
 .checklist-item {
@@ -354,17 +417,25 @@ span.side-button {
   cursor: pointer;
 }
 .checklist-item .checklist-label.code {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: Consolas, system-ui, -apple-system, sans-serif;
   font-size: 120%;
 }
 
-.checklist-item .checklist-label input[type="checkbox"] {
+.checklist-item .checklist-label input[type="checkbox"],
+.checklist-item .checklist-label input[type="radio"] {
   margin-right: 0.5em;
 }
 
-.checklist-item .checklist-label:has(input[type="checkbox"]:checked) {
+.checklist-item .checklist-label.completed,
+.checklist-item .checklist-label:has(input[type="checkbox"]:checked),
+.checklist-item .checklist-label:has(input[type="radio"]:checked) {
   text-decoration: line-through;
   color: #999;
+}
+
+.checklist-item .checklist-label.disabled {
+  pointer-events: none;
+  opacity: 0.6;
 }
 
 .checklist-item .item-index {
@@ -392,6 +463,11 @@ span.side-button {
   .checklist-item .checklist-info {
     padding: 0.5em 0 0 2.5em;
   }
+}
+
+.checklist-item .checklist-label.disabled ~ .checklist-info {
+  pointer-events: none;
+  opacity: 0.6;
 }
 
 .checklist-item .checklist-info > div {
@@ -520,4 +596,9 @@ span.side-button {
 .tab-button.active {
   background: var(--color-bg-button-active);
   color: var(--color-fg-card-active);
+}
+
+.tab-button.disabled {
+  pointer-events: none;
+  opacity: 0.6;
 }
