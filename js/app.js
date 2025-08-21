@@ -1,6 +1,7 @@
 import { h } from 'vue';
 import { ONotificationsContainer } from 'notifications';
 import LocalStorage from 'local-storage';
+import { appTitle, progressKey } from './constants.js';
 import AsyncLoader from './components/async-loader.js';
 import Sidebar from './sidebar.js';
 import HashRouter from './components/hash-router.js';
@@ -10,8 +11,16 @@ import RegionPage from './pages/region.js';
 import ChecklistPage from './pages/checklist.js';
 import { escapeKey, generateMarkdown } from './utils.js';
 
-const progressKey = 'stellar-blade-checklist';
-const appTitle = 'Stellar Blade Checklist';
+const conditionsDataDef = {
+  'game-mode': {
+    title: "Game Mode",
+    list: []
+  },
+  'region': {
+    title: "Region",
+    list: []
+  }
+};
 
 export default {
   name: 'app',
@@ -33,7 +42,7 @@ export default {
 
     return {
       localStorage: ls,
-      conditionDefs: {},
+      conditionsData: conditionsDataDef,
       checklistData: {},
       sideMenuData: [],
       completed: ls.get('completed', []),
@@ -46,7 +55,19 @@ export default {
   watch: {
     checklistData(value) {
       if (typeof value === 'object') {
-        this.sideMenuData = Object.keys(value).map(key => {
+        const conditionsData = this.conditionsData || {};
+
+        const conditionsMenu = Object.keys(conditionsData).reduce((t, x) => {
+          if (x !== 'game-mode') {
+            t.push({
+              key: x,
+              title: conditionsData[x].title,
+            });
+          }
+          return t;
+        }, []);
+
+        const menuData = Object.keys(value).map(key => {
           const item = {
             key,
             title: value[key].title,
@@ -60,6 +81,11 @@ export default {
 
           return item;
         });
+
+        this.sideMenuData = [
+          ...conditionsMenu,
+          ...menuData
+        ];
       }
     },
     gameMode() {
@@ -126,7 +152,7 @@ export default {
       if (res.ok) {
         const data = await res.json();
 
-        this.conditionDefs = data['$condition-defs'];
+        this.conditionsData = data['$condition-data'] || conditionsDataDef;
 
         const defCompleted = data['$completed'];
         if (Array.isArray(defCompleted)) {
@@ -204,23 +230,19 @@ export default {
       return false;
     },
     exportMarkdown() {
-      const gameModes = this.conditionDefs['game-mode'].map((x, i) => {
-        return {
-          ...x,
-          completed: i <= this.gameMode
-        };
-      });
+      const gameModesData = {
+        ...this.conditionsData['game-mode'],
+        list: this.conditionsData['game-mode'].list.map((x, i) => ({ ...x, completed: i <= this.gameMode }))
+      };
+      
+      const regionsData = {
+        ...this.conditionsData['region'],
+        list: this.conditionsData['region'].list.map((x, i) => ({ ...x, completed: i <= this.lastRegion }))
+      };
 
-      const regions = this.conditionDefs['region'].map((x, i) => {
-        return {
-          ...x,
-          completed: i <= this.lastRegion
-        };
-      });
+      const listData = { ...this.checklistData };
 
-      const listData = { ...this.checklistData, region: undefined };
-
-      const markdown = generateMarkdown(appTitle, gameModes, regions, listData, this.completed);
+      const markdown = generateMarkdown(appTitle, gameModesData, regionsData, listData, this.completed);
 
       const blob = new Blob([markdown], { type: 'text/markdown' });
       const url = URL.createObjectURL(blob);
@@ -297,12 +319,12 @@ export default {
     return [
       h(AsyncLoader, { promise: this.loadData }),
       h('div', { key: `${this.gameMode}-${this.lastRegion}`, class: 'content-container' }, [
-        h(Sidebar, { modelValue: this.sideMenuData, activeId: this.pageId }),
+        h(Sidebar, { gameModes: this.conditionsData['game-mode'].list, modelValue: this.sideMenuData, activeId: this.pageId }),
         h('div', { class: 'content-card' },
           h(HashRouter, { onChange: this.handlePageChange }, {
             default: () => h(HomePage, { title: appTitle }),
             faq: () => h(FAQPage),
-            region: () => h(RegionPage, { dataKey: 'region', listData: this.checklistData['region'] }),
+            region: () => h(RegionPage, { dataKey: 'region', listData: this.conditionsData['region'] }),
             '#routes': (pathNames) => {
               if (pathNames) {
                 const parts = pathNames.split('/');

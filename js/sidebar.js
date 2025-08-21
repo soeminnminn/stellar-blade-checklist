@@ -2,6 +2,10 @@ import { h } from 'vue';
 
 export default {
   props: {
+    gameModes: {
+      type: Object,
+      default: []
+    },
     modelValue: {
       type: Object,
       default: []
@@ -102,26 +106,16 @@ export default {
           h('img', { src: './images/logo.png' })
         ),
         h('div', { class: 'side-content' }, [
-          h('menu', { class: 'side-card' }, [
-            h('li', { key: 'game-mode-ng' }, 
-              h('label', { class: 'side-button' }, [
-                h('input', { type: 'radio', name: 'game-mode', value: 0, checked: this.gameMode == 0, style: 'appearance: none; display: none;', onChange: this.handleGameModeChange }),
-                'New Game'
-              ])
-            ),
-            h('li', { key: 'game-mode-ng-plus' }, 
-              h('label', { class: 'side-button' }, [
-                h('input', { type: 'radio', name: 'game-mode', value: 1, checked: this.gameMode == 1, style: 'appearance: none; display: none;', onChange: this.handleGameModeChange }),
-                'New Game+'
-              ])
-            ),
-            h('li', { key: 'game-mode-ng-plus-plus' }, 
-              h('label', { class: 'side-button' }, [
-                h('input', { type: 'radio', name: 'game-mode', value: 2, checked: this.gameMode == 2, style: 'appearance: none; display: none;', onChange: this.handleGameModeChange }),
-                'New Game++'
-              ])
+          h('menu', { class: 'side-card' }, 
+            this.gameModes.map((gm, i) => 
+              h('li', { key: `game-mode-${gm.key}` }, 
+                h('label', { class: 'side-button' }, [
+                  h('input', { type: 'radio', name: 'game-mode', value: i, checked: this.gameMode == i, style: 'appearance: none; display: none;', onChange: this.handleGameModeChange }),
+                  gm.title
+                ])
+              )
             )
-          ]),
+          ),
           h('menu', { class: 'side-card' }, 
             this.modelValue.map((x, i) => 
               h('li', { key: x.key }, [

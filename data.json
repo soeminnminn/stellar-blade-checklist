@@ -4,23 +4,29 @@
     "https://game8.co/games/Stellar-Blade/",
     "https://www.neoseeker.com/stellar-blade/"
   ],
-  "$condition-defs": {
-    "game-mode": [
-      { "key": 0, "title": "Normal Mode" },
-      { "key": 1, "title": "New Game+" },
-      { "key": 2, "title": "New Game++" }
-    ],
-    "region": [
-      { "key": 0, "title": "Eidos 7" },
-      { "key": 1, "title": "Xion" },
-      { "key": 2, "title": "Wasteland" },
-      { "key": 3, "title": "Altess Levoire" },
-      { "key": 4, "title": "Matrix 11" },
-      { "key": 5, "title": "Great Desert" },
-      { "key": 6, "title": "Abyss Levoire" },
-      { "key": 7, "title": "Eidos 9" },
-      { "key": 8, "title": "Spire 4" }
-    ]
+  "$condition-data": {
+    "game-mode": {
+      "title": "Game Mode",
+      "list": [
+        { "key": 0, "title": "Normal Mode" },
+        { "key": 1, "title": "New Game+" },
+        { "key": 2, "title": "New Game++" }
+      ]
+    },
+    "region": {
+      "title": "Region",
+      "list": [
+        { "key": 0, "title": "Eidos 7" },
+        { "key": 1, "title": "Xion" },
+        { "key": 2, "title": "Wasteland" },
+        { "key": 3, "title": "Altess Levoire" },
+        { "key": 4, "title": "Matrix 11" },
+        { "key": 5, "title": "Great Desert" },
+        { "key": 6, "title": "Abyss Levoire" },
+        { "key": 7, "title": "Eidos 9" },
+        { "key": 8, "title": "Spire 4" }
+      ]
+    }
   },
   "$completed": [
     "comrades/adam-clothes/sewer-rat",
@@ -29,20 +35,6 @@
     "exterior/hair/planet-diving-tail",
     "exterior/nano-suit/skin-suit"
   ],
-  "region": {
-    "title": "Region",
-    "list": [
-      { "title": "Eidos 7", "key": "eidos-7" },
-      { "title": "Xion", "key": "xion" },
-      { "title": "Wasteland", "key": "wasteland" },
-      { "title": "Altess Levoire", "key": "altess-levoire" },
-      { "title": "Matrix 11", "key": "matrix-11" },
-      { "title": "Great Desert", "key": "great-desert" },
-      { "title": "Abyss Levoire", "key": "abyss-levoire" },
-      { "title": "Eidos 9", "key": "eidos-9" },
-      { "title": "Spire 4", "key": "spire-4" }
-    ]
-  },
   "camp": {
     "title": "Camp",
     "list": {
@@ -377,6 +369,10 @@
   },
   "exospine": {
     "title": "Exospine",
+    "$sort": [
+      { "key": "#", "title": "Default" },
+      { "key": "name", "title": "Alphabets" }
+    ],
     "list": [
       { 
         "name": "Chain-Type Exospine", 
@@ -478,6 +474,10 @@
   },
   "gear": {
     "title": "Gear",
+    "$sort": [
+      { "key": "#", "title": "Default" },
+      { "key": "name", "title": "Alphabets" }
+    ],
     "list": [
       {
         "name": "Beta Charge Gear",
@@ -835,12 +835,13 @@
           { "name": "Planet Diving Suit (2nd)", "key": "planet-diving-suit-2nd", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [], "$condition": { "region": 1 } },
           { "name": "Planet Diving Suit (2nd) V2", "key": "planet-diving-suit-2nd-v2", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 1 } },
           { "name": "Planet Diving Suit (Captain)", "key": "planet-diving-suit-captain", "location": "Xion", "sector": "Adam’s Safehouse", "shop": "", "tags": [], "$condition": { "region": 1 } },
-          { "name": "Prototype Neurolink Suit", "key": "prototype-neurolink-suit", "location": "Wasteland", "sector": "Wasteland Basin", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 2 } },
-          { "name": "Prototype Sensate Skin", "key": "prototype-sensate-skin", "location": "Great Desert", "sector": "Northern Desert", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 5 } },
           { "name": "Neurolink Suit", "key": "neurolink-suit", "location": "", "sector": "", "shop": "", "tags": [ "Boss Challenge", "All Normal Bosses" ], "$condition": { "game-mode": 1 } },
           { "name": "Neurolink Skin", "key": "neurolink-skin", "location": "Xion", "sector": "", "shop": "", "tags": [ "Side Quest: `Cat Photo Exhibition`" ], "$condition": { "region": 1 } },
           { "name": "Sensate Skin", "key": "sensate-skin", "location": "Wasteland", "sector": "West side", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 2 } },
           { "name": "Royal Guard Suit", "key": "royal-guard-suit", "location": "", "sector": "", "shop": "", "tags": [ "Boss Challenge", "Mann - Normal Mode" ], "$condition": { "game-mode": 1 } },
+          { "name": "Prototype Neurolink Suit", "key": "prototype-neurolink-suit", "location": "Wasteland", "sector": "Wasteland Basin", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 2 } },
+          { "name": "Prototype Sensate Suit", "key": "prototype-sensate-suit", "location": "Great Desert", "sector": "Northern Desert", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 5 } },
+          { "name": "War Aegis", "key": "war-aegis", "location": "Great Desert", "sector": "Buried Ruins", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 5 } },
           { "name": "Photogenic", "key": "photogenic", "location": "Spire 4", "sector": "Prestige Lounge", "shop": "", "tags": [], "$condition": { "region": 8 } },
           { "name": "Telegenic", "key": "telegenic", "location": "Spire 4", "sector": "Prestige Lounge", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 8 } },
           { "name": "Daily Mascot", "key": "daily-mascot", "location": "Matrix 11", "sector": "Underground Sewer", "shop": "", "tags": [], "$condition": { "region": 4 } },
@@ -866,6 +867,7 @@
           { "name": "Silver Kunoichi", "key": "silver-kunoichi", "location": "Spire 4", "sector": "Hypertube", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 8 } },
           { "name": "Shadow Kunoichi", "key": "shadow-kunoichi", "location": "Matrix 11", "sector": "Underground Sewer", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 4 } },
           { "name": "Peony", "key": "peony", "location": "Eidos 7", "sector": "Construction Zone", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2 } },
+          { "name": "Hydrangea", "key": "hydrangea", "location": "Eidos 9", "sector": "Sector 2", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 7 } },
           { "name": "Moutan Peony", "key": "moutan-peony", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [], "$condition": { "region": 1 } },
           { "name": "Black Lotus", "key": "black-lotus", "location": "Eidos 7", "sector": "Drained plaza", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2 } },
           { "name": "Cybernetic Bondage", "key": "cybernetic-bondage", "location": "Great Desert", "sector": "Oasis", "shop": "", "tags": [], "$condition": { "region": 5 } },
@@ -886,16 +888,14 @@
           { "name": "Resonance", "key": "resonance", "location": "Eidos 9", "sector": "Rollercoaster", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 7 } },
           { "name": "War Dress", "key": "war-dress", "location": "Xion", "sector": "", "shop": "", "tags": [ "Side Quest: `Pisces`" ], "$condition": { "region": 1 } },
           { "name": "War Suit", "key": "war-suit", "location": "Eidos 9", "sector": "Rollercoaster", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 7 } },
-          { "name": "War Aegis", "key": "war-aegis", "location": "Great Desert", "sector": "Buried Ruins", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 5 } },
           { "name": "Cyber Bunny", "key": "cyber-bunny", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [], "$condition": { "region": 1 } },
-          { "name": "Aqua Pearl", "key": "aqua-pearl", "location": "Matrix 11", "sector": "Closed-Off Platform", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 4 } },
           { "name": "White Pearl", "key": "white-pearl", "location": "Wasteland", "sector": "Wasteland Basin", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 2 } },
+          { "name": "Aqua Pearl", "key": "aqua-pearl", "location": "Matrix 11", "sector": "Closed-Off Platform", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 4 } },
           { "name": "Ultimate Bunny", "key": "ultimate-bunny", "location": "Spire 4", "sector": "Raphael Space Centre", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 8 } },
           { "name": "Extreme Bunny", "key": "extreme-bunny", "location": "Wasteland", "sector": "Forbidden Area", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 2 } },
           { "name": "Crimson Wings", "key": "crimson-wings", "location": "", "sector": "", "shop": "", "tags": [ "1.011 Patch Update" ] },
           { "name": "Punk Top", "key": "punk-top", "location": "Eidos 9", "sector": "Sector 2", "shop": "", "tags": [], "$condition": { "region": 7 } },
           { "name": "Punk Style", "key": "punk-style", "location": "Eidos 9", "sector": "Sector 2", "shop": "", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 7 } },
-          { "name": "Hydrangea", "key": "hydrangea", "location": "Eidos 9", "sector": "Sector 2", "shop": "", "tags": [ "NG++" ], "$condition": { "game-mode": 2, "region": 7 } },
           { "name": "Orca Exploration Suit", "key": "orca-exploration-suit", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [], "$condition": { "region": 1 } },
           { "name": "Orca Pathfinder", "key": "orca-pathfinder", "location": "Xion", "sector": "", "shop": "Roxanne’s shop", "tags": [ "NG+" ], "$condition": { "game-mode": 1, "region": 1 } },
           { "name": "Orca Engineer", "key": "orca-engineer", "location": "Spire 4", "sector": "Hypertube", "shop": "", "tags": [], "$condition": { "region": 8 } },
@@ -1010,14 +1010,14 @@
           { "name": "Originative", "key": "originative", "location": "Xion", "shop": "Gwen’s Hair Salon", "tags": [] },
           { "name": "Santa Girl", "key": "santa-girl", "location": "Xion", "shop": "", "tags": [ "Seasonal Christmas event" ] },
           { "name": "YoRHa No.2 Type B Style", "key": "yorha-no-2-type-b-style", "location": "", "shop": "Emil’s Shop", "tags": [ "EVE NieR - DLC" ] },
+          { "name": "Moonlit Beauty", "key": "moonlit-beauty", "location": "", "shop": "", "tags": [ "Boss Challenge", "Scarlet - Normal Mode", "Nikke - DLC" ] },
           { "name": "White Fox Mask Style", "key": "white-fox-mask-style", "location": "", "shop": "Emil’s Shop", "tags": [ "EVE NieR - DLC" ] },
           { "name": "YoRHa Type A No.2 Style", "key": "yorha-type-a-no-2-style", "location": "", "shop": "Emil’s Shop", "tags": [ "EVE NieR - DLC" ] },
           { "name": "Noble Elegance", "key": "noble-elegance", "location": "Wasteland", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ] },
           { "name": "Standard Long", "key": "standard-long", "location": "Wasteland", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ] },
           { "name": "Energetic Bangs", "key": "energetic-bangs", "location": "Wasteland", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ] },
           { "name": "First Affection", "key": "first-affection", "location": "Wasteland", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ] },
-          { "name": "Poppin’ Twin Tails", "key": "poppin-twin-tails", "location": "Wasteland", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ] },
-          { "name": "Moonlit Beauty", "key": "moonlit-beauty", "location": "", "shop": "", "tags": [ "Boss Challenge", "Scarlet - Normal Mode", "Nikke - DLC" ] }
+          { "name": "Poppin’ Twin Tails", "key": "poppin-twin-tails", "location": "Wasteland", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ] }
         ]
       }
     }

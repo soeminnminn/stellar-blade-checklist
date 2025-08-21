@@ -150,16 +150,16 @@ export function generateMarkdown(title, gameModes, regions, listData, completed)
     }
   };
 
-  lines.push('## Game Mode\n');
-  for (const i in gameModes) {
-    const mode = gameModes[i];
+  lines.push(`## ${gameModes.title}\n`);
+  for (const i in gameModes.list) {
+    const mode = gameModes.list[i];
     lines.push(` ${parseInt(i, 10) + 1}. ${mode.completed ? '[x]' : '[ ]'} ${mode.title}`);
   }
   lines.push('\n--------------------------------------\n');
 
-  lines.push('## Region\n');
-  for (const i in regions) {
-    const region = regions[i];
+  lines.push(`## ${regions.title}\n`);
+  for (const i in regions.list) {
+    const region = regions.list[i];
     lines.push(` ${parseInt(i, 10) + 1}. ${region.completed ? '[x]' : '[ ]'} ${region.title}`);
   }
   lines.push('\n--------------------------------------\n');
