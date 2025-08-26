@@ -920,12 +920,12 @@
           { "name": "YoRHa Uniform 1", "key": "yorha-uniform-1", "location": "", "sector": "", "shop": "Emil’s Shop", "tags": [ "EVE NieR - DLC" ], "$condition": { "region": 2 } },
           { "name": "YoRHa Unofficial Ceremonial Attire", "key": "yorha-unofficial-ceremonial-attire", "location": "", "sector": "", "shop": "Emil’s Shop", "tags": [ "EVE NieR - DLC" ], "$condition": { "region": 2 } },
           { "name": "YoRHa Type A No.2 Uniform", "key": "yorha-type-a-no-2-uniform", "location": "", "sector": "", "shop": "Emil’s Shop", "tags": [ "EVE NieR - DLC" ], "$condition": { "region": 2 } },
+          { "name": "Wandering Swordfighter Outfit", "key": "wandering-swordfighter-outfit", "location": "", "sector": "", "shop": "", "tags": [ "Boss Challenge", "Scarlet - Normal Mode", "Nikke - DLC" ], "$condition": { "game-mode": 1 } },
           { "name": "Elegant Dress", "key": "elegant-dress", "location": "Wasteland", "sector": "", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ], "$condition": { "region": 2 } },
           { "name": "Elysion Combat Uniform", "key": "elysion-combat-uniform", "location": "Wasteland", "sector": "", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ], "$condition": { "region": 2 } },
           { "name": "Never Look Back", "key": "never-look-back", "location": "Wasteland", "sector": "", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ], "$condition": { "region": 2 } },
           { "name": "Missing Link", "key": "missing-link", "location": "Wasteland", "sector": "", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ], "$condition": { "region": 2 } },
-          { "name": "Cooling Suit", "key": "cooling-suit", "location": "Wasteland", "sector": "", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ], "$condition": { "region": 2 } },
-          { "name": "Wandering Swordfighter Outfit", "key": "wandering-swordfighter-outfit", "location": "", "sector": "", "shop": "", "tags": [ "Boss Challenge", "Scarlet - Normal Mode", "Nikke - DLC" ], "$condition": { "game-mode": 1 } }
+          { "name": "Cooling Suit", "key": "cooling-suit", "location": "Wasteland", "sector": "", "shop": "Volt’s Shop", "tags": [ "Nikke - DLC" ], "$condition": { "region": 2 } }
         ]
       },
       "face-decorations": {
