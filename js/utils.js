@@ -1,4 +1,5 @@
 
+//#region escape functions
 const greekAlphabets = [
   { name: "Alpha", upper: "Α", lower: "α" },
   { name: "Beta", upper: "Β", lower: "β" },
@@ -32,10 +33,10 @@ const greekAlphabets = [
  */
 export function escapeKey(key) {
   return Array.from(key).reduce((a, c) => {
-      const gi = greekAlphabets.findIndex(g => [g.upper, g.lower].includes(c));
-      a += (gi > -1) ? `|${greekAlphabets[gi].name}|` : c;
-      return a;
-    }, "")
+    const gi = greekAlphabets.findIndex(g => [g.upper, g.lower].includes(c));
+    a += (gi > -1) ? `|${greekAlphabets[gi].name}|` : c;
+    return a;
+  }, "")
     .toLocaleLowerCase()
     .replaceAll('|', '-')
     .replaceAll('’s', '')
@@ -75,7 +76,9 @@ export function escapeGreekAlphabets(text) {
     return s;
   }, "");
 }
+//#endregion
 
+//#region generate export functions
 /**
  * @param {string} title 
  * @param {Object[]} gameModes 
@@ -126,7 +129,7 @@ export function generateMarkdown(title, gameModes, regions, listData, completed)
 
         } else {
           lines.push(` ${parseInt(i, 10) + 1}. ${isCompleted(key) ? '[x]' : '[ ]'} ${t}`);
-        }            
+        }
       }
     }
     lines.push('');
@@ -184,3 +187,126 @@ export function generateMarkdown(title, gameModes, regions, listData, completed)
 
   return lines.join('\n');
 }
+//#endregion
+
+//#region conditional functions
+
+/**
+ * @param {Record<string, any>} conditions 
+ * @param {Record<string, any>} values 
+ * @returns {boolean}
+ */
+export function conditional(conditions, values) {
+  const conditionOpRegex = /^(==|!=|<=|<|>=|>|in)[\s]{1,}(.*)$/;
+
+  const fields = Object.keys(values);
+
+  const execCondition = (conditionStr, value, defRes) => {
+    const matches = conditionOpRegex.exec(conditionStr.trim());
+    if (!matches) return defRes;
+
+    const operator = matches[1];
+    let valueIs;
+    try {
+      const temp = JSON.parse(`[${matches[2].trim()}]`);
+      if (!Array.isArray(temp)) return defRes;
+      if (temp.length !== 1) return defRes;
+
+      valueIs = temp[0];
+
+    } catch {
+      return defRes;
+    }
+
+    switch (operator) {
+      case '==':
+        return value == valueIs;
+      case '!=':
+        return value != valueIs;
+      case '<=':
+        return value <= valueIs;
+      case '<':
+        return value < valueIs;
+      case '>=':
+        return value >= valueIs;
+      case '>':
+        return value > valueIs;
+      case 'in':
+        if (Array.isArray(valueIs)) {
+          return value !== '' && valueIs.includes(value);
+        }
+        return defRes;
+      default:
+        return defRes;
+    }
+  };
+
+  const andCondition = (con) => {
+    if (typeof con !== 'object') return false;
+
+    let res = true;
+
+    const keys = Object.keys(con);
+    for (const k of keys) {
+      const c = con[k];
+
+      if (fields.includes(k)) {
+
+        if (typeof c === 'object') {
+          if (Array.isArray(c)) {
+            res = res && orCondition(c, k);
+          } else {
+            res = res && andCondition(c);
+          }
+
+        } else {
+          let op = c;
+          if (typeof c === 'number' || typeof c === 'boolean' || c === null) {
+            op = `== ${c}`;
+          }
+
+          if (typeof op === 'string' && conditionOpRegex.test(op.trim())) {
+            res = res && execCondition(op, values[k], true);
+          }
+        }
+      }
+    }
+    return res;
+  };
+
+  const orCondition = (con, field) => {
+    if (typeof con !== 'object' || !Array.isArray(con)) return false;
+
+    let res = false;
+    for (const i in con) {
+      const c = con[i];
+
+      if (typeof c === 'object') {
+        if (Array.isArray(c)) {
+          res = res || orCondition(c);
+        } else {
+          res = res || andCondition(c);
+        }
+
+      } else if (field && typeof c === 'string') {
+        res = res || execCondition(c, values[field], false);
+
+      }
+    }
+
+    return res;
+  };
+
+  let result = false;
+
+  if (typeof conditions === 'object') {
+    if (Array.isArray(conditions)) {
+      result = orCondition(conditions);
+    } else {
+      result = andCondition(conditions);
+    }
+  }
+
+  return result;
+}
+//#endregion

@@ -40,7 +40,7 @@ export default {
     }
   },
   render() {
-    return h(PopperMenu, { title: 'Sort', width: '10em' }, {
+    return h(PopperMenu, { placement: 'bottom-end', title: 'Sort', width: '10em', arrow: true }, {
       trigger: () => h('i', { class: 'fa-solid fa-arrow-down-short-wide' }),
       default: () => this.sort.map((x, i) => 
         h(SortMenuItem, { key: `sort-item-${i}`, sortKey: x.key, title: x.title, checked: x.sorted, onClick: this.handleItemClick })

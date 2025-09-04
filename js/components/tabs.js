@@ -181,7 +181,7 @@ export default {
 
     return h('div', { class: this.wrapperClass }, [
       h('nav', { role: 'tablist', class: this.navClass }, this.tabs.filter(tab => !tab.hidden).map((tab, i) =>
-        h('label', { key: `tab-${i}`, role: 'presentation', class: [this.itemClass, tab.isActive && this.itemActiveClass, tab.disabled && this.itemDisabledClass] }, [
+        h('label', { key: `tab-${i}`, role: 'presentation', class: [this.itemClass, tab.isActive && this.itemActiveClass, tab.disabled && this.itemDisabledClass], 'aria-disabled': tab.disabled ? 'true' : undefined }, [
           h('input', { type: 'radio', name: this.tabName, role: 'tab', tabIndex: '0', disabled: tab.disabled === true ? 'true' : undefined, checked: tab.isActive, value: tab.tabId, style: 'appearance: none; display: none;', onChange: (ev) => this.handleInputChange(ev, tab) }),
           tab.header
         ])

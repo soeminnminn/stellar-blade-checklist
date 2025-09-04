@@ -1,0 +1,19 @@
+{
+  "name": "stellar-blade-checklist",
+  "version": "1.0.0",
+  "description": "Lightweight checklist",
+  "type": "module",
+  "license": "ISC",
+  "author": "Soe Minn Minn",
+  "scripts": {
+    "start": "node ./bin/serve --dir .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soeminnminn/stellar-blade-checklist.git"
+  },
+  "engines": {
+    "node": "14.x"
+  }
+}

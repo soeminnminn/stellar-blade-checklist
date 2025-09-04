@@ -9,14 +9,14 @@ import HomePage from './pages/home.js';
 import FAQPage from './pages/faq.js';
 import RegionPage from './pages/region.js';
 import ChecklistPage from './pages/checklist.js';
-import { escapeKey, generateMarkdown } from './utils.js';
+import { escapeKey, generateMarkdown, conditional } from './utils.js';
 
 const conditionsDataDef = {
-  'game-mode': {
+  gameMode: {
     title: "Game Mode",
     list: []
   },
-  'region': {
+  region: {
     title: "Region",
     list: []
   }
@@ -45,6 +45,7 @@ export default {
       conditionsData: conditionsDataDef,
       checklistData: {},
       sideMenuData: [],
+      defCompleted: [],
       completed: ls.get('completed', []),
       pageId: false,
       gameMode: ls.get('gameMode', 0),
@@ -58,7 +59,7 @@ export default {
         const conditionsData = this.conditionsData || {};
 
         const conditionsMenu = Object.keys(conditionsData).reduce((t, x) => {
-          if (x !== 'game-mode') {
+          if (x !== 'gameMode') {
             t.push({
               key: x,
               title: conditionsData[x].title,
@@ -115,6 +116,7 @@ export default {
       isDisabled: this.isDisabled,
       setCompleted: this.setCompleted,
       isCompleted: this.isCompleted,
+      isDefCompleted: (dataKey) => this.defCompleted.includes(dataKey),
       getCompletedCount: this.getCompletedCount,
       exportMarkdown: this.exportMarkdown,
       exportChecklist: this.exportChecklist,
@@ -154,12 +156,13 @@ export default {
 
         this.conditionsData = data['$condition-data'] || conditionsDataDef;
 
-        const defCompleted = data['$completed'];
+        const defCompleted = data['$default-completed'];
         if (Array.isArray(defCompleted)) {
           const completed = [].concat(this.completed || [])
             .concat(defCompleted)
             .filter((x, i, arr) => arr.indexOf(x) === i);
           this.completed = completed;
+          this.defCompleted = defCompleted;
         }
 
         for (const key of Object.keys(data).filter(x => x.startsWith('$'))) {
@@ -207,32 +210,23 @@ export default {
       }
     },
     isDisabled(value) {
-      if (typeof value === 'object' && typeof value['$condition'] === 'object') {
+      if (typeof value === 'object') {
         const condition = value['$condition'];
-        const gameMode = condition['game-mode'] || 0;
-        const region = condition['region'] || 0;
+        if (typeof condition === 'object') {        
+          const values = {
+            gameMode: this.gameMode,
+            region: this.lastRegion
+          };
 
-        if (gameMode === 'any') {
-          return region > this.lastRegion;
+          return conditional(condition, values) === false;
         }
-
-        if (region === 'any') {
-          return gameMode > this.gameMode;
-        }
-
-        let passed = gameMode < this.gameMode;
-        if (gameMode >= this.gameMode) {
-          passed = region <= this.lastRegion;
-        }
-
-        return passed === false;
       }
       return false;
     },
     exportMarkdown() {
       const gameModesData = {
-        ...this.conditionsData['game-mode'],
-        list: this.conditionsData['game-mode'].list.map((x, i) => ({ ...x, completed: i <= this.gameMode }))
+        ...this.conditionsData['gameMode'],
+        list: this.conditionsData['gameMode'].list.map((x, i) => ({ ...x, completed: i <= this.gameMode }))
       };
       
       const regionsData = {
@@ -319,7 +313,7 @@ export default {
     return [
       h(AsyncLoader, { promise: this.loadData }),
       h('div', { key: `${this.gameMode}-${this.lastRegion}`, class: 'content-container' }, [
-        h(Sidebar, { gameModes: this.conditionsData['game-mode'].list, modelValue: this.sideMenuData, activeId: this.pageId }),
+        h(Sidebar, { gameModes: this.conditionsData['gameMode'].list, modelValue: this.sideMenuData, activeId: this.pageId }),
         h('div', { class: 'content-card' },
           h(HashRouter, { onChange: this.handlePageChange }, {
             default: () => h(HomePage, { title: appTitle }),

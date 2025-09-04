@@ -14,11 +14,13 @@
   --color-foreground: #ddd;
 
   --color-fg-footer: #aaa;
+  --color-fg-active: #f7bf00;
+  --color-fg-info: #999;
+  --color-fg-variant: #be950f;
 
   --color-bg-card: #212121;
   --color-bg-card-active: #383838;
   --color-fg-card: #ccc;
-  --color-fg-card-active: #f7bf00;
 
   --color-bg-button: #2a2a2a;
   --color-bg-button-active: #383838;
@@ -229,6 +231,9 @@ a:hover {
   border: none;
   border-radius: var(--border-radius-button);
   text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   cursor: pointer;
   transition: background 0.2s;
   flex-shrink: 0;
@@ -243,12 +248,12 @@ span.side-button {
 .side-button:not(span):hover,
 .side-button.active {
   background: var(--color-bg-button-active);
-  color: var(--color-fg-card-active);
+  color: var(--color-fg-active);
 }
 
 .side-button:has(input[type="radio"]:checked) {
   background: var(--color-bg-button-active);
-  color: var(--color-fg-card-active);
+  color: var(--color-fg-active);
 }
 
 .side-card li:has(.side-sub-menu) > a {
@@ -263,6 +268,9 @@ span.side-button {
 .side-sub-menu > li > a {
   padding: 0.625em;
   text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .side-sub-menu > li > a:hover {
@@ -272,7 +280,7 @@ span.side-button {
 
 .side-sub-menu > li > a.active,
 .side-sub-menu > li > a.active:hover {
-  color: var(--color-fg-card-active);
+  color: var(--color-fg-active);
 }
 
 .side-button.disabled,
@@ -352,14 +360,26 @@ span.side-button {
   gap: 0.5em;
 }
 
+.checklist-header {
+  position: relative;
+}
+
 .checklist-header .title {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
+  padding-right: 0.5em;
+}
+
+.checklist-header .title > h2 {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
 }
 
 .checklist-header .location {
+  position: relative;
   margin-bottom: 1em;
+  padding-left: 1.675em;
   color: #999;
 }
 
@@ -377,7 +397,7 @@ span.side-button {
 .checklist-header .title .popper-button:hover,
 .checklist-header .title .popper-button:focus {
   background: var(--color-bg-button-active);
-  color: var(--color-fg-card-active);
+  color: var(--color-fg-active);
 }
 
 .popper-popup .menu-item {
@@ -390,6 +410,9 @@ span.side-button {
   text-decoration: none;
   font-weight: 500;
   color: var(--color-fg-card);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .popper-popup .menu-item::before {
@@ -420,6 +443,9 @@ span.side-button {
   font-family: Consolas, system-ui, -apple-system, sans-serif;
   font-size: 120%;
 }
+.checklist-item .checklist-label.default {
+  cursor: initial;
+}
 
 .checklist-item .checklist-label input[type="checkbox"],
 .checklist-item .checklist-label input[type="radio"] {
@@ -440,10 +466,11 @@ span.side-button {
 
 .checklist-item .item-index {
   display: inline-block;
-  min-width: 2em;
+  min-width: 1.75em;
   text-align: right;
   color: #999;
   user-select: none;
+  font-size: small;
 }
 
 .checklist-item .item-index::after {
@@ -454,15 +481,9 @@ span.side-button {
   display: flex;
   flex-flow: column;
   gap: 0.5em;
-  padding: 0.5em 0 0 2.125em;
-  color: #999;
+  padding: 0.5em 0 0 2em;
+  color: var(--color-fg-info);
   font-size: small;
-}
-
-@media (min-width: 768px) {
-  .checklist-item .checklist-info {
-    padding: 0.5em 0 0 2.5em;
-  }
 }
 
 .checklist-item .checklist-label.disabled ~ .checklist-info {
@@ -470,35 +491,86 @@ span.side-button {
   opacity: 0.6;
 }
 
-.checklist-item .checklist-info > div {
+.checklist-info > div {
+  position: relative;
   display: flex;
   flex-flow: row;
+  padding-left: 1.75em;
 }
 
-.checklist-item .checklist-variants > .variants-label {
+.checklist-info > div.tags {
+  flex-flow: column;
+}
+
+@media (min-width: 768px) {
+  .checklist-info > div.tags {
+    flex-flow: row;
+  }
+}
+
+.checklist-info > div.locations {
+  display: flex;
+  flex-flow: column;
+}
+
+.checklist-info > .variants {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  padding-left: 1.75em;
+}
+
+.checklist-info > .variants > li {
+  list-style-type: none;
+}
+
+.checklist-info > .variants .key {
+  display: inline-block;
+  position: relative;
+  width: 3.25em;
+  text-transform: uppercase;
+  margin-right: 0.5em;
+}
+
+.checklist-info > .variants .key::after {
+  content: ':';
+  position: absolute;
+  right: 0;
+}
+
+.checklist-info > .variants .text {
+  color: var(--color-fg-variant);
+}
+
+.checklist-item .checklist-ranks > .ranks-label {
   display: flex;
   flex-flow: row;
   align-items: center;
   gap: 0.25em;
 }
 
-.checklist-item .checklist-variants .variants {
+.checklist-item .checklist-ranks .ranks {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 0.25em 0 0 2.125em;
+  flex-flow: column;
+  flex-wrap: nowrap;
+  align-items: normal;
+  padding: 0.25em 0 0 1.725em;
   gap: 0.5em;
   font-size: small;
 }
 
 @media (min-width: 768px) {
-  .checklist-item .checklist-variants .variants {
-    padding: 0.25em 0 0 2.5em;
+  .checklist-item .checklist-ranks .ranks {
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-items: center;
   }
 }
 
 .checklist-header .location::before,
+.checklist-info .serial::before,
 .checklist-info .location::before,
+.checklist-info .locations::before,
 .checklist-info .shop::before,
 .checklist-info .tags::before,
 .checklist-info .notes::before,
@@ -509,15 +581,23 @@ span.side-button {
   text-align: center;
   width: 1.5em;
   margin-right: 0.25em;
+  position: absolute;
+  left: 0;
+  top: 0.125em;
+}
+
+.checklist-info .serial::before {
+  content: '\23';
 }
 
 .checklist-header .location::before,
-.checklist-info .location::before {
+.checklist-info .location::before,
+.checklist-info .locations::before {
   content: '\f3c5';
 }
 
 .checklist-info .shop::before {
-  content: '\f54f';
+  content: '\f07a';
 }
 
 .checklist-info .tags::before {
@@ -532,9 +612,37 @@ span.side-button {
   content: '\f578';
 }
 
-.checklist-info .location > span:not(:first-child)::before,
-.checklist-info .tags > span.tag:not(:first-child)::before {
+.checklist-info > .variants::before {
+  content: 'V';
+  position: absolute;
+  left: 0.125em;
+  top: 0.125em;
+  font-weight: 900;
+  font-size: 10pt;
+  line-height: 1.025em;
+  display: inline-block;
+  text-align: center;
+  color: var(--color-bg-card);
+  width: 1.125em;
+  height: 1.125em;
+  margin-right: 0.5em;
+  background: var(--color-fg-info);
+  border-radius: 50% 50%;
+}
+
+.checklist-info .location > span:not(:first-child)::before {
   content: ', ';
+}
+
+.checklist-info .tags > span.tag:not(:first-child)::before {
+  content: '';
+}
+
+@media (min-width: 768px) {
+  .checklist-info .location > span:not(:first-child)::before,
+  .checklist-info .tags > span.tag:not(:first-child)::before {
+    content: ', ';
+  }
 }
 
 .tab-box {
@@ -553,17 +661,17 @@ span.side-button {
 .tab-buttons {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   flex-shrink: 0;
   flex-basis: content;
   gap: 8px;
+  padding-bottom: 0.5em;
   overflow-x: auto;
 }
 
 .tab-panel {
   flex-shrink: 1;
   flex-basis: auto;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 .tab-panel section {
@@ -586,6 +694,10 @@ span.side-button {
   color: var(--color-fg-card);
   border-radius: var(--border-radius-button);
   text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  overflow: hidden;
   cursor: pointer;
   transition: background 0.2s;
   flex-shrink: 0;
@@ -595,7 +707,7 @@ span.side-button {
 .tab-button:hover,
 .tab-button.active {
   background: var(--color-bg-button-active);
-  color: var(--color-fg-card-active);
+  color: var(--color-fg-active);
 }
 
 .tab-button.disabled {

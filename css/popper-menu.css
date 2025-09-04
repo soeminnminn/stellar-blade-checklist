@@ -60,24 +60,20 @@
 }
 
 /*position arrow using popper.js data-popper-placement attribute*/
-.popper-popup[data-popper-placement^="top"] .popper-arrow,
 .popper-popup[x-placement^="top"] .popper-arrow {
-  bottom: -.25em;
+  bottom: -0.25em;
 }
 
-.popper-popup[data-popper-placement^="bottom"] .popper-arrow,
 .popper-popup[x-placement^="bottom"] .popper-arrow {
-  top: -.25em;
+  top: -0.25em;
 }
 
-.popper-popup[data-popper-placement^="left"] .popper-arrow,
 .popper-popup[x-placement^="left"] .popper-arrow {
-  right: -.25em;
+  right: -0.25em;
 }
 
-.popper-popup[data-popper-placement^="right"] .popper-arrow,
 .popper-popup[x-placement^="right"] .popper-arrow {
-  left: -.25em;
+  left: -0.25em;
 }
 
 /*hide arrow when reference outside of viewport*/
@@ -85,7 +81,7 @@
   visibility: hidden;
 }
 
-.popper-popup .popper-arrow,
-.popper-popup .popper-arrow::before {
+.popper-popup .popper-arrow.hidden,
+.popper-popup .popper-arrow.hidden::before {
   display: none;
 }

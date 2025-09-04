@@ -16,13 +16,8 @@ export default {
         return this.value;
 
       } else if (typeof this.value === 'object') {
-        let title = this.value.name || this.value.code || this.value.title;
-
-        if (typeof this.value.serial !== 'undefined') {
-          title += ` (No. ${this.value.serial})`;
-        }
-
-        return title;
+        const title = this.value.name || this.value.code || this.value.title;
+        return title || '-';
       }
 
       return '';
@@ -31,8 +26,8 @@ export default {
       return typeof this.value === 'object' && this.value.code;
     }
   },
-  inject: [ 'makeKey', 'setCompleted', 'isCompleted', 'isDisabled' ],
-  emits: [ 'change' ],
+  inject: ['makeKey', 'setCompleted', 'isCompleted', 'isDefCompleted', 'isDisabled'],
+  emits: ['change'],
   methods: {
     isChecked(key) {
       if (typeof this.isCompleted === 'function') {
@@ -59,58 +54,96 @@ export default {
   },
   render() {
     const isDisabled = typeof this.isDisabled === 'function' ? this.isDisabled : (() => false);
+    const isDefCompleted = typeof this.isDefCompleted === 'function' ? this.isDefCompleted : (() => false);
+    const disabled = isDisabled(this.value);
 
     const label = () => {
       const key = this.makeKey(this.dataKey, this.value);
 
-      if (typeof this.value === 'object' && Array.isArray(this.value.variants) && this.value.variants.length) {
-        return h('div', { class: 'checklist-variants' }, [
-          h('div', { class: 'variants-label' }, [
+      if (typeof this.value === 'object' && Array.isArray(this.value.ranks) && this.value.ranks.length) {
+        return h('div', { class: 'checklist-ranks' }, [
+          h('div', { class: 'ranks-label' }, [
             h('span', { class: 'item-index' }, `${this.index}`),
-            h('span', { class: [ 'checklist-label', this.isCode && 'code' ] }, this.title),
+            h('span', { class: ['checklist-label', this.isCode && 'code'] }, this.title),
           ]),
-          h('div', { class: 'variants' }, this.value.variants.map((v, i) => {
+          h('div', { class: 'ranks' }, this.value.ranks.map((v, i) => {
             const title = (typeof v === 'object') ? v.name || v.code || v.title : `${v}`;
             const vkey = this.makeKey(key, v);
-            const disabled = isDisabled(v);
+            const vDisabled = isDisabled(v);
+            const vDefCompleted = isDefCompleted(vkey);
 
-            return h('label', { key: `variant-${i}`, class: [ 'checklist-label', v.code && 'code', disabled && 'disabled' ], 'aria-disabled': disabled ? undefined : 'true' }, [
-              h('input', { type: 'checkbox', value: vkey, disabled: disabled ? 'true' : undefined, checked: this.isChecked(vkey), onChange: this.handleChange }),
+            return h('label', { key: `rank-${i}`, class: ['checklist-label', v.code && 'code', vDisabled && 'disabled', vDefCompleted && 'default'], 'aria-disabled': vDisabled ? undefined : 'true' }, [
+              h('input', { type: 'checkbox', value: vkey, disabled: vDisabled || vDefCompleted ? 'true' : undefined, checked: this.isChecked(vkey), onChange: this.handleChange }),
               title
             ]);
           }))
         ]);
       }
 
-      const disabled = isDisabled(this.value);
-      return h('label', { class: [ 'checklist-label', this.isCode && 'code', disabled && 'disabled' ], 'aria-disabled': disabled ? 'true' : undefined }, [
+      const defCompleted = isDefCompleted(key);
+
+      return h('label', { class: ['checklist-label', this.isCode && 'code', disabled && 'disabled', defCompleted && 'default'], 'aria-disabled': disabled ? 'true' : undefined }, [
         h('span', { class: 'item-index' }, `${this.index}`),
-        h('input', { type: 'checkbox', value: key, disabled: disabled ? 'true' : undefined, checked: this.isChecked(key), onChange: this.handleChange }),
+        h('input', { type: 'checkbox', value: key, disabled: disabled || defCompleted ? 'true' : undefined, checked: this.isChecked(key), onChange: this.handleChange }),
         this.title,
       ]);
+    };
+
+    const serial = () => {
+      if (typeof this.value !== 'object') return undefined;
+
+      if (typeof this.value.serial !== 'undefined') {
+        return h('div', { class: 'serial' },
+          h('span', {}, `No. ${this.value.serial}`)
+        );
+      }
+      return undefined;
+    };
+
+    const variants = () => {
+      if (typeof this.value !== 'object') return undefined;
+
+      if (typeof this.value.variants === 'object') {
+        const variants = this.value.variants;
+        const variantsKeys = Object.keys(variants);
+
+        return h('menu', { class: 'variants' },
+          variantsKeys.map((vk, i) => h('li', { key: `variants-${i}`, class: 'variant' }, [
+            h('span', { class: 'key' }, vk),
+            h('span', { class: 'text' }, variants[vk])
+          ]))
+        );
+      }
+
+      return undefined;
     };
 
     const location = () => {
       if (typeof this.value !== 'object') return undefined;
 
-      const elms = [];
-      if (typeof this.value.location !== 'undefined' && this.value.location) {
-        elms.push(h('span', {}, this.value.location));
-      }
-
-      if (typeof this.value.sector !== 'undefined' && this.value.sector) {
-        elms.push(h('span', {}, this.value.sector));
-      }
-
       if (typeof this.value.locations !== 'undefined' && Array.isArray(this.value.locations)) {
-        this.value.locations.forEach(loc => {
-          elms.push(h('span', {}, loc));
-        });        
-      }
+        const locations = this.value.locations;
 
-      if (elms.length) {
-        return h('div', { class: 'location' }, elms);
-      }
+        return h('div', { class: 'locations' }, 
+          locations.map((loc, i) => 
+            h('span', { key: `loc-${i}` }, loc)
+          )
+        );
+
+      } else {
+        const elms = [];
+        if (typeof this.value.location !== 'undefined' && this.value.location) {
+          elms.push(h('span', { class: 'region' }, this.value.location));
+        }
+
+        if (typeof this.value.sector !== 'undefined' && this.value.sector) {
+          elms.push(h('span', { class: 'area' }, this.value.sector));
+        }
+
+        if (elms.length) {
+          return h('div', { class: 'location' }, elms);
+        }
+      }      
 
       return undefined;
     };
@@ -118,7 +151,7 @@ export default {
     const shop = () => {
       if (typeof this.value !== 'object') return undefined;
       if (typeof this.value.shop !== 'undefined' && this.value.shop) {
-        return h('div', { class: 'shop' }, 
+        return h('div', { class: 'shop' },
           h('span', {}, this.value.shop)
         );
       }
@@ -129,7 +162,7 @@ export default {
       if (typeof this.value !== 'object') return undefined;
 
       if (typeof this.value.tags !== 'undefined' && Array.isArray(this.value.tags) && this.value.tags.length) {
-        return h('div', { class: 'tags' }, 
+        return h('div', { class: 'tags' },
           this.value.tags.map((t, i) => h('span', { key: `tags-${i}`, class: 'tag' }, t))
         );
       }
@@ -141,7 +174,7 @@ export default {
       if (typeof this.value !== 'object') return undefined;
 
       if (typeof this.value.notes !== 'undefined' && this.value.notes) {
-        return h('div', { class: 'notes' }, 
+        return h('div', { class: 'notes' },
           h('span', {}, this.value.notes)
         );
       }
@@ -152,7 +185,7 @@ export default {
       if (typeof this.value !== 'object') return undefined;
 
       if (typeof this.value.bait !== 'undefined' && this.value.bait) {
-        return h('div', { class: 'bait' }, 
+        return h('div', { class: 'bait' },
           h('span', {}, this.value.bait)
         );
       }
@@ -161,7 +194,9 @@ export default {
 
     return h('li', { class: 'checklist-item' }, [
       label(),
-      typeof this.value === 'object' && h('div', { class: 'checklist-info' }, [
+      typeof this.value === 'object' && !disabled && h('div', { class: 'checklist-info' }, [
+        serial(),
+        variants(),
         location(),
         shop(),
         bait(),

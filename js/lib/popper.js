@@ -1710,6 +1710,7 @@ export default class Popper {
   static Utils = PopperUtils;
   static placements = placements;
   static Defaults = defaultsOptions;
+  static Modifiers = Modifiers;
 
   constructor(reference, popper, options = {}) {
     // make update() debounced, so that it only runs at most once-per-tick
