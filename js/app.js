@@ -9,7 +9,8 @@ import HomePage from './pages/home.js';
 import FAQPage from './pages/faq.js';
 import RegionPage from './pages/region.js';
 import ChecklistPage from './pages/checklist.js';
-import { escapeKey, generateMarkdown, conditional } from './utils.js';
+import { escapeKey, generateMarkdown } from './utils.js';
+import conditional from './conditional.js';
 
 const conditionsDataDef = {
   gameMode: {
@@ -92,11 +93,11 @@ export default {
     gameMode() {
       if (this.pageId) {
         this.pageId = false;
-        
+
         this.$nextTick(() => {
           window.location.hash = '';
         });
-      }      
+      }
     },
     completed: {
       handler(value) {
@@ -212,7 +213,7 @@ export default {
     isDisabled(value) {
       if (typeof value === 'object') {
         const condition = value['$condition'];
-        if (typeof condition === 'object') {        
+        if (typeof condition === 'object' || typeof condition === 'string') {
           const values = {
             gameMode: this.gameMode,
             region: this.lastRegion
@@ -228,7 +229,7 @@ export default {
         ...this.conditionsData['gameMode'],
         list: this.conditionsData['gameMode'].list.map((x, i) => ({ ...x, completed: i <= this.gameMode }))
       };
-      
+
       const regionsData = {
         ...this.conditionsData['region'],
         list: this.conditionsData['region'].list.map((x, i) => ({ ...x, completed: i <= this.lastRegion }))
@@ -236,7 +237,7 @@ export default {
 
       const listData = { ...this.checklistData };
 
-      const markdown = generateMarkdown(appTitle, gameModesData, regionsData, listData, this.completed);
+      const markdown = generateMarkdown(this.$t('APP_TITLE'), gameModesData, regionsData, listData, this.completed);
 
       const blob = new Blob([markdown], { type: 'text/markdown' });
       const url = URL.createObjectURL(blob);
@@ -316,7 +317,7 @@ export default {
         h(Sidebar, { gameModes: this.conditionsData['gameMode'].list, modelValue: this.sideMenuData, activeId: this.pageId }),
         h('div', { class: 'content-card' },
           h(HashRouter, { onChange: this.handlePageChange }, {
-            default: () => h(HomePage, { title: appTitle }),
+            default: () => h(HomePage, { title: this.$t('APP_TITLE') }),
             faq: () => h(FAQPage),
             region: () => h(RegionPage, { dataKey: 'region', listData: this.conditionsData['region'] }),
             '#routes': (pathNames) => {

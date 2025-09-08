@@ -1,4 +1,5 @@
 import { h } from 'vue';
+import { coverImageUrl, gitRepoUrl } from '../constants.js';
 
 export default {
   name: 'home-page',
@@ -11,11 +12,11 @@ export default {
         h('h1', {}, this.title || 'Checklist')
       ),
       h('div', { class: 'cover-image' }, 
-        h('img', { src: './images/cover.png' })
+        h('img', { src: coverImageUrl })
       ),
       h('footer', { class: 'site-footer' }, [
-        'Check out the project or ',
-        h('a', { href: 'https://github.com/Lepehn/stellar-blade-checklist', target: '_blank' }, 'report an issue on GitHub'),
+        this.$t('CHECKOUT_PROJECT'),
+        h('a', { href: gitRepoUrl, target: '_blank' }, this.$t('REPORT_ISSUE')),
         '.'
       ]),
     ]);

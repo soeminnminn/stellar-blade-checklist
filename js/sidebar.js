@@ -1,4 +1,5 @@
 import { h } from 'vue';
+import { sideImageUrl } from './constants.js';
 
 export default {
   props: {
@@ -103,10 +104,10 @@ export default {
           )
         ),
         h('a', { class: 'side-logo', href: '#' }, 
-          h('img', { src: './images/logo.png' })
+          h('img', { src: sideImageUrl })
         ),
         h('div', { class: 'side-content' }, [
-          h('menu', { class: 'side-card' }, 
+          this.gameModes.length > 1 && h('menu', { class: 'side-card' }, 
             this.gameModes.map((gm, i) => 
               h('li', { key: `game-mode-${gm.key}` }, 
                 h('label', { class: 'side-button' }, [
@@ -129,13 +130,13 @@ export default {
             )
           ),
           h('div', { class: 'side-card' }, [
-            h('a', { href: '#faq', class: ['side-button', this.activeId === 'faq' && 'active'] }, 'FAQ'),
+            h('a', { href: '#faq', class: ['side-button', this.activeId === 'faq' && 'active'] }, this.$t('FAQ')),
             h('label', { class: 'side-button' }, [
-              'Import Progress',
+              this.$t('IMPORT_PROGRESS'),
               h('input', { type: 'file', style: 'display: none;', onChange: this.handleImportChange })
             ]),
-            h('button', { type: 'button', class: 'side-button', onClick: this.handleExportClick }, 'Export Progress'),
-            h('button', { type: 'button', class: 'side-button', onClick: this.handleExportMarkdownClick }, 'Markdown Export'),
+            h('button', { type: 'button', class: 'side-button', onClick: this.handleExportClick }, this.$t('EXPORT_PROGRESS')),
+            h('button', { type: 'button', class: 'side-button', onClick: this.handleExportMarkdownClick }, this.$t('MARKDOWN_EXPORT')),
           ]),
         ])
       ])

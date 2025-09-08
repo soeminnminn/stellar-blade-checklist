@@ -21,6 +21,7 @@
   {
     "imports": {
       "vue": "./js/lib/vue/vue.esm-browser.prod.js",
+      "i18n": "./js/lib/i18n.js",
 			"notifications": "./js/lib/notifications/index.js",
       "popper": "./js/lib/popper.js",
       "local-storage": "./js/lib/local-storage.js"
@@ -33,10 +34,18 @@
   
   <script type="module">
   import { createApp, ref } from 'vue';
+  import createI18n from 'i18n';
 	import notifications from 'notifications';
+  import { i18nLocales } from './js/constants.js';
   import App from './js/app.js';
 
   const app = createApp(App);
+
+  app.use(createI18n({
+		locale: "en",
+		fallbackLocale: "en",
+		locales: i18nLocales,
+	}));
 
 	app.use(notifications());
 

@@ -345,6 +345,18 @@ span.side-button {
   }
 }
 
+.faq-content {
+  padding-left: 1em;
+  margin-top: 0;
+}
+.faq-content > li > h4 {
+  margin-bottom: 0;
+}
+.faq-content > li > h4 ~ p {
+  margin-top: 0.25em;
+  text-align: justify;
+}
+
 .scrollable-list {
   margin-top: 0.75em;
   max-height: 100%;
@@ -456,7 +468,6 @@ span.side-button {
 .checklist-item .checklist-label:has(input[type="checkbox"]:checked),
 .checklist-item .checklist-label:has(input[type="radio"]:checked) {
   text-decoration: line-through;
-  color: #999;
 }
 
 .checklist-item .checklist-label.disabled {
